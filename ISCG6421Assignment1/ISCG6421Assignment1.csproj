@@ -32,6 +32,14 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,16 +54,93 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="ArenaForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="ArenaForm.Designer.cs">
+      <DependentUpon>ArenaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChallengeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChallengeForm.Designer.cs">
+      <DependentUpon>ChallengeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CompetitorChallengeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CompetitorChallengeForm.Designer.cs">
+      <DependentUpon>CompetitorChallengeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CompetitorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CompetitorForm.Designer.cs">
+      <DependentUpon>CompetitorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CompetitorReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CompetitorReportForm.Designer.cs">
+      <DependentUpon>CompetitorReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataModule.Designer.cs">
+      <DependentUpon>DataModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DsNZESL.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsNZESL.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EventForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EventForm.Designer.cs">
+      <DependentUpon>EventForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EventsReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EventsReportForm.Designer.cs">
+      <DependentUpon>EventsReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="ArenaForm.resx">
+      <DependentUpon>ArenaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChallengeForm.resx">
+      <DependentUpon>ChallengeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CompetitorChallengeForm.resx">
+      <DependentUpon>CompetitorChallengeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CompetitorForm.resx">
+      <DependentUpon>CompetitorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CompetitorReportForm.resx">
+      <DependentUpon>CompetitorReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataModule.resx">
+      <DependentUpon>DataModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventForm.resx">
+      <DependentUpon>EventForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventsReportForm.resx">
+      <DependentUpon>EventsReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -66,6 +151,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="DsNZESL.xsc">
+      <DependentUpon>DsNZESL.xsd</DependentUpon>
+    </None>
+    <None Include="DsNZESL.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsNZESL.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DsNZESL.xss">
+      <DependentUpon>DsNZESL.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

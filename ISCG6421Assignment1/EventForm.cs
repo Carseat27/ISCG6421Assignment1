@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace ISCG6421Assignment1
 {
-    public partial class Form1 : Form
+    public partial class EventForm : Form
     {
-        public Form1()
+        private DataModule DM;
+        private MainForm frmMenu;
+        private CurrencyManager currencyManager;
+        public EventForm(DataModule dm, MainForm mnu)
         {
             InitializeComponent();
+            DM = dm;
+            frmMenu = mnu;
+            BindControls();
         }
-
-        private void Form1_Load(object sender, EventArgs e)
+        private void BindControls()
         {
 
         }
