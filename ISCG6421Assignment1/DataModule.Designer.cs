@@ -66,10 +66,10 @@
             // 
             // ctnNZESL
             // 
-            //this.ctnNZESL.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\"C:\\Users\\carso\\OneDrive - Unitec N" +
-    //"Z\\University\\2022 Semester 2\\GUI Programming\\Assignment1\\NZESL.mdb\"";
-
-            this.ctnNZESL.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\"C:\\Temp\"";
+            this.ctnNZESL.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\"C:\\Users\\carso\\OneDrive - Unitec N" +
+    "Z\\University\\2022 Semester 2\\GUI Programming\\Assignment1\\NZESL.mdb\"";
+            //uncomment code for submissions
+            //this.ctnNZESL.ConnectionString = "Provider=Microsoft.ACE.OLEBD.12.0;Data Source=\"C:\\Temp\"";
             // 
             // oleDbInsertCommand1
             // 
@@ -136,6 +136,7 @@
                         new System.Data.Common.DataColumnMapping("City", "City"),
                         new System.Data.Common.DataColumnMapping("PhoneNumber", "PhoneNumber")})});
             this.daArena.UpdateCommand = this.oleDbUpdateCommand1;
+            this.daArena.RowUpdated += new System.Data.OleDb.OleDbRowUpdatedEventHandler(this.daArena_RowUpdated);
             // 
             // oleDbSelectCommand2
             // 
@@ -416,9 +417,10 @@
             // 
             // DataModule
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(263, 197);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DataModule";
             this.Text = "DataModule";
             ((System.ComponentModel.ISupportInitialize)(this.dsNZESL)).EndInit();

@@ -38,6 +38,7 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnCompetitorReport = new System.Windows.Forms.Button();
             this.btnEventsReport = new System.Windows.Forms.Button();
+            this.btbDbConnect = new System.Windows.Forms.Button();
             this.grpMaintenance.SuspendLayout();
             this.grpReporting.SuspendLayout();
             this.SuspendLayout();
@@ -63,9 +64,9 @@
             // 
             this.btnEnterCompetitorChallenge.BackColor = System.Drawing.SystemColors.Control;
             this.btnEnterCompetitorChallenge.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnterCompetitorChallenge.Location = new System.Drawing.Point(30, 278);
+            this.btnEnterCompetitorChallenge.Location = new System.Drawing.Point(30, 265);
             this.btnEnterCompetitorChallenge.Name = "btnEnterCompetitorChallenge";
-            this.btnEnterCompetitorChallenge.Size = new System.Drawing.Size(268, 71);
+            this.btnEnterCompetitorChallenge.Size = new System.Drawing.Size(268, 84);
             this.btnEnterCompetitorChallenge.TabIndex = 4;
             this.btnEnterCompetitorChallenge.Text = "Enter Competitor into Challenge";
             this.btnEnterCompetitorChallenge.UseVisualStyleBackColor = false;
@@ -123,6 +124,7 @@
             // 
             this.grpReporting.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.grpReporting.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.grpReporting.Controls.Add(this.btbDbConnect);
             this.grpReporting.Controls.Add(this.btnExit);
             this.grpReporting.Controls.Add(this.btnCompetitorReport);
             this.grpReporting.Controls.Add(this.btnEventsReport);
@@ -169,6 +171,18 @@
             this.btnEventsReport.UseVisualStyleBackColor = false;
             this.btnEventsReport.Click += new System.EventHandler(this.btnEventsReport_Click);
             // 
+            // btbDbConnect
+            // 
+            this.btbDbConnect.BackColor = System.Drawing.SystemColors.Control;
+            this.btbDbConnect.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btbDbConnect.Location = new System.Drawing.Point(32, 265);
+            this.btbDbConnect.Name = "btbDbConnect";
+            this.btbDbConnect.Size = new System.Drawing.Size(268, 39);
+            this.btbDbConnect.TabIndex = 4;
+            this.btbDbConnect.Text = "Connect to Database";
+            this.btbDbConnect.UseVisualStyleBackColor = false;
+            this.btbDbConnect.Click += new System.EventHandler(this.btbDbConnect_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -199,6 +213,7 @@
         private System.Windows.Forms.Button btnEventsReport;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnCompetitorReport;
+        private System.Windows.Forms.Button btbDbConnect;
     }
 }
 

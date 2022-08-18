@@ -99,5 +99,10 @@ namespace ISCG6421Assignment1
             }
             frmCompetitorReport.ShowDialog();
         }
+
+        private void btbDbConnect_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

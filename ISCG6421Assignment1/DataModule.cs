@@ -44,5 +44,16 @@ namespace ISCG6421Assignment1
             daArena.Update(dtArena);
         }
 
+        private void daArena_RowUpdated(object sender, OleDbRowUpdatedEventArgs e)
+        {
+            int newID = 0;
+            OleDbCommand idCMD = new OleDbCommand("SELECT @@IDENTITY", ctnNZESL);
+
+            if(e.StatementType == StatementType.Insert)
+            {
+                newID = (int)idCMD.ExecuteScalar();
+                e.Row["ArenaID"] = newID;
+            }
+        }
     }
 }
