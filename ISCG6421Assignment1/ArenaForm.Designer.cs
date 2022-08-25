@@ -48,10 +48,6 @@
             this.btnDeleteArena = new System.Windows.Forms.Button();
             this.btnReturn = new System.Windows.Forms.Button();
             this.pnlAdd = new System.Windows.Forms.Panel();
-            this.pnlUpdate = new System.Windows.Forms.Panel();
-            this.lblArenaUpdate = new System.Windows.Forms.Label();
-            this.btnArenaUpdate = new System.Windows.Forms.Button();
-            this.btnUpdateCancel = new System.Windows.Forms.Button();
             this.lblAddArena = new System.Windows.Forms.Label();
             this.btnArenaSave = new System.Windows.Forms.Button();
             this.btnAddCancel = new System.Windows.Forms.Button();
@@ -65,6 +61,10 @@
             this.lblArenaSuburbAdd = new System.Windows.Forms.Label();
             this.lblArenaAddressAdd = new System.Windows.Forms.Label();
             this.lblArenaNameAdd = new System.Windows.Forms.Label();
+            this.pnlUpdate = new System.Windows.Forms.Panel();
+            this.lblArenaUpdate = new System.Windows.Forms.Label();
+            this.btnArenaUpdate = new System.Windows.Forms.Button();
+            this.btnUpdateCancel = new System.Windows.Forms.Button();
             this.pnlAdd.SuspendLayout();
             this.pnlUpdate.SuspendLayout();
             this.SuspendLayout();
@@ -310,53 +310,6 @@
             this.pnlAdd.TabIndex = 21;
             this.pnlAdd.Visible = false;
             // 
-            // pnlUpdate
-            // 
-            this.pnlUpdate.Controls.Add(this.lblArenaUpdate);
-            this.pnlUpdate.Controls.Add(this.btnArenaUpdate);
-            this.pnlUpdate.Controls.Add(this.btnUpdateCancel);
-            this.pnlUpdate.Location = new System.Drawing.Point(47, 27);
-            this.pnlUpdate.Name = "pnlUpdate";
-            this.pnlUpdate.Size = new System.Drawing.Size(243, 341);
-            this.pnlUpdate.TabIndex = 34;
-            this.pnlUpdate.Visible = false;
-            // 
-            // lblArenaUpdate
-            // 
-            this.lblArenaUpdate.AutoSize = true;
-            this.lblArenaUpdate.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblArenaUpdate.ForeColor = System.Drawing.Color.White;
-            this.lblArenaUpdate.Location = new System.Drawing.Point(45, 59);
-            this.lblArenaUpdate.Name = "lblArenaUpdate";
-            this.lblArenaUpdate.Size = new System.Drawing.Size(174, 27);
-            this.lblArenaUpdate.TabIndex = 33;
-            this.lblArenaUpdate.Text = "Update Arena";
-            this.lblArenaUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // btnArenaUpdate
-            // 
-            this.btnArenaUpdate.BackColor = System.Drawing.SystemColors.Control;
-            this.btnArenaUpdate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnArenaUpdate.Location = new System.Drawing.Point(50, 104);
-            this.btnArenaUpdate.Name = "btnArenaUpdate";
-            this.btnArenaUpdate.Size = new System.Drawing.Size(139, 56);
-            this.btnArenaUpdate.TabIndex = 32;
-            this.btnArenaUpdate.Text = "Save Changes";
-            this.btnArenaUpdate.UseVisualStyleBackColor = false;
-            this.btnArenaUpdate.Click += new System.EventHandler(this.btnArenaUpdate_Click);
-            // 
-            // btnUpdateCancel
-            // 
-            this.btnUpdateCancel.BackColor = System.Drawing.SystemColors.Control;
-            this.btnUpdateCancel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateCancel.Location = new System.Drawing.Point(50, 209);
-            this.btnUpdateCancel.Name = "btnUpdateCancel";
-            this.btnUpdateCancel.Size = new System.Drawing.Size(139, 56);
-            this.btnUpdateCancel.TabIndex = 31;
-            this.btnUpdateCancel.Text = "Cancel";
-            this.btnUpdateCancel.UseVisualStyleBackColor = false;
-            this.btnUpdateCancel.Click += new System.EventHandler(this.btnUpdateCancel_Click);
-            // 
             // lblAddArena
             // 
             this.lblAddArena.AutoSize = true;
@@ -503,6 +456,53 @@
             this.lblArenaNameAdd.Text = "Arena Name:";
             this.lblArenaNameAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // pnlUpdate
+            // 
+            this.pnlUpdate.Controls.Add(this.lblArenaUpdate);
+            this.pnlUpdate.Controls.Add(this.btnArenaUpdate);
+            this.pnlUpdate.Controls.Add(this.btnUpdateCancel);
+            this.pnlUpdate.Location = new System.Drawing.Point(47, 27);
+            this.pnlUpdate.Name = "pnlUpdate";
+            this.pnlUpdate.Size = new System.Drawing.Size(243, 341);
+            this.pnlUpdate.TabIndex = 34;
+            this.pnlUpdate.Visible = false;
+            // 
+            // lblArenaUpdate
+            // 
+            this.lblArenaUpdate.AutoSize = true;
+            this.lblArenaUpdate.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblArenaUpdate.ForeColor = System.Drawing.Color.White;
+            this.lblArenaUpdate.Location = new System.Drawing.Point(45, 59);
+            this.lblArenaUpdate.Name = "lblArenaUpdate";
+            this.lblArenaUpdate.Size = new System.Drawing.Size(174, 27);
+            this.lblArenaUpdate.TabIndex = 33;
+            this.lblArenaUpdate.Text = "Update Arena";
+            this.lblArenaUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // btnArenaUpdate
+            // 
+            this.btnArenaUpdate.BackColor = System.Drawing.SystemColors.Control;
+            this.btnArenaUpdate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnArenaUpdate.Location = new System.Drawing.Point(50, 104);
+            this.btnArenaUpdate.Name = "btnArenaUpdate";
+            this.btnArenaUpdate.Size = new System.Drawing.Size(139, 56);
+            this.btnArenaUpdate.TabIndex = 32;
+            this.btnArenaUpdate.Text = "Save Changes";
+            this.btnArenaUpdate.UseVisualStyleBackColor = false;
+            this.btnArenaUpdate.Click += new System.EventHandler(this.btnArenaUpdate_Click);
+            // 
+            // btnUpdateCancel
+            // 
+            this.btnUpdateCancel.BackColor = System.Drawing.SystemColors.Control;
+            this.btnUpdateCancel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateCancel.Location = new System.Drawing.Point(50, 209);
+            this.btnUpdateCancel.Name = "btnUpdateCancel";
+            this.btnUpdateCancel.Size = new System.Drawing.Size(139, 56);
+            this.btnUpdateCancel.TabIndex = 31;
+            this.btnUpdateCancel.Text = "Cancel";
+            this.btnUpdateCancel.UseVisualStyleBackColor = false;
+            this.btnUpdateCancel.Click += new System.EventHandler(this.btnUpdateCancel_Click);
+            // 
             // ArenaForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -529,7 +529,9 @@
             this.Controls.Add(this.lblArenaName);
             this.Controls.Add(this.lblArenaNo);
             this.Controls.Add(this.lstArenas);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ArenaForm";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Arena Maintenance";
             this.pnlAdd.ResumeLayout(false);

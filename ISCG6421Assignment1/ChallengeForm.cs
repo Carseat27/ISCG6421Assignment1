@@ -27,5 +27,34 @@ namespace ISCG6421Assignment1
             
         }
 
+        private void btnPrevious_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDeleteArena_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUpdateArena_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddArena_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

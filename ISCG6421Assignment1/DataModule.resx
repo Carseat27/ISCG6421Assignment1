@@ -174,38 +174,11 @@
   <metadata name="oleDbSelectCommand2.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="oleDbInsertCommand2.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="oleDbInsertCommand2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>0, 0</value>
-  </metadata>
-  <metadata name="oleDbInsertCommand2.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="oleDbUpdateCommand2.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="oleDbUpdateCommand2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>0, 0</value>
-  </metadata>
-  <metadata name="oleDbUpdateCommand2.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <data name="oleDbUpdateCommand2.CommandText" xml:space="preserve">
-    <value>UPDATE `CHALLENGE` SET `ChallengeName` = ?, `EventID` = ?, `StartTime` = ?, `Status` = ?, `Capacity` = ? WHERE ((`ChallengeID` = ?) AND ((? = 1 AND `ChallengeName` IS NULL) OR (`ChallengeName` = ?)) AND ((? = 1 AND `EventID` IS NULL) OR (`EventID` = ?)) AND ((? = 1 AND `StartTime` IS NULL) OR (`StartTime` = ?)) AND ((? = 1 AND `Status` IS NULL) OR (`Status` = ?)) AND ((? = 1 AND `Capacity` IS NULL) OR (`Capacity` = ?)))</value>
-  </data>
-  <metadata name="oleDbDeleteCommand2.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="oleDbDeleteCommand2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>0, 0</value>
-  </metadata>
-  <metadata name="oleDbDeleteCommand2.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <data name="oleDbDeleteCommand2.CommandText" xml:space="preserve">
-    <value>DELETE FROM `CHALLENGE` WHERE ((`ChallengeID` = ?) AND ((? = 1 AND `ChallengeName` IS NULL) OR (`ChallengeName` = ?)) AND ((? = 1 AND `EventID` IS NULL) OR (`EventID` = ?)) AND ((? = 1 AND `StartTime` IS NULL) OR (`StartTime` = ?)) AND ((? = 1 AND `Status` IS NULL) OR (`Status` = ?)) AND ((? = 1 AND `Capacity` IS NULL) OR (`Capacity` = ?)))</value>
+  <data name="oleDbSelectCommand2.CommandText" xml:space="preserve">
+    <value>SELECT CHALLENGE.ChallengeID, CHALLENGE.ChallengeName, CHALLENGE.EventID, CHALLENGE.StartTime, CHALLENGE.Status, CHALLENGE.Capacity, EVENT.EventName, EVENT.EventID AS Expr1
+FROM     (CHALLENGE INNER JOIN
+                  EVENT ON CHALLENGE.EventID = EVENT.EventID)
+ORDER BY CHALLENGE.ChallengeID</value>
   </data>
   <metadata name="daChallenge.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>330, 17</value>

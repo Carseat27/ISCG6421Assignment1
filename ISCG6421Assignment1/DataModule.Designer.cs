@@ -36,9 +36,6 @@
             this.oleDbDeleteCommand1 = new System.Data.OleDb.OleDbCommand();
             this.daArena = new System.Data.OleDb.OleDbDataAdapter();
             this.oleDbSelectCommand2 = new System.Data.OleDb.OleDbCommand();
-            this.oleDbInsertCommand2 = new System.Data.OleDb.OleDbCommand();
-            this.oleDbUpdateCommand2 = new System.Data.OleDb.OleDbCommand();
-            this.oleDbDeleteCommand2 = new System.Data.OleDb.OleDbCommand();
             this.daChallenge = new System.Data.OleDb.OleDbDataAdapter();
             this.oleDbSelectCommand3 = new System.Data.OleDb.OleDbCommand();
             this.oleDbInsertCommand3 = new System.Data.OleDb.OleDbCommand();
@@ -68,8 +65,6 @@
             // 
             this.ctnNZESL.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\"C:\\Users\\carso\\OneDrive - Unitec N" +
     "Z\\University\\2022 Semester 2\\GUI Programming\\Assignment1\\NZESL.mdb\"";
-            //uncomment code for submissions
-            //this.ctnNZESL.ConnectionString = "Provider=Microsoft.ACE.OLEBD.12.0;Data Source=\"C:\\Temp\"";
             // 
             // oleDbInsertCommand1
             // 
@@ -140,65 +135,11 @@
             // 
             // oleDbSelectCommand2
             // 
-            this.oleDbSelectCommand2.CommandText = "SELECT        ChallengeID, ChallengeName, EventID, StartTime, Status, Capacity\r\nF" +
-    "ROM            CHALLENGE\r\nORDER BY ChallengeID";
+            this.oleDbSelectCommand2.CommandText = resources.GetString("oleDbSelectCommand2.CommandText");
             this.oleDbSelectCommand2.Connection = this.ctnNZESL;
-            // 
-            // oleDbInsertCommand2
-            // 
-            this.oleDbInsertCommand2.CommandText = "INSERT INTO `CHALLENGE` (`ChallengeName`, `EventID`, `StartTime`, `Status`, `Capa" +
-    "city`) VALUES (?, ?, ?, ?, ?)";
-            this.oleDbInsertCommand2.Connection = this.ctnNZESL;
-            this.oleDbInsertCommand2.Parameters.AddRange(new System.Data.OleDb.OleDbParameter[] {
-            new System.Data.OleDb.OleDbParameter("ChallengeName", System.Data.OleDb.OleDbType.VarWChar, 0, "ChallengeName"),
-            new System.Data.OleDb.OleDbParameter("EventID", System.Data.OleDb.OleDbType.Integer, 0, "EventID"),
-            new System.Data.OleDb.OleDbParameter("StartTime", System.Data.OleDb.OleDbType.Date, 0, "StartTime"),
-            new System.Data.OleDb.OleDbParameter("Status", System.Data.OleDb.OleDbType.VarWChar, 0, "Status"),
-            new System.Data.OleDb.OleDbParameter("Capacity", System.Data.OleDb.OleDbType.Integer, 0, "Capacity")});
-            // 
-            // oleDbUpdateCommand2
-            // 
-            this.oleDbUpdateCommand2.CommandText = resources.GetString("oleDbUpdateCommand2.CommandText");
-            this.oleDbUpdateCommand2.Connection = this.ctnNZESL;
-            this.oleDbUpdateCommand2.Parameters.AddRange(new System.Data.OleDb.OleDbParameter[] {
-            new System.Data.OleDb.OleDbParameter("ChallengeName", System.Data.OleDb.OleDbType.VarWChar, 0, "ChallengeName"),
-            new System.Data.OleDb.OleDbParameter("EventID", System.Data.OleDb.OleDbType.Integer, 0, "EventID"),
-            new System.Data.OleDb.OleDbParameter("StartTime", System.Data.OleDb.OleDbType.Date, 0, "StartTime"),
-            new System.Data.OleDb.OleDbParameter("Status", System.Data.OleDb.OleDbType.VarWChar, 0, "Status"),
-            new System.Data.OleDb.OleDbParameter("Capacity", System.Data.OleDb.OleDbType.Integer, 0, "Capacity"),
-            new System.Data.OleDb.OleDbParameter("Original_ChallengeID", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "ChallengeID", System.Data.DataRowVersion.Original, null),
-            new System.Data.OleDb.OleDbParameter("IsNull_ChallengeName", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ChallengeName", System.Data.DataRowVersion.Original, true, null),
-            new System.Data.OleDb.OleDbParameter("Original_ChallengeName", System.Data.OleDb.OleDbType.VarWChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "ChallengeName", System.Data.DataRowVersion.Original, null),
-            new System.Data.OleDb.OleDbParameter("IsNull_EventID", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "EventID", System.Data.DataRowVersion.Original, true, null),
-            new System.Data.OleDb.OleDbParameter("Original_EventID", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "EventID", System.Data.DataRowVersion.Original, null),
-            new System.Data.OleDb.OleDbParameter("IsNull_StartTime", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "StartTime", System.Data.DataRowVersion.Original, true, null),
-            new System.Data.OleDb.OleDbParameter("Original_StartTime", System.Data.OleDb.OleDbType.Date, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "StartTime", System.Data.DataRowVersion.Original, null),
-            new System.Data.OleDb.OleDbParameter("IsNull_Status", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Status", System.Data.DataRowVersion.Original, true, null),
-            new System.Data.OleDb.OleDbParameter("Original_Status", System.Data.OleDb.OleDbType.VarWChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Status", System.Data.DataRowVersion.Original, null),
-            new System.Data.OleDb.OleDbParameter("IsNull_Capacity", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Capacity", System.Data.DataRowVersion.Original, true, null),
-            new System.Data.OleDb.OleDbParameter("Original_Capacity", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Capacity", System.Data.DataRowVersion.Original, null)});
-            // 
-            // oleDbDeleteCommand2
-            // 
-            this.oleDbDeleteCommand2.CommandText = resources.GetString("oleDbDeleteCommand2.CommandText");
-            this.oleDbDeleteCommand2.Connection = this.ctnNZESL;
-            this.oleDbDeleteCommand2.Parameters.AddRange(new System.Data.OleDb.OleDbParameter[] {
-            new System.Data.OleDb.OleDbParameter("Original_ChallengeID", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "ChallengeID", System.Data.DataRowVersion.Original, null),
-            new System.Data.OleDb.OleDbParameter("IsNull_ChallengeName", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ChallengeName", System.Data.DataRowVersion.Original, true, null),
-            new System.Data.OleDb.OleDbParameter("Original_ChallengeName", System.Data.OleDb.OleDbType.VarWChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "ChallengeName", System.Data.DataRowVersion.Original, null),
-            new System.Data.OleDb.OleDbParameter("IsNull_EventID", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "EventID", System.Data.DataRowVersion.Original, true, null),
-            new System.Data.OleDb.OleDbParameter("Original_EventID", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "EventID", System.Data.DataRowVersion.Original, null),
-            new System.Data.OleDb.OleDbParameter("IsNull_StartTime", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "StartTime", System.Data.DataRowVersion.Original, true, null),
-            new System.Data.OleDb.OleDbParameter("Original_StartTime", System.Data.OleDb.OleDbType.Date, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "StartTime", System.Data.DataRowVersion.Original, null),
-            new System.Data.OleDb.OleDbParameter("IsNull_Status", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Status", System.Data.DataRowVersion.Original, true, null),
-            new System.Data.OleDb.OleDbParameter("Original_Status", System.Data.OleDb.OleDbType.VarWChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Status", System.Data.DataRowVersion.Original, null),
-            new System.Data.OleDb.OleDbParameter("IsNull_Capacity", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Capacity", System.Data.DataRowVersion.Original, true, null),
-            new System.Data.OleDb.OleDbParameter("Original_Capacity", System.Data.OleDb.OleDbType.Integer, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Capacity", System.Data.DataRowVersion.Original, null)});
             // 
             // daChallenge
             // 
-            this.daChallenge.DeleteCommand = this.oleDbDeleteCommand2;
-            this.daChallenge.InsertCommand = this.oleDbInsertCommand2;
             this.daChallenge.SelectCommand = this.oleDbSelectCommand2;
             this.daChallenge.TableMappings.AddRange(new System.Data.Common.DataTableMapping[] {
             new System.Data.Common.DataTableMapping("Table", "CHALLENGE", new System.Data.Common.DataColumnMapping[] {
@@ -207,8 +148,9 @@
                         new System.Data.Common.DataColumnMapping("EventID", "EventID"),
                         new System.Data.Common.DataColumnMapping("StartTime", "StartTime"),
                         new System.Data.Common.DataColumnMapping("Status", "Status"),
-                        new System.Data.Common.DataColumnMapping("Capacity", "Capacity")})});
-            this.daChallenge.UpdateCommand = this.oleDbUpdateCommand2;
+                        new System.Data.Common.DataColumnMapping("Capacity", "Capacity"),
+                        new System.Data.Common.DataColumnMapping("EventName", "EventName"),
+                        new System.Data.Common.DataColumnMapping("Expr1", "Expr1")})});
             // 
             // oleDbSelectCommand3
             // 
@@ -437,9 +379,6 @@
         private System.Data.OleDb.OleDbCommand oleDbDeleteCommand1;
         private System.Data.OleDb.OleDbDataAdapter daArena;
         private System.Data.OleDb.OleDbCommand oleDbSelectCommand2;
-        private System.Data.OleDb.OleDbCommand oleDbInsertCommand2;
-        private System.Data.OleDb.OleDbCommand oleDbUpdateCommand2;
-        private System.Data.OleDb.OleDbCommand oleDbDeleteCommand2;
         private System.Data.OleDb.OleDbDataAdapter daChallenge;
         private System.Data.OleDb.OleDbCommand oleDbSelectCommand3;
         private System.Data.OleDb.OleDbCommand oleDbInsertCommand3;
