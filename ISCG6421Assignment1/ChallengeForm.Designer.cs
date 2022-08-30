@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.btnReturn = new System.Windows.Forms.Button();
-            this.btnDeleteArena = new System.Windows.Forms.Button();
-            this.btnUpdateArena = new System.Windows.Forms.Button();
-            this.btnAddArena = new System.Windows.Forms.Button();
+            this.btnDeleteChallenge = new System.Windows.Forms.Button();
+            this.btnUpdateChallenge = new System.Windows.Forms.Button();
+            this.btnAddChallenge = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
             this.btnPrevious = new System.Windows.Forms.Button();
             this.btnMarkFinished = new System.Windows.Forms.Button();
@@ -51,55 +51,70 @@
             this.txtStartTime = new System.Windows.Forms.TextBox();
             this.txtStatus = new System.Windows.Forms.TextBox();
             this.txtCapacity = new System.Windows.Forms.TextBox();
+            this.pnlAdd = new System.Windows.Forms.Panel();
+            this.numCapacity = new System.Windows.Forms.NumericUpDown();
+            this.timePicker = new System.Windows.Forms.DateTimePicker();
+            this.cmbEventName = new System.Windows.Forms.ComboBox();
+            this.cmbEventID = new System.Windows.Forms.ComboBox();
+            this.lblAddChallenge = new System.Windows.Forms.Label();
+            this.btnChallengeSave = new System.Windows.Forms.Button();
+            this.btnAddCancel = new System.Windows.Forms.Button();
+            this.txtChallengeNameAdd = new System.Windows.Forms.TextBox();
+            this.lblCapacityAdd = new System.Windows.Forms.Label();
+            this.lblStartTimeAdd = new System.Windows.Forms.Label();
+            this.lblEventAdd = new System.Windows.Forms.Label();
+            this.lblChallengeNameAdd = new System.Windows.Forms.Label();
+            this.pnlAdd.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numCapacity)).BeginInit();
             this.SuspendLayout();
             // 
             // btnReturn
             // 
             this.btnReturn.BackColor = System.Drawing.SystemColors.Control;
             this.btnReturn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReturn.Location = new System.Drawing.Point(633, 415);
+            this.btnReturn.Location = new System.Drawing.Point(605, 415);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(102, 23);
+            this.btnReturn.Size = new System.Drawing.Size(130, 23);
             this.btnReturn.TabIndex = 24;
             this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
-            // btnDeleteArena
+            // btnDeleteChallenge
             // 
-            this.btnDeleteArena.BackColor = System.Drawing.SystemColors.Control;
-            this.btnDeleteArena.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteArena.Location = new System.Drawing.Point(633, 374);
-            this.btnDeleteArena.Name = "btnDeleteArena";
-            this.btnDeleteArena.Size = new System.Drawing.Size(102, 23);
-            this.btnDeleteArena.TabIndex = 23;
-            this.btnDeleteArena.Text = "Delete Arena";
-            this.btnDeleteArena.UseVisualStyleBackColor = false;
-            this.btnDeleteArena.Click += new System.EventHandler(this.btnDeleteArena_Click);
+            this.btnDeleteChallenge.BackColor = System.Drawing.SystemColors.Control;
+            this.btnDeleteChallenge.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteChallenge.Location = new System.Drawing.Point(605, 374);
+            this.btnDeleteChallenge.Name = "btnDeleteChallenge";
+            this.btnDeleteChallenge.Size = new System.Drawing.Size(130, 23);
+            this.btnDeleteChallenge.TabIndex = 23;
+            this.btnDeleteChallenge.Text = "Delete Challenge";
+            this.btnDeleteChallenge.UseVisualStyleBackColor = false;
+            this.btnDeleteChallenge.Click += new System.EventHandler(this.btnDeleteChallenge_Click);
             // 
-            // btnUpdateArena
+            // btnUpdateChallenge
             // 
-            this.btnUpdateArena.BackColor = System.Drawing.SystemColors.Control;
-            this.btnUpdateArena.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateArena.Location = new System.Drawing.Point(487, 374);
-            this.btnUpdateArena.Name = "btnUpdateArena";
-            this.btnUpdateArena.Size = new System.Drawing.Size(102, 23);
-            this.btnUpdateArena.TabIndex = 22;
-            this.btnUpdateArena.Text = "Update Arena";
-            this.btnUpdateArena.UseVisualStyleBackColor = false;
-            this.btnUpdateArena.Click += new System.EventHandler(this.btnUpdateArena_Click);
+            this.btnUpdateChallenge.BackColor = System.Drawing.SystemColors.Control;
+            this.btnUpdateChallenge.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateChallenge.Location = new System.Drawing.Point(448, 374);
+            this.btnUpdateChallenge.Name = "btnUpdateChallenge";
+            this.btnUpdateChallenge.Size = new System.Drawing.Size(141, 23);
+            this.btnUpdateChallenge.TabIndex = 22;
+            this.btnUpdateChallenge.Text = "Update Challenge";
+            this.btnUpdateChallenge.UseVisualStyleBackColor = false;
+            this.btnUpdateChallenge.Click += new System.EventHandler(this.btnUpdateChallenge_Click);
             // 
-            // btnAddArena
+            // btnAddChallenge
             // 
-            this.btnAddArena.BackColor = System.Drawing.SystemColors.Control;
-            this.btnAddArena.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddArena.Location = new System.Drawing.Point(346, 374);
-            this.btnAddArena.Name = "btnAddArena";
-            this.btnAddArena.Size = new System.Drawing.Size(102, 23);
-            this.btnAddArena.TabIndex = 21;
-            this.btnAddArena.Text = "Add Arena";
-            this.btnAddArena.UseVisualStyleBackColor = false;
-            this.btnAddArena.Click += new System.EventHandler(this.btnAddArena_Click);
+            this.btnAddChallenge.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAddChallenge.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddChallenge.Location = new System.Drawing.Point(301, 374);
+            this.btnAddChallenge.Name = "btnAddChallenge";
+            this.btnAddChallenge.Size = new System.Drawing.Size(141, 23);
+            this.btnAddChallenge.TabIndex = 21;
+            this.btnAddChallenge.Text = "Add Challenge";
+            this.btnAddChallenge.UseVisualStyleBackColor = false;
+            this.btnAddChallenge.Click += new System.EventHandler(this.btnAddChallenge_Click);
             // 
             // btnNext
             // 
@@ -141,9 +156,9 @@
             // 
             this.btnMarkCompleted.BackColor = System.Drawing.SystemColors.Control;
             this.btnMarkCompleted.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMarkCompleted.Location = new System.Drawing.Point(346, 415);
+            this.btnMarkCompleted.Location = new System.Drawing.Point(301, 415);
             this.btnMarkCompleted.Name = "btnMarkCompleted";
-            this.btnMarkCompleted.Size = new System.Drawing.Size(243, 23);
+            this.btnMarkCompleted.Size = new System.Drawing.Size(288, 23);
             this.btnMarkCompleted.TabIndex = 26;
             this.btnMarkCompleted.Text = "Mark Challenge as Completed";
             this.btnMarkCompleted.UseVisualStyleBackColor = false;
@@ -320,11 +335,171 @@
             this.txtCapacity.TabIndex = 41;
             this.txtCapacity.Text = "Capacity";
             // 
+            // pnlAdd
+            // 
+            this.pnlAdd.Controls.Add(this.numCapacity);
+            this.pnlAdd.Controls.Add(this.timePicker);
+            this.pnlAdd.Controls.Add(this.cmbEventName);
+            this.pnlAdd.Controls.Add(this.cmbEventID);
+            this.pnlAdd.Controls.Add(this.lblAddChallenge);
+            this.pnlAdd.Controls.Add(this.btnChallengeSave);
+            this.pnlAdd.Controls.Add(this.btnAddCancel);
+            this.pnlAdd.Controls.Add(this.txtChallengeNameAdd);
+            this.pnlAdd.Controls.Add(this.lblCapacityAdd);
+            this.pnlAdd.Controls.Add(this.lblStartTimeAdd);
+            this.pnlAdd.Controls.Add(this.lblEventAdd);
+            this.pnlAdd.Controls.Add(this.lblChallengeNameAdd);
+            this.pnlAdd.Location = new System.Drawing.Point(60, 27);
+            this.pnlAdd.Name = "pnlAdd";
+            this.pnlAdd.Size = new System.Drawing.Size(684, 341);
+            this.pnlAdd.TabIndex = 42;
+            this.pnlAdd.Visible = false;
+            // 
+            // numCapacity
+            // 
+            this.numCapacity.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numCapacity.Location = new System.Drawing.Point(365, 243);
+            this.numCapacity.Name = "numCapacity";
+            this.numCapacity.Size = new System.Drawing.Size(120, 23);
+            this.numCapacity.TabIndex = 37;
+            this.numCapacity.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // timePicker
+            // 
+            this.timePicker.CustomFormat = "HH:mm";
+            this.timePicker.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.timePicker.Location = new System.Drawing.Point(365, 176);
+            this.timePicker.Name = "timePicker";
+            this.timePicker.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.timePicker.ShowUpDown = true;
+            this.timePicker.Size = new System.Drawing.Size(120, 23);
+            this.timePicker.TabIndex = 36;
+            this.timePicker.Value = new System.DateTime(2022, 8, 30, 0, 0, 0, 0);
+            // 
+            // cmbEventName
+            // 
+            this.cmbEventName.Enabled = false;
+            this.cmbEventName.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbEventName.FormattingEnabled = true;
+            this.cmbEventName.Location = new System.Drawing.Point(427, 116);
+            this.cmbEventName.Name = "cmbEventName";
+            this.cmbEventName.Size = new System.Drawing.Size(129, 25);
+            this.cmbEventName.TabIndex = 35;
+            // 
+            // cmbEventID
+            // 
+            this.cmbEventID.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbEventID.FormattingEnabled = true;
+            this.cmbEventID.Location = new System.Drawing.Point(365, 116);
+            this.cmbEventID.Name = "cmbEventID";
+            this.cmbEventID.Size = new System.Drawing.Size(56, 25);
+            this.cmbEventID.TabIndex = 34;
+            // 
+            // lblAddChallenge
+            // 
+            this.lblAddChallenge.AutoSize = true;
+            this.lblAddChallenge.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddChallenge.ForeColor = System.Drawing.Color.White;
+            this.lblAddChallenge.Location = new System.Drawing.Point(46, 60);
+            this.lblAddChallenge.Name = "lblAddChallenge";
+            this.lblAddChallenge.Size = new System.Drawing.Size(151, 22);
+            this.lblAddChallenge.TabIndex = 33;
+            this.lblAddChallenge.Text = "Add Challenge";
+            this.lblAddChallenge.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // btnChallengeSave
+            // 
+            this.btnChallengeSave.BackColor = System.Drawing.SystemColors.Control;
+            this.btnChallengeSave.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChallengeSave.Location = new System.Drawing.Point(50, 104);
+            this.btnChallengeSave.Name = "btnChallengeSave";
+            this.btnChallengeSave.Size = new System.Drawing.Size(139, 56);
+            this.btnChallengeSave.TabIndex = 32;
+            this.btnChallengeSave.Text = "Save Challenge";
+            this.btnChallengeSave.UseVisualStyleBackColor = false;
+            this.btnChallengeSave.Click += new System.EventHandler(this.btnChallengeSave_Click);
+            // 
+            // btnAddCancel
+            // 
+            this.btnAddCancel.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAddCancel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddCancel.Location = new System.Drawing.Point(50, 209);
+            this.btnAddCancel.Name = "btnAddCancel";
+            this.btnAddCancel.Size = new System.Drawing.Size(139, 56);
+            this.btnAddCancel.TabIndex = 31;
+            this.btnAddCancel.Text = "Cancel";
+            this.btnAddCancel.UseVisualStyleBackColor = false;
+            this.btnAddCancel.Click += new System.EventHandler(this.btnAddCancel_Click);
+            // 
+            // txtChallengeNameAdd
+            // 
+            this.txtChallengeNameAdd.AcceptsTab = true;
+            this.txtChallengeNameAdd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtChallengeNameAdd.Location = new System.Drawing.Point(365, 65);
+            this.txtChallengeNameAdd.Name = "txtChallengeNameAdd";
+            this.txtChallengeNameAdd.Size = new System.Drawing.Size(191, 23);
+            this.txtChallengeNameAdd.TabIndex = 26;
+            this.txtChallengeNameAdd.Text = "Name";
+            // 
+            // lblCapacityAdd
+            // 
+            this.lblCapacityAdd.AutoSize = true;
+            this.lblCapacityAdd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCapacityAdd.ForeColor = System.Drawing.Color.White;
+            this.lblCapacityAdd.Location = new System.Drawing.Point(279, 245);
+            this.lblCapacityAdd.Name = "lblCapacityAdd";
+            this.lblCapacityAdd.Size = new System.Drawing.Size(72, 17);
+            this.lblCapacityAdd.TabIndex = 24;
+            this.lblCapacityAdd.Text = "Capacity:";
+            this.lblCapacityAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblStartTimeAdd
+            // 
+            this.lblStartTimeAdd.AutoSize = true;
+            this.lblStartTimeAdd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStartTimeAdd.ForeColor = System.Drawing.Color.White;
+            this.lblStartTimeAdd.Location = new System.Drawing.Point(277, 181);
+            this.lblStartTimeAdd.Name = "lblStartTimeAdd";
+            this.lblStartTimeAdd.Size = new System.Drawing.Size(74, 17);
+            this.lblStartTimeAdd.TabIndex = 23;
+            this.lblStartTimeAdd.Text = "Start Time:";
+            this.lblStartTimeAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblEventAdd
+            // 
+            this.lblEventAdd.AutoSize = true;
+            this.lblEventAdd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEventAdd.ForeColor = System.Drawing.Color.White;
+            this.lblEventAdd.Location = new System.Drawing.Point(303, 121);
+            this.lblEventAdd.Name = "lblEventAdd";
+            this.lblEventAdd.Size = new System.Drawing.Size(48, 17);
+            this.lblEventAdd.TabIndex = 22;
+            this.lblEventAdd.Text = "Event:";
+            this.lblEventAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblChallengeNameAdd
+            // 
+            this.lblChallengeNameAdd.AutoSize = true;
+            this.lblChallengeNameAdd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChallengeNameAdd.ForeColor = System.Drawing.Color.White;
+            this.lblChallengeNameAdd.Location = new System.Drawing.Point(228, 65);
+            this.lblChallengeNameAdd.Name = "lblChallengeNameAdd";
+            this.lblChallengeNameAdd.Size = new System.Drawing.Size(123, 17);
+            this.lblChallengeNameAdd.TabIndex = 21;
+            this.lblChallengeNameAdd.Text = "Challenge Name:";
+            this.lblChallengeNameAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // ChallengeForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(799, 450);
+            this.Controls.Add(this.pnlAdd);
             this.Controls.Add(this.txtCapacity);
             this.Controls.Add(this.txtStatus);
             this.Controls.Add(this.txtStartTime);
@@ -343,9 +518,9 @@
             this.Controls.Add(this.btnMarkCompleted);
             this.Controls.Add(this.btnMarkFinished);
             this.Controls.Add(this.btnReturn);
-            this.Controls.Add(this.btnDeleteArena);
-            this.Controls.Add(this.btnUpdateArena);
-            this.Controls.Add(this.btnAddArena);
+            this.Controls.Add(this.btnDeleteChallenge);
+            this.Controls.Add(this.btnUpdateChallenge);
+            this.Controls.Add(this.btnAddChallenge);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnPrevious);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -354,6 +529,9 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Challenge Maintenance";
+            this.pnlAdd.ResumeLayout(false);
+            this.pnlAdd.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numCapacity)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -362,9 +540,9 @@
         #endregion
 
         private System.Windows.Forms.Button btnReturn;
-        private System.Windows.Forms.Button btnDeleteArena;
-        private System.Windows.Forms.Button btnUpdateArena;
-        private System.Windows.Forms.Button btnAddArena;
+        private System.Windows.Forms.Button btnDeleteChallenge;
+        private System.Windows.Forms.Button btnUpdateChallenge;
+        private System.Windows.Forms.Button btnAddChallenge;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Button btnPrevious;
         private System.Windows.Forms.Button btnMarkFinished;
@@ -384,5 +562,18 @@
         private System.Windows.Forms.TextBox txtStartTime;
         private System.Windows.Forms.TextBox txtStatus;
         private System.Windows.Forms.TextBox txtCapacity;
+        private System.Windows.Forms.Panel pnlAdd;
+        private System.Windows.Forms.ComboBox cmbEventName;
+        private System.Windows.Forms.ComboBox cmbEventID;
+        private System.Windows.Forms.Label lblAddChallenge;
+        private System.Windows.Forms.Button btnChallengeSave;
+        private System.Windows.Forms.Button btnAddCancel;
+        private System.Windows.Forms.TextBox txtChallengeNameAdd;
+        private System.Windows.Forms.Label lblCapacityAdd;
+        private System.Windows.Forms.Label lblStartTimeAdd;
+        private System.Windows.Forms.Label lblEventAdd;
+        private System.Windows.Forms.Label lblChallengeNameAdd;
+        private System.Windows.Forms.DateTimePicker timePicker;
+        private System.Windows.Forms.NumericUpDown numCapacity;
     }
 }

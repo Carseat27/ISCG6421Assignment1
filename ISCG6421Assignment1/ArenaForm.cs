@@ -61,7 +61,7 @@ namespace ISCG6421Assignment1
         }
 
         /// <summary>
-        /// this section contains fucntions to hide and show the control buttons
+        /// this section contains functions to hide and show the control buttons
         /// </summary>
         private void disableButtons()
         {
