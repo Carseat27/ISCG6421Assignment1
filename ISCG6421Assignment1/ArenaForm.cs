@@ -137,6 +137,7 @@ namespace ISCG6421Assignment1
                 DM.dtArena.Rows.Add(newArenaRow);
                 MessageBox.Show("Arena added successfully", "Success");
                 DM.UpdateArena();
+                pnlAdd.Visible = false;
             }
         }
 
