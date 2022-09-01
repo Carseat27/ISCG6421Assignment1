@@ -53,7 +53,7 @@ namespace ISCG6421Assignment1
             int newID = 0;
             OleDbCommand idCMD = new OleDbCommand("SELECT @@IDENTITY", ctnNZESL);
 
-            if(e.StatementType == StatementType.Insert)
+            if (e.StatementType == StatementType.Insert)
             {
                 newID = (int)idCMD.ExecuteScalar();
                 e.Row["ArenaID"] = newID;
@@ -64,9 +64,9 @@ namespace ISCG6421Assignment1
         {
             int newID = 0;
             OleDbCommand idCMD = new OleDbCommand("SELECT @@IDENTITY", ctnNZESL);
-            if(e.StatementType == StatementType.Insert)
+            if (e.StatementType == StatementType.Insert)
             {
-                newID= (int)idCMD.ExecuteScalar();
+                newID = (int)idCMD.ExecuteScalar();
                 e.Row["ChallengeID"] = newID;
             }
         }

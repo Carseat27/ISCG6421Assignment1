@@ -90,10 +90,10 @@
     <Compile Include="DataModule.Designer.cs">
       <DependentUpon>DataModule.cs</DependentUpon>
     </Compile>
-    <Compile Include="DsNZESL.Designer.cs">
+    <Compile Include="DSNZESL.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DsNZESL.xsd</DependentUpon>
+      <DependentUpon>DSNZESL.xsd</DependentUpon>
     </Compile>
     <Compile Include="EventForm.cs">
       <SubType>Form</SubType>
@@ -151,16 +151,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="DsNZESL.xsc">
-      <DependentUpon>DsNZESL.xsd</DependentUpon>
+    <None Include="DSNZESL.xsc">
+      <DependentUpon>DSNZESL.xsd</DependentUpon>
     </None>
-    <None Include="DsNZESL.xsd">
+    <None Include="DSNZESL.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DsNZESL.Designer.cs</LastGenOutput>
+      <LastGenOutput>DSNZESL.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="DsNZESL.xss">
-      <DependentUpon>DsNZESL.xsd</DependentUpon>
+    <None Include="DSNZESL.xss">
+      <DependentUpon>DSNZESL.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
