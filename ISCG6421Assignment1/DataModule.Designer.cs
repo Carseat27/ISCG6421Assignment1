@@ -280,6 +280,7 @@
                         new System.Data.Common.DataColumnMapping("EmailAddress", "EmailAddress"),
                         new System.Data.Common.DataColumnMapping("FirstName", "FirstName")})});
             this.daCompetitor.UpdateCommand = this.oleDbUpdateCommand3;
+            this.daCompetitor.RowUpdated += new System.Data.OleDb.OleDbRowUpdatedEventHandler(this.daCompetitor_RowUpdated);
             // 
             // oleDbSelectCommand4
             // 
@@ -412,9 +413,10 @@
             // 
             // DataModule
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(262, 182);
+            this.ClientSize = new System.Drawing.Size(196, 148);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "DataModule";
             this.Text = "DataModule";
             ((System.ComponentModel.ISupportInitialize)(this.dsNZESL)).EndInit();
