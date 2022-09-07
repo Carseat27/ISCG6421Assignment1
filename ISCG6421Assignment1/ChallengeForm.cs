@@ -10,6 +10,7 @@ namespace ISCG6421Assignment1
         private DataModule DM;
         private MainForm frmMenu;
         private CurrencyManager currencyManager;
+        private DateTime currentTimeUpdate;
         public ChallengeForm(DataModule dm, MainForm mnu)
         {
             InitializeComponent();
@@ -53,10 +54,12 @@ namespace ISCG6421Assignment1
             }
             else
             {
-                if (MessageBox.Show("Are you sure to delete the selected record?\nIt is currently: " + txtChallengeName.Text, "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                if (MessageBox.Show("Are you sure to delete the selected record?\n\nIt is currently: " + txtChallengeName.Text, "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
                     deleteChallengeRow.Delete();
                     DM.UpdateChallenge();
+
+                    MessageBox.Show("Challenge deleted successfully", "Success");
                 }
             }
         }
@@ -77,6 +80,9 @@ namespace ISCG6421Assignment1
             int.TryParse(txtCapacity.Text, out int result);
             numCapacityUpdate.Value = result;
             cmbStatusUpdate.Text = txtStatus.Text;
+
+            //get time
+            currentTimeUpdate = timePickerUpdate.Value;
         }
 
         private void btnAddChallenge_Click(object sender, EventArgs e)
@@ -109,6 +115,7 @@ namespace ISCG6421Assignment1
             }
         }
 
+        //sets the selected challenge to "Finished" provided that the condidtions are met
         private void btnMarkFinished_Click(object sender, EventArgs e)
         {
             DataRow updateChallengeRow = DM.dtChallenge.Rows[currencyManager.Position];
@@ -125,6 +132,7 @@ namespace ISCG6421Assignment1
             }
         }
 
+        //sets the selected challenge to "Completed" provided that the condidtions are met
         private void btnMarkCompleted_Click(object sender, EventArgs e)
         {
             DataRow updateChallengeRow = DM.dtChallenge.Rows[currencyManager.Position];
@@ -179,6 +187,7 @@ namespace ISCG6421Assignment1
 
         private void btnChallengeSave_Click(object sender, EventArgs e)
         {
+            //ensures that no options are left blank and adds the challenge with a new id
             txtChallengeID.Text = "";
             DataRow newChallengeRow = DM.dtChallenge.NewRow();
 
@@ -191,7 +200,7 @@ namespace ISCG6421Assignment1
                 newChallengeRow["ChallengeName"] = txtChallengeNameAdd.Text;
                 newChallengeRow["EventID"] = cmbEventID.Text;
                 newChallengeRow["StartTime"] = timePicker.Text;
-                newChallengeRow["Status"] = "Scheduled";
+                newChallengeRow["Status"] = cmbStatusAdd.Text;
                 newChallengeRow["Capacity"] = numCapacity.Value;
                 DM.dtChallenge.Rows.Add(newChallengeRow);
                 MessageBox.Show("Challenge added successfully", "Success");
@@ -201,8 +210,10 @@ namespace ISCG6421Assignment1
             }
         }
 
+        
         private void btnChallengeUpdate_Click(object sender, EventArgs e)
         {
+            //ensures that no options are left blank and updates the relevant challenge
             DataRow UpdateChallengeRow = DM.dtChallenge.Rows[currencyManager.Position];
             if ((txtChallengeNameUpdate.Text == "") || (timePickerUpdate.Text == "") || (numCapacityUpdate.Value == 0))
             {
@@ -214,11 +225,17 @@ namespace ISCG6421Assignment1
                 UpdateChallengeRow["StartTime"] = timePickerUpdate.Text;
                 UpdateChallengeRow["Capacity"] = numCapacityUpdate.Value;
                 UpdateChallengeRow["Status"] = cmbStatusUpdate.Text;
+                currencyManager.EndCurrentEdit();
+                DM.UpdateChallenge();
+                MessageBox.Show("Challenge Updated Successfully", "Success");
+                pnlUpdate.Visible = false;
+                enableButtons();
             }
         }
 
         private void btnUpdateCancel_Click(object sender, EventArgs e)
         {
+            //ensure extra panels are not visible
             pnlUpdate.Visible = false;
             pnlAdd.Visible = false;
 
@@ -226,18 +243,10 @@ namespace ISCG6421Assignment1
             enableButtons();
         }
 
+        //this fills the event combo boxes on the add challenge screen and
+        //ensures that they match.
         private void fillCmb()
         {
-            //OleDbCommand cmd = new OleDbCommand("SELECT EventID, EventName FROM EVENT", DM.ctnNZESL);
-            //OleDbDataAdapter da = new OleDbDataAdapter(cmd);
-            //DataTable dt = new DataTable();
-            //da.Fill(dt);
-
-            //foreach (DataRow row in dt.Rows)
-            //{
-            //    cmbEventID.Items.Add(row["EventID"]);
-            //}
-            //cmbEventID.Text = "select";
             cmbEventID.DataSource = DM.dsNZESL;
             cmbEventID.DisplayMember = "EVENT.EventID";
             cmbEventID.ValueMember = "EVENT.EventID";
@@ -250,6 +259,41 @@ namespace ISCG6421Assignment1
         private void cmbEventID_SelectedIndexChanged(object sender, EventArgs e)
         {
             cmbEventName.SelectedValue = cmbEventID.SelectedValue;
+        }
+
+        private void timePickerUpdate_ValueChanged(object sender, EventArgs e)
+        {
+            //haven't been able to get this to work properly
+
+            //Console.WriteLine("HIE!");
+            //Console.WriteLine(e.GetType());
+            //PropertyValueChangedEventArgs args = (PropertyValueChangedEventArgs)e;
+
+            //if ((DateTime)args.OldValue > timePickerUpdate.Value)
+            //{
+            //    timePickerUpdate.Value.AddMinutes(15);
+            //}
+            //else {
+            //    timePickerUpdate.Value.AddMinutes(-15);
+            //}
+            
+            //if ((currentTimeUpdate.Minute < timePickerUpdate.Value.Minute))
+            //{
+            //    timePickerUpdate.Value = currentTimeUpdate.AddMinutes(15);
+            //    currentTimeUpdate = timePickerUpdate.Value;
+            //}
+            //else if ((currentTimeUpdate.Minute == 45))
+            //{
+            //    timePickerUpdate.Value = currentTimeUpdate.AddMinutes(15);
+            //    currentTimeUpdate = timePickerUpdate.Value;
+            //}
+            //else if ((currentTimeUpdate.Minute > timePickerUpdate.Value.Minute))
+            //{
+            //    timePickerUpdate.Value = currentTimeUpdate.AddMinutes(-15);
+            //    //Console.WriteLine("False"); 
+            //    currentTimeUpdate = timePickerUpdate.Value;
+            //}
+            //else { currentTimeUpdate = timePickerUpdate.Value; }
         }
     }
 }

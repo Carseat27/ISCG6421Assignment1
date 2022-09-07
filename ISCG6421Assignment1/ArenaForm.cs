@@ -56,7 +56,6 @@ namespace ISCG6421Assignment1
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
-            pnlAdd.Visible = false;
             Close();
         }
 
@@ -227,10 +226,11 @@ namespace ISCG6421Assignment1
             }
             else
             {
-                if (MessageBox.Show("Are you sure you want to delete the selected record?\nIt is currently: " + txtArenaName.Text, "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                if (MessageBox.Show("Are you sure you want to delete the selected record?\n\nIt is currently: " + txtArenaName.Text, "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
                     deleteArenaRow.Delete();
                     DM.UpdateArena();
+                    MessageBox.Show("Arena deleted successfully", "Success");
                 }
             }
         }

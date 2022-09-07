@@ -508,6 +508,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ControlBox = false;
             this.Controls.Add(this.pnlUpdate);
             this.Controls.Add(this.pnlAdd);
             this.Controls.Add(this.btnReturn);
