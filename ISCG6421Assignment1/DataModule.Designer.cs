@@ -336,8 +336,7 @@
             // 
             // oleDbSelectCommand5
             // 
-            this.oleDbSelectCommand5.CommandText = "SELECT EventID, EventName, ArenaID, Status, Capacity, EventDate\r\nFROM     EVENT\r\n" +
-    "ORDER BY EventID";
+            this.oleDbSelectCommand5.CommandText = resources.GetString("oleDbSelectCommand5.CommandText");
             this.oleDbSelectCommand5.Connection = this.ctnNZESL;
             // 
             // oleDbInsertCommand5
@@ -413,10 +412,10 @@
             // 
             // DataModule
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(196, 148);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ClientSize = new System.Drawing.Size(261, 182);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "DataModule";
             this.Text = "DataModule";
             ((System.ComponentModel.ISupportInitialize)(this.dsNZESL)).EndInit();

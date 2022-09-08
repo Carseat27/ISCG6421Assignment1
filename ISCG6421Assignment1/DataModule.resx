@@ -308,6 +308,12 @@ FROM     (CHALLENGE INNER JOIN
   <metadata name="oleDbSelectCommand5.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
+  <data name="oleDbSelectCommand5.CommandText" xml:space="preserve">
+    <value>SELECT EVENT.EventID, EVENT.EventName, EVENT.ArenaID, EVENT.Status, EVENT.Capacity, EVENT.EventDate, ARENA.ArenaName
+FROM     (EVENT INNER JOIN
+                  ARENA ON ARENA.ArenaID = EVENT.ArenaID)
+ORDER BY EVENT.EventID</value>
+  </data>
   <metadata name="oleDbInsertCommand5.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
