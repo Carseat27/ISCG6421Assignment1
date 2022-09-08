@@ -37,7 +37,6 @@ namespace ISCG6421Assignment1
         /// <param name="e"></param>
         public static int Movement(int step, object sender, EventArgs e)
         {
-            Console.WriteLine(step);
             if (step != 0)
             {
                 frmMenu.On_Move(sender, e);
