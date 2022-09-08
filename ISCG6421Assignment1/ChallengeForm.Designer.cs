@@ -448,7 +448,6 @@ namespace ISCG6421Assignment1
             this.cmbEventID.Name = "cmbEventID";
             this.cmbEventID.Size = new System.Drawing.Size(56, 29);
             this.cmbEventID.TabIndex = 34;
-            this.cmbEventID.SelectedIndexChanged += new System.EventHandler(this.cmbEventID_SelectedIndexChanged);
             // 
             // lblAddChallenge
             // 

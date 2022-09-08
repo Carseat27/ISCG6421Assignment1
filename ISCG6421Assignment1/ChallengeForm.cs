@@ -237,11 +237,6 @@ namespace ISCG6421Assignment1
             cmbEventName.DisplayMember = "EVENT.EventName";
         }
 
-        private void cmbEventID_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            cmbEventName.SelectedValue = cmbEventID.SelectedValue;
-        }
-
         private void timePickerUpdate_ValueChanged(object sender, EventArgs e)
         {
             //haven't been able to get this to work properly
