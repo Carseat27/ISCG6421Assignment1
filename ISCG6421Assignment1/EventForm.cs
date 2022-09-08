@@ -61,5 +61,49 @@ namespace ISCG6421Assignment1
                 ++currencyManager.Position;
             }
         }
+
+        private void btnAddEvent_Click(object sender, EventArgs e)
+        {
+            //show panel
+            pnlAdd.Visible = true;
+            //disable buttons
+            Utilities.ButtonsMagic(controls, false);
+            //set inputs to defaults
+            txtEventNameAdd.Text = "";
+            numEventCapacityAdd.Value = 0;
+            cmbEventStatusAdd.SelectedIndex = 0;
+            //fill arena info
+            fillArenaInfo();
+            //configure datepicker
+            DatePickerAdd.MaxDate = DateTime.Now.AddYears(5);
+            DatePickerAdd.MinDate = DateTime.Now;
+            DatePickerAdd.Value = DateTime.Now;
+        }
+
+        private void btnEventSave_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddCancel_Click(object sender, EventArgs e)
+        {
+            //hide panel
+            pnlAdd.Visible = false;
+            //enable buttons
+            Utilities.ButtonsMagic(controls, true);
+        }
+
+        //this fills the arena combo boxes on the add challenge screen and
+        //ensures that they match.
+        private void fillArenaInfo()
+        {
+            cmbArenaID.DataSource = DM.dsNZESL;
+            cmbArenaID.DisplayMember = "Arena.ArenaID";
+            cmbArenaID.ValueMember = "Arena.ArenaID";
+
+            cmbArenaName.DataSource = DM.dsNZESL;
+            cmbArenaName.DisplayMember = "Arena.ArenaName";
+            cmbArenaName.ValueMember = "Arena.ArenaID";
+        }
     }
 }
