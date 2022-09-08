@@ -25,6 +25,7 @@ namespace ISCG6421Assignment1
         public MainForm()
         {
             InitializeComponent();
+            Utilities.frmMenu = this;
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -103,6 +104,16 @@ namespace ISCG6421Assignment1
         private void btbDbConnect_Click(object sender, EventArgs e)
         {
 
+        }
+        
+        /// <summary>
+        /// this method causes the MainForm to move to the same location each time a child form is moved.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void On_Move(object sender, EventArgs e)
+        {
+            this.Location = new Point(((Form)sender).Location.X, ((Form)sender).Location.Y);
         }
     }
 }

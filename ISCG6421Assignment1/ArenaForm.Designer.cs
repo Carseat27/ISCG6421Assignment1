@@ -73,10 +73,10 @@
             // 
             this.lstArenas.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstArenas.FormattingEnabled = true;
-            this.lstArenas.ItemHeight = 17;
+            this.lstArenas.ItemHeight = 21;
             this.lstArenas.Location = new System.Drawing.Point(60, 39);
             this.lstArenas.Name = "lstArenas";
-            this.lstArenas.Size = new System.Drawing.Size(230, 293);
+            this.lstArenas.Size = new System.Drawing.Size(230, 277);
             this.lstArenas.TabIndex = 0;
             // 
             // lblArenaNo
@@ -86,7 +86,7 @@
             this.lblArenaNo.ForeColor = System.Drawing.Color.White;
             this.lblArenaNo.Location = new System.Drawing.Point(343, 39);
             this.lblArenaNo.Name = "lblArenaNo";
-            this.lblArenaNo.Size = new System.Drawing.Size(67, 17);
+            this.lblArenaNo.Size = new System.Drawing.Size(89, 21);
             this.lblArenaNo.TabIndex = 1;
             this.lblArenaNo.Text = "Arena ID:";
             this.lblArenaNo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -98,7 +98,7 @@
             this.lblArenaName.ForeColor = System.Drawing.Color.White;
             this.lblArenaName.Location = new System.Drawing.Point(316, 92);
             this.lblArenaName.Name = "lblArenaName";
-            this.lblArenaName.Size = new System.Drawing.Size(94, 17);
+            this.lblArenaName.Size = new System.Drawing.Size(122, 21);
             this.lblArenaName.TabIndex = 2;
             this.lblArenaName.Text = "Arena Name:";
             this.lblArenaName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -110,7 +110,7 @@
             this.lblArenaAddress.ForeColor = System.Drawing.Color.White;
             this.lblArenaAddress.Location = new System.Drawing.Point(309, 149);
             this.lblArenaAddress.Name = "lblArenaAddress";
-            this.lblArenaAddress.Size = new System.Drawing.Size(101, 17);
+            this.lblArenaAddress.Size = new System.Drawing.Size(136, 21);
             this.lblArenaAddress.TabIndex = 3;
             this.lblArenaAddress.Text = "Street Address:";
             this.lblArenaAddress.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -122,7 +122,7 @@
             this.lblArenaSuburb.ForeColor = System.Drawing.Color.White;
             this.lblArenaSuburb.Location = new System.Drawing.Point(354, 208);
             this.lblArenaSuburb.Name = "lblArenaSuburb";
-            this.lblArenaSuburb.Size = new System.Drawing.Size(56, 17);
+            this.lblArenaSuburb.Size = new System.Drawing.Size(72, 21);
             this.lblArenaSuburb.TabIndex = 4;
             this.lblArenaSuburb.Text = "Suburb:";
             this.lblArenaSuburb.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -134,7 +134,7 @@
             this.lblArenaCity.ForeColor = System.Drawing.Color.White;
             this.lblArenaCity.Location = new System.Drawing.Point(373, 272);
             this.lblArenaCity.Name = "lblArenaCity";
-            this.lblArenaCity.Size = new System.Drawing.Size(37, 17);
+            this.lblArenaCity.Size = new System.Drawing.Size(47, 21);
             this.lblArenaCity.TabIndex = 5;
             this.lblArenaCity.Text = "City:";
             this.lblArenaCity.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -146,7 +146,7 @@
             this.lblArenaPhoneNumber.ForeColor = System.Drawing.Color.White;
             this.lblArenaPhoneNumber.Location = new System.Drawing.Point(301, 332);
             this.lblArenaPhoneNumber.Name = "lblArenaPhoneNumber";
-            this.lblArenaPhoneNumber.Size = new System.Drawing.Size(109, 17);
+            this.lblArenaPhoneNumber.Size = new System.Drawing.Size(138, 21);
             this.lblArenaPhoneNumber.TabIndex = 6;
             this.lblArenaPhoneNumber.Text = "Phone Number:";
             this.lblArenaPhoneNumber.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -158,7 +158,7 @@
             this.txtArenaID.Location = new System.Drawing.Point(416, 36);
             this.txtArenaID.Name = "txtArenaID";
             this.txtArenaID.ReadOnly = true;
-            this.txtArenaID.Size = new System.Drawing.Size(45, 23);
+            this.txtArenaID.Size = new System.Drawing.Size(45, 27);
             this.txtArenaID.TabIndex = 7;
             this.txtArenaID.Text = "arena";
             // 
@@ -169,7 +169,7 @@
             this.txtArenaName.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtArenaName.Location = new System.Drawing.Point(416, 92);
             this.txtArenaName.Name = "txtArenaName";
-            this.txtArenaName.Size = new System.Drawing.Size(191, 23);
+            this.txtArenaName.Size = new System.Drawing.Size(191, 27);
             this.txtArenaName.TabIndex = 8;
             this.txtArenaName.Text = "Name";
             // 
@@ -180,7 +180,7 @@
             this.txtArenaAddress.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtArenaAddress.Location = new System.Drawing.Point(416, 146);
             this.txtArenaAddress.Name = "txtArenaAddress";
-            this.txtArenaAddress.Size = new System.Drawing.Size(319, 23);
+            this.txtArenaAddress.Size = new System.Drawing.Size(319, 27);
             this.txtArenaAddress.TabIndex = 9;
             this.txtArenaAddress.Text = "Address";
             // 
@@ -191,7 +191,7 @@
             this.txtArenaSuburb.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtArenaSuburb.Location = new System.Drawing.Point(416, 205);
             this.txtArenaSuburb.Name = "txtArenaSuburb";
-            this.txtArenaSuburb.Size = new System.Drawing.Size(141, 23);
+            this.txtArenaSuburb.Size = new System.Drawing.Size(141, 27);
             this.txtArenaSuburb.TabIndex = 10;
             this.txtArenaSuburb.Text = "Suburb";
             // 
@@ -202,7 +202,7 @@
             this.txtArenaCity.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtArenaCity.Location = new System.Drawing.Point(416, 269);
             this.txtArenaCity.Name = "txtArenaCity";
-            this.txtArenaCity.Size = new System.Drawing.Size(141, 23);
+            this.txtArenaCity.Size = new System.Drawing.Size(141, 27);
             this.txtArenaCity.TabIndex = 11;
             this.txtArenaCity.Text = "City";
             // 
@@ -213,7 +213,7 @@
             this.txtArenaPhone.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtArenaPhone.Location = new System.Drawing.Point(416, 326);
             this.txtArenaPhone.Name = "txtArenaPhone";
-            this.txtArenaPhone.Size = new System.Drawing.Size(117, 23);
+            this.txtArenaPhone.Size = new System.Drawing.Size(117, 27);
             this.txtArenaPhone.TabIndex = 12;
             this.txtArenaPhone.Text = "Phone No.";
             // 
@@ -317,7 +317,7 @@
             this.lblAddArena.ForeColor = System.Drawing.Color.White;
             this.lblAddArena.Location = new System.Drawing.Point(53, 59);
             this.lblAddArena.Name = "lblAddArena";
-            this.lblAddArena.Size = new System.Drawing.Size(114, 22);
+            this.lblAddArena.Size = new System.Drawing.Size(136, 27);
             this.lblAddArena.TabIndex = 33;
             this.lblAddArena.Text = "Add Arena";
             this.lblAddArena.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -352,7 +352,7 @@
             this.txtArenaPhoneAdd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtArenaPhoneAdd.Location = new System.Drawing.Point(365, 299);
             this.txtArenaPhoneAdd.Name = "txtArenaPhoneAdd";
-            this.txtArenaPhoneAdd.Size = new System.Drawing.Size(117, 23);
+            this.txtArenaPhoneAdd.Size = new System.Drawing.Size(117, 27);
             this.txtArenaPhoneAdd.TabIndex = 30;
             this.txtArenaPhoneAdd.Text = "Phone No.";
             // 
@@ -362,7 +362,7 @@
             this.txtArenaCityAdd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtArenaCityAdd.Location = new System.Drawing.Point(365, 242);
             this.txtArenaCityAdd.Name = "txtArenaCityAdd";
-            this.txtArenaCityAdd.Size = new System.Drawing.Size(141, 23);
+            this.txtArenaCityAdd.Size = new System.Drawing.Size(141, 27);
             this.txtArenaCityAdd.TabIndex = 29;
             this.txtArenaCityAdd.Text = "City";
             // 
@@ -372,7 +372,7 @@
             this.txtArenaSuburbAdd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtArenaSuburbAdd.Location = new System.Drawing.Point(365, 178);
             this.txtArenaSuburbAdd.Name = "txtArenaSuburbAdd";
-            this.txtArenaSuburbAdd.Size = new System.Drawing.Size(141, 23);
+            this.txtArenaSuburbAdd.Size = new System.Drawing.Size(141, 27);
             this.txtArenaSuburbAdd.TabIndex = 28;
             this.txtArenaSuburbAdd.Text = "Suburb";
             // 
@@ -382,7 +382,7 @@
             this.txtArenaAddressAdd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtArenaAddressAdd.Location = new System.Drawing.Point(365, 119);
             this.txtArenaAddressAdd.Name = "txtArenaAddressAdd";
-            this.txtArenaAddressAdd.Size = new System.Drawing.Size(316, 23);
+            this.txtArenaAddressAdd.Size = new System.Drawing.Size(316, 27);
             this.txtArenaAddressAdd.TabIndex = 27;
             this.txtArenaAddressAdd.Text = "Address";
             // 
@@ -392,7 +392,7 @@
             this.txtArenaNameAdd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtArenaNameAdd.Location = new System.Drawing.Point(365, 65);
             this.txtArenaNameAdd.Name = "txtArenaNameAdd";
-            this.txtArenaNameAdd.Size = new System.Drawing.Size(191, 23);
+            this.txtArenaNameAdd.Size = new System.Drawing.Size(191, 27);
             this.txtArenaNameAdd.TabIndex = 26;
             this.txtArenaNameAdd.Text = "Name";
             // 
@@ -403,7 +403,7 @@
             this.lblArenaPhoneAdd.ForeColor = System.Drawing.Color.White;
             this.lblArenaPhoneAdd.Location = new System.Drawing.Point(250, 305);
             this.lblArenaPhoneAdd.Name = "lblArenaPhoneAdd";
-            this.lblArenaPhoneAdd.Size = new System.Drawing.Size(109, 17);
+            this.lblArenaPhoneAdd.Size = new System.Drawing.Size(138, 21);
             this.lblArenaPhoneAdd.TabIndex = 25;
             this.lblArenaPhoneAdd.Text = "Phone Number:";
             this.lblArenaPhoneAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -415,7 +415,7 @@
             this.lblArenaCityAdd.ForeColor = System.Drawing.Color.White;
             this.lblArenaCityAdd.Location = new System.Drawing.Point(322, 245);
             this.lblArenaCityAdd.Name = "lblArenaCityAdd";
-            this.lblArenaCityAdd.Size = new System.Drawing.Size(37, 17);
+            this.lblArenaCityAdd.Size = new System.Drawing.Size(47, 21);
             this.lblArenaCityAdd.TabIndex = 24;
             this.lblArenaCityAdd.Text = "City:";
             this.lblArenaCityAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -427,7 +427,7 @@
             this.lblArenaSuburbAdd.ForeColor = System.Drawing.Color.White;
             this.lblArenaSuburbAdd.Location = new System.Drawing.Point(303, 181);
             this.lblArenaSuburbAdd.Name = "lblArenaSuburbAdd";
-            this.lblArenaSuburbAdd.Size = new System.Drawing.Size(56, 17);
+            this.lblArenaSuburbAdd.Size = new System.Drawing.Size(72, 21);
             this.lblArenaSuburbAdd.TabIndex = 23;
             this.lblArenaSuburbAdd.Text = "Suburb:";
             this.lblArenaSuburbAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -439,7 +439,7 @@
             this.lblArenaAddressAdd.ForeColor = System.Drawing.Color.White;
             this.lblArenaAddressAdd.Location = new System.Drawing.Point(258, 122);
             this.lblArenaAddressAdd.Name = "lblArenaAddressAdd";
-            this.lblArenaAddressAdd.Size = new System.Drawing.Size(101, 17);
+            this.lblArenaAddressAdd.Size = new System.Drawing.Size(136, 21);
             this.lblArenaAddressAdd.TabIndex = 22;
             this.lblArenaAddressAdd.Text = "Street Address:";
             this.lblArenaAddressAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -451,7 +451,7 @@
             this.lblArenaNameAdd.ForeColor = System.Drawing.Color.White;
             this.lblArenaNameAdd.Location = new System.Drawing.Point(265, 65);
             this.lblArenaNameAdd.Name = "lblArenaNameAdd";
-            this.lblArenaNameAdd.Size = new System.Drawing.Size(94, 17);
+            this.lblArenaNameAdd.Size = new System.Drawing.Size(122, 21);
             this.lblArenaNameAdd.TabIndex = 21;
             this.lblArenaNameAdd.Text = "Arena Name:";
             this.lblArenaNameAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -474,7 +474,7 @@
             this.lblArenaUpdate.ForeColor = System.Drawing.Color.White;
             this.lblArenaUpdate.Location = new System.Drawing.Point(45, 59);
             this.lblArenaUpdate.Name = "lblArenaUpdate";
-            this.lblArenaUpdate.Size = new System.Drawing.Size(143, 22);
+            this.lblArenaUpdate.Size = new System.Drawing.Size(174, 27);
             this.lblArenaUpdate.TabIndex = 33;
             this.lblArenaUpdate.Text = "Update Arena";
             this.lblArenaUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -535,6 +535,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Arena Maintenance";
+            this.Move += new System.EventHandler(this.ArenaForm_Move);
             this.pnlAdd.ResumeLayout(false);
             this.pnlAdd.PerformLayout();
             this.pnlUpdate.ResumeLayout(false);

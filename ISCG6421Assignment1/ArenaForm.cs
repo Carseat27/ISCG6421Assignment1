@@ -16,12 +16,15 @@ namespace ISCG6421Assignment1
         private DataModule DM;
         private MainForm frmMenu;
         private CurrencyManager currencyManager;
+        private int step = 0;
+        private Button[] controls;
         public ArenaForm(DataModule dm, MainForm mnu)
         {
             InitializeComponent();
             DM = dm;
             frmMenu = mnu;
             BindControls();
+            controls = new Button[] { btnNext, btnPrevious, btnAddArena, btnUpdateArena, btnDeleteArena, btnReturn };
         }
 
         private void BindControls()
@@ -60,30 +63,6 @@ namespace ISCG6421Assignment1
         }
 
         /// <summary>
-        /// this section contains functions to hide and show the control buttons
-        /// </summary>
-        private void disableButtons()
-        {
-            //disable items not needed
-            btnUpdateArena.Enabled = false;
-            btnDeleteArena.Enabled = false;
-            btnNext.Enabled = false;
-            btnPrevious.Enabled = false;
-            btnAddArena.Enabled = false;
-            btnReturn.Enabled = false;
-        }
-        private void enableButtons()
-        {
-            //enable needed items
-            btnUpdateArena.Enabled = true;
-            btnDeleteArena.Enabled = true;
-            btnNext.Enabled = true;
-            btnPrevious.Enabled = true;
-            btnAddArena.Enabled = true;
-            btnReturn.Enabled = true;
-        }
-
-        /// <summary>
         /// this section defines the ActionEvents for adding an arena
         /// </summary>
         /// <param name="sender"></param>
@@ -96,7 +75,7 @@ namespace ISCG6421Assignment1
 
 
             //enable needed items
-            enableButtons();
+            Utilities.ButtonsMagic(controls, true);
         }
 
         private void btnAddArena_Click(object sender, EventArgs e)
@@ -106,7 +85,7 @@ namespace ISCG6421Assignment1
             pnlUpdate.Visible = false;
 
             //disable items not needed
-            disableButtons();
+            Utilities.ButtonsMagic(controls, false);
 
             //ensure text boxes are empty
             txtArenaNameAdd.Text = "";
@@ -137,6 +116,8 @@ namespace ISCG6421Assignment1
                 MessageBox.Show("Arena added successfully", "Success");
                 DM.UpdateArena();
                 pnlAdd.Visible = false;
+                //enable buttons
+                Utilities.ButtonsMagic(controls, true);
             }
         }
 
@@ -167,7 +148,7 @@ namespace ISCG6421Assignment1
                 pnlAdd.Visible = false;
 
                 //enable needed items
-                enableButtons();
+                Utilities.ButtonsMagic(controls, true);
 
                 //disable text boxes
                 txtArenaName.Enabled = false;
@@ -184,7 +165,7 @@ namespace ISCG6421Assignment1
             pnlAdd.Visible = false;
 
             //enable needed items
-            enableButtons();
+            Utilities.ButtonsMagic(controls, true);
 
             //disable text boxes
             txtArenaName.Enabled = false;
@@ -201,7 +182,7 @@ namespace ISCG6421Assignment1
             pnlUpdate.Visible = true;
 
             //disable items not needed
-            disableButtons();
+            Utilities.ButtonsMagic(controls, false);
 
             //enable text boxes
             txtArenaName.Enabled = true;
@@ -233,6 +214,16 @@ namespace ISCG6421Assignment1
                     MessageBox.Show("Arena deleted successfully", "Success");
                 }
             }
+        }
+
+        /// <summary>
+        /// this method ensures that the child form (Arena) will make the parent form (MainForm) move with it.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ArenaForm_Move(object sender, EventArgs e)
+        {
+            step = Utilities.Movement(step, sender, e);
         }
     }
 }

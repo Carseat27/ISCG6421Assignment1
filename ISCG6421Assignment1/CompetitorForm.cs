@@ -9,12 +9,15 @@ namespace ISCG6421Assignment1
         private DataModule DM;
         private MainForm frmMenu;
         private CurrencyManager currencyManager;
+        private Button[] controls;
+        private int step = 0;
         public CompetitorForm(DataModule dm, MainForm mnu)
         {
             InitializeComponent();
             DM = dm;
             frmMenu = mnu;
             BindControls();
+            controls = new Button[] { btnPrevious, btnNext, btnAddCompetitor, btnUpdateCompetitor, btnDeleteCompetitor, btnReturn };
         }
         private void BindControls()
         {
@@ -55,26 +58,6 @@ namespace ISCG6421Assignment1
         /// <summary>
         /// this section contains functions to hide and show the control buttons
         /// </summary>
-        private void disableButtons()
-        {
-            //disable items not needed
-            btnNext.Enabled = false;
-            btnPrevious.Enabled = false;
-            btnUpdateCompetitor.Enabled = false;
-            btnAddCompetitor.Enabled = false;
-            btnDeleteCompetitor.Enabled = false;
-            btnReturn.Enabled = false;
-        }
-        private void enableButtons()
-        {
-            //enable needed items
-            btnNext.Enabled = true;
-            btnPrevious.Enabled = true;
-            btnUpdateCompetitor.Enabled = true;
-            btnAddCompetitor.Enabled = true;
-            btnDeleteCompetitor.Enabled = true;
-            btnReturn.Enabled = true;
-        }
 
         private bool checkEmail(string email)
         {
@@ -86,7 +69,7 @@ namespace ISCG6421Assignment1
             //show correct panel
             pnlAdd.Visible = true;
             //disable items not needed
-            disableButtons();
+            Utilities.ButtonsMagic(controls, false);
             //ensure boxes are emtpy
             txtCompetitorUsernameAdd.Text = "";
             txtCompetitorFNameAdd.Text = "";
@@ -141,7 +124,8 @@ namespace ISCG6421Assignment1
                 MessageBox.Show("Competitor Added Successfully", "Success");
 
                 pnlAdd.Visible = false;
-                enableButtons();
+                //enable butttons
+                Utilities.ButtonsMagic(controls, true);
             }
         }
 
@@ -149,14 +133,16 @@ namespace ISCG6421Assignment1
         {
             //hide panel and enable controls
             pnlAdd.Visible = false;
-            enableButtons();
+            //enable buttons
+            Utilities.ButtonsMagic(controls, true);
         }
 
         private void btnUpdateCancel_Click(object sender, EventArgs e)
         {
             //hide panel and enable controls
             pnlUpdate.Visible = false;
-            enableButtons();
+            //enable buttons
+            Utilities.ButtonsMagic(controls, true);
         }
 
         private void btnUpdateCompetitor_Click(object sender, EventArgs e)
@@ -164,7 +150,7 @@ namespace ISCG6421Assignment1
             //show correct panel
             pnlUpdate.Visible = true;
             //disable buttons
-            disableButtons();
+            Utilities.ButtonsMagic(controls, false);
             //ensure fields are filled out correctly for selected competitor
             txtCompetitorUsernameUpdate.Text = txtCompetitorUsername.Text;
             txtCompetitorFNameUpdate.Text = txtCompetitorFName.Text;
@@ -221,7 +207,8 @@ namespace ISCG6421Assignment1
                 MessageBox.Show("Competitor Updated Successfully", "Success");
 
                 pnlUpdate.Visible = false;
-                enableButtons();
+                //enable buttons
+                Utilities.ButtonsMagic(controls, true);
             }
         }
 
@@ -242,6 +229,11 @@ namespace ISCG6421Assignment1
                     MessageBox.Show("Competitor deleted successfully", "Success");
                 }
             }
+        }
+
+        private void CompetitorForm_Move(object sender, EventArgs e)
+        {
+            step = Utilities.Movement(step, sender, e);
         }
     }
 }

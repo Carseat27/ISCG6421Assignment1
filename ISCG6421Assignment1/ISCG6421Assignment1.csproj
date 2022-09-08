@@ -115,6 +115,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities.cs" />
     <EmbeddedResource Include="ArenaForm.resx">
       <DependentUpon>ArenaForm.cs</DependentUpon>
     </EmbeddedResource>

@@ -11,12 +11,15 @@ namespace ISCG6421Assignment1
         private MainForm frmMenu;
         private CurrencyManager currencyManager;
         private DateTime currentTimeUpdate;
+        private int step = 0;
+        private Button[] controls;
         public ChallengeForm(DataModule dm, MainForm mnu)
         {
             InitializeComponent();
             DM = dm;
             frmMenu = mnu;
             BindControls();
+            controls = new Button[] { btnPrevious, btnNext, btnMarkCompleted, btnMarkFinished, btnAddChallenge, btnUpdateChallenge, btnDeleteChallenge, btnReturn };
         }
         private void BindControls()
         {
@@ -71,7 +74,7 @@ namespace ISCG6421Assignment1
             pnlAdd.Visible = false;
 
             //disable not needed items
-            disableButtons();
+            Utilities.ButtonsMagic(controls, false);
 
             //enable text boxes and set text
             txtChallengeNameUpdate.Text = txtChallengeName.Text;
@@ -90,8 +93,8 @@ namespace ISCG6421Assignment1
             pnlAdd.Visible = true;
             pnlUpdate.Visible = false;
 
-            //diable buttons
-            disableButtons();
+            //disable buttons
+            Utilities.ButtonsMagic(controls, false);
 
             //ensure items are empty
             txtChallengeNameAdd.Text = "";
@@ -151,30 +154,6 @@ namespace ISCG6421Assignment1
         /// <summary>
         /// this section contains functions to hide and show the control buttons
         /// </summary>
-        private void disableButtons()
-        {
-            //disable not needed items
-            btnPrevious.Enabled = false;
-            btnNext.Enabled = false;
-            btnAddChallenge.Enabled = false;
-            btnUpdateChallenge.Enabled = false;
-            btnDeleteChallenge.Enabled = false;
-            btnMarkFinished.Enabled = false;
-            btnMarkCompleted.Enabled = false;
-            btnReturn.Enabled = false;
-        }
-        private void enableButtons()
-        {
-            //enable needed items
-            btnPrevious.Enabled = true;
-            btnNext.Enabled = true;
-            btnAddChallenge.Enabled = true;
-            btnUpdateChallenge.Enabled = true;
-            btnDeleteChallenge.Enabled = true;
-            btnMarkFinished.Enabled = true;
-            btnMarkCompleted.Enabled = true;
-            btnReturn.Enabled = true;
-        }
 
         private void btnAddCancel_Click(object sender, EventArgs e)
         {
@@ -182,7 +161,7 @@ namespace ISCG6421Assignment1
             pnlAdd.Visible = false;
 
             //enable buttons
-            enableButtons();
+            Utilities.ButtonsMagic(controls, true);
         }
 
         private void btnChallengeSave_Click(object sender, EventArgs e)
@@ -206,7 +185,7 @@ namespace ISCG6421Assignment1
                 MessageBox.Show("Challenge added successfully", "Success");
                 DM.UpdateChallenge();
                 pnlAdd.Visible = false;
-                enableButtons();
+                Utilities.ButtonsMagic(controls, true);
             }
         }
 
@@ -229,7 +208,8 @@ namespace ISCG6421Assignment1
                 DM.UpdateChallenge();
                 MessageBox.Show("Challenge Updated Successfully", "Success");
                 pnlUpdate.Visible = false;
-                enableButtons();
+                //enable buttons
+                Utilities.ButtonsMagic(controls, true);
             }
         }
 
@@ -240,7 +220,7 @@ namespace ISCG6421Assignment1
             pnlAdd.Visible = false;
 
             //enable needed items
-            enableButtons();
+            Utilities.ButtonsMagic(controls, true);
         }
 
         //this fills the event combo boxes on the add challenge screen and
@@ -264,10 +244,11 @@ namespace ISCG6421Assignment1
         private void timePickerUpdate_ValueChanged(object sender, EventArgs e)
         {
             //haven't been able to get this to work properly
+            //but it is there if you want to fix it
 
-            //Console.WriteLine("HIE!");
             //Console.WriteLine(e.GetType());
             //PropertyValueChangedEventArgs args = (PropertyValueChangedEventArgs)e;
+
 
             //if ((DateTime)args.OldValue > timePickerUpdate.Value)
             //{
@@ -294,6 +275,16 @@ namespace ISCG6421Assignment1
             //    currentTimeUpdate = timePickerUpdate.Value;
             //}
             //else { currentTimeUpdate = timePickerUpdate.Value; }
+        }
+
+        /// <summary>
+        /// this method ensures that the child form (Arena) will make the parent form (MainForm) move with it.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ChallengeForm_Move(object sender, EventArgs e)
+        {
+            step = Utilities.Movement(step, sender, e);
         }
     }
 }

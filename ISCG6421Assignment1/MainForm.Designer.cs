@@ -35,10 +35,10 @@
             this.btnEventMaintenance = new System.Windows.Forms.Button();
             this.btnArenaMaintenance = new System.Windows.Forms.Button();
             this.grpReporting = new System.Windows.Forms.GroupBox();
+            this.btbDbConnect = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnCompetitorReport = new System.Windows.Forms.Button();
             this.btnEventsReport = new System.Windows.Forms.Button();
-            this.btbDbConnect = new System.Windows.Forms.Button();
             this.grpMaintenance.SuspendLayout();
             this.grpReporting.SuspendLayout();
             this.SuspendLayout();
@@ -135,6 +135,18 @@
             this.grpReporting.TabStop = false;
             this.grpReporting.Text = "Reporting";
             // 
+            // btbDbConnect
+            // 
+            this.btbDbConnect.BackColor = System.Drawing.SystemColors.Control;
+            this.btbDbConnect.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btbDbConnect.Location = new System.Drawing.Point(32, 265);
+            this.btbDbConnect.Name = "btbDbConnect";
+            this.btbDbConnect.Size = new System.Drawing.Size(268, 39);
+            this.btbDbConnect.TabIndex = 4;
+            this.btbDbConnect.Text = "Connect to Database";
+            this.btbDbConnect.UseVisualStyleBackColor = false;
+            this.btbDbConnect.Click += new System.EventHandler(this.btbDbConnect_Click);
+            // 
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.SystemColors.Control;
@@ -170,18 +182,6 @@
             this.btnEventsReport.Text = "Events Report";
             this.btnEventsReport.UseVisualStyleBackColor = false;
             this.btnEventsReport.Click += new System.EventHandler(this.btnEventsReport_Click);
-            // 
-            // btbDbConnect
-            // 
-            this.btbDbConnect.BackColor = System.Drawing.SystemColors.Control;
-            this.btbDbConnect.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btbDbConnect.Location = new System.Drawing.Point(32, 265);
-            this.btbDbConnect.Name = "btbDbConnect";
-            this.btbDbConnect.Size = new System.Drawing.Size(268, 39);
-            this.btbDbConnect.TabIndex = 4;
-            this.btbDbConnect.Text = "Connect to Database";
-            this.btbDbConnect.UseVisualStyleBackColor = false;
-            this.btbDbConnect.Click += new System.EventHandler(this.btbDbConnect_Click);
             // 
             // MainForm
             // 
