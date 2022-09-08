@@ -93,10 +93,10 @@
             // 
             this.btnReturn.BackColor = System.Drawing.SystemColors.Control;
             this.btnReturn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReturn.Location = new System.Drawing.Point(807, 511);
-            this.btnReturn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReturn.Location = new System.Drawing.Point(605, 415);
+            this.btnReturn.Margin = new System.Windows.Forms.Padding(4);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(185, 28);
+            this.btnReturn.Size = new System.Drawing.Size(130, 23);
             this.btnReturn.TabIndex = 24;
             this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = false;
@@ -106,10 +106,10 @@
             // 
             this.btnDeleteCompetitor.BackColor = System.Drawing.SystemColors.Control;
             this.btnDeleteCompetitor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteCompetitor.Location = new System.Drawing.Point(807, 460);
-            this.btnDeleteCompetitor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDeleteCompetitor.Location = new System.Drawing.Point(605, 374);
+            this.btnDeleteCompetitor.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeleteCompetitor.Name = "btnDeleteCompetitor";
-            this.btnDeleteCompetitor.Size = new System.Drawing.Size(185, 28);
+            this.btnDeleteCompetitor.Size = new System.Drawing.Size(130, 23);
             this.btnDeleteCompetitor.TabIndex = 23;
             this.btnDeleteCompetitor.Text = "Delete Competitor";
             this.btnDeleteCompetitor.UseVisualStyleBackColor = false;
@@ -119,10 +119,10 @@
             // 
             this.btnUpdateCompetitor.BackColor = System.Drawing.SystemColors.Control;
             this.btnUpdateCompetitor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateCompetitor.Location = new System.Drawing.Point(597, 460);
-            this.btnUpdateCompetitor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUpdateCompetitor.Location = new System.Drawing.Point(448, 374);
+            this.btnUpdateCompetitor.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdateCompetitor.Name = "btnUpdateCompetitor";
-            this.btnUpdateCompetitor.Size = new System.Drawing.Size(201, 28);
+            this.btnUpdateCompetitor.Size = new System.Drawing.Size(144, 23);
             this.btnUpdateCompetitor.TabIndex = 22;
             this.btnUpdateCompetitor.Text = "Update Competitor";
             this.btnUpdateCompetitor.UseVisualStyleBackColor = false;
@@ -132,10 +132,10 @@
             // 
             this.btnAddCompetitor.BackColor = System.Drawing.SystemColors.Control;
             this.btnAddCompetitor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddCompetitor.Location = new System.Drawing.Point(395, 460);
-            this.btnAddCompetitor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddCompetitor.Location = new System.Drawing.Point(301, 374);
+            this.btnAddCompetitor.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddCompetitor.Name = "btnAddCompetitor";
-            this.btnAddCompetitor.Size = new System.Drawing.Size(201, 28);
+            this.btnAddCompetitor.Size = new System.Drawing.Size(144, 23);
             this.btnAddCompetitor.TabIndex = 21;
             this.btnAddCompetitor.Text = "Add Competitor";
             this.btnAddCompetitor.UseVisualStyleBackColor = false;
@@ -145,10 +145,10 @@
             // 
             this.btnNext.BackColor = System.Drawing.SystemColors.Control;
             this.btnNext.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNext.Location = new System.Drawing.Point(251, 460);
-            this.btnNext.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNext.Location = new System.Drawing.Point(188, 374);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(4);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(136, 28);
+            this.btnNext.Size = new System.Drawing.Size(102, 23);
             this.btnNext.TabIndex = 20;
             this.btnNext.Text = ">>>";
             this.btnNext.UseVisualStyleBackColor = false;
@@ -158,10 +158,10 @@
             // 
             this.btnPrevious.BackColor = System.Drawing.SystemColors.Control;
             this.btnPrevious.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrevious.Location = new System.Drawing.Point(80, 460);
-            this.btnPrevious.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPrevious.Location = new System.Drawing.Point(60, 374);
+            this.btnPrevious.Margin = new System.Windows.Forms.Padding(4);
             this.btnPrevious.Name = "btnPrevious";
-            this.btnPrevious.Size = new System.Drawing.Size(136, 28);
+            this.btnPrevious.Size = new System.Drawing.Size(102, 23);
             this.btnPrevious.TabIndex = 19;
             this.btnPrevious.Text = "<<<";
             this.btnPrevious.UseVisualStyleBackColor = false;
@@ -172,10 +172,10 @@
             this.lstCompetitors.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstCompetitors.FormattingEnabled = true;
             this.lstCompetitors.ItemHeight = 21;
-            this.lstCompetitors.Location = new System.Drawing.Point(80, 57);
-            this.lstCompetitors.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lstCompetitors.Location = new System.Drawing.Point(60, 46);
+            this.lstCompetitors.Margin = new System.Windows.Forms.Padding(4);
             this.lstCompetitors.Name = "lstCompetitors";
-            this.lstCompetitors.Size = new System.Drawing.Size(305, 319);
+            this.lstCompetitors.Size = new System.Drawing.Size(230, 277);
             this.lstCompetitors.TabIndex = 28;
             // 
             // txtCompetitorID
@@ -183,8 +183,8 @@
             this.txtCompetitorID.AcceptsTab = true;
             this.txtCompetitorID.Enabled = false;
             this.txtCompetitorID.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCompetitorID.Location = new System.Drawing.Point(559, 66);
-            this.txtCompetitorID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCompetitorID.Location = new System.Drawing.Point(450, 43);
+            this.txtCompetitorID.Margin = new System.Windows.Forms.Padding(4);
             this.txtCompetitorID.Name = "txtCompetitorID";
             this.txtCompetitorID.Size = new System.Drawing.Size(64, 27);
             this.txtCompetitorID.TabIndex = 30;
@@ -195,7 +195,7 @@
             this.lblCompetitorID.AutoSize = true;
             this.lblCompetitorID.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCompetitorID.ForeColor = System.Drawing.Color.White;
-            this.lblCompetitorID.Location = new System.Drawing.Point(411, 70);
+            this.lblCompetitorID.Location = new System.Drawing.Point(308, 46);
             this.lblCompetitorID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompetitorID.Name = "lblCompetitorID";
             this.lblCompetitorID.Size = new System.Drawing.Size(134, 21);
@@ -208,7 +208,7 @@
             this.lblCompetitorUserName.AutoSize = true;
             this.lblCompetitorUserName.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCompetitorUserName.ForeColor = System.Drawing.Color.White;
-            this.lblCompetitorUserName.Location = new System.Drawing.Point(451, 127);
+            this.lblCompetitorUserName.Location = new System.Drawing.Point(344, 82);
             this.lblCompetitorUserName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompetitorUserName.Name = "lblCompetitorUserName";
             this.lblCompetitorUserName.Size = new System.Drawing.Size(98, 21);
@@ -221,7 +221,7 @@
             this.lblCompetitorFName.AutoSize = true;
             this.lblCompetitorFName.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCompetitorFName.ForeColor = System.Drawing.Color.White;
-            this.lblCompetitorFName.Location = new System.Drawing.Point(443, 180);
+            this.lblCompetitorFName.Location = new System.Drawing.Point(341, 123);
             this.lblCompetitorFName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompetitorFName.Name = "lblCompetitorFName";
             this.lblCompetitorFName.Size = new System.Drawing.Size(101, 21);
@@ -234,7 +234,7 @@
             this.lblCompetitorLName.AutoSize = true;
             this.lblCompetitorLName.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCompetitorLName.ForeColor = System.Drawing.Color.White;
-            this.lblCompetitorLName.Location = new System.Drawing.Point(443, 233);
+            this.lblCompetitorLName.Location = new System.Drawing.Point(337, 161);
             this.lblCompetitorLName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompetitorLName.Name = "lblCompetitorLName";
             this.lblCompetitorLName.Size = new System.Drawing.Size(105, 21);
@@ -247,7 +247,7 @@
             this.lblCompetitorGender.AutoSize = true;
             this.lblCompetitorGender.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCompetitorGender.ForeColor = System.Drawing.Color.White;
-            this.lblCompetitorGender.Location = new System.Drawing.Point(468, 282);
+            this.lblCompetitorGender.Location = new System.Drawing.Point(363, 205);
             this.lblCompetitorGender.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompetitorGender.Name = "lblCompetitorGender";
             this.lblCompetitorGender.Size = new System.Drawing.Size(79, 21);
@@ -260,7 +260,7 @@
             this.lblCompetitorDoB.AutoSize = true;
             this.lblCompetitorDoB.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCompetitorDoB.ForeColor = System.Drawing.Color.White;
-            this.lblCompetitorDoB.Location = new System.Drawing.Point(428, 332);
+            this.lblCompetitorDoB.Location = new System.Drawing.Point(323, 247);
             this.lblCompetitorDoB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompetitorDoB.Name = "lblCompetitorDoB";
             this.lblCompetitorDoB.Size = new System.Drawing.Size(119, 21);
@@ -273,7 +273,7 @@
             this.lblCompetitorEmail.AutoSize = true;
             this.lblCompetitorEmail.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCompetitorEmail.ForeColor = System.Drawing.Color.White;
-            this.lblCompetitorEmail.Location = new System.Drawing.Point(488, 375);
+            this.lblCompetitorEmail.Location = new System.Drawing.Point(385, 293);
             this.lblCompetitorEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompetitorEmail.Name = "lblCompetitorEmail";
             this.lblCompetitorEmail.Size = new System.Drawing.Size(57, 21);
@@ -286,8 +286,8 @@
             this.txtCompetitorUsername.AcceptsTab = true;
             this.txtCompetitorUsername.Enabled = false;
             this.txtCompetitorUsername.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCompetitorUsername.Location = new System.Drawing.Point(559, 123);
-            this.txtCompetitorUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCompetitorUsername.Location = new System.Drawing.Point(450, 79);
+            this.txtCompetitorUsername.Margin = new System.Windows.Forms.Padding(4);
             this.txtCompetitorUsername.Name = "txtCompetitorUsername";
             this.txtCompetitorUsername.Size = new System.Drawing.Size(239, 27);
             this.txtCompetitorUsername.TabIndex = 37;
@@ -298,8 +298,8 @@
             this.txtCompetitorFName.AcceptsTab = true;
             this.txtCompetitorFName.Enabled = false;
             this.txtCompetitorFName.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCompetitorFName.Location = new System.Drawing.Point(556, 176);
-            this.txtCompetitorFName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCompetitorFName.Location = new System.Drawing.Point(448, 120);
+            this.txtCompetitorFName.Margin = new System.Windows.Forms.Padding(4);
             this.txtCompetitorFName.Name = "txtCompetitorFName";
             this.txtCompetitorFName.Size = new System.Drawing.Size(239, 27);
             this.txtCompetitorFName.TabIndex = 38;
@@ -310,8 +310,8 @@
             this.txtCompetitorLName.AcceptsTab = true;
             this.txtCompetitorLName.Enabled = false;
             this.txtCompetitorLName.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCompetitorLName.Location = new System.Drawing.Point(556, 229);
-            this.txtCompetitorLName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCompetitorLName.Location = new System.Drawing.Point(448, 161);
+            this.txtCompetitorLName.Margin = new System.Windows.Forms.Padding(4);
             this.txtCompetitorLName.Name = "txtCompetitorLName";
             this.txtCompetitorLName.Size = new System.Drawing.Size(239, 27);
             this.txtCompetitorLName.TabIndex = 39;
@@ -322,8 +322,8 @@
             this.txtCompetitorGender.AcceptsTab = true;
             this.txtCompetitorGender.Enabled = false;
             this.txtCompetitorGender.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCompetitorGender.Location = new System.Drawing.Point(556, 282);
-            this.txtCompetitorGender.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCompetitorGender.Location = new System.Drawing.Point(448, 205);
+            this.txtCompetitorGender.Margin = new System.Windows.Forms.Padding(4);
             this.txtCompetitorGender.Name = "txtCompetitorGender";
             this.txtCompetitorGender.Size = new System.Drawing.Size(96, 27);
             this.txtCompetitorGender.TabIndex = 40;
@@ -334,8 +334,8 @@
             this.txtCompetitorDoB.AcceptsTab = true;
             this.txtCompetitorDoB.Enabled = false;
             this.txtCompetitorDoB.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCompetitorDoB.Location = new System.Drawing.Point(556, 329);
-            this.txtCompetitorDoB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCompetitorDoB.Location = new System.Drawing.Point(448, 244);
+            this.txtCompetitorDoB.Margin = new System.Windows.Forms.Padding(4);
             this.txtCompetitorDoB.Name = "txtCompetitorDoB";
             this.txtCompetitorDoB.Size = new System.Drawing.Size(96, 27);
             this.txtCompetitorDoB.TabIndex = 41;
@@ -346,10 +346,10 @@
             this.txtCompetitorEmail.AcceptsTab = true;
             this.txtCompetitorEmail.Enabled = false;
             this.txtCompetitorEmail.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCompetitorEmail.Location = new System.Drawing.Point(556, 372);
-            this.txtCompetitorEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCompetitorEmail.Location = new System.Drawing.Point(443, 290);
+            this.txtCompetitorEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtCompetitorEmail.Name = "txtCompetitorEmail";
-            this.txtCompetitorEmail.Size = new System.Drawing.Size(343, 27);
+            this.txtCompetitorEmail.Size = new System.Drawing.Size(246, 27);
             this.txtCompetitorEmail.TabIndex = 42;
             this.txtCompetitorEmail.Text = "Email";
             // 
@@ -372,10 +372,10 @@
             this.pnlAdd.Controls.Add(this.lblCompetitorLNameAdd);
             this.pnlAdd.Controls.Add(this.lblCompetitorFNameAdd);
             this.pnlAdd.Controls.Add(this.lblCompetitorUserNameAdd);
-            this.pnlAdd.Location = new System.Drawing.Point(68, 33);
-            this.pnlAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlAdd.Location = new System.Drawing.Point(60, 25);
+            this.pnlAdd.Margin = new System.Windows.Forms.Padding(4);
             this.pnlAdd.Name = "pnlAdd";
-            this.pnlAdd.Size = new System.Drawing.Size(912, 420);
+            this.pnlAdd.Size = new System.Drawing.Size(684, 341);
             this.pnlAdd.TabIndex = 43;
             this.pnlAdd.Visible = false;
             // 
@@ -384,8 +384,8 @@
             this.radCompetitorOtherAdd.AutoSize = true;
             this.radCompetitorOtherAdd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radCompetitorOtherAdd.ForeColor = System.Drawing.Color.White;
-            this.radCompetitorOtherAdd.Location = new System.Drawing.Point(676, 246);
-            this.radCompetitorOtherAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radCompetitorOtherAdd.Location = new System.Drawing.Point(528, 182);
+            this.radCompetitorOtherAdd.Margin = new System.Windows.Forms.Padding(4);
             this.radCompetitorOtherAdd.Name = "radCompetitorOtherAdd";
             this.radCompetitorOtherAdd.Size = new System.Drawing.Size(79, 25);
             this.radCompetitorOtherAdd.TabIndex = 38;
@@ -398,8 +398,8 @@
             this.radCompetitorMaleAdd.AutoSize = true;
             this.radCompetitorMaleAdd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radCompetitorMaleAdd.ForeColor = System.Drawing.Color.White;
-            this.radCompetitorMaleAdd.Location = new System.Drawing.Point(592, 246);
-            this.radCompetitorMaleAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radCompetitorMaleAdd.Location = new System.Drawing.Point(453, 182);
+            this.radCompetitorMaleAdd.Margin = new System.Windows.Forms.Padding(4);
             this.radCompetitorMaleAdd.Name = "radCompetitorMaleAdd";
             this.radCompetitorMaleAdd.Size = new System.Drawing.Size(74, 25);
             this.radCompetitorMaleAdd.TabIndex = 37;
@@ -412,8 +412,8 @@
             this.radCompetitorFemaleAdd.AutoSize = true;
             this.radCompetitorFemaleAdd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radCompetitorFemaleAdd.ForeColor = System.Drawing.Color.White;
-            this.radCompetitorFemaleAdd.Location = new System.Drawing.Point(487, 246);
-            this.radCompetitorFemaleAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radCompetitorFemaleAdd.Location = new System.Drawing.Point(354, 181);
+            this.radCompetitorFemaleAdd.Margin = new System.Windows.Forms.Padding(4);
             this.radCompetitorFemaleAdd.Name = "radCompetitorFemaleAdd";
             this.radCompetitorFemaleAdd.Size = new System.Drawing.Size(91, 25);
             this.radCompetitorFemaleAdd.TabIndex = 36;
@@ -426,8 +426,8 @@
             this.DoBPickerAdd.CalendarFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DoBPickerAdd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DoBPickerAdd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DoBPickerAdd.Location = new System.Drawing.Point(491, 289);
-            this.DoBPickerAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DoBPickerAdd.Location = new System.Drawing.Point(354, 214);
+            this.DoBPickerAdd.Margin = new System.Windows.Forms.Padding(4);
             this.DoBPickerAdd.MaxDate = new System.DateTime(2022, 9, 7, 0, 0, 0, 0);
             this.DoBPickerAdd.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.DoBPickerAdd.Name = "DoBPickerAdd";
@@ -440,7 +440,7 @@
             this.lblCompetitorEmailAdd.AutoSize = true;
             this.lblCompetitorEmailAdd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCompetitorEmailAdd.ForeColor = System.Drawing.Color.White;
-            this.lblCompetitorEmailAdd.Location = new System.Drawing.Point(412, 335);
+            this.lblCompetitorEmailAdd.Location = new System.Drawing.Point(289, 257);
             this.lblCompetitorEmailAdd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompetitorEmailAdd.Name = "lblCompetitorEmailAdd";
             this.lblCompetitorEmailAdd.Size = new System.Drawing.Size(57, 21);
@@ -453,7 +453,7 @@
             this.lblAddCompetitor.AutoSize = true;
             this.lblAddCompetitor.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddCompetitor.ForeColor = System.Drawing.Color.White;
-            this.lblAddCompetitor.Location = new System.Drawing.Point(61, 74);
+            this.lblAddCompetitor.Location = new System.Drawing.Point(32, 54);
             this.lblAddCompetitor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAddCompetitor.Name = "lblAddCompetitor";
             this.lblAddCompetitor.Size = new System.Drawing.Size(198, 27);
@@ -465,10 +465,10 @@
             // 
             this.btnCompetitorSave.BackColor = System.Drawing.SystemColors.Control;
             this.btnCompetitorSave.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCompetitorSave.Location = new System.Drawing.Point(67, 128);
-            this.btnCompetitorSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCompetitorSave.Location = new System.Drawing.Point(50, 104);
+            this.btnCompetitorSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnCompetitorSave.Name = "btnCompetitorSave";
-            this.btnCompetitorSave.Size = new System.Drawing.Size(185, 69);
+            this.btnCompetitorSave.Size = new System.Drawing.Size(139, 56);
             this.btnCompetitorSave.TabIndex = 32;
             this.btnCompetitorSave.Text = "Save Competitor";
             this.btnCompetitorSave.UseVisualStyleBackColor = false;
@@ -478,10 +478,10 @@
             // 
             this.btnAddCancel.BackColor = System.Drawing.SystemColors.Control;
             this.btnAddCancel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddCancel.Location = new System.Drawing.Point(67, 257);
-            this.btnAddCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddCancel.Location = new System.Drawing.Point(50, 209);
+            this.btnAddCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddCancel.Name = "btnAddCancel";
-            this.btnAddCancel.Size = new System.Drawing.Size(185, 69);
+            this.btnAddCancel.Size = new System.Drawing.Size(139, 56);
             this.btnAddCancel.TabIndex = 31;
             this.btnAddCancel.Text = "Cancel";
             this.btnAddCancel.UseVisualStyleBackColor = false;
@@ -491,10 +491,10 @@
             // 
             this.txtCompetitorEmailAdd.AcceptsTab = true;
             this.txtCompetitorEmailAdd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCompetitorEmailAdd.Location = new System.Drawing.Point(491, 331);
-            this.txtCompetitorEmailAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCompetitorEmailAdd.Location = new System.Drawing.Point(354, 254);
+            this.txtCompetitorEmailAdd.Margin = new System.Windows.Forms.Padding(4);
             this.txtCompetitorEmailAdd.Name = "txtCompetitorEmailAdd";
-            this.txtCompetitorEmailAdd.Size = new System.Drawing.Size(340, 27);
+            this.txtCompetitorEmailAdd.Size = new System.Drawing.Size(253, 27);
             this.txtCompetitorEmailAdd.TabIndex = 30;
             this.txtCompetitorEmailAdd.Text = "Email:";
             // 
@@ -502,8 +502,8 @@
             // 
             this.txtCompetitorLNameAdd.AcceptsTab = true;
             this.txtCompetitorLNameAdd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCompetitorLNameAdd.Location = new System.Drawing.Point(487, 196);
-            this.txtCompetitorLNameAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCompetitorLNameAdd.Location = new System.Drawing.Point(354, 139);
+            this.txtCompetitorLNameAdd.Margin = new System.Windows.Forms.Padding(4);
             this.txtCompetitorLNameAdd.Name = "txtCompetitorLNameAdd";
             this.txtCompetitorLNameAdd.Size = new System.Drawing.Size(253, 27);
             this.txtCompetitorLNameAdd.TabIndex = 28;
@@ -513,8 +513,8 @@
             // 
             this.txtCompetitorFNameAdd.AcceptsTab = true;
             this.txtCompetitorFNameAdd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCompetitorFNameAdd.Location = new System.Drawing.Point(487, 139);
-            this.txtCompetitorFNameAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCompetitorFNameAdd.Location = new System.Drawing.Point(354, 95);
+            this.txtCompetitorFNameAdd.Margin = new System.Windows.Forms.Padding(4);
             this.txtCompetitorFNameAdd.Name = "txtCompetitorFNameAdd";
             this.txtCompetitorFNameAdd.Size = new System.Drawing.Size(253, 27);
             this.txtCompetitorFNameAdd.TabIndex = 27;
@@ -524,8 +524,8 @@
             // 
             this.txtCompetitorUsernameAdd.AcceptsTab = true;
             this.txtCompetitorUsernameAdd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCompetitorUsernameAdd.Location = new System.Drawing.Point(487, 76);
-            this.txtCompetitorUsernameAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCompetitorUsernameAdd.Location = new System.Drawing.Point(354, 54);
+            this.txtCompetitorUsernameAdd.Margin = new System.Windows.Forms.Padding(4);
             this.txtCompetitorUsernameAdd.Name = "txtCompetitorUsernameAdd";
             this.txtCompetitorUsernameAdd.Size = new System.Drawing.Size(253, 27);
             this.txtCompetitorUsernameAdd.TabIndex = 26;
@@ -536,7 +536,7 @@
             this.lblCompetitorDoBAdd.AutoSize = true;
             this.lblCompetitorDoBAdd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCompetitorDoBAdd.ForeColor = System.Drawing.Color.White;
-            this.lblCompetitorDoBAdd.Location = new System.Drawing.Point(352, 295);
+            this.lblCompetitorDoBAdd.Location = new System.Drawing.Point(227, 219);
             this.lblCompetitorDoBAdd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompetitorDoBAdd.Name = "lblCompetitorDoBAdd";
             this.lblCompetitorDoBAdd.Size = new System.Drawing.Size(119, 21);
@@ -549,7 +549,7 @@
             this.lblCompetitorGenderAdd.AutoSize = true;
             this.lblCompetitorGenderAdd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCompetitorGenderAdd.ForeColor = System.Drawing.Color.White;
-            this.lblCompetitorGenderAdd.Location = new System.Drawing.Point(400, 249);
+            this.lblCompetitorGenderAdd.Location = new System.Drawing.Point(267, 180);
             this.lblCompetitorGenderAdd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompetitorGenderAdd.Name = "lblCompetitorGenderAdd";
             this.lblCompetitorGenderAdd.Size = new System.Drawing.Size(79, 21);
@@ -562,7 +562,7 @@
             this.lblCompetitorLNameAdd.AutoSize = true;
             this.lblCompetitorLNameAdd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCompetitorLNameAdd.ForeColor = System.Drawing.Color.White;
-            this.lblCompetitorLNameAdd.Location = new System.Drawing.Point(371, 199);
+            this.lblCompetitorLNameAdd.Location = new System.Drawing.Point(241, 139);
             this.lblCompetitorLNameAdd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompetitorLNameAdd.Name = "lblCompetitorLNameAdd";
             this.lblCompetitorLNameAdd.Size = new System.Drawing.Size(105, 21);
@@ -575,7 +575,7 @@
             this.lblCompetitorFNameAdd.AutoSize = true;
             this.lblCompetitorFNameAdd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCompetitorFNameAdd.ForeColor = System.Drawing.Color.White;
-            this.lblCompetitorFNameAdd.Location = new System.Drawing.Point(373, 143);
+            this.lblCompetitorFNameAdd.Location = new System.Drawing.Point(245, 101);
             this.lblCompetitorFNameAdd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompetitorFNameAdd.Name = "lblCompetitorFNameAdd";
             this.lblCompetitorFNameAdd.Size = new System.Drawing.Size(101, 21);
@@ -588,7 +588,7 @@
             this.lblCompetitorUserNameAdd.AutoSize = true;
             this.lblCompetitorUserNameAdd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCompetitorUserNameAdd.ForeColor = System.Drawing.Color.White;
-            this.lblCompetitorUserNameAdd.Location = new System.Drawing.Point(379, 80);
+            this.lblCompetitorUserNameAdd.Location = new System.Drawing.Point(248, 60);
             this.lblCompetitorUserNameAdd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompetitorUserNameAdd.Name = "lblCompetitorUserNameAdd";
             this.lblCompetitorUserNameAdd.Size = new System.Drawing.Size(98, 21);
@@ -615,10 +615,10 @@
             this.pnlUpdate.Controls.Add(this.lblCompetitorLNameUpdate);
             this.pnlUpdate.Controls.Add(this.lblCompetitorFNameUpdate);
             this.pnlUpdate.Controls.Add(this.lblCompetitorUsernameUpdate);
-            this.pnlUpdate.Location = new System.Drawing.Point(80, 33);
-            this.pnlUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlUpdate.Location = new System.Drawing.Point(60, 27);
+            this.pnlUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.pnlUpdate.Name = "pnlUpdate";
-            this.pnlUpdate.Size = new System.Drawing.Size(912, 420);
+            this.pnlUpdate.Size = new System.Drawing.Size(684, 341);
             this.pnlUpdate.TabIndex = 45;
             this.pnlUpdate.Visible = false;
             // 
@@ -627,8 +627,8 @@
             this.radCompetitorOtherUpdate.AutoSize = true;
             this.radCompetitorOtherUpdate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radCompetitorOtherUpdate.ForeColor = System.Drawing.Color.White;
-            this.radCompetitorOtherUpdate.Location = new System.Drawing.Point(676, 246);
-            this.radCompetitorOtherUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radCompetitorOtherUpdate.Location = new System.Drawing.Point(550, 172);
+            this.radCompetitorOtherUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.radCompetitorOtherUpdate.Name = "radCompetitorOtherUpdate";
             this.radCompetitorOtherUpdate.Size = new System.Drawing.Size(79, 25);
             this.radCompetitorOtherUpdate.TabIndex = 38;
@@ -641,8 +641,8 @@
             this.radCompetitorMaleUpdate.AutoSize = true;
             this.radCompetitorMaleUpdate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radCompetitorMaleUpdate.ForeColor = System.Drawing.Color.White;
-            this.radCompetitorMaleUpdate.Location = new System.Drawing.Point(592, 246);
-            this.radCompetitorMaleUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radCompetitorMaleUpdate.Location = new System.Drawing.Point(471, 172);
+            this.radCompetitorMaleUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.radCompetitorMaleUpdate.Name = "radCompetitorMaleUpdate";
             this.radCompetitorMaleUpdate.Size = new System.Drawing.Size(74, 25);
             this.radCompetitorMaleUpdate.TabIndex = 37;
@@ -655,8 +655,8 @@
             this.radCompetitorFemaleUpdate.AutoSize = true;
             this.radCompetitorFemaleUpdate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radCompetitorFemaleUpdate.ForeColor = System.Drawing.Color.White;
-            this.radCompetitorFemaleUpdate.Location = new System.Drawing.Point(487, 246);
-            this.radCompetitorFemaleUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radCompetitorFemaleUpdate.Location = new System.Drawing.Point(372, 172);
+            this.radCompetitorFemaleUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.radCompetitorFemaleUpdate.Name = "radCompetitorFemaleUpdate";
             this.radCompetitorFemaleUpdate.Size = new System.Drawing.Size(91, 25);
             this.radCompetitorFemaleUpdate.TabIndex = 36;
@@ -669,8 +669,8 @@
             this.DoBPickerUpdate.CalendarFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DoBPickerUpdate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DoBPickerUpdate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DoBPickerUpdate.Location = new System.Drawing.Point(491, 289);
-            this.DoBPickerUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DoBPickerUpdate.Location = new System.Drawing.Point(372, 204);
+            this.DoBPickerUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.DoBPickerUpdate.MaxDate = new System.DateTime(2022, 9, 7, 0, 0, 0, 0);
             this.DoBPickerUpdate.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.DoBPickerUpdate.Name = "DoBPickerUpdate";
@@ -683,7 +683,7 @@
             this.lblCompetitorEmailUpdate.AutoSize = true;
             this.lblCompetitorEmailUpdate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCompetitorEmailUpdate.ForeColor = System.Drawing.Color.White;
-            this.lblCompetitorEmailUpdate.Location = new System.Drawing.Point(412, 335);
+            this.lblCompetitorEmailUpdate.Location = new System.Drawing.Point(303, 242);
             this.lblCompetitorEmailUpdate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompetitorEmailUpdate.Name = "lblCompetitorEmailUpdate";
             this.lblCompetitorEmailUpdate.Size = new System.Drawing.Size(57, 21);
@@ -696,24 +696,24 @@
             this.lblCompetitorUpdate.AutoSize = true;
             this.lblCompetitorUpdate.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCompetitorUpdate.ForeColor = System.Drawing.Color.White;
-            this.lblCompetitorUpdate.Location = new System.Drawing.Point(61, 74);
+            this.lblCompetitorUpdate.Location = new System.Drawing.Point(18, 59);
             this.lblCompetitorUpdate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompetitorUpdate.Name = "lblCompetitorUpdate";
-            this.lblCompetitorUpdate.Size = new System.Drawing.Size(198, 27);
+            this.lblCompetitorUpdate.Size = new System.Drawing.Size(236, 27);
             this.lblCompetitorUpdate.TabIndex = 33;
-            this.lblCompetitorUpdate.Text = "Add Competitor";
+            this.lblCompetitorUpdate.Text = "Update Competitor";
             this.lblCompetitorUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnCompetitorUpdate
             // 
             this.btnCompetitorUpdate.BackColor = System.Drawing.SystemColors.Control;
             this.btnCompetitorUpdate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCompetitorUpdate.Location = new System.Drawing.Point(67, 128);
-            this.btnCompetitorUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCompetitorUpdate.Location = new System.Drawing.Point(50, 104);
+            this.btnCompetitorUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnCompetitorUpdate.Name = "btnCompetitorUpdate";
-            this.btnCompetitorUpdate.Size = new System.Drawing.Size(185, 69);
+            this.btnCompetitorUpdate.Size = new System.Drawing.Size(139, 56);
             this.btnCompetitorUpdate.TabIndex = 32;
-            this.btnCompetitorUpdate.Text = "Save Competitor";
+            this.btnCompetitorUpdate.Text = "Save Changes";
             this.btnCompetitorUpdate.UseVisualStyleBackColor = false;
             this.btnCompetitorUpdate.Click += new System.EventHandler(this.btnCompetitorUpdate_Click);
             // 
@@ -721,10 +721,10 @@
             // 
             this.btnUpdateCancel.BackColor = System.Drawing.SystemColors.Control;
             this.btnUpdateCancel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateCancel.Location = new System.Drawing.Point(67, 257);
-            this.btnUpdateCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUpdateCancel.Location = new System.Drawing.Point(50, 209);
+            this.btnUpdateCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdateCancel.Name = "btnUpdateCancel";
-            this.btnUpdateCancel.Size = new System.Drawing.Size(185, 69);
+            this.btnUpdateCancel.Size = new System.Drawing.Size(139, 56);
             this.btnUpdateCancel.TabIndex = 31;
             this.btnUpdateCancel.Text = "Cancel";
             this.btnUpdateCancel.UseVisualStyleBackColor = false;
@@ -734,10 +734,10 @@
             // 
             this.txtCompetitorEmailUpdate.AcceptsTab = true;
             this.txtCompetitorEmailUpdate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCompetitorEmailUpdate.Location = new System.Drawing.Point(491, 331);
-            this.txtCompetitorEmailUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCompetitorEmailUpdate.Location = new System.Drawing.Point(373, 242);
+            this.txtCompetitorEmailUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.txtCompetitorEmailUpdate.Name = "txtCompetitorEmailUpdate";
-            this.txtCompetitorEmailUpdate.Size = new System.Drawing.Size(340, 27);
+            this.txtCompetitorEmailUpdate.Size = new System.Drawing.Size(252, 27);
             this.txtCompetitorEmailUpdate.TabIndex = 30;
             this.txtCompetitorEmailUpdate.Text = "Email:";
             // 
@@ -745,8 +745,8 @@
             // 
             this.txtCompetitorLNameUpdate.AcceptsTab = true;
             this.txtCompetitorLNameUpdate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCompetitorLNameUpdate.Location = new System.Drawing.Point(487, 196);
-            this.txtCompetitorLNameUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCompetitorLNameUpdate.Location = new System.Drawing.Point(372, 137);
+            this.txtCompetitorLNameUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.txtCompetitorLNameUpdate.Name = "txtCompetitorLNameUpdate";
             this.txtCompetitorLNameUpdate.Size = new System.Drawing.Size(253, 27);
             this.txtCompetitorLNameUpdate.TabIndex = 28;
@@ -756,8 +756,8 @@
             // 
             this.txtCompetitorFNameUpdate.AcceptsTab = true;
             this.txtCompetitorFNameUpdate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCompetitorFNameUpdate.Location = new System.Drawing.Point(487, 139);
-            this.txtCompetitorFNameUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCompetitorFNameUpdate.Location = new System.Drawing.Point(372, 99);
+            this.txtCompetitorFNameUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.txtCompetitorFNameUpdate.Name = "txtCompetitorFNameUpdate";
             this.txtCompetitorFNameUpdate.Size = new System.Drawing.Size(253, 27);
             this.txtCompetitorFNameUpdate.TabIndex = 27;
@@ -767,8 +767,8 @@
             // 
             this.txtCompetitorUsernameUpdate.AcceptsTab = true;
             this.txtCompetitorUsernameUpdate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCompetitorUsernameUpdate.Location = new System.Drawing.Point(487, 76);
-            this.txtCompetitorUsernameUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCompetitorUsernameUpdate.Location = new System.Drawing.Point(373, 62);
+            this.txtCompetitorUsernameUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.txtCompetitorUsernameUpdate.Name = "txtCompetitorUsernameUpdate";
             this.txtCompetitorUsernameUpdate.Size = new System.Drawing.Size(253, 27);
             this.txtCompetitorUsernameUpdate.TabIndex = 26;
@@ -779,7 +779,7 @@
             this.lblCompetitorDoBUpdate.AutoSize = true;
             this.lblCompetitorDoBUpdate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCompetitorDoBUpdate.ForeColor = System.Drawing.Color.White;
-            this.lblCompetitorDoBUpdate.Location = new System.Drawing.Point(352, 295);
+            this.lblCompetitorDoBUpdate.Location = new System.Drawing.Point(245, 209);
             this.lblCompetitorDoBUpdate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompetitorDoBUpdate.Name = "lblCompetitorDoBUpdate";
             this.lblCompetitorDoBUpdate.Size = new System.Drawing.Size(119, 21);
@@ -792,7 +792,7 @@
             this.lblCompetitorGenderUpdate.AutoSize = true;
             this.lblCompetitorGenderUpdate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCompetitorGenderUpdate.ForeColor = System.Drawing.Color.White;
-            this.lblCompetitorGenderUpdate.Location = new System.Drawing.Point(400, 249);
+            this.lblCompetitorGenderUpdate.Location = new System.Drawing.Point(285, 174);
             this.lblCompetitorGenderUpdate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompetitorGenderUpdate.Name = "lblCompetitorGenderUpdate";
             this.lblCompetitorGenderUpdate.Size = new System.Drawing.Size(79, 21);
@@ -805,7 +805,7 @@
             this.lblCompetitorLNameUpdate.AutoSize = true;
             this.lblCompetitorLNameUpdate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCompetitorLNameUpdate.ForeColor = System.Drawing.Color.White;
-            this.lblCompetitorLNameUpdate.Location = new System.Drawing.Point(371, 199);
+            this.lblCompetitorLNameUpdate.Location = new System.Drawing.Point(259, 137);
             this.lblCompetitorLNameUpdate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompetitorLNameUpdate.Name = "lblCompetitorLNameUpdate";
             this.lblCompetitorLNameUpdate.Size = new System.Drawing.Size(105, 21);
@@ -818,7 +818,7 @@
             this.lblCompetitorFNameUpdate.AutoSize = true;
             this.lblCompetitorFNameUpdate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCompetitorFNameUpdate.ForeColor = System.Drawing.Color.White;
-            this.lblCompetitorFNameUpdate.Location = new System.Drawing.Point(373, 143);
+            this.lblCompetitorFNameUpdate.Location = new System.Drawing.Point(263, 102);
             this.lblCompetitorFNameUpdate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompetitorFNameUpdate.Name = "lblCompetitorFNameUpdate";
             this.lblCompetitorFNameUpdate.Size = new System.Drawing.Size(101, 21);
@@ -831,7 +831,7 @@
             this.lblCompetitorUsernameUpdate.AutoSize = true;
             this.lblCompetitorUsernameUpdate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCompetitorUsernameUpdate.ForeColor = System.Drawing.Color.White;
-            this.lblCompetitorUsernameUpdate.Location = new System.Drawing.Point(379, 80);
+            this.lblCompetitorUsernameUpdate.Location = new System.Drawing.Point(267, 65);
             this.lblCompetitorUsernameUpdate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompetitorUsernameUpdate.Name = "lblCompetitorUsernameUpdate";
             this.lblCompetitorUsernameUpdate.Size = new System.Drawing.Size(98, 21);
@@ -841,10 +841,9 @@
             // 
             // CompetitorForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(1065, 554);
+            this.ClientSize = new System.Drawing.Size(797, 442);
             this.ControlBox = false;
             this.Controls.Add(this.pnlUpdate);
             this.Controls.Add(this.pnlAdd);
@@ -870,7 +869,7 @@
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnPrevious);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CompetitorForm";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

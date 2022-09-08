@@ -10,7 +10,7 @@ namespace ISCG6421Assignment1
         private MainForm frmMenu;
         private CurrencyManager currencyManager;
         private Button[] controls;
-        private int step = 0;
+        private int step;
         public CompetitorForm(DataModule dm, MainForm mnu)
         {
             InitializeComponent();
@@ -18,6 +18,7 @@ namespace ISCG6421Assignment1
             frmMenu = mnu;
             BindControls();
             controls = new Button[] { btnPrevious, btnNext, btnAddCompetitor, btnUpdateCompetitor, btnDeleteCompetitor, btnReturn };
+            step = 0;
         }
         private void BindControls()
         {
