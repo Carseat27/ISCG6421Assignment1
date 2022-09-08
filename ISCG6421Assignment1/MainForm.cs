@@ -114,8 +114,9 @@ namespace ISCG6421Assignment1
         public void On_Move(object sender, EventArgs e)
         {
             Point LocationCurrent = this.Location;
-            this.Location = new Point(((Form)sender).Location.X, ((Form)sender).Location.Y);
+            Point newLocation = new Point(((Form)sender).Location.X, ((Form)sender).Location.Y);
             this.Location = LocationCurrent;
+            this.Location = newLocation;
         }
     }
 }

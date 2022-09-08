@@ -53,7 +53,7 @@
             this.grpMaintenance.Controls.Add(this.btnEventMaintenance);
             this.grpMaintenance.Controls.Add(this.btnArenaMaintenance);
             this.grpMaintenance.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.grpMaintenance.Location = new System.Drawing.Point(47, 41);
+            this.grpMaintenance.Location = new System.Drawing.Point(37, 41);
             this.grpMaintenance.Name = "grpMaintenance";
             this.grpMaintenance.Size = new System.Drawing.Size(328, 364);
             this.grpMaintenance.TabIndex = 0;
@@ -128,7 +128,7 @@
             this.grpReporting.Controls.Add(this.btnExit);
             this.grpReporting.Controls.Add(this.btnCompetitorReport);
             this.grpReporting.Controls.Add(this.btnEventsReport);
-            this.grpReporting.Location = new System.Drawing.Point(433, 41);
+            this.grpReporting.Location = new System.Drawing.Point(428, 41);
             this.grpReporting.Name = "grpReporting";
             this.grpReporting.Size = new System.Drawing.Size(328, 364);
             this.grpReporting.TabIndex = 1;
@@ -188,7 +188,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(795, 434);
             this.Controls.Add(this.grpReporting);
             this.Controls.Add(this.grpMaintenance);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
