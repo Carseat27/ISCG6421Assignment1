@@ -191,6 +191,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.grpReporting);
             this.Controls.Add(this.grpMaintenance);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NZ E-Sports League";
