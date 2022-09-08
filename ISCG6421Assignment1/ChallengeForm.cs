@@ -11,7 +11,7 @@ namespace ISCG6421Assignment1
         private MainForm frmMenu;
         private CurrencyManager currencyManager;
         private DateTime currentTimeUpdate;
-        private int step = 0;
+        private int step;
         private Button[] controls;
         public ChallengeForm(DataModule dm, MainForm mnu)
         {
@@ -20,6 +20,7 @@ namespace ISCG6421Assignment1
             frmMenu = mnu;
             BindControls();
             controls = new Button[] { btnPrevious, btnNext, btnMarkCompleted, btnMarkFinished, btnAddChallenge, btnUpdateChallenge, btnDeleteChallenge, btnReturn };
+            step = 0;
         }
         private void BindControls()
         {

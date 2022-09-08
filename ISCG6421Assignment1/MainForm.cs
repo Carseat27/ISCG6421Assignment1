@@ -113,6 +113,8 @@ namespace ISCG6421Assignment1
         /// <param name="e"></param>
         public void On_Move(object sender, EventArgs e)
         {
+            Point LocationCurrent = this.Location;
+            this.Location = LocationCurrent;
             this.Location = new Point(((Form)sender).Location.X, ((Form)sender).Location.Y);
         }
     }
