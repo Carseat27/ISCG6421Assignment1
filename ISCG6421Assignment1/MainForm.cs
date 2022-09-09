@@ -115,7 +115,7 @@ namespace ISCG6421Assignment1
         {
             Point LocationCurrent = this.Location;
             this.Location = new Point(((Form)sender).Location.X, ((Form)sender).Location.Y);
-            this.Location = LocationCurrent;
+            Console.WriteLine(sender);
         }
     }
 }

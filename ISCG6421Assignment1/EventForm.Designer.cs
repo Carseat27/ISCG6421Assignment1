@@ -170,10 +170,10 @@
             // 
             this.lstEvents.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstEvents.FormattingEnabled = true;
-            this.lstEvents.ItemHeight = 21;
+            this.lstEvents.ItemHeight = 19;
             this.lstEvents.Location = new System.Drawing.Point(60, 46);
             this.lstEvents.Name = "lstEvents";
-            this.lstEvents.Size = new System.Drawing.Size(230, 277);
+            this.lstEvents.Size = new System.Drawing.Size(230, 270);
             this.lstEvents.TabIndex = 31;
             // 
             // lblEventID
@@ -183,7 +183,7 @@
             this.lblEventID.ForeColor = System.Drawing.Color.White;
             this.lblEventID.Location = new System.Drawing.Point(329, 49);
             this.lblEventID.Name = "lblEventID";
-            this.lblEventID.Size = new System.Drawing.Size(86, 21);
+            this.lblEventID.Size = new System.Drawing.Size(69, 19);
             this.lblEventID.TabIndex = 32;
             this.lblEventID.Text = "Event ID:";
             // 
@@ -193,7 +193,7 @@
             this.txtEventID.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEventID.Location = new System.Drawing.Point(421, 46);
             this.txtEventID.Name = "txtEventID";
-            this.txtEventID.Size = new System.Drawing.Size(74, 28);
+            this.txtEventID.Size = new System.Drawing.Size(74, 24);
             this.txtEventID.TabIndex = 33;
             this.txtEventID.Text = "ID";
             // 
@@ -204,7 +204,7 @@
             this.lblEventName.ForeColor = System.Drawing.Color.White;
             this.lblEventName.Location = new System.Drawing.Point(297, 92);
             this.lblEventName.Name = "lblEventName";
-            this.lblEventName.Size = new System.Drawing.Size(119, 21);
+            this.lblEventName.Size = new System.Drawing.Size(98, 19);
             this.lblEventName.TabIndex = 34;
             this.lblEventName.Text = "Event Name:";
             // 
@@ -215,7 +215,7 @@
             this.lblArenaID.ForeColor = System.Drawing.Color.White;
             this.lblArenaID.Location = new System.Drawing.Point(326, 135);
             this.lblArenaID.Name = "lblArenaID";
-            this.lblArenaID.Size = new System.Drawing.Size(89, 21);
+            this.lblArenaID.Size = new System.Drawing.Size(71, 19);
             this.lblArenaID.TabIndex = 35;
             this.lblArenaID.Text = "Arena ID:";
             // 
@@ -226,7 +226,7 @@
             this.lblArenaName.ForeColor = System.Drawing.Color.White;
             this.lblArenaName.Location = new System.Drawing.Point(293, 177);
             this.lblArenaName.Name = "lblArenaName";
-            this.lblArenaName.Size = new System.Drawing.Size(122, 21);
+            this.lblArenaName.Size = new System.Drawing.Size(100, 19);
             this.lblArenaName.TabIndex = 36;
             this.lblArenaName.Text = "Arena Name:";
             // 
@@ -237,7 +237,7 @@
             this.lblEventStatus.ForeColor = System.Drawing.Color.White;
             this.lblEventStatus.Location = new System.Drawing.Point(349, 219);
             this.lblEventStatus.Name = "lblEventStatus";
-            this.lblEventStatus.Size = new System.Drawing.Size(66, 21);
+            this.lblEventStatus.Size = new System.Drawing.Size(54, 19);
             this.lblEventStatus.TabIndex = 37;
             this.lblEventStatus.Text = "Status:";
             // 
@@ -248,7 +248,7 @@
             this.lblEventCapacity.ForeColor = System.Drawing.Color.White;
             this.lblEventCapacity.Location = new System.Drawing.Point(321, 257);
             this.lblEventCapacity.Name = "lblEventCapacity";
-            this.lblEventCapacity.Size = new System.Drawing.Size(94, 21);
+            this.lblEventCapacity.Size = new System.Drawing.Size(79, 19);
             this.lblEventCapacity.TabIndex = 38;
             this.lblEventCapacity.Text = "Capacity:";
             // 
@@ -259,7 +259,7 @@
             this.lblEventDate.ForeColor = System.Drawing.Color.White;
             this.lblEventDate.Location = new System.Drawing.Point(305, 298);
             this.lblEventDate.Name = "lblEventDate";
-            this.lblEventDate.Size = new System.Drawing.Size(111, 21);
+            this.lblEventDate.Size = new System.Drawing.Size(90, 19);
             this.lblEventDate.TabIndex = 39;
             this.lblEventDate.Text = "Event Date:";
             // 
@@ -269,7 +269,7 @@
             this.txtEventName.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEventName.Location = new System.Drawing.Point(421, 89);
             this.txtEventName.Name = "txtEventName";
-            this.txtEventName.Size = new System.Drawing.Size(241, 28);
+            this.txtEventName.Size = new System.Drawing.Size(241, 24);
             this.txtEventName.TabIndex = 40;
             this.txtEventName.Text = "Event Name";
             // 
@@ -279,7 +279,7 @@
             this.txtArenaID.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtArenaID.Location = new System.Drawing.Point(421, 132);
             this.txtArenaID.Name = "txtArenaID";
-            this.txtArenaID.Size = new System.Drawing.Size(74, 28);
+            this.txtArenaID.Size = new System.Drawing.Size(74, 24);
             this.txtArenaID.TabIndex = 41;
             this.txtArenaID.Text = "ID";
             // 
@@ -289,7 +289,7 @@
             this.txtArenaName.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtArenaName.Location = new System.Drawing.Point(421, 174);
             this.txtArenaName.Name = "txtArenaName";
-            this.txtArenaName.Size = new System.Drawing.Size(241, 28);
+            this.txtArenaName.Size = new System.Drawing.Size(241, 24);
             this.txtArenaName.TabIndex = 42;
             this.txtArenaName.Text = "Arena Name";
             // 
@@ -299,7 +299,7 @@
             this.txtEventStatus.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEventStatus.Location = new System.Drawing.Point(421, 216);
             this.txtEventStatus.Name = "txtEventStatus";
-            this.txtEventStatus.Size = new System.Drawing.Size(104, 28);
+            this.txtEventStatus.Size = new System.Drawing.Size(104, 24);
             this.txtEventStatus.TabIndex = 43;
             this.txtEventStatus.Text = "Status";
             // 
@@ -309,7 +309,7 @@
             this.txtEventCapacity.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEventCapacity.Location = new System.Drawing.Point(421, 254);
             this.txtEventCapacity.Name = "txtEventCapacity";
-            this.txtEventCapacity.Size = new System.Drawing.Size(80, 28);
+            this.txtEventCapacity.Size = new System.Drawing.Size(80, 24);
             this.txtEventCapacity.TabIndex = 44;
             this.txtEventCapacity.Text = "Capacity";
             // 
@@ -319,7 +319,7 @@
             this.txtEventDate.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEventDate.Location = new System.Drawing.Point(421, 295);
             this.txtEventDate.Name = "txtEventDate";
-            this.txtEventDate.Size = new System.Drawing.Size(80, 28);
+            this.txtEventDate.Size = new System.Drawing.Size(80, 24);
             this.txtEventDate.TabIndex = 45;
             this.txtEventDate.Text = "Event Date";
             // 
@@ -355,7 +355,7 @@
             this.DatePickerAdd.MaxDate = new System.DateTime(2022, 9, 7, 0, 0, 0, 0);
             this.DatePickerAdd.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.DatePickerAdd.Name = "DatePickerAdd";
-            this.DatePickerAdd.Size = new System.Drawing.Size(125, 27);
+            this.DatePickerAdd.Size = new System.Drawing.Size(125, 23);
             this.DatePickerAdd.TabIndex = 49;
             this.DatePickerAdd.Value = new System.DateTime(2022, 9, 7, 0, 0, 0, 0);
             // 
@@ -366,7 +366,7 @@
             this.lblEventStausAdd.ForeColor = System.Drawing.Color.White;
             this.lblEventStausAdd.Location = new System.Drawing.Point(270, 165);
             this.lblEventStausAdd.Name = "lblEventStausAdd";
-            this.lblEventStausAdd.Size = new System.Drawing.Size(66, 21);
+            this.lblEventStausAdd.Size = new System.Drawing.Size(50, 17);
             this.lblEventStausAdd.TabIndex = 48;
             this.lblEventStausAdd.Text = "Status:";
             this.lblEventStausAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -381,7 +381,7 @@
             "Cancelled"});
             this.cmbEventStatusAdd.Location = new System.Drawing.Point(353, 162);
             this.cmbEventStatusAdd.Name = "cmbEventStatusAdd";
-            this.cmbEventStatusAdd.Size = new System.Drawing.Size(121, 29);
+            this.cmbEventStatusAdd.Size = new System.Drawing.Size(121, 27);
             this.cmbEventStatusAdd.TabIndex = 47;
             // 
             // numEventCapacityAdd
@@ -394,7 +394,7 @@
             0,
             0});
             this.numEventCapacityAdd.Name = "numEventCapacityAdd";
-            this.numEventCapacityAdd.Size = new System.Drawing.Size(120, 27);
+            this.numEventCapacityAdd.Size = new System.Drawing.Size(120, 23);
             this.numEventCapacityAdd.TabIndex = 37;
             this.numEventCapacityAdd.Value = new decimal(new int[] {
             1,
@@ -409,7 +409,7 @@
             this.cmbArenaName.FormattingEnabled = true;
             this.cmbArenaName.Location = new System.Drawing.Point(415, 113);
             this.cmbArenaName.Name = "cmbArenaName";
-            this.cmbArenaName.Size = new System.Drawing.Size(248, 29);
+            this.cmbArenaName.Size = new System.Drawing.Size(248, 25);
             this.cmbArenaName.TabIndex = 35;
             // 
             // cmbArenaID
@@ -418,7 +418,7 @@
             this.cmbArenaID.FormattingEnabled = true;
             this.cmbArenaID.Location = new System.Drawing.Point(353, 113);
             this.cmbArenaID.Name = "cmbArenaID";
-            this.cmbArenaID.Size = new System.Drawing.Size(56, 29);
+            this.cmbArenaID.Size = new System.Drawing.Size(56, 25);
             this.cmbArenaID.TabIndex = 34;
             // 
             // lblAddEvent
@@ -428,7 +428,7 @@
             this.lblAddEvent.ForeColor = System.Drawing.Color.White;
             this.lblAddEvent.Location = new System.Drawing.Point(58, 59);
             this.lblAddEvent.Name = "lblAddEvent";
-            this.lblAddEvent.Size = new System.Drawing.Size(131, 27);
+            this.lblAddEvent.Size = new System.Drawing.Size(110, 22);
             this.lblAddEvent.TabIndex = 33;
             this.lblAddEvent.Text = "Add Event";
             this.lblAddEvent.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -463,7 +463,7 @@
             this.txtEventNameAdd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEventNameAdd.Location = new System.Drawing.Point(353, 59);
             this.txtEventNameAdd.Name = "txtEventNameAdd";
-            this.txtEventNameAdd.Size = new System.Drawing.Size(310, 27);
+            this.txtEventNameAdd.Size = new System.Drawing.Size(310, 23);
             this.txtEventNameAdd.TabIndex = 26;
             this.txtEventNameAdd.Text = "Name";
             // 
@@ -474,7 +474,7 @@
             this.lblEventCapacityAdd.ForeColor = System.Drawing.Color.White;
             this.lblEventCapacityAdd.Location = new System.Drawing.Point(246, 217);
             this.lblEventCapacityAdd.Name = "lblEventCapacityAdd";
-            this.lblEventCapacityAdd.Size = new System.Drawing.Size(94, 21);
+            this.lblEventCapacityAdd.Size = new System.Drawing.Size(72, 17);
             this.lblEventCapacityAdd.TabIndex = 24;
             this.lblEventCapacityAdd.Text = "Capacity:";
             this.lblEventCapacityAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -486,7 +486,7 @@
             this.lblEventDateAdd.ForeColor = System.Drawing.Color.White;
             this.lblEventDateAdd.Location = new System.Drawing.Point(225, 265);
             this.lblEventDateAdd.Name = "lblEventDateAdd";
-            this.lblEventDateAdd.Size = new System.Drawing.Size(111, 21);
+            this.lblEventDateAdd.Size = new System.Drawing.Size(84, 17);
             this.lblEventDateAdd.TabIndex = 23;
             this.lblEventDateAdd.Text = "Event Date:";
             this.lblEventDateAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -498,7 +498,7 @@
             this.lblEventAdd.ForeColor = System.Drawing.Color.White;
             this.lblEventAdd.Location = new System.Drawing.Point(270, 116);
             this.lblEventAdd.Name = "lblEventAdd";
-            this.lblEventAdd.Size = new System.Drawing.Size(66, 21);
+            this.lblEventAdd.Size = new System.Drawing.Size(50, 17);
             this.lblEventAdd.TabIndex = 22;
             this.lblEventAdd.Text = "Arena:";
             this.lblEventAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -510,7 +510,7 @@
             this.lblEventNameAdd.ForeColor = System.Drawing.Color.White;
             this.lblEventNameAdd.Location = new System.Drawing.Point(217, 62);
             this.lblEventNameAdd.Name = "lblEventNameAdd";
-            this.lblEventNameAdd.Size = new System.Drawing.Size(119, 21);
+            this.lblEventNameAdd.Size = new System.Drawing.Size(92, 17);
             this.lblEventNameAdd.TabIndex = 21;
             this.lblEventNameAdd.Text = "Event Name:";
             this.lblEventNameAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -550,7 +550,7 @@
             "Cancelled"});
             this.cmbEventStatusUpdate.Location = new System.Drawing.Point(361, 201);
             this.cmbEventStatusUpdate.Name = "cmbEventStatusUpdate";
-            this.cmbEventStatusUpdate.Size = new System.Drawing.Size(121, 29);
+            this.cmbEventStatusUpdate.Size = new System.Drawing.Size(121, 27);
             this.cmbEventStatusUpdate.TabIndex = 60;
             // 
             // DatePickerUpdate
@@ -563,7 +563,7 @@
             this.DatePickerUpdate.MaxDate = new System.DateTime(2022, 9, 7, 0, 0, 0, 0);
             this.DatePickerUpdate.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.DatePickerUpdate.Name = "DatePickerUpdate";
-            this.DatePickerUpdate.Size = new System.Drawing.Size(125, 27);
+            this.DatePickerUpdate.Size = new System.Drawing.Size(125, 23);
             this.DatePickerUpdate.TabIndex = 59;
             this.DatePickerUpdate.Value = new System.DateTime(2022, 9, 7, 0, 0, 0, 0);
             // 
@@ -577,7 +577,7 @@
             0,
             0});
             this.numEventCapacityUpdate.Name = "numEventCapacityUpdate";
-            this.numEventCapacityUpdate.Size = new System.Drawing.Size(120, 27);
+            this.numEventCapacityUpdate.Size = new System.Drawing.Size(120, 23);
             this.numEventCapacityUpdate.TabIndex = 58;
             this.numEventCapacityUpdate.Value = new decimal(new int[] {
             1,
@@ -591,7 +591,7 @@
             this.txtArenaNameUpdate.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtArenaNameUpdate.Location = new System.Drawing.Point(361, 159);
             this.txtArenaNameUpdate.Name = "txtArenaNameUpdate";
-            this.txtArenaNameUpdate.Size = new System.Drawing.Size(241, 28);
+            this.txtArenaNameUpdate.Size = new System.Drawing.Size(241, 24);
             this.txtArenaNameUpdate.TabIndex = 56;
             this.txtArenaNameUpdate.Text = "Arena Name";
             // 
@@ -601,7 +601,7 @@
             this.txtArenaIDUpdate.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtArenaIDUpdate.Location = new System.Drawing.Point(361, 117);
             this.txtArenaIDUpdate.Name = "txtArenaIDUpdate";
-            this.txtArenaIDUpdate.Size = new System.Drawing.Size(74, 28);
+            this.txtArenaIDUpdate.Size = new System.Drawing.Size(74, 24);
             this.txtArenaIDUpdate.TabIndex = 55;
             this.txtArenaIDUpdate.Text = "ID";
             // 
@@ -610,7 +610,7 @@
             this.txtEventNameUpdate.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEventNameUpdate.Location = new System.Drawing.Point(361, 74);
             this.txtEventNameUpdate.Name = "txtEventNameUpdate";
-            this.txtEventNameUpdate.Size = new System.Drawing.Size(241, 28);
+            this.txtEventNameUpdate.Size = new System.Drawing.Size(241, 24);
             this.txtEventNameUpdate.TabIndex = 54;
             this.txtEventNameUpdate.Text = "Event Name";
             // 
@@ -621,7 +621,7 @@
             this.lblEventDateUpdate.ForeColor = System.Drawing.Color.White;
             this.lblEventDateUpdate.Location = new System.Drawing.Point(245, 283);
             this.lblEventDateUpdate.Name = "lblEventDateUpdate";
-            this.lblEventDateUpdate.Size = new System.Drawing.Size(111, 21);
+            this.lblEventDateUpdate.Size = new System.Drawing.Size(90, 19);
             this.lblEventDateUpdate.TabIndex = 53;
             this.lblEventDateUpdate.Text = "Event Date:";
             // 
@@ -632,7 +632,7 @@
             this.lblEventCapacityUpdate.ForeColor = System.Drawing.Color.White;
             this.lblEventCapacityUpdate.Location = new System.Drawing.Point(261, 242);
             this.lblEventCapacityUpdate.Name = "lblEventCapacityUpdate";
-            this.lblEventCapacityUpdate.Size = new System.Drawing.Size(94, 21);
+            this.lblEventCapacityUpdate.Size = new System.Drawing.Size(79, 19);
             this.lblEventCapacityUpdate.TabIndex = 52;
             this.lblEventCapacityUpdate.Text = "Capacity:";
             // 
@@ -643,7 +643,7 @@
             this.lblEventStatusUpdate.ForeColor = System.Drawing.Color.White;
             this.lblEventStatusUpdate.Location = new System.Drawing.Point(289, 204);
             this.lblEventStatusUpdate.Name = "lblEventStatusUpdate";
-            this.lblEventStatusUpdate.Size = new System.Drawing.Size(66, 21);
+            this.lblEventStatusUpdate.Size = new System.Drawing.Size(54, 19);
             this.lblEventStatusUpdate.TabIndex = 51;
             this.lblEventStatusUpdate.Text = "Status:";
             // 
@@ -654,7 +654,7 @@
             this.lblArenaNameUpdate.ForeColor = System.Drawing.Color.White;
             this.lblArenaNameUpdate.Location = new System.Drawing.Point(233, 162);
             this.lblArenaNameUpdate.Name = "lblArenaNameUpdate";
-            this.lblArenaNameUpdate.Size = new System.Drawing.Size(122, 21);
+            this.lblArenaNameUpdate.Size = new System.Drawing.Size(100, 19);
             this.lblArenaNameUpdate.TabIndex = 50;
             this.lblArenaNameUpdate.Text = "Arena Name:";
             // 
@@ -665,7 +665,7 @@
             this.lblArenaIDUpdate.ForeColor = System.Drawing.Color.White;
             this.lblArenaIDUpdate.Location = new System.Drawing.Point(266, 120);
             this.lblArenaIDUpdate.Name = "lblArenaIDUpdate";
-            this.lblArenaIDUpdate.Size = new System.Drawing.Size(89, 21);
+            this.lblArenaIDUpdate.Size = new System.Drawing.Size(71, 19);
             this.lblArenaIDUpdate.TabIndex = 49;
             this.lblArenaIDUpdate.Text = "Arena ID:";
             // 
@@ -676,7 +676,7 @@
             this.lblEventNameUpdate.ForeColor = System.Drawing.Color.White;
             this.lblEventNameUpdate.Location = new System.Drawing.Point(237, 77);
             this.lblEventNameUpdate.Name = "lblEventNameUpdate";
-            this.lblEventNameUpdate.Size = new System.Drawing.Size(119, 21);
+            this.lblEventNameUpdate.Size = new System.Drawing.Size(98, 19);
             this.lblEventNameUpdate.TabIndex = 48;
             this.lblEventNameUpdate.Text = "Event Name:";
             // 
@@ -686,7 +686,7 @@
             this.txtEventIDUpdate.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEventIDUpdate.Location = new System.Drawing.Point(361, 31);
             this.txtEventIDUpdate.Name = "txtEventIDUpdate";
-            this.txtEventIDUpdate.Size = new System.Drawing.Size(74, 28);
+            this.txtEventIDUpdate.Size = new System.Drawing.Size(74, 24);
             this.txtEventIDUpdate.TabIndex = 47;
             this.txtEventIDUpdate.Text = "ID";
             // 
@@ -697,7 +697,7 @@
             this.lblEventIDUpdate.ForeColor = System.Drawing.Color.White;
             this.lblEventIDUpdate.Location = new System.Drawing.Point(269, 34);
             this.lblEventIDUpdate.Name = "lblEventIDUpdate";
-            this.lblEventIDUpdate.Size = new System.Drawing.Size(86, 21);
+            this.lblEventIDUpdate.Size = new System.Drawing.Size(69, 19);
             this.lblEventIDUpdate.TabIndex = 46;
             this.lblEventIDUpdate.Text = "Event ID:";
             // 
@@ -708,7 +708,7 @@
             this.lblUpdateEvent.ForeColor = System.Drawing.Color.White;
             this.lblUpdateEvent.Location = new System.Drawing.Point(42, 59);
             this.lblUpdateEvent.Name = "lblUpdateEvent";
-            this.lblUpdateEvent.Size = new System.Drawing.Size(169, 27);
+            this.lblUpdateEvent.Size = new System.Drawing.Size(139, 22);
             this.lblUpdateEvent.TabIndex = 33;
             this.lblUpdateEvent.Text = "Update Event";
             this.lblUpdateEvent.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -768,6 +768,8 @@
             this.Controls.Add(this.btnPrevious);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximumSize = new System.Drawing.Size(813, 481);
+            this.MinimumSize = new System.Drawing.Size(813, 481);
             this.Name = "EventForm";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

@@ -189,10 +189,10 @@ namespace ISCG6421Assignment1
             // 
             this.lstChallenges.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstChallenges.FormattingEnabled = true;
-            this.lstChallenges.ItemHeight = 21;
+            this.lstChallenges.ItemHeight = 17;
             this.lstChallenges.Location = new System.Drawing.Point(60, 46);
             this.lstChallenges.Name = "lstChallenges";
-            this.lstChallenges.Size = new System.Drawing.Size(230, 256);
+            this.lstChallenges.Size = new System.Drawing.Size(230, 242);
             this.lstChallenges.TabIndex = 27;
             // 
             // lblChallengeID
@@ -202,7 +202,7 @@ namespace ISCG6421Assignment1
             this.lblChallengeID.ForeColor = System.Drawing.Color.White;
             this.lblChallengeID.Location = new System.Drawing.Point(322, 46);
             this.lblChallengeID.Name = "lblChallengeID";
-            this.lblChallengeID.Size = new System.Drawing.Size(123, 21);
+            this.lblChallengeID.Size = new System.Drawing.Size(96, 17);
             this.lblChallengeID.TabIndex = 28;
             this.lblChallengeID.Text = "Challenge ID:";
             this.lblChallengeID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -214,7 +214,7 @@ namespace ISCG6421Assignment1
             this.lblChallengeName.ForeColor = System.Drawing.Color.White;
             this.lblChallengeName.Location = new System.Drawing.Point(295, 92);
             this.lblChallengeName.Name = "lblChallengeName";
-            this.lblChallengeName.Size = new System.Drawing.Size(156, 21);
+            this.lblChallengeName.Size = new System.Drawing.Size(123, 17);
             this.lblChallengeName.TabIndex = 29;
             this.lblChallengeName.Text = "Challenge Name:";
             this.lblChallengeName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -226,7 +226,7 @@ namespace ISCG6421Assignment1
             this.lblEventID.ForeColor = System.Drawing.Color.White;
             this.lblEventID.Location = new System.Drawing.Point(353, 134);
             this.lblEventID.Name = "lblEventID";
-            this.lblEventID.Size = new System.Drawing.Size(86, 21);
+            this.lblEventID.Size = new System.Drawing.Size(65, 17);
             this.lblEventID.TabIndex = 30;
             this.lblEventID.Text = "Event ID:";
             this.lblEventID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -238,7 +238,7 @@ namespace ISCG6421Assignment1
             this.lblEventName.ForeColor = System.Drawing.Color.White;
             this.lblEventName.Location = new System.Drawing.Point(326, 181);
             this.lblEventName.Name = "lblEventName";
-            this.lblEventName.Size = new System.Drawing.Size(119, 21);
+            this.lblEventName.Size = new System.Drawing.Size(92, 17);
             this.lblEventName.TabIndex = 31;
             this.lblEventName.Text = "Event Name:";
             this.lblEventName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -250,7 +250,7 @@ namespace ISCG6421Assignment1
             this.lblStartTime.ForeColor = System.Drawing.Color.White;
             this.lblStartTime.Location = new System.Drawing.Point(344, 231);
             this.lblStartTime.Name = "lblStartTime";
-            this.lblStartTime.Size = new System.Drawing.Size(96, 21);
+            this.lblStartTime.Size = new System.Drawing.Size(74, 17);
             this.lblStartTime.TabIndex = 32;
             this.lblStartTime.Text = "Start Time:";
             this.lblStartTime.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -262,7 +262,7 @@ namespace ISCG6421Assignment1
             this.lblStatus.ForeColor = System.Drawing.Color.White;
             this.lblStatus.Location = new System.Drawing.Point(372, 280);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(61, 21);
+            this.lblStatus.Size = new System.Drawing.Size(46, 17);
             this.lblStatus.TabIndex = 33;
             this.lblStatus.Text = "Status";
             this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -274,7 +274,7 @@ namespace ISCG6421Assignment1
             this.lblCapacity.ForeColor = System.Drawing.Color.White;
             this.lblCapacity.Location = new System.Drawing.Point(346, 322);
             this.lblCapacity.Name = "lblCapacity";
-            this.lblCapacity.Size = new System.Drawing.Size(94, 21);
+            this.lblCapacity.Size = new System.Drawing.Size(72, 17);
             this.lblCapacity.TabIndex = 34;
             this.lblCapacity.Text = "Capacity:";
             this.lblCapacity.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -286,7 +286,7 @@ namespace ISCG6421Assignment1
             this.txtChallengeID.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtChallengeID.Location = new System.Drawing.Point(424, 43);
             this.txtChallengeID.Name = "txtChallengeID";
-            this.txtChallengeID.Size = new System.Drawing.Size(38, 27);
+            this.txtChallengeID.Size = new System.Drawing.Size(38, 23);
             this.txtChallengeID.TabIndex = 35;
             this.txtChallengeID.Text = "ID";
             // 
@@ -297,7 +297,7 @@ namespace ISCG6421Assignment1
             this.txtEventID.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEventID.Location = new System.Drawing.Point(424, 131);
             this.txtEventID.Name = "txtEventID";
-            this.txtEventID.Size = new System.Drawing.Size(38, 27);
+            this.txtEventID.Size = new System.Drawing.Size(38, 23);
             this.txtEventID.TabIndex = 36;
             this.txtEventID.Text = "ID";
             // 
@@ -308,7 +308,7 @@ namespace ISCG6421Assignment1
             this.txtChallengeName.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtChallengeName.Location = new System.Drawing.Point(424, 89);
             this.txtChallengeName.Name = "txtChallengeName";
-            this.txtChallengeName.Size = new System.Drawing.Size(165, 27);
+            this.txtChallengeName.Size = new System.Drawing.Size(165, 23);
             this.txtChallengeName.TabIndex = 37;
             this.txtChallengeName.Text = "Challenge Name";
             // 
@@ -319,7 +319,7 @@ namespace ISCG6421Assignment1
             this.txtEventName.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEventName.Location = new System.Drawing.Point(424, 178);
             this.txtEventName.Name = "txtEventName";
-            this.txtEventName.Size = new System.Drawing.Size(165, 27);
+            this.txtEventName.Size = new System.Drawing.Size(165, 23);
             this.txtEventName.TabIndex = 38;
             this.txtEventName.Text = "Event Name";
             // 
@@ -330,7 +330,7 @@ namespace ISCG6421Assignment1
             this.txtStartTime.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStartTime.Location = new System.Drawing.Point(424, 228);
             this.txtStartTime.Name = "txtStartTime";
-            this.txtStartTime.Size = new System.Drawing.Size(165, 27);
+            this.txtStartTime.Size = new System.Drawing.Size(165, 23);
             this.txtStartTime.TabIndex = 39;
             this.txtStartTime.Text = "Start Time";
             // 
@@ -341,7 +341,7 @@ namespace ISCG6421Assignment1
             this.txtStatus.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStatus.Location = new System.Drawing.Point(424, 277);
             this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(165, 27);
+            this.txtStatus.Size = new System.Drawing.Size(165, 23);
             this.txtStatus.TabIndex = 40;
             this.txtStatus.Text = "Status";
             // 
@@ -352,7 +352,7 @@ namespace ISCG6421Assignment1
             this.txtCapacity.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCapacity.Location = new System.Drawing.Point(424, 319);
             this.txtCapacity.Name = "txtCapacity";
-            this.txtCapacity.Size = new System.Drawing.Size(67, 27);
+            this.txtCapacity.Size = new System.Drawing.Size(67, 23);
             this.txtCapacity.TabIndex = 41;
             this.txtCapacity.Text = "Capacity";
             // 
@@ -385,7 +385,7 @@ namespace ISCG6421Assignment1
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(301, 270);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 21);
+            this.label1.Size = new System.Drawing.Size(50, 17);
             this.label1.TabIndex = 48;
             this.label1.Text = "Status:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -401,7 +401,7 @@ namespace ISCG6421Assignment1
             "Finished"});
             this.cmbStatusAdd.Location = new System.Drawing.Point(363, 265);
             this.cmbStatusAdd.Name = "cmbStatusAdd";
-            this.cmbStatusAdd.Size = new System.Drawing.Size(121, 29);
+            this.cmbStatusAdd.Size = new System.Drawing.Size(121, 27);
             this.cmbStatusAdd.TabIndex = 47;
             // 
             // numCapacity
@@ -409,7 +409,7 @@ namespace ISCG6421Assignment1
             this.numCapacity.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numCapacity.Location = new System.Drawing.Point(364, 221);
             this.numCapacity.Name = "numCapacity";
-            this.numCapacity.Size = new System.Drawing.Size(120, 27);
+            this.numCapacity.Size = new System.Drawing.Size(120, 23);
             this.numCapacity.TabIndex = 37;
             this.numCapacity.Value = new decimal(new int[] {
             1,
@@ -426,7 +426,7 @@ namespace ISCG6421Assignment1
             this.timePicker.Name = "timePicker";
             this.timePicker.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.timePicker.ShowUpDown = true;
-            this.timePicker.Size = new System.Drawing.Size(120, 27);
+            this.timePicker.Size = new System.Drawing.Size(120, 23);
             this.timePicker.TabIndex = 36;
             this.timePicker.Value = new System.DateTime(2022, 8, 30, 0, 0, 0, 0);
             // 
@@ -437,7 +437,7 @@ namespace ISCG6421Assignment1
             this.cmbEventName.FormattingEnabled = true;
             this.cmbEventName.Location = new System.Drawing.Point(427, 116);
             this.cmbEventName.Name = "cmbEventName";
-            this.cmbEventName.Size = new System.Drawing.Size(248, 29);
+            this.cmbEventName.Size = new System.Drawing.Size(248, 25);
             this.cmbEventName.TabIndex = 35;
             // 
             // cmbEventID
@@ -446,7 +446,7 @@ namespace ISCG6421Assignment1
             this.cmbEventID.FormattingEnabled = true;
             this.cmbEventID.Location = new System.Drawing.Point(365, 116);
             this.cmbEventID.Name = "cmbEventID";
-            this.cmbEventID.Size = new System.Drawing.Size(56, 29);
+            this.cmbEventID.Size = new System.Drawing.Size(56, 25);
             this.cmbEventID.TabIndex = 34;
             // 
             // lblAddChallenge
@@ -456,7 +456,7 @@ namespace ISCG6421Assignment1
             this.lblAddChallenge.ForeColor = System.Drawing.Color.White;
             this.lblAddChallenge.Location = new System.Drawing.Point(46, 60);
             this.lblAddChallenge.Name = "lblAddChallenge";
-            this.lblAddChallenge.Size = new System.Drawing.Size(187, 27);
+            this.lblAddChallenge.Size = new System.Drawing.Size(151, 22);
             this.lblAddChallenge.TabIndex = 33;
             this.lblAddChallenge.Text = "Add Challenge";
             this.lblAddChallenge.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -491,7 +491,7 @@ namespace ISCG6421Assignment1
             this.txtChallengeNameAdd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtChallengeNameAdd.Location = new System.Drawing.Point(365, 65);
             this.txtChallengeNameAdd.Name = "txtChallengeNameAdd";
-            this.txtChallengeNameAdd.Size = new System.Drawing.Size(310, 27);
+            this.txtChallengeNameAdd.Size = new System.Drawing.Size(310, 23);
             this.txtChallengeNameAdd.TabIndex = 26;
             this.txtChallengeNameAdd.Text = "Name";
             // 
@@ -502,7 +502,7 @@ namespace ISCG6421Assignment1
             this.lblCapacityAdd.ForeColor = System.Drawing.Color.White;
             this.lblCapacityAdd.Location = new System.Drawing.Point(279, 223);
             this.lblCapacityAdd.Name = "lblCapacityAdd";
-            this.lblCapacityAdd.Size = new System.Drawing.Size(94, 21);
+            this.lblCapacityAdd.Size = new System.Drawing.Size(72, 17);
             this.lblCapacityAdd.TabIndex = 24;
             this.lblCapacityAdd.Text = "Capacity:";
             this.lblCapacityAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -514,7 +514,7 @@ namespace ISCG6421Assignment1
             this.lblStartTimeAdd.ForeColor = System.Drawing.Color.White;
             this.lblStartTimeAdd.Location = new System.Drawing.Point(277, 181);
             this.lblStartTimeAdd.Name = "lblStartTimeAdd";
-            this.lblStartTimeAdd.Size = new System.Drawing.Size(96, 21);
+            this.lblStartTimeAdd.Size = new System.Drawing.Size(74, 17);
             this.lblStartTimeAdd.TabIndex = 23;
             this.lblStartTimeAdd.Text = "Start Time:";
             this.lblStartTimeAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -526,7 +526,7 @@ namespace ISCG6421Assignment1
             this.lblEventAdd.ForeColor = System.Drawing.Color.White;
             this.lblEventAdd.Location = new System.Drawing.Point(303, 121);
             this.lblEventAdd.Name = "lblEventAdd";
-            this.lblEventAdd.Size = new System.Drawing.Size(63, 21);
+            this.lblEventAdd.Size = new System.Drawing.Size(48, 17);
             this.lblEventAdd.TabIndex = 22;
             this.lblEventAdd.Text = "Event:";
             this.lblEventAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -538,7 +538,7 @@ namespace ISCG6421Assignment1
             this.lblChallengeNameAdd.ForeColor = System.Drawing.Color.White;
             this.lblChallengeNameAdd.Location = new System.Drawing.Point(228, 65);
             this.lblChallengeNameAdd.Name = "lblChallengeNameAdd";
-            this.lblChallengeNameAdd.Size = new System.Drawing.Size(156, 21);
+            this.lblChallengeNameAdd.Size = new System.Drawing.Size(123, 17);
             this.lblChallengeNameAdd.TabIndex = 21;
             this.lblChallengeNameAdd.Text = "Challenge Name:";
             this.lblChallengeNameAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -571,7 +571,7 @@ namespace ISCG6421Assignment1
             this.txtEventNameUpdate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEventNameUpdate.Location = new System.Drawing.Point(338, 119);
             this.txtEventNameUpdate.Name = "txtEventNameUpdate";
-            this.txtEventNameUpdate.Size = new System.Drawing.Size(191, 27);
+            this.txtEventNameUpdate.Size = new System.Drawing.Size(191, 23);
             this.txtEventNameUpdate.TabIndex = 47;
             this.txtEventNameUpdate.Text = "Name";
             // 
@@ -586,7 +586,7 @@ namespace ISCG6421Assignment1
             "Finished"});
             this.cmbStatusUpdate.Location = new System.Drawing.Point(338, 276);
             this.cmbStatusUpdate.Name = "cmbStatusUpdate";
-            this.cmbStatusUpdate.Size = new System.Drawing.Size(121, 29);
+            this.cmbStatusUpdate.Size = new System.Drawing.Size(121, 27);
             this.cmbStatusUpdate.TabIndex = 46;
             // 
             // lblStatusUpdate
@@ -596,7 +596,7 @@ namespace ISCG6421Assignment1
             this.lblStatusUpdate.ForeColor = System.Drawing.Color.White;
             this.lblStatusUpdate.Location = new System.Drawing.Point(266, 280);
             this.lblStatusUpdate.Name = "lblStatusUpdate";
-            this.lblStatusUpdate.Size = new System.Drawing.Size(66, 21);
+            this.lblStatusUpdate.Size = new System.Drawing.Size(50, 17);
             this.lblStatusUpdate.TabIndex = 45;
             this.lblStatusUpdate.Text = "Status:";
             this.lblStatusUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -606,7 +606,7 @@ namespace ISCG6421Assignment1
             this.numCapacityUpdate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numCapacityUpdate.Location = new System.Drawing.Point(338, 225);
             this.numCapacityUpdate.Name = "numCapacityUpdate";
-            this.numCapacityUpdate.Size = new System.Drawing.Size(120, 27);
+            this.numCapacityUpdate.Size = new System.Drawing.Size(120, 23);
             this.numCapacityUpdate.TabIndex = 44;
             this.numCapacityUpdate.Value = new decimal(new int[] {
             1,
@@ -623,7 +623,7 @@ namespace ISCG6421Assignment1
             this.timePickerUpdate.Name = "timePickerUpdate";
             this.timePickerUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.timePickerUpdate.ShowUpDown = true;
-            this.timePickerUpdate.Size = new System.Drawing.Size(120, 27);
+            this.timePickerUpdate.Size = new System.Drawing.Size(120, 23);
             this.timePickerUpdate.TabIndex = 43;
             this.timePickerUpdate.Value = new System.DateTime(2022, 8, 30, 0, 0, 0, 0);
             this.timePickerUpdate.ValueChanged += new System.EventHandler(this.timePickerUpdate_ValueChanged);
@@ -634,7 +634,7 @@ namespace ISCG6421Assignment1
             this.txtChallengeNameUpdate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtChallengeNameUpdate.Location = new System.Drawing.Point(338, 63);
             this.txtChallengeNameUpdate.Name = "txtChallengeNameUpdate";
-            this.txtChallengeNameUpdate.Size = new System.Drawing.Size(191, 27);
+            this.txtChallengeNameUpdate.Size = new System.Drawing.Size(191, 23);
             this.txtChallengeNameUpdate.TabIndex = 42;
             this.txtChallengeNameUpdate.Text = "Name";
             // 
@@ -645,7 +645,7 @@ namespace ISCG6421Assignment1
             this.lblCapacityUpdate.ForeColor = System.Drawing.Color.White;
             this.lblCapacityUpdate.Location = new System.Drawing.Point(252, 227);
             this.lblCapacityUpdate.Name = "lblCapacityUpdate";
-            this.lblCapacityUpdate.Size = new System.Drawing.Size(94, 21);
+            this.lblCapacityUpdate.Size = new System.Drawing.Size(72, 17);
             this.lblCapacityUpdate.TabIndex = 41;
             this.lblCapacityUpdate.Text = "Capacity:";
             this.lblCapacityUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -657,7 +657,7 @@ namespace ISCG6421Assignment1
             this.lblStartTimeUpdate.ForeColor = System.Drawing.Color.White;
             this.lblStartTimeUpdate.Location = new System.Drawing.Point(250, 179);
             this.lblStartTimeUpdate.Name = "lblStartTimeUpdate";
-            this.lblStartTimeUpdate.Size = new System.Drawing.Size(96, 21);
+            this.lblStartTimeUpdate.Size = new System.Drawing.Size(74, 17);
             this.lblStartTimeUpdate.TabIndex = 40;
             this.lblStartTimeUpdate.Text = "Start Time:";
             this.lblStartTimeUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -669,7 +669,7 @@ namespace ISCG6421Assignment1
             this.lblEventNameUpdate.ForeColor = System.Drawing.Color.White;
             this.lblEventNameUpdate.Location = new System.Drawing.Point(227, 122);
             this.lblEventNameUpdate.Name = "lblEventNameUpdate";
-            this.lblEventNameUpdate.Size = new System.Drawing.Size(119, 21);
+            this.lblEventNameUpdate.Size = new System.Drawing.Size(92, 17);
             this.lblEventNameUpdate.TabIndex = 39;
             this.lblEventNameUpdate.Text = "Event Name:";
             this.lblEventNameUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -681,7 +681,7 @@ namespace ISCG6421Assignment1
             this.lblChallengeNameUpdate.ForeColor = System.Drawing.Color.White;
             this.lblChallengeNameUpdate.Location = new System.Drawing.Point(201, 63);
             this.lblChallengeNameUpdate.Name = "lblChallengeNameUpdate";
-            this.lblChallengeNameUpdate.Size = new System.Drawing.Size(156, 21);
+            this.lblChallengeNameUpdate.Size = new System.Drawing.Size(123, 17);
             this.lblChallengeNameUpdate.TabIndex = 38;
             this.lblChallengeNameUpdate.Text = "Challenge Name:";
             this.lblChallengeNameUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -693,7 +693,7 @@ namespace ISCG6421Assignment1
             this.lblChallengeUpdate.ForeColor = System.Drawing.Color.White;
             this.lblChallengeUpdate.Location = new System.Drawing.Point(18, 59);
             this.lblChallengeUpdate.Name = "lblChallengeUpdate";
-            this.lblChallengeUpdate.Size = new System.Drawing.Size(225, 27);
+            this.lblChallengeUpdate.Size = new System.Drawing.Size(180, 22);
             this.lblChallengeUpdate.TabIndex = 33;
             this.lblChallengeUpdate.Text = "Update Challenge";
             this.lblChallengeUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -726,7 +726,7 @@ namespace ISCG6421Assignment1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(799, 450);
+            this.ClientSize = new System.Drawing.Size(797, 442);
             this.ControlBox = false;
             this.Controls.Add(this.pnlUpdate);
             this.Controls.Add(this.pnlAdd);
@@ -755,6 +755,8 @@ namespace ISCG6421Assignment1
             this.Controls.Add(this.btnPrevious);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximumSize = new System.Drawing.Size(813, 481);
+            this.MinimumSize = new System.Drawing.Size(813, 481);
             this.Name = "ChallengeForm";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

@@ -186,14 +186,15 @@
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(795, 434);
+            this.ClientSize = new System.Drawing.Size(797, 442);
             this.Controls.Add(this.grpReporting);
             this.Controls.Add(this.grpMaintenance);
+            this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximumSize = new System.Drawing.Size(813, 481);
+            this.MinimumSize = new System.Drawing.Size(813, 481);
             this.Name = "MainForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NZ E-Sports League";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.grpMaintenance.ResumeLayout(false);

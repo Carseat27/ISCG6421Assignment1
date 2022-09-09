@@ -35,8 +35,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(797, 442);
+            this.MaximumSize = new System.Drawing.Size(813, 481);
+            this.MinimumSize = new System.Drawing.Size(813, 481);
             this.Name = "CompetitorReportForm";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Competitor Report";
             this.ResumeLayout(false);
 

@@ -171,11 +171,11 @@
             // 
             this.lstCompetitors.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstCompetitors.FormattingEnabled = true;
-            this.lstCompetitors.ItemHeight = 21;
+            this.lstCompetitors.ItemHeight = 17;
             this.lstCompetitors.Location = new System.Drawing.Point(60, 46);
             this.lstCompetitors.Margin = new System.Windows.Forms.Padding(4);
             this.lstCompetitors.Name = "lstCompetitors";
-            this.lstCompetitors.Size = new System.Drawing.Size(230, 277);
+            this.lstCompetitors.Size = new System.Drawing.Size(230, 276);
             this.lstCompetitors.TabIndex = 28;
             // 
             // txtCompetitorID
@@ -186,7 +186,7 @@
             this.txtCompetitorID.Location = new System.Drawing.Point(450, 43);
             this.txtCompetitorID.Margin = new System.Windows.Forms.Padding(4);
             this.txtCompetitorID.Name = "txtCompetitorID";
-            this.txtCompetitorID.Size = new System.Drawing.Size(64, 27);
+            this.txtCompetitorID.Size = new System.Drawing.Size(64, 23);
             this.txtCompetitorID.TabIndex = 30;
             this.txtCompetitorID.Text = "ID";
             // 
@@ -198,7 +198,7 @@
             this.lblCompetitorID.Location = new System.Drawing.Point(308, 46);
             this.lblCompetitorID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompetitorID.Name = "lblCompetitorID";
-            this.lblCompetitorID.Size = new System.Drawing.Size(134, 21);
+            this.lblCompetitorID.Size = new System.Drawing.Size(105, 17);
             this.lblCompetitorID.TabIndex = 29;
             this.lblCompetitorID.Text = "Competitor ID:";
             this.lblCompetitorID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -211,7 +211,7 @@
             this.lblCompetitorUserName.Location = new System.Drawing.Point(344, 82);
             this.lblCompetitorUserName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompetitorUserName.Name = "lblCompetitorUserName";
-            this.lblCompetitorUserName.Size = new System.Drawing.Size(98, 21);
+            this.lblCompetitorUserName.Size = new System.Drawing.Size(75, 17);
             this.lblCompetitorUserName.TabIndex = 31;
             this.lblCompetitorUserName.Text = "Username:";
             this.lblCompetitorUserName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -224,7 +224,7 @@
             this.lblCompetitorFName.Location = new System.Drawing.Point(341, 123);
             this.lblCompetitorFName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompetitorFName.Name = "lblCompetitorFName";
-            this.lblCompetitorFName.Size = new System.Drawing.Size(101, 21);
+            this.lblCompetitorFName.Size = new System.Drawing.Size(79, 17);
             this.lblCompetitorFName.TabIndex = 32;
             this.lblCompetitorFName.Text = "First Name:";
             this.lblCompetitorFName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -237,7 +237,7 @@
             this.lblCompetitorLName.Location = new System.Drawing.Point(337, 161);
             this.lblCompetitorLName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompetitorLName.Name = "lblCompetitorLName";
-            this.lblCompetitorLName.Size = new System.Drawing.Size(105, 21);
+            this.lblCompetitorLName.Size = new System.Drawing.Size(81, 17);
             this.lblCompetitorLName.TabIndex = 33;
             this.lblCompetitorLName.Text = "Last Name:";
             this.lblCompetitorLName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -250,7 +250,7 @@
             this.lblCompetitorGender.Location = new System.Drawing.Point(363, 205);
             this.lblCompetitorGender.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompetitorGender.Name = "lblCompetitorGender";
-            this.lblCompetitorGender.Size = new System.Drawing.Size(79, 21);
+            this.lblCompetitorGender.Size = new System.Drawing.Size(60, 17);
             this.lblCompetitorGender.TabIndex = 34;
             this.lblCompetitorGender.Text = "Gender:";
             this.lblCompetitorGender.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -263,7 +263,7 @@
             this.lblCompetitorDoB.Location = new System.Drawing.Point(323, 247);
             this.lblCompetitorDoB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompetitorDoB.Name = "lblCompetitorDoB";
-            this.lblCompetitorDoB.Size = new System.Drawing.Size(119, 21);
+            this.lblCompetitorDoB.Size = new System.Drawing.Size(92, 17);
             this.lblCompetitorDoB.TabIndex = 35;
             this.lblCompetitorDoB.Text = "Date of Birth:";
             this.lblCompetitorDoB.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -276,7 +276,7 @@
             this.lblCompetitorEmail.Location = new System.Drawing.Point(385, 293);
             this.lblCompetitorEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompetitorEmail.Name = "lblCompetitorEmail";
-            this.lblCompetitorEmail.Size = new System.Drawing.Size(57, 21);
+            this.lblCompetitorEmail.Size = new System.Drawing.Size(47, 17);
             this.lblCompetitorEmail.TabIndex = 36;
             this.lblCompetitorEmail.Text = "Email:";
             this.lblCompetitorEmail.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -289,7 +289,7 @@
             this.txtCompetitorUsername.Location = new System.Drawing.Point(450, 79);
             this.txtCompetitorUsername.Margin = new System.Windows.Forms.Padding(4);
             this.txtCompetitorUsername.Name = "txtCompetitorUsername";
-            this.txtCompetitorUsername.Size = new System.Drawing.Size(239, 27);
+            this.txtCompetitorUsername.Size = new System.Drawing.Size(239, 23);
             this.txtCompetitorUsername.TabIndex = 37;
             this.txtCompetitorUsername.Text = "Username";
             // 
@@ -301,7 +301,7 @@
             this.txtCompetitorFName.Location = new System.Drawing.Point(448, 120);
             this.txtCompetitorFName.Margin = new System.Windows.Forms.Padding(4);
             this.txtCompetitorFName.Name = "txtCompetitorFName";
-            this.txtCompetitorFName.Size = new System.Drawing.Size(239, 27);
+            this.txtCompetitorFName.Size = new System.Drawing.Size(239, 23);
             this.txtCompetitorFName.TabIndex = 38;
             this.txtCompetitorFName.Text = "First Name";
             // 
@@ -313,7 +313,7 @@
             this.txtCompetitorLName.Location = new System.Drawing.Point(448, 161);
             this.txtCompetitorLName.Margin = new System.Windows.Forms.Padding(4);
             this.txtCompetitorLName.Name = "txtCompetitorLName";
-            this.txtCompetitorLName.Size = new System.Drawing.Size(239, 27);
+            this.txtCompetitorLName.Size = new System.Drawing.Size(239, 23);
             this.txtCompetitorLName.TabIndex = 39;
             this.txtCompetitorLName.Text = "Last Name";
             // 
@@ -325,7 +325,7 @@
             this.txtCompetitorGender.Location = new System.Drawing.Point(448, 205);
             this.txtCompetitorGender.Margin = new System.Windows.Forms.Padding(4);
             this.txtCompetitorGender.Name = "txtCompetitorGender";
-            this.txtCompetitorGender.Size = new System.Drawing.Size(96, 27);
+            this.txtCompetitorGender.Size = new System.Drawing.Size(96, 23);
             this.txtCompetitorGender.TabIndex = 40;
             this.txtCompetitorGender.Text = "Gender";
             // 
@@ -337,7 +337,7 @@
             this.txtCompetitorDoB.Location = new System.Drawing.Point(448, 244);
             this.txtCompetitorDoB.Margin = new System.Windows.Forms.Padding(4);
             this.txtCompetitorDoB.Name = "txtCompetitorDoB";
-            this.txtCompetitorDoB.Size = new System.Drawing.Size(96, 27);
+            this.txtCompetitorDoB.Size = new System.Drawing.Size(96, 23);
             this.txtCompetitorDoB.TabIndex = 41;
             this.txtCompetitorDoB.Text = "DoB";
             // 
@@ -349,7 +349,7 @@
             this.txtCompetitorEmail.Location = new System.Drawing.Point(443, 290);
             this.txtCompetitorEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtCompetitorEmail.Name = "txtCompetitorEmail";
-            this.txtCompetitorEmail.Size = new System.Drawing.Size(246, 27);
+            this.txtCompetitorEmail.Size = new System.Drawing.Size(246, 23);
             this.txtCompetitorEmail.TabIndex = 42;
             this.txtCompetitorEmail.Text = "Email";
             // 
@@ -387,7 +387,7 @@
             this.radCompetitorOtherAdd.Location = new System.Drawing.Point(528, 182);
             this.radCompetitorOtherAdd.Margin = new System.Windows.Forms.Padding(4);
             this.radCompetitorOtherAdd.Name = "radCompetitorOtherAdd";
-            this.radCompetitorOtherAdd.Size = new System.Drawing.Size(79, 25);
+            this.radCompetitorOtherAdd.Size = new System.Drawing.Size(62, 21);
             this.radCompetitorOtherAdd.TabIndex = 38;
             this.radCompetitorOtherAdd.TabStop = true;
             this.radCompetitorOtherAdd.Text = "Other";
@@ -401,7 +401,7 @@
             this.radCompetitorMaleAdd.Location = new System.Drawing.Point(453, 182);
             this.radCompetitorMaleAdd.Margin = new System.Windows.Forms.Padding(4);
             this.radCompetitorMaleAdd.Name = "radCompetitorMaleAdd";
-            this.radCompetitorMaleAdd.Size = new System.Drawing.Size(74, 25);
+            this.radCompetitorMaleAdd.Size = new System.Drawing.Size(57, 21);
             this.radCompetitorMaleAdd.TabIndex = 37;
             this.radCompetitorMaleAdd.TabStop = true;
             this.radCompetitorMaleAdd.Text = "Male";
@@ -415,7 +415,7 @@
             this.radCompetitorFemaleAdd.Location = new System.Drawing.Point(354, 181);
             this.radCompetitorFemaleAdd.Margin = new System.Windows.Forms.Padding(4);
             this.radCompetitorFemaleAdd.Name = "radCompetitorFemaleAdd";
-            this.radCompetitorFemaleAdd.Size = new System.Drawing.Size(91, 25);
+            this.radCompetitorFemaleAdd.Size = new System.Drawing.Size(73, 21);
             this.radCompetitorFemaleAdd.TabIndex = 36;
             this.radCompetitorFemaleAdd.TabStop = true;
             this.radCompetitorFemaleAdd.Text = "Female";
@@ -431,7 +431,7 @@
             this.DoBPickerAdd.MaxDate = new System.DateTime(2022, 9, 7, 0, 0, 0, 0);
             this.DoBPickerAdd.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.DoBPickerAdd.Name = "DoBPickerAdd";
-            this.DoBPickerAdd.Size = new System.Drawing.Size(125, 27);
+            this.DoBPickerAdd.Size = new System.Drawing.Size(125, 23);
             this.DoBPickerAdd.TabIndex = 35;
             this.DoBPickerAdd.Value = new System.DateTime(2022, 9, 7, 0, 0, 0, 0);
             // 
@@ -443,7 +443,7 @@
             this.lblCompetitorEmailAdd.Location = new System.Drawing.Point(289, 257);
             this.lblCompetitorEmailAdd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompetitorEmailAdd.Name = "lblCompetitorEmailAdd";
-            this.lblCompetitorEmailAdd.Size = new System.Drawing.Size(57, 21);
+            this.lblCompetitorEmailAdd.Size = new System.Drawing.Size(47, 17);
             this.lblCompetitorEmailAdd.TabIndex = 34;
             this.lblCompetitorEmailAdd.Text = "Email:";
             this.lblCompetitorEmailAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -456,7 +456,7 @@
             this.lblAddCompetitor.Location = new System.Drawing.Point(32, 54);
             this.lblAddCompetitor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAddCompetitor.Name = "lblAddCompetitor";
-            this.lblAddCompetitor.Size = new System.Drawing.Size(198, 27);
+            this.lblAddCompetitor.Size = new System.Drawing.Size(160, 22);
             this.lblAddCompetitor.TabIndex = 33;
             this.lblAddCompetitor.Text = "Add Competitor";
             this.lblAddCompetitor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -494,7 +494,7 @@
             this.txtCompetitorEmailAdd.Location = new System.Drawing.Point(354, 254);
             this.txtCompetitorEmailAdd.Margin = new System.Windows.Forms.Padding(4);
             this.txtCompetitorEmailAdd.Name = "txtCompetitorEmailAdd";
-            this.txtCompetitorEmailAdd.Size = new System.Drawing.Size(253, 27);
+            this.txtCompetitorEmailAdd.Size = new System.Drawing.Size(253, 23);
             this.txtCompetitorEmailAdd.TabIndex = 30;
             this.txtCompetitorEmailAdd.Text = "Email:";
             // 
@@ -505,7 +505,7 @@
             this.txtCompetitorLNameAdd.Location = new System.Drawing.Point(354, 139);
             this.txtCompetitorLNameAdd.Margin = new System.Windows.Forms.Padding(4);
             this.txtCompetitorLNameAdd.Name = "txtCompetitorLNameAdd";
-            this.txtCompetitorLNameAdd.Size = new System.Drawing.Size(253, 27);
+            this.txtCompetitorLNameAdd.Size = new System.Drawing.Size(253, 23);
             this.txtCompetitorLNameAdd.TabIndex = 28;
             this.txtCompetitorLNameAdd.Text = "Last Name";
             // 
@@ -516,7 +516,7 @@
             this.txtCompetitorFNameAdd.Location = new System.Drawing.Point(354, 95);
             this.txtCompetitorFNameAdd.Margin = new System.Windows.Forms.Padding(4);
             this.txtCompetitorFNameAdd.Name = "txtCompetitorFNameAdd";
-            this.txtCompetitorFNameAdd.Size = new System.Drawing.Size(253, 27);
+            this.txtCompetitorFNameAdd.Size = new System.Drawing.Size(253, 23);
             this.txtCompetitorFNameAdd.TabIndex = 27;
             this.txtCompetitorFNameAdd.Text = "First Name";
             // 
@@ -527,7 +527,7 @@
             this.txtCompetitorUsernameAdd.Location = new System.Drawing.Point(354, 54);
             this.txtCompetitorUsernameAdd.Margin = new System.Windows.Forms.Padding(4);
             this.txtCompetitorUsernameAdd.Name = "txtCompetitorUsernameAdd";
-            this.txtCompetitorUsernameAdd.Size = new System.Drawing.Size(253, 27);
+            this.txtCompetitorUsernameAdd.Size = new System.Drawing.Size(253, 23);
             this.txtCompetitorUsernameAdd.TabIndex = 26;
             this.txtCompetitorUsernameAdd.Text = "Username";
             // 
@@ -539,7 +539,7 @@
             this.lblCompetitorDoBAdd.Location = new System.Drawing.Point(227, 219);
             this.lblCompetitorDoBAdd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompetitorDoBAdd.Name = "lblCompetitorDoBAdd";
-            this.lblCompetitorDoBAdd.Size = new System.Drawing.Size(119, 21);
+            this.lblCompetitorDoBAdd.Size = new System.Drawing.Size(92, 17);
             this.lblCompetitorDoBAdd.TabIndex = 25;
             this.lblCompetitorDoBAdd.Text = "Date of Birth:";
             this.lblCompetitorDoBAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -552,7 +552,7 @@
             this.lblCompetitorGenderAdd.Location = new System.Drawing.Point(267, 180);
             this.lblCompetitorGenderAdd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompetitorGenderAdd.Name = "lblCompetitorGenderAdd";
-            this.lblCompetitorGenderAdd.Size = new System.Drawing.Size(79, 21);
+            this.lblCompetitorGenderAdd.Size = new System.Drawing.Size(60, 17);
             this.lblCompetitorGenderAdd.TabIndex = 24;
             this.lblCompetitorGenderAdd.Text = "Gender:";
             this.lblCompetitorGenderAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -565,7 +565,7 @@
             this.lblCompetitorLNameAdd.Location = new System.Drawing.Point(241, 139);
             this.lblCompetitorLNameAdd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompetitorLNameAdd.Name = "lblCompetitorLNameAdd";
-            this.lblCompetitorLNameAdd.Size = new System.Drawing.Size(105, 21);
+            this.lblCompetitorLNameAdd.Size = new System.Drawing.Size(81, 17);
             this.lblCompetitorLNameAdd.TabIndex = 23;
             this.lblCompetitorLNameAdd.Text = "Last Name:";
             this.lblCompetitorLNameAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -578,7 +578,7 @@
             this.lblCompetitorFNameAdd.Location = new System.Drawing.Point(245, 101);
             this.lblCompetitorFNameAdd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompetitorFNameAdd.Name = "lblCompetitorFNameAdd";
-            this.lblCompetitorFNameAdd.Size = new System.Drawing.Size(101, 21);
+            this.lblCompetitorFNameAdd.Size = new System.Drawing.Size(79, 17);
             this.lblCompetitorFNameAdd.TabIndex = 22;
             this.lblCompetitorFNameAdd.Text = "First Name:";
             this.lblCompetitorFNameAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -591,7 +591,7 @@
             this.lblCompetitorUserNameAdd.Location = new System.Drawing.Point(248, 60);
             this.lblCompetitorUserNameAdd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompetitorUserNameAdd.Name = "lblCompetitorUserNameAdd";
-            this.lblCompetitorUserNameAdd.Size = new System.Drawing.Size(98, 21);
+            this.lblCompetitorUserNameAdd.Size = new System.Drawing.Size(75, 17);
             this.lblCompetitorUserNameAdd.TabIndex = 21;
             this.lblCompetitorUserNameAdd.Text = "Username:";
             this.lblCompetitorUserNameAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -630,7 +630,7 @@
             this.radCompetitorOtherUpdate.Location = new System.Drawing.Point(550, 172);
             this.radCompetitorOtherUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.radCompetitorOtherUpdate.Name = "radCompetitorOtherUpdate";
-            this.radCompetitorOtherUpdate.Size = new System.Drawing.Size(79, 25);
+            this.radCompetitorOtherUpdate.Size = new System.Drawing.Size(62, 21);
             this.radCompetitorOtherUpdate.TabIndex = 38;
             this.radCompetitorOtherUpdate.TabStop = true;
             this.radCompetitorOtherUpdate.Text = "Other";
@@ -644,7 +644,7 @@
             this.radCompetitorMaleUpdate.Location = new System.Drawing.Point(471, 172);
             this.radCompetitorMaleUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.radCompetitorMaleUpdate.Name = "radCompetitorMaleUpdate";
-            this.radCompetitorMaleUpdate.Size = new System.Drawing.Size(74, 25);
+            this.radCompetitorMaleUpdate.Size = new System.Drawing.Size(57, 21);
             this.radCompetitorMaleUpdate.TabIndex = 37;
             this.radCompetitorMaleUpdate.TabStop = true;
             this.radCompetitorMaleUpdate.Text = "Male";
@@ -658,7 +658,7 @@
             this.radCompetitorFemaleUpdate.Location = new System.Drawing.Point(372, 172);
             this.radCompetitorFemaleUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.radCompetitorFemaleUpdate.Name = "radCompetitorFemaleUpdate";
-            this.radCompetitorFemaleUpdate.Size = new System.Drawing.Size(91, 25);
+            this.radCompetitorFemaleUpdate.Size = new System.Drawing.Size(73, 21);
             this.radCompetitorFemaleUpdate.TabIndex = 36;
             this.radCompetitorFemaleUpdate.TabStop = true;
             this.radCompetitorFemaleUpdate.Text = "Female";
@@ -674,7 +674,7 @@
             this.DoBPickerUpdate.MaxDate = new System.DateTime(2022, 9, 7, 0, 0, 0, 0);
             this.DoBPickerUpdate.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.DoBPickerUpdate.Name = "DoBPickerUpdate";
-            this.DoBPickerUpdate.Size = new System.Drawing.Size(125, 27);
+            this.DoBPickerUpdate.Size = new System.Drawing.Size(125, 23);
             this.DoBPickerUpdate.TabIndex = 35;
             this.DoBPickerUpdate.Value = new System.DateTime(2022, 9, 7, 0, 0, 0, 0);
             // 
@@ -686,7 +686,7 @@
             this.lblCompetitorEmailUpdate.Location = new System.Drawing.Point(303, 242);
             this.lblCompetitorEmailUpdate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompetitorEmailUpdate.Name = "lblCompetitorEmailUpdate";
-            this.lblCompetitorEmailUpdate.Size = new System.Drawing.Size(57, 21);
+            this.lblCompetitorEmailUpdate.Size = new System.Drawing.Size(47, 17);
             this.lblCompetitorEmailUpdate.TabIndex = 34;
             this.lblCompetitorEmailUpdate.Text = "Email:";
             this.lblCompetitorEmailUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -699,7 +699,7 @@
             this.lblCompetitorUpdate.Location = new System.Drawing.Point(18, 59);
             this.lblCompetitorUpdate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompetitorUpdate.Name = "lblCompetitorUpdate";
-            this.lblCompetitorUpdate.Size = new System.Drawing.Size(236, 27);
+            this.lblCompetitorUpdate.Size = new System.Drawing.Size(189, 22);
             this.lblCompetitorUpdate.TabIndex = 33;
             this.lblCompetitorUpdate.Text = "Update Competitor";
             this.lblCompetitorUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -737,7 +737,7 @@
             this.txtCompetitorEmailUpdate.Location = new System.Drawing.Point(373, 242);
             this.txtCompetitorEmailUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.txtCompetitorEmailUpdate.Name = "txtCompetitorEmailUpdate";
-            this.txtCompetitorEmailUpdate.Size = new System.Drawing.Size(252, 27);
+            this.txtCompetitorEmailUpdate.Size = new System.Drawing.Size(252, 23);
             this.txtCompetitorEmailUpdate.TabIndex = 30;
             this.txtCompetitorEmailUpdate.Text = "Email:";
             // 
@@ -748,7 +748,7 @@
             this.txtCompetitorLNameUpdate.Location = new System.Drawing.Point(372, 137);
             this.txtCompetitorLNameUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.txtCompetitorLNameUpdate.Name = "txtCompetitorLNameUpdate";
-            this.txtCompetitorLNameUpdate.Size = new System.Drawing.Size(253, 27);
+            this.txtCompetitorLNameUpdate.Size = new System.Drawing.Size(253, 23);
             this.txtCompetitorLNameUpdate.TabIndex = 28;
             this.txtCompetitorLNameUpdate.Text = "Last Name";
             // 
@@ -759,7 +759,7 @@
             this.txtCompetitorFNameUpdate.Location = new System.Drawing.Point(372, 99);
             this.txtCompetitorFNameUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.txtCompetitorFNameUpdate.Name = "txtCompetitorFNameUpdate";
-            this.txtCompetitorFNameUpdate.Size = new System.Drawing.Size(253, 27);
+            this.txtCompetitorFNameUpdate.Size = new System.Drawing.Size(253, 23);
             this.txtCompetitorFNameUpdate.TabIndex = 27;
             this.txtCompetitorFNameUpdate.Text = "First Name";
             // 
@@ -770,7 +770,7 @@
             this.txtCompetitorUsernameUpdate.Location = new System.Drawing.Point(373, 62);
             this.txtCompetitorUsernameUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.txtCompetitorUsernameUpdate.Name = "txtCompetitorUsernameUpdate";
-            this.txtCompetitorUsernameUpdate.Size = new System.Drawing.Size(253, 27);
+            this.txtCompetitorUsernameUpdate.Size = new System.Drawing.Size(253, 23);
             this.txtCompetitorUsernameUpdate.TabIndex = 26;
             this.txtCompetitorUsernameUpdate.Text = "Username";
             // 
@@ -782,7 +782,7 @@
             this.lblCompetitorDoBUpdate.Location = new System.Drawing.Point(245, 209);
             this.lblCompetitorDoBUpdate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompetitorDoBUpdate.Name = "lblCompetitorDoBUpdate";
-            this.lblCompetitorDoBUpdate.Size = new System.Drawing.Size(119, 21);
+            this.lblCompetitorDoBUpdate.Size = new System.Drawing.Size(92, 17);
             this.lblCompetitorDoBUpdate.TabIndex = 25;
             this.lblCompetitorDoBUpdate.Text = "Date of Birth:";
             this.lblCompetitorDoBUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -795,7 +795,7 @@
             this.lblCompetitorGenderUpdate.Location = new System.Drawing.Point(285, 174);
             this.lblCompetitorGenderUpdate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompetitorGenderUpdate.Name = "lblCompetitorGenderUpdate";
-            this.lblCompetitorGenderUpdate.Size = new System.Drawing.Size(79, 21);
+            this.lblCompetitorGenderUpdate.Size = new System.Drawing.Size(60, 17);
             this.lblCompetitorGenderUpdate.TabIndex = 24;
             this.lblCompetitorGenderUpdate.Text = "Gender:";
             this.lblCompetitorGenderUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -808,7 +808,7 @@
             this.lblCompetitorLNameUpdate.Location = new System.Drawing.Point(259, 137);
             this.lblCompetitorLNameUpdate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompetitorLNameUpdate.Name = "lblCompetitorLNameUpdate";
-            this.lblCompetitorLNameUpdate.Size = new System.Drawing.Size(105, 21);
+            this.lblCompetitorLNameUpdate.Size = new System.Drawing.Size(81, 17);
             this.lblCompetitorLNameUpdate.TabIndex = 23;
             this.lblCompetitorLNameUpdate.Text = "Last Name:";
             this.lblCompetitorLNameUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -821,7 +821,7 @@
             this.lblCompetitorFNameUpdate.Location = new System.Drawing.Point(263, 102);
             this.lblCompetitorFNameUpdate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompetitorFNameUpdate.Name = "lblCompetitorFNameUpdate";
-            this.lblCompetitorFNameUpdate.Size = new System.Drawing.Size(101, 21);
+            this.lblCompetitorFNameUpdate.Size = new System.Drawing.Size(79, 17);
             this.lblCompetitorFNameUpdate.TabIndex = 22;
             this.lblCompetitorFNameUpdate.Text = "First Name:";
             this.lblCompetitorFNameUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -834,7 +834,7 @@
             this.lblCompetitorUsernameUpdate.Location = new System.Drawing.Point(267, 65);
             this.lblCompetitorUsernameUpdate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompetitorUsernameUpdate.Name = "lblCompetitorUsernameUpdate";
-            this.lblCompetitorUsernameUpdate.Size = new System.Drawing.Size(98, 21);
+            this.lblCompetitorUsernameUpdate.Size = new System.Drawing.Size(75, 17);
             this.lblCompetitorUsernameUpdate.TabIndex = 21;
             this.lblCompetitorUsernameUpdate.Text = "Username:";
             this.lblCompetitorUsernameUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -870,6 +870,8 @@
             this.Controls.Add(this.btnPrevious);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximumSize = new System.Drawing.Size(813, 481);
+            this.MinimumSize = new System.Drawing.Size(813, 481);
             this.Name = "CompetitorForm";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
