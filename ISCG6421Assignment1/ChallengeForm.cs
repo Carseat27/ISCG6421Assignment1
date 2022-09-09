@@ -183,8 +183,15 @@ namespace ISCG6421Assignment1
                 newChallengeRow["Status"] = cmbStatusAdd.Text;
                 newChallengeRow["Capacity"] = numCapacity.Value;
                 DM.dtChallenge.Rows.Add(newChallengeRow);
-                MessageBox.Show("Challenge added successfully", "Success");
-                DM.UpdateChallenge();
+                try
+                {
+                    DM.UpdateChallenge();
+                    MessageBox.Show("Challenge added successfully", "Success");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("There has been an unexpected error.\n\nPlease check that you are using 'NZESL.mdb' as provided.", "Error");
+                }
                 pnlAdd.Visible = false;
                 Utilities.ButtonsMagic(controls, true);
             }
