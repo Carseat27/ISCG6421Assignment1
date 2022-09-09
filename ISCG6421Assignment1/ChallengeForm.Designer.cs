@@ -392,7 +392,6 @@ namespace ISCG6421Assignment1
             // 
             // cmbStatusAdd
             // 
-            this.cmbStatusAdd.Enabled = false;
             this.cmbStatusAdd.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbStatusAdd.FormattingEnabled = true;
             this.cmbStatusAdd.Items.AddRange(new object[] {
@@ -626,7 +625,6 @@ namespace ISCG6421Assignment1
             this.timePickerUpdate.Size = new System.Drawing.Size(120, 23);
             this.timePickerUpdate.TabIndex = 43;
             this.timePickerUpdate.Value = new System.DateTime(2022, 8, 30, 0, 0, 0, 0);
-            this.timePickerUpdate.ValueChanged += new System.EventHandler(this.timePickerUpdate_ValueChanged);
             // 
             // txtChallengeNameUpdate
             // 
@@ -761,7 +759,6 @@ namespace ISCG6421Assignment1
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Challenge Maintenance";
-            this.Move += new System.EventHandler(this.ChallengeForm_Move);
             this.pnlAdd.ResumeLayout(false);
             this.pnlAdd.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numCapacity)).EndInit();

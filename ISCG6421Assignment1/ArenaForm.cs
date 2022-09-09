@@ -16,7 +16,6 @@ namespace ISCG6421Assignment1
         private DataModule DM;
         private MainForm frmMenu;
         private CurrencyManager currencyManager;
-        private int step;
         private Button[] controls;
         public ArenaForm(DataModule dm, MainForm mnu)
         {
@@ -27,6 +26,9 @@ namespace ISCG6421Assignment1
             controls = new Button[] { btnNext, btnPrevious, btnAddArena, btnUpdateArena, btnDeleteArena, btnReturn };
         }
 
+        /// <summary>
+        /// this method binds the arena maintenance controls
+        /// </summary>
         private void BindControls()
         {
             txtArenaID.DataBindings.Add("Text", DM.dsNZESL, "Arena.ArenaID");
@@ -41,6 +43,10 @@ namespace ISCG6421Assignment1
             currencyManager = (CurrencyManager)this.BindingContext[DM.dsNZESL, "Arena"];
         }
 
+        /// <summary>
+        /// this region holds the code for the basic controls
+        /// </summary>
+        #region basicPageControls
         private void btnPrevious_Click(object sender, EventArgs e)
         {
             if(currencyManager.Position > 0)
@@ -61,18 +67,17 @@ namespace ISCG6421Assignment1
         {
             Close();
         }
+        #endregion
 
         /// <summary>
-        /// this section defines the ActionEvents for adding an arena
+        /// this region holds the code for adding a new arena
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        #region AddArena
         private void btnAddCancel_Click(object sender, EventArgs e)
         {
             //hide panel for adding arena
             pnlAdd.Visible = false;
             pnlUpdate.Visible = false;
-
 
             //enable needed items
             Utilities.ButtonsMagic(controls, true);
@@ -112,70 +117,29 @@ namespace ISCG6421Assignment1
                 newArenaRow["Suburb"] = txtArenaSuburbAdd.Text;
                 newArenaRow["City"] = txtArenaCityAdd.Text;
                 newArenaRow["PhoneNumber"] = txtArenaPhoneAdd.Text;
-                DM.dtArena.Rows.Add(newArenaRow);
                 MessageBox.Show("Arena added successfully", "Success");
-                DM.UpdateArena();
+                try
+                {
+                    DM.dtArena.Rows.Add(newArenaRow);
+                    DM.UpdateArena();
+                    MessageBox.Show("Arena added successfully", "Success");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("There has been an unexpected error.\n\nPlease check that you are using 'NZESL.mdb' as provided.", "Error");
+                }
+                //hide panel
                 pnlAdd.Visible = false;
                 //enable buttons
                 Utilities.ButtonsMagic(controls, true);
             }
         }
+        #endregion
 
         /// <summary>
-        /// this next section defines the EventActions for updating the arena details
+        /// this region holds the code for updating an arena
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnArenaUpdate_Click(object sender, EventArgs e)
-        {
-            DataRow updateArenaRow = DM.dtArena.Rows[currencyManager.Position];
-            if ((txtArenaName.Text == "") || (txtArenaAddress.Text == "") || (txtArenaSuburb.Text == "") || (txtArenaCity.Text == "") || (txtArenaPhone.Text == ""))
-            {
-                MessageBox.Show("You must fill out ALL fields!", "Error!");
-            }
-            else
-            {
-                updateArenaRow["ArenaName"] = txtArenaName.Text;
-                updateArenaRow["StreetAddress"] = txtArenaAddress.Text;
-                updateArenaRow["Suburb"] = txtArenaSuburb.Text;
-                updateArenaRow["City"] = txtArenaCity.Text;
-                updateArenaRow["PhoneNumber"] = txtArenaPhone.Text;
-                currencyManager.EndCurrentEdit();
-                DM.UpdateArena();
-                MessageBox.Show("Treatment Updated Successfully", "Success!");
-
-                pnlUpdate.Visible = false;
-                pnlAdd.Visible = false;
-
-                //enable needed items
-                Utilities.ButtonsMagic(controls, true);
-
-                //disable text boxes
-                txtArenaName.Enabled = false;
-                txtArenaAddress.Enabled = false;
-                txtArenaSuburb.Enabled = false;
-                txtArenaCity.Enabled = false;
-                txtArenaPhone.Enabled = false;
-            }
-        }
-
-        private void btnUpdateCancel_Click(object sender, EventArgs e)
-        {
-            pnlUpdate.Visible = false;
-            pnlAdd.Visible = false;
-
-            //enable needed items
-            Utilities.ButtonsMagic(controls, true);
-
-            //disable text boxes
-            txtArenaName.Enabled = false;
-            txtArenaAddress.Enabled = false;
-            txtArenaSuburb.Enabled = false;
-            txtArenaCity.Enabled = false;
-            txtArenaPhone.Enabled = false;
-
-        }
-
+        #region UpdateArena
         private void btnUpdateArena_Click(object sender, EventArgs e)
         {
             pnlAdd.Visible = false;
@@ -192,11 +156,65 @@ namespace ISCG6421Assignment1
             txtArenaPhone.Enabled = true;
         }
 
+        private void btnArenaUpdate_Click(object sender, EventArgs e)
+        {
+            DataRow updateArenaRow = DM.dtArena.Rows[currencyManager.Position];
+            if ((txtArenaName.Text == "") || (txtArenaAddress.Text == "") || (txtArenaSuburb.Text == "") || (txtArenaCity.Text == "") || (txtArenaPhone.Text == ""))
+            {
+                MessageBox.Show("You must fill out ALL fields!", "Error!");
+            }
+            else
+            {
+                updateArenaRow["ArenaName"] = txtArenaName.Text;
+                updateArenaRow["StreetAddress"] = txtArenaAddress.Text;
+                updateArenaRow["Suburb"] = txtArenaSuburb.Text;
+                updateArenaRow["City"] = txtArenaCity.Text;
+                updateArenaRow["PhoneNumber"] = txtArenaPhone.Text;
+                currencyManager.EndCurrentEdit();
+                try
+                {
+                    DM.UpdateArena();
+                    MessageBox.Show("Arena updated successfully", "Success");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("There has been an unexpected error.\n\nPlease check that you are using 'NZESL.mdb' as provided.", "Error");
+                }
+                //hide panel
+                pnlUpdate.Visible = false;
+
+                //enable needed items
+                Utilities.ButtonsMagic(controls, true);
+
+                //disable text boxes
+                txtArenaName.Enabled = false;
+                txtArenaAddress.Enabled = false;
+                txtArenaSuburb.Enabled = false;
+                txtArenaCity.Enabled = false;
+                txtArenaPhone.Enabled = false;
+            }
+        }
+
+        private void btnUpdateCancel_Click(object sender, EventArgs e)
+        {
+            pnlUpdate.Visible = false;
+
+            //enable needed items
+            Utilities.ButtonsMagic(controls, true);
+
+            //disable text boxes
+            txtArenaName.Enabled = false;
+            txtArenaAddress.Enabled = false;
+            txtArenaSuburb.Enabled = false;
+            txtArenaCity.Enabled = false;
+            txtArenaPhone.Enabled = false;
+        }
+        #endregion
+
         /// <summary>
         /// this section defines the EventActions for deleting an arena
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        #region DeleteArena
         private void btnDeleteArena_Click(object sender, EventArgs e)
         {
             DataRow deleteArenaRow = DM.dtArena.Rows[currencyManager.Position];
@@ -209,21 +227,19 @@ namespace ISCG6421Assignment1
             {
                 if (MessageBox.Show("Are you sure you want to delete the selected record?\n\nIt is currently: " + txtArenaName.Text, "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
-                    deleteArenaRow.Delete();
-                    DM.UpdateArena();
-                    MessageBox.Show("Arena deleted successfully", "Success");
+                    try
+                    {
+                        deleteArenaRow.Delete();
+                        DM.UpdateArena();
+                        MessageBox.Show("Arena updated successfully", "Success");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("There has been an unexpected error.\n\nPlease check that you are using 'NZESL.mdb' as provided.", "Error");
+                    }
                 }
             }
         }
-
-        /// <summary>
-        /// this method ensures that the child form (Arena) will make the parent form (MainForm) move with it.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void ArenaForm_Move(object sender, EventArgs e)
-        {
-            step = Utilities.Movement(step, sender, e);
-        }
+        #endregion
     }
 }

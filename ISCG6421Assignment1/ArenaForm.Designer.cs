@@ -535,7 +535,6 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Arena Maintenance";
-            this.Move += new System.EventHandler(this.ArenaForm_Move);
             this.pnlAdd.ResumeLayout(false);
             this.pnlAdd.PerformLayout();
             this.pnlUpdate.ResumeLayout(false);
