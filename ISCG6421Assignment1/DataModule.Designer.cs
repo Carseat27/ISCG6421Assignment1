@@ -404,6 +404,7 @@
                         new System.Data.Common.DataColumnMapping("Capacity", "Capacity"),
                         new System.Data.Common.DataColumnMapping("EventDate", "EventDate")})});
             this.daEvent.UpdateCommand = this.oleDbUpdateCommand5;
+            this.daEvent.RowUpdated += new System.Data.OleDb.OleDbRowUpdatedEventHandler(this.daEvent_RowUpdated);
             // 
             // dsNZESL
             // 

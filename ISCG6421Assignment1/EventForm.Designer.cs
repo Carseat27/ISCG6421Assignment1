@@ -50,6 +50,7 @@
             this.txtEventCapacity = new System.Windows.Forms.TextBox();
             this.txtEventDate = new System.Windows.Forms.TextBox();
             this.pnlAdd = new System.Windows.Forms.Panel();
+            this.DatePickerAdd = new System.Windows.Forms.DateTimePicker();
             this.lblEventStausAdd = new System.Windows.Forms.Label();
             this.cmbEventStatusAdd = new System.Windows.Forms.ComboBox();
             this.numEventCapacityAdd = new System.Windows.Forms.NumericUpDown();
@@ -63,9 +64,28 @@
             this.lblEventDateAdd = new System.Windows.Forms.Label();
             this.lblEventAdd = new System.Windows.Forms.Label();
             this.lblEventNameAdd = new System.Windows.Forms.Label();
-            this.DatePickerAdd = new System.Windows.Forms.DateTimePicker();
+            this.pnlUpdate = new System.Windows.Forms.Panel();
+            this.cmbEventStatusUpdate = new System.Windows.Forms.ComboBox();
+            this.DatePickerUpdate = new System.Windows.Forms.DateTimePicker();
+            this.numEventCapacityUpdate = new System.Windows.Forms.NumericUpDown();
+            this.txtArenaNameUpdate = new System.Windows.Forms.TextBox();
+            this.txtArenaIDUpdate = new System.Windows.Forms.TextBox();
+            this.txtEventNameUpdate = new System.Windows.Forms.TextBox();
+            this.lblEventDateUpdate = new System.Windows.Forms.Label();
+            this.lblEventCapacityUpdate = new System.Windows.Forms.Label();
+            this.lblEventStatusUpdate = new System.Windows.Forms.Label();
+            this.lblArenaNameUpdate = new System.Windows.Forms.Label();
+            this.lblArenaIDUpdate = new System.Windows.Forms.Label();
+            this.lblEventNameUpdate = new System.Windows.Forms.Label();
+            this.txtEventIDUpdate = new System.Windows.Forms.TextBox();
+            this.lblEventIDUpdate = new System.Windows.Forms.Label();
+            this.lblUpdateEvent = new System.Windows.Forms.Label();
+            this.btnEventUpdate = new System.Windows.Forms.Button();
+            this.btnUpdateCancel = new System.Windows.Forms.Button();
             this.pnlAdd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numEventCapacityAdd)).BeginInit();
+            this.pnlUpdate.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numEventCapacityUpdate)).BeginInit();
             this.SuspendLayout();
             // 
             // btnReturn
@@ -92,6 +112,7 @@
             this.btnDeleteEvent.TabIndex = 29;
             this.btnDeleteEvent.Text = "Delete Event";
             this.btnDeleteEvent.UseVisualStyleBackColor = false;
+            this.btnDeleteEvent.Click += new System.EventHandler(this.btnDeleteEvent_Click);
             // 
             // btnUpdateEvent
             // 
@@ -104,6 +125,7 @@
             this.btnUpdateEvent.TabIndex = 28;
             this.btnUpdateEvent.Text = "Update Event";
             this.btnUpdateEvent.UseVisualStyleBackColor = false;
+            this.btnUpdateEvent.Click += new System.EventHandler(this.btnUpdateEvent_Click);
             // 
             // btnAddEvent
             // 
@@ -213,11 +235,11 @@
             this.lblEventStatus.AutoSize = true;
             this.lblEventStatus.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEventStatus.ForeColor = System.Drawing.Color.White;
-            this.lblEventStatus.Location = new System.Drawing.Point(356, 219);
+            this.lblEventStatus.Location = new System.Drawing.Point(349, 219);
             this.lblEventStatus.Name = "lblEventStatus";
-            this.lblEventStatus.Size = new System.Drawing.Size(59, 21);
+            this.lblEventStatus.Size = new System.Drawing.Size(66, 21);
             this.lblEventStatus.TabIndex = 37;
-            this.lblEventStatus.Text = "Staus:";
+            this.lblEventStatus.Text = "Status:";
             // 
             // lblEventCapacity
             // 
@@ -317,11 +339,25 @@
             this.pnlAdd.Controls.Add(this.lblEventDateAdd);
             this.pnlAdd.Controls.Add(this.lblEventAdd);
             this.pnlAdd.Controls.Add(this.lblEventNameAdd);
-            this.pnlAdd.Location = new System.Drawing.Point(51, 12);
+            this.pnlAdd.Location = new System.Drawing.Point(60, 27);
             this.pnlAdd.Name = "pnlAdd";
             this.pnlAdd.Size = new System.Drawing.Size(684, 341);
             this.pnlAdd.TabIndex = 46;
             this.pnlAdd.Visible = false;
+            // 
+            // DatePickerAdd
+            // 
+            this.DatePickerAdd.CalendarFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DatePickerAdd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DatePickerAdd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DatePickerAdd.Location = new System.Drawing.Point(353, 260);
+            this.DatePickerAdd.Margin = new System.Windows.Forms.Padding(4);
+            this.DatePickerAdd.MaxDate = new System.DateTime(2022, 9, 7, 0, 0, 0, 0);
+            this.DatePickerAdd.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.DatePickerAdd.Name = "DatePickerAdd";
+            this.DatePickerAdd.Size = new System.Drawing.Size(125, 27);
+            this.DatePickerAdd.TabIndex = 49;
+            this.DatePickerAdd.Value = new System.DateTime(2022, 9, 7, 0, 0, 0, 0);
             // 
             // lblEventStausAdd
             // 
@@ -352,6 +388,11 @@
             // 
             this.numEventCapacityAdd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numEventCapacityAdd.Location = new System.Drawing.Point(353, 215);
+            this.numEventCapacityAdd.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.numEventCapacityAdd.Name = "numEventCapacityAdd";
             this.numEventCapacityAdd.Size = new System.Drawing.Size(120, 27);
             this.numEventCapacityAdd.TabIndex = 37;
@@ -474,19 +515,227 @@
             this.lblEventNameAdd.Text = "Event Name:";
             this.lblEventNameAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // DatePickerAdd
+            // pnlUpdate
             // 
-            this.DatePickerAdd.CalendarFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DatePickerAdd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DatePickerAdd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DatePickerAdd.Location = new System.Drawing.Point(353, 260);
-            this.DatePickerAdd.Margin = new System.Windows.Forms.Padding(4);
-            this.DatePickerAdd.MaxDate = new System.DateTime(2022, 9, 7, 0, 0, 0, 0);
-            this.DatePickerAdd.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
-            this.DatePickerAdd.Name = "DatePickerAdd";
-            this.DatePickerAdd.Size = new System.Drawing.Size(125, 27);
-            this.DatePickerAdd.TabIndex = 49;
-            this.DatePickerAdd.Value = new System.DateTime(2022, 9, 7, 0, 0, 0, 0);
+            this.pnlUpdate.Controls.Add(this.cmbEventStatusUpdate);
+            this.pnlUpdate.Controls.Add(this.DatePickerUpdate);
+            this.pnlUpdate.Controls.Add(this.numEventCapacityUpdate);
+            this.pnlUpdate.Controls.Add(this.txtArenaNameUpdate);
+            this.pnlUpdate.Controls.Add(this.txtArenaIDUpdate);
+            this.pnlUpdate.Controls.Add(this.txtEventNameUpdate);
+            this.pnlUpdate.Controls.Add(this.lblEventDateUpdate);
+            this.pnlUpdate.Controls.Add(this.lblEventCapacityUpdate);
+            this.pnlUpdate.Controls.Add(this.lblEventStatusUpdate);
+            this.pnlUpdate.Controls.Add(this.lblArenaNameUpdate);
+            this.pnlUpdate.Controls.Add(this.lblArenaIDUpdate);
+            this.pnlUpdate.Controls.Add(this.lblEventNameUpdate);
+            this.pnlUpdate.Controls.Add(this.txtEventIDUpdate);
+            this.pnlUpdate.Controls.Add(this.lblEventIDUpdate);
+            this.pnlUpdate.Controls.Add(this.lblUpdateEvent);
+            this.pnlUpdate.Controls.Add(this.btnEventUpdate);
+            this.pnlUpdate.Controls.Add(this.btnUpdateCancel);
+            this.pnlUpdate.Location = new System.Drawing.Point(60, 27);
+            this.pnlUpdate.Name = "pnlUpdate";
+            this.pnlUpdate.Size = new System.Drawing.Size(684, 341);
+            this.pnlUpdate.TabIndex = 47;
+            this.pnlUpdate.Visible = false;
+            // 
+            // cmbEventStatusUpdate
+            // 
+            this.cmbEventStatusUpdate.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbEventStatusUpdate.FormattingEnabled = true;
+            this.cmbEventStatusUpdate.Items.AddRange(new object[] {
+            "Unconfirmed",
+            "Confirmed",
+            "Cancelled"});
+            this.cmbEventStatusUpdate.Location = new System.Drawing.Point(361, 201);
+            this.cmbEventStatusUpdate.Name = "cmbEventStatusUpdate";
+            this.cmbEventStatusUpdate.Size = new System.Drawing.Size(121, 29);
+            this.cmbEventStatusUpdate.TabIndex = 60;
+            // 
+            // DatePickerUpdate
+            // 
+            this.DatePickerUpdate.CalendarFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DatePickerUpdate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DatePickerUpdate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DatePickerUpdate.Location = new System.Drawing.Point(361, 278);
+            this.DatePickerUpdate.Margin = new System.Windows.Forms.Padding(4);
+            this.DatePickerUpdate.MaxDate = new System.DateTime(2022, 9, 7, 0, 0, 0, 0);
+            this.DatePickerUpdate.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.DatePickerUpdate.Name = "DatePickerUpdate";
+            this.DatePickerUpdate.Size = new System.Drawing.Size(125, 27);
+            this.DatePickerUpdate.TabIndex = 59;
+            this.DatePickerUpdate.Value = new System.DateTime(2022, 9, 7, 0, 0, 0, 0);
+            // 
+            // numEventCapacityUpdate
+            // 
+            this.numEventCapacityUpdate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numEventCapacityUpdate.Location = new System.Drawing.Point(361, 240);
+            this.numEventCapacityUpdate.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.numEventCapacityUpdate.Name = "numEventCapacityUpdate";
+            this.numEventCapacityUpdate.Size = new System.Drawing.Size(120, 27);
+            this.numEventCapacityUpdate.TabIndex = 58;
+            this.numEventCapacityUpdate.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // txtArenaNameUpdate
+            // 
+            this.txtArenaNameUpdate.Enabled = false;
+            this.txtArenaNameUpdate.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtArenaNameUpdate.Location = new System.Drawing.Point(361, 159);
+            this.txtArenaNameUpdate.Name = "txtArenaNameUpdate";
+            this.txtArenaNameUpdate.Size = new System.Drawing.Size(241, 28);
+            this.txtArenaNameUpdate.TabIndex = 56;
+            this.txtArenaNameUpdate.Text = "Arena Name";
+            // 
+            // txtArenaIDUpdate
+            // 
+            this.txtArenaIDUpdate.Enabled = false;
+            this.txtArenaIDUpdate.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtArenaIDUpdate.Location = new System.Drawing.Point(361, 117);
+            this.txtArenaIDUpdate.Name = "txtArenaIDUpdate";
+            this.txtArenaIDUpdate.Size = new System.Drawing.Size(74, 28);
+            this.txtArenaIDUpdate.TabIndex = 55;
+            this.txtArenaIDUpdate.Text = "ID";
+            // 
+            // txtEventNameUpdate
+            // 
+            this.txtEventNameUpdate.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEventNameUpdate.Location = new System.Drawing.Point(361, 74);
+            this.txtEventNameUpdate.Name = "txtEventNameUpdate";
+            this.txtEventNameUpdate.Size = new System.Drawing.Size(241, 28);
+            this.txtEventNameUpdate.TabIndex = 54;
+            this.txtEventNameUpdate.Text = "Event Name";
+            // 
+            // lblEventDateUpdate
+            // 
+            this.lblEventDateUpdate.AutoSize = true;
+            this.lblEventDateUpdate.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEventDateUpdate.ForeColor = System.Drawing.Color.White;
+            this.lblEventDateUpdate.Location = new System.Drawing.Point(245, 283);
+            this.lblEventDateUpdate.Name = "lblEventDateUpdate";
+            this.lblEventDateUpdate.Size = new System.Drawing.Size(111, 21);
+            this.lblEventDateUpdate.TabIndex = 53;
+            this.lblEventDateUpdate.Text = "Event Date:";
+            // 
+            // lblEventCapacityUpdate
+            // 
+            this.lblEventCapacityUpdate.AutoSize = true;
+            this.lblEventCapacityUpdate.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEventCapacityUpdate.ForeColor = System.Drawing.Color.White;
+            this.lblEventCapacityUpdate.Location = new System.Drawing.Point(261, 242);
+            this.lblEventCapacityUpdate.Name = "lblEventCapacityUpdate";
+            this.lblEventCapacityUpdate.Size = new System.Drawing.Size(94, 21);
+            this.lblEventCapacityUpdate.TabIndex = 52;
+            this.lblEventCapacityUpdate.Text = "Capacity:";
+            // 
+            // lblEventStatusUpdate
+            // 
+            this.lblEventStatusUpdate.AutoSize = true;
+            this.lblEventStatusUpdate.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEventStatusUpdate.ForeColor = System.Drawing.Color.White;
+            this.lblEventStatusUpdate.Location = new System.Drawing.Point(289, 204);
+            this.lblEventStatusUpdate.Name = "lblEventStatusUpdate";
+            this.lblEventStatusUpdate.Size = new System.Drawing.Size(66, 21);
+            this.lblEventStatusUpdate.TabIndex = 51;
+            this.lblEventStatusUpdate.Text = "Status:";
+            // 
+            // lblArenaNameUpdate
+            // 
+            this.lblArenaNameUpdate.AutoSize = true;
+            this.lblArenaNameUpdate.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblArenaNameUpdate.ForeColor = System.Drawing.Color.White;
+            this.lblArenaNameUpdate.Location = new System.Drawing.Point(233, 162);
+            this.lblArenaNameUpdate.Name = "lblArenaNameUpdate";
+            this.lblArenaNameUpdate.Size = new System.Drawing.Size(122, 21);
+            this.lblArenaNameUpdate.TabIndex = 50;
+            this.lblArenaNameUpdate.Text = "Arena Name:";
+            // 
+            // lblArenaIDUpdate
+            // 
+            this.lblArenaIDUpdate.AutoSize = true;
+            this.lblArenaIDUpdate.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblArenaIDUpdate.ForeColor = System.Drawing.Color.White;
+            this.lblArenaIDUpdate.Location = new System.Drawing.Point(266, 120);
+            this.lblArenaIDUpdate.Name = "lblArenaIDUpdate";
+            this.lblArenaIDUpdate.Size = new System.Drawing.Size(89, 21);
+            this.lblArenaIDUpdate.TabIndex = 49;
+            this.lblArenaIDUpdate.Text = "Arena ID:";
+            // 
+            // lblEventNameUpdate
+            // 
+            this.lblEventNameUpdate.AutoSize = true;
+            this.lblEventNameUpdate.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEventNameUpdate.ForeColor = System.Drawing.Color.White;
+            this.lblEventNameUpdate.Location = new System.Drawing.Point(237, 77);
+            this.lblEventNameUpdate.Name = "lblEventNameUpdate";
+            this.lblEventNameUpdate.Size = new System.Drawing.Size(119, 21);
+            this.lblEventNameUpdate.TabIndex = 48;
+            this.lblEventNameUpdate.Text = "Event Name:";
+            // 
+            // txtEventIDUpdate
+            // 
+            this.txtEventIDUpdate.Enabled = false;
+            this.txtEventIDUpdate.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEventIDUpdate.Location = new System.Drawing.Point(361, 31);
+            this.txtEventIDUpdate.Name = "txtEventIDUpdate";
+            this.txtEventIDUpdate.Size = new System.Drawing.Size(74, 28);
+            this.txtEventIDUpdate.TabIndex = 47;
+            this.txtEventIDUpdate.Text = "ID";
+            // 
+            // lblEventIDUpdate
+            // 
+            this.lblEventIDUpdate.AutoSize = true;
+            this.lblEventIDUpdate.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEventIDUpdate.ForeColor = System.Drawing.Color.White;
+            this.lblEventIDUpdate.Location = new System.Drawing.Point(269, 34);
+            this.lblEventIDUpdate.Name = "lblEventIDUpdate";
+            this.lblEventIDUpdate.Size = new System.Drawing.Size(86, 21);
+            this.lblEventIDUpdate.TabIndex = 46;
+            this.lblEventIDUpdate.Text = "Event ID:";
+            // 
+            // lblUpdateEvent
+            // 
+            this.lblUpdateEvent.AutoSize = true;
+            this.lblUpdateEvent.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUpdateEvent.ForeColor = System.Drawing.Color.White;
+            this.lblUpdateEvent.Location = new System.Drawing.Point(42, 59);
+            this.lblUpdateEvent.Name = "lblUpdateEvent";
+            this.lblUpdateEvent.Size = new System.Drawing.Size(169, 27);
+            this.lblUpdateEvent.TabIndex = 33;
+            this.lblUpdateEvent.Text = "Update Event";
+            this.lblUpdateEvent.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // btnEventUpdate
+            // 
+            this.btnEventUpdate.BackColor = System.Drawing.SystemColors.Control;
+            this.btnEventUpdate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEventUpdate.Location = new System.Drawing.Point(50, 104);
+            this.btnEventUpdate.Name = "btnEventUpdate";
+            this.btnEventUpdate.Size = new System.Drawing.Size(139, 56);
+            this.btnEventUpdate.TabIndex = 32;
+            this.btnEventUpdate.Text = "Save Changes";
+            this.btnEventUpdate.UseVisualStyleBackColor = false;
+            this.btnEventUpdate.Click += new System.EventHandler(this.btnEventUpdate_Click);
+            // 
+            // btnUpdateCancel
+            // 
+            this.btnUpdateCancel.BackColor = System.Drawing.SystemColors.Control;
+            this.btnUpdateCancel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateCancel.Location = new System.Drawing.Point(50, 209);
+            this.btnUpdateCancel.Name = "btnUpdateCancel";
+            this.btnUpdateCancel.Size = new System.Drawing.Size(139, 56);
+            this.btnUpdateCancel.TabIndex = 31;
+            this.btnUpdateCancel.Text = "Cancel";
+            this.btnUpdateCancel.UseVisualStyleBackColor = false;
+            this.btnUpdateCancel.Click += new System.EventHandler(this.btnUpdateCancel_Click);
             // 
             // EventForm
             // 
@@ -494,6 +743,7 @@
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(797, 442);
             this.ControlBox = false;
+            this.Controls.Add(this.pnlUpdate);
             this.Controls.Add(this.pnlAdd);
             this.Controls.Add(this.txtEventDate);
             this.Controls.Add(this.txtEventCapacity);
@@ -525,6 +775,9 @@
             this.pnlAdd.ResumeLayout(false);
             this.pnlAdd.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numEventCapacityAdd)).EndInit();
+            this.pnlUpdate.ResumeLayout(false);
+            this.pnlUpdate.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numEventCapacityUpdate)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -568,5 +821,23 @@
         private System.Windows.Forms.Label lblEventAdd;
         private System.Windows.Forms.Label lblEventNameAdd;
         private System.Windows.Forms.DateTimePicker DatePickerAdd;
+        private System.Windows.Forms.Panel pnlUpdate;
+        private System.Windows.Forms.TextBox txtArenaNameUpdate;
+        private System.Windows.Forms.TextBox txtArenaIDUpdate;
+        private System.Windows.Forms.TextBox txtEventNameUpdate;
+        private System.Windows.Forms.Label lblEventDateUpdate;
+        private System.Windows.Forms.Label lblEventCapacityUpdate;
+        private System.Windows.Forms.Label lblEventStatusUpdate;
+        private System.Windows.Forms.Label lblArenaNameUpdate;
+        private System.Windows.Forms.Label lblArenaIDUpdate;
+        private System.Windows.Forms.Label lblEventNameUpdate;
+        private System.Windows.Forms.TextBox txtEventIDUpdate;
+        private System.Windows.Forms.Label lblEventIDUpdate;
+        private System.Windows.Forms.Label lblUpdateEvent;
+        private System.Windows.Forms.Button btnEventUpdate;
+        private System.Windows.Forms.Button btnUpdateCancel;
+        private System.Windows.Forms.DateTimePicker DatePickerUpdate;
+        private System.Windows.Forms.NumericUpDown numEventCapacityUpdate;
+        private System.Windows.Forms.ComboBox cmbEventStatusUpdate;
     }
 }

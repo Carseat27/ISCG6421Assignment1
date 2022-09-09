@@ -56,15 +56,6 @@ namespace ISCG6421Assignment1
             }
         }
 
-        /// <summary>
-        /// this section contains functions to hide and show the control buttons
-        /// </summary>
-
-        private bool checkEmail(string email)
-        {
-            return email.Contains("@");
-        }
-
         private void btnAddCompetitor_Click(object sender, EventArgs e)
         {
             //show correct panel
@@ -97,7 +88,7 @@ namespace ISCG6421Assignment1
                 MessageBox.Show("You must select a gender!", "Error!");
             }
             //email validation
-            else if (checkEmail(txtCompetitorEmailAdd.Text) == false)
+            else if (!Utilities.EmailCheck(txtCompetitorEmailAdd.Text))
             {
                 MessageBox.Show("Invalid email address!", "Error!");
             }
@@ -180,7 +171,7 @@ namespace ISCG6421Assignment1
                 MessageBox.Show("You must select a gender!", "Error!");
             }
             //email validation
-            else if (checkEmail(txtCompetitorEmailUpdate.Text) == false)
+            else if (!Utilities.EmailCheck(txtCompetitorEmailUpdate.Text))
             {
                 MessageBox.Show("Invalid email address!", "Error!");
             }

@@ -16,7 +16,7 @@ namespace ISCG6421Assignment1
         private DataModule DM;
         private MainForm frmMenu;
         private CurrencyManager currencyManager;
-        private int step;
+        private int step = 0;
         private Button[] controls;
         public ArenaForm(DataModule dm, MainForm mnu)
         {
@@ -25,7 +25,6 @@ namespace ISCG6421Assignment1
             frmMenu = mnu;
             BindControls();
             controls = new Button[] { btnNext, btnPrevious, btnAddArena, btnUpdateArena, btnDeleteArena, btnReturn };
-            step = 0;
         }
 
         private void BindControls()

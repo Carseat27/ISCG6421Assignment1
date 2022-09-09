@@ -26,6 +26,9 @@ namespace ISCG6421Assignment1
             controls = new Button[] { btnNext, btnPrevious, btnAddEvent, btnUpdateEvent, btnDeleteEvent, btnReturn };
             step = 0;
         }
+        /// <summary>
+        /// this method binds the event maintenance controls
+        /// </summary>
         private void BindControls()
         {
             txtEventID.DataBindings.Add("Text", DM.dsNZESL, "Event.EventID");
@@ -41,6 +44,10 @@ namespace ISCG6421Assignment1
             currencyManager = (CurrencyManager)this.BindingContext[DM.dsNZESL, "Event"];
         }
 
+        /// <summary>
+        /// this region holds the code for the basic controls
+        /// </summary>
+        #region basicPageControls
         private void btnReturn_Click(object sender, EventArgs e)
         {
             Close();
@@ -61,7 +68,12 @@ namespace ISCG6421Assignment1
                 ++currencyManager.Position;
             }
         }
+        #endregion
 
+        /// <summary>
+        /// this region holds the code for adding a new event
+        /// </summary>
+        #region AddEvents
         private void btnAddEvent_Click(object sender, EventArgs e)
         {
             //show panel
@@ -82,6 +94,34 @@ namespace ISCG6421Assignment1
 
         private void btnEventSave_Click(object sender, EventArgs e)
         {
+            txtEventID.Text = "";
+            DataRow newEventRow = DM.dtEvent.NewRow();
+
+            //validation of empty boxes
+            if ((txtEventNameAdd.Text == "") || (cmbArenaID.Text == ""))
+            {
+                MessageBox.Show("You must fill out ALL fields!", "Error");
+            }
+            //check capacity
+            else if ( (numEventCapacityAdd.Value == 0) || (numEventCapacityAdd.Value == null) )
+            {
+                MessageBox.Show("Capacity cannot be 0 or null", "Error");
+            }
+            else
+            {
+                newEventRow["EventName"] = txtEventNameAdd.Text;
+                newEventRow["ArenaID"] = cmbArenaID.Text;
+                newEventRow["Status"] = cmbEventStatusAdd.Text;
+                newEventRow["Capacity"] = numEventCapacityAdd.Value;
+                newEventRow["EventDate"] = DatePickerAdd.Value;
+                DM.dtEvent.Rows.Add(newEventRow);
+                DM.UpdateEvent();
+                MessageBox.Show("Event added successfully", "Success");
+
+                pnlAdd.Visible = false;
+                //enable buttons
+                Utilities.ButtonsMagic(controls, true);
+            }
 
         }
 
@@ -105,5 +145,79 @@ namespace ISCG6421Assignment1
             cmbArenaName.DisplayMember = "Arena.ArenaName";
             cmbArenaName.ValueMember = "Arena.ArenaID";
         }
+        #endregion
+
+        /// <summary>
+        /// this region holds the code for updating an event
+        /// </summary>
+        #region UpdateEvents
+        private void btnUpdateEvent_Click(object sender, EventArgs e)
+        {
+            //show panel
+            pnlUpdate.Visible = true;
+            //disable buttons
+            Utilities.ButtonsMagic(controls, false);
+            //fill boxes
+            txtEventIDUpdate.Text = txtEventID.Text;
+            txtEventNameUpdate.Text = txtEventName.Text;
+            txtArenaIDUpdate.Text = txtArenaID.Text;
+            txtArenaNameUpdate.Text = txtArenaName.Text;
+            cmbEventStatusUpdate.Text = txtEventStatus.Text;
+            int.TryParse(txtEventCapacity.Text, out int result);
+            numEventCapacityUpdate.Value = result;
+            DatePickerUpdate.Text = txtEventDate.Text;
+        }
+
+        private void btnUpdateCancel_Click(object sender, EventArgs e)
+        {
+            //hide panel
+            pnlUpdate.Visible = false;
+            //enable buttons
+            Utilities.ButtonsMagic(controls, true);
+        }
+
+        private void btnEventUpdate_Click(object sender, EventArgs e)
+        {
+            DataRow updateEventRow = DM.dtEvent.Rows[currencyManager.Position];
+
+            //validation of empty boxes
+            if ((txtEventNameUpdate.Text == "") )
+            {
+                MessageBox.Show("You must fill out ALL fields!", "Error");
+            }
+            //check capacity
+            else if ((numEventCapacityUpdate.Value == 0) || (numEventCapacityUpdate.Value == null))
+            {
+                MessageBox.Show("Capacity cannot be 0 or null", "Error");
+            }
+            else
+            {
+                updateEventRow["EventName"] = txtEventNameUpdate.Text;
+                updateEventRow["ArenaID"] = txtArenaIDUpdate.Text;
+                updateEventRow["Status"] = cmbEventStatusUpdate.Text;
+                updateEventRow["Capacity"] = numEventCapacityUpdate.Value;
+                updateEventRow["EventDate"] = DatePickerUpdate.Value;
+                currencyManager.EndCurrentEdit();
+                DM.UpdateEvent();
+                MessageBox.Show("Event Updated Successfully", "Success");
+
+                pnlUpdate.Visible = false;
+                //enable buttons
+                Utilities.ButtonsMagic(controls, true);
+            }
+
+        }
+        #endregion
+
+        /// <summary>
+        /// this region holds the code for deleting an event
+        /// </summary>
+        #region DeleteEvent
+        private void btnDeleteEvent_Click(object sender, EventArgs e)
+        {
+            DataRow deleteEventRow = DM.dtEvent.Rows[currencyManager.Position];
+            DataRow[] ChallengeRow = DM.dtChallenge.Select("EventID = " + txtEventID.Text);
+        }
+        #endregion
     }
 }

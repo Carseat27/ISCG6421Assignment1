@@ -52,6 +52,10 @@ namespace ISCG6421Assignment1
         {
             daCompetitor.Update(dtCompetitor);
         }
+        public void UpdateEvent()
+        {
+            daEvent.Update(dtEvent);
+        }
 
         private void daArena_RowUpdated(object sender, OleDbRowUpdatedEventArgs e)
         {
@@ -84,6 +88,17 @@ namespace ISCG6421Assignment1
             {
                 newID = (int)idCMD.ExecuteScalar();
                 e.Row["CompetitorID"] = newID;
+            }
+        }
+
+        private void daEvent_RowUpdated(object sender, OleDbRowUpdatedEventArgs e)
+        {
+            int newID = 0;
+            OleDbCommand idCMD = new OleDbCommand("SELECT @@IDENTITY", ctnNZESL);
+            if (e.StatementType == StatementType.Insert)
+            {
+                newID = (int)idCMD.ExecuteScalar();
+                e.Row["EventID"] = newID;
             }
         }
     }
