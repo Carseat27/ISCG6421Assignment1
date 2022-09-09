@@ -56,6 +56,10 @@ namespace ISCG6421Assignment1
         {
             daEvent.Update(dtEvent);
         }
+        public void UpdateEntry()
+        {
+            daEntry.Update(dtEntry);
+        }
 
         private void daArena_RowUpdated(object sender, OleDbRowUpdatedEventArgs e)
         {

@@ -34,6 +34,8 @@ namespace ISCG6421Assignment1 {
         
         private EVENTDataTable tableEVENT;
         
+        private global::System.Data.DataRelation relationCHALLENGE_ENTRY;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -290,6 +292,7 @@ namespace ISCG6421Assignment1 {
                     this.tableEVENT.InitVars();
                 }
             }
+            this.relationCHALLENGE_ENTRY = this.Relations["CHALLENGE_ENTRY"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -310,6 +313,18 @@ namespace ISCG6421Assignment1 {
             base.Tables.Add(this.tableENTRY);
             this.tableEVENT = new EVENTDataTable();
             base.Tables.Add(this.tableEVENT);
+            global::System.Data.ForeignKeyConstraint fkc;
+            fkc = new global::System.Data.ForeignKeyConstraint("CHALLENGE_ENTRY", new global::System.Data.DataColumn[] {
+                        this.tableCHALLENGE.ChallengeIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableENTRY.ChallengeIDColumn});
+            this.tableENTRY.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.None;
+            fkc.UpdateRule = global::System.Data.Rule.None;
+            this.relationCHALLENGE_ENTRY = new global::System.Data.DataRelation("CHALLENGE_ENTRY", new global::System.Data.DataColumn[] {
+                        this.tableCHALLENGE.ChallengeIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableENTRY.ChallengeIDColumn}, false);
+            this.Relations.Add(this.relationCHALLENGE_ENTRY);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -951,7 +966,10 @@ namespace ISCG6421Assignment1 {
                 base.Columns.Add(this.columnStatus);
                 this.columnCapacity = new global::System.Data.DataColumn("Capacity", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCapacity);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnChallengeID}, false));
                 this.columnChallengeID.AutoIncrement = true;
+                this.columnChallengeID.Unique = true;
                 this.columnChallengeName.MaxLength = 40;
                 this.columnEventName.MaxLength = 40;
                 this.columnStatus.MaxLength = 9;
@@ -1536,12 +1554,15 @@ namespace ISCG6421Assignment1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ENTRYRow AddENTRYRow(int ChallengeID, int CompetitorID, string Status) {
+            public ENTRYRow AddENTRYRow(CHALLENGERow parentCHALLENGERowByCHALLENGE_ENTRY, int CompetitorID, string Status) {
                 ENTRYRow rowENTRYRow = ((ENTRYRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        ChallengeID,
+                        null,
                         CompetitorID,
                         Status};
+                if ((parentCHALLENGERowByCHALLENGE_ENTRY != null)) {
+                    columnValuesArray[0] = parentCHALLENGERowByCHALLENGE_ENTRY[0];
+                }
                 rowENTRYRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowENTRYRow);
                 return rowENTRYRow;
@@ -2424,6 +2445,17 @@ namespace ISCG6421Assignment1 {
             public void SetCapacityNull() {
                 this[this.tableCHALLENGE.CapacityColumn] = global::System.Convert.DBNull;
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public ENTRYRow[] GetENTRYRows() {
+                if ((this.Table.ChildRelations["CHALLENGE_ENTRY"] == null)) {
+                    return new ENTRYRow[0];
+                }
+                else {
+                    return ((ENTRYRow[])(base.GetChildRows(this.Table.ChildRelations["CHALLENGE_ENTRY"])));
+                }
+            }
         }
         
         /// <summary>
@@ -2669,6 +2701,17 @@ namespace ISCG6421Assignment1 {
                 }
                 set {
                     this[this.tableENTRY.StatusColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public CHALLENGERow CHALLENGERow {
+                get {
+                    return ((CHALLENGERow)(this.GetParentRow(this.Table.ParentRelations["CHALLENGE_ENTRY"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["CHALLENGE_ENTRY"]);
                 }
             }
             
