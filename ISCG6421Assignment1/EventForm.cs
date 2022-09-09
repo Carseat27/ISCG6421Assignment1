@@ -165,6 +165,8 @@ namespace ISCG6421Assignment1
             cmbEventStatusUpdate.Text = txtEventStatus.Text;
             int.TryParse(txtEventCapacity.Text, out int result);
             numEventCapacityUpdate.Value = result;
+            //set minimum date to be 1 year prior to the selected event's date
+            DatePickerUpdate.MinDate = (DateTime.Parse(txtEventDate.Text).AddYears(-1));
             DatePickerUpdate.Text = txtEventDate.Text;
         }
 
