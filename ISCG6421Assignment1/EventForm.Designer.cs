@@ -389,7 +389,7 @@
             this.numEventCapacityAdd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numEventCapacityAdd.Location = new System.Drawing.Point(353, 215);
             this.numEventCapacityAdd.Maximum = new decimal(new int[] {
-            10000,
+            4999,
             0,
             0,
             0});
@@ -572,7 +572,7 @@
             this.numEventCapacityUpdate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numEventCapacityUpdate.Location = new System.Drawing.Point(361, 240);
             this.numEventCapacityUpdate.Maximum = new decimal(new int[] {
-            10000,
+            4999,
             0,
             0,
             0});
