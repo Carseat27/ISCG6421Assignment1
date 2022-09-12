@@ -31,24 +31,6 @@ namespace ISCG6421Assignment1
         }
 
         /// <summary>
-        /// this method ensures that the child form (Arena) will make the parent form (MainForm) move with it.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        public static int Movement(int step, object sender, EventArgs e)
-        {
-            if (step != 0)
-            {
-                frmMenu.On_Move(sender, e);
-            }
-            else if (step == 0)
-            {
-                step = 1;
-            }
-            return step;
-        }
-
-        /// <summary>
         /// this method checks the validity of an inputted email and returns true or false
         /// </summary>
         /// <param name="email"></param>
@@ -56,6 +38,15 @@ namespace ISCG6421Assignment1
         public static bool EmailCheck(string email)
         {
             return email.Contains("@");
+        }
+
+        /// <summary>
+        /// this method displays an error message.
+        /// it is called when an exception is caught during adding, updating, or deleting any of the Database entities
+        /// </summary>
+        public static void DBExceptionError()
+        {
+            MessageBox.Show("There has been an unexpected error.\n\nPlease check that you are using 'NZESL.mdb' as provided.", "Error");
         }
     }
 }
