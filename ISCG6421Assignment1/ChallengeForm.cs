@@ -123,7 +123,7 @@ namespace ISCG6421Assignment1
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("There has been an unexpected error.\n\nPlease check that you are using 'NZESL.mdb' as provided.", "Error");
+                    Utilities.DBExceptionError();
                 }
                 pnlAdd.Visible = false;
                 Utilities.ButtonsMagic(controls, true);
@@ -184,7 +184,7 @@ namespace ISCG6421Assignment1
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("There has been an unexpected error.\n\nPlease check that you are using 'NZESL.mdb' as provided.", "Error");
+                    Utilities.DBExceptionError();
                 }
                 //hide panel
                 pnlUpdate.Visible = false;
@@ -220,10 +220,16 @@ namespace ISCG6421Assignment1
             {
                 if (MessageBox.Show("Are you sure to delete the selected record?\n\nIt is currently: " + txtChallengeName.Text, "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
-                    deleteChallengeRow.Delete();
-                    DM.UpdateChallenge();
-
-                    MessageBox.Show("Challenge deleted successfully", "Success");
+                    try
+                    {
+                        deleteChallengeRow.Delete();
+                        DM.UpdateChallenge();
+                        MessageBox.Show("Challenge deleted successfully", "Success");
+                    }
+                    catch (Exception ex)
+                    {
+                        Utilities.DBExceptionError();
+                    }
                 }
             }
         }
@@ -248,7 +254,7 @@ namespace ISCG6421Assignment1
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("There has been an unexpected error.\n\nPlease check that you are using 'NZESL.mdb' as provided.", "Error");
+                    Utilities.DBExceptionError();
                 }
             }
             else
@@ -272,7 +278,7 @@ namespace ISCG6421Assignment1
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("There has been an unexpected error.\n\nPlease check that you are using 'NZESL.mdb' as provided.", "Error");
+                    Utilities.DBExceptionError();
                 }
             }
             else

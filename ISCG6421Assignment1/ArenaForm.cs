@@ -126,7 +126,7 @@ namespace ISCG6421Assignment1
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("There has been an unexpected error.\n\nPlease check that you are using 'NZESL.mdb' as provided.", "Error");
+                    Utilities.DBExceptionError();
                 }
                 //hide panel
                 pnlAdd.Visible = false;
@@ -178,7 +178,7 @@ namespace ISCG6421Assignment1
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("There has been an unexpected error.\n\nPlease check that you are using 'NZESL.mdb' as provided.", "Error");
+                    Utilities.DBExceptionError();
                 }
                 //hide panel
                 pnlUpdate.Visible = false;
@@ -235,7 +235,7 @@ namespace ISCG6421Assignment1
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("There has been an unexpected error.\n\nPlease check that you are using 'NZESL.mdb' as provided.", "Error");
+                        Utilities.DBExceptionError();
                     }
                 }
             }

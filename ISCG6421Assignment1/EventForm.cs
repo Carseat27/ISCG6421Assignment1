@@ -114,10 +114,16 @@ namespace ISCG6421Assignment1
                 newEventRow["Status"] = cmbEventStatusAdd.Text;
                 newEventRow["Capacity"] = numEventCapacityAdd.Value;
                 newEventRow["EventDate"] = DatePickerAdd.Value;
-                DM.dtEvent.Rows.Add(newEventRow);
-                DM.UpdateEvent();
-                MessageBox.Show("Event added successfully", "Success");
-
+                try
+                {
+                    DM.dtEvent.Rows.Add(newEventRow);
+                    DM.UpdateEvent();
+                    MessageBox.Show("Event added successfully", "Success");
+                }
+                catch (Exception ex)
+                {
+                    Utilities.DBExceptionError();
+                }
                 pnlAdd.Visible = false;
                 //enable buttons
                 Utilities.ButtonsMagic(controls, true);
@@ -200,9 +206,16 @@ namespace ISCG6421Assignment1
                 updateEventRow["Capacity"] = numEventCapacityUpdate.Value;
                 updateEventRow["EventDate"] = DatePickerUpdate.Value;
                 currencyManager.EndCurrentEdit();
-                DM.UpdateEvent();
-                MessageBox.Show("Event Updated Successfully", "Success");
-
+                try
+                {
+                    DM.UpdateEvent();
+                    MessageBox.Show("Event Updated Successfully", "Success");
+                }
+                catch (Exception ex)
+                {
+                    Utilities.DBExceptionError();
+                }
+                //hide panel
                 pnlUpdate.Visible = false;
                 //enable buttons
                 Utilities.ButtonsMagic(controls, true);
@@ -219,6 +232,26 @@ namespace ISCG6421Assignment1
         {
             DataRow deleteEventRow = DM.dtEvent.Rows[currencyManager.Position];
             DataRow[] ChallengeRow = DM.dtChallenge.Select("EventID = " + txtEventID.Text);
+            if(ChallengeRow.Length != 0)
+            {
+                MessageBox.Show("You may only delete events that have no challenges", "Error!");
+            }
+            else
+            {
+                if(MessageBox.Show("Are you sure you want to delete the selected record?\n\nIt is currently: " + txtEventName.Text, "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                {
+                    try
+                    {
+                        deleteEventRow.Delete();
+                        DM.UpdateEvent();
+                        MessageBox.Show("Event deleted successfully", "Success");
+                    }
+                    catch (Exception ex)
+                    {
+                        Utilities.DBExceptionError();
+                    }
+                }
+            }
         }
         #endregion
     }

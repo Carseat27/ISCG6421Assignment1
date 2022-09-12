@@ -33,30 +33,53 @@ namespace ISCG6421Assignment1
 
             BindControls();
         }
+        /// <summary>
+        /// this method binds the add/remove competitor to challenge controls
+        /// </summary>
         private void BindControls()
         {
             dgvCompetitor.DataSource = DM.dsNZESL;
             dgvCompetitor.DataMember = "Competitor";
-            dgvCompetitor.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvCompetitor.AllowUserToAddRows = false;
 
             dgvChallenge.DataSource = DM.dsNZESL;
             dgvChallenge.DataMember = "Challenge";
-            dgvChallenge.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvChallenge.AllowUserToAddRows = false;
 
             dgvEntry.DataSource = DM.dsNZESL;
             dgvEntry.DataMember = "Challenge.Challenge_Entry";
-            dgvEntry.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             txtEventName.DataBindings.Add("Text", DM.dsNZESL, "Challenge.EventName");
+
+            //auto resize columns
+            //noticed that it sometimes caused an error, hence the try-catch
+            try
+            {
+                dgvCompetitor.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dgvChallenge.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dgvEntry.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading the form. Please try again.");
+            }
         }
+
+        /// <summary>
+        /// the region holds the code for the basic controls
+        /// </summary>
+        #region basicPageControls
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
             Close();
         }
+        #endregion
 
+        /// <summary>
+        /// this region holds the code for assigning a comeptitor to a challenge
+        /// </summary>
+        #region AssignCompetitorToChallenge
         private void btnAddEntry_Click(object sender, EventArgs e)
         {
             if (DM.dtChallenge.Rows[cmChallenge.Position]["Status"].ToString() == "Scheduled")
@@ -73,7 +96,7 @@ namespace ISCG6421Assignment1
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("There has been an unexpected error - Please check that you are using 'NZESL.mdb' as provided.", "Error");
+                    Utilities.DBExceptionError();
                 }
             }
             else
@@ -81,7 +104,12 @@ namespace ISCG6421Assignment1
                 MessageBox.Show("Competitors can only be entered into scheduled challenges", "Error");
             }
         }
+        #endregion
 
+        /// <summary>
+        /// this region holds the code for removing an entry
+        /// </summary>
+        #region RemoveCompetitorFromChallenge
         private void btnRemoveEntry_Click(object sender, EventArgs e)
         {
             DataRow deleteEntryRow = DM.dtEntry.Rows[cmCE.Position];
@@ -95,9 +123,10 @@ namespace ISCG6421Assignment1
                 }
                 catch(Exception ex)
                 {
-                    MessageBox.Show("There has been an unexpected error - Please check that you are using 'NZESL.mdb' as provided.", "Error");
+                    Utilities.DBExceptionError();
                 }
             }
         }
+        #endregion
     }
 }

@@ -20,6 +20,9 @@ namespace ISCG6421Assignment1
             controls = new Button[] { btnPrevious, btnNext, btnAddCompetitor, btnUpdateCompetitor, btnDeleteCompetitor, btnReturn };
             step = 0;
         }
+        /// <summary>
+        /// this method binds the competitor maintenance controls
+        /// </summary>
         private void BindControls()
         {
             txtCompetitorID.DataBindings.Add("Text", DM.dsNZESL, "Competitor.CompetitorID");
@@ -35,6 +38,10 @@ namespace ISCG6421Assignment1
             currencyManager = (CurrencyManager)this.BindingContext[DM.dsNZESL, "Competitor"];
         }
 
+        /// <summary>
+        /// this region holds the code for the basic controls
+        /// </summary>
+        #region basicPageControls
         private void btnReturn_Click(object sender, EventArgs e)
         {
             Close();
@@ -55,7 +62,12 @@ namespace ISCG6421Assignment1
                 ++currencyManager.Position;
             }
         }
+        #endregion
 
+        /// <summary>
+        /// this region holds the code for adding a new competitor
+        /// </summary>
+        #region AddCompetitor
         private void btnAddCompetitor_Click(object sender, EventArgs e)
         {
             //show correct panel
@@ -71,7 +83,6 @@ namespace ISCG6421Assignment1
             DoBPickerAdd.MaxDate = DateTime.Now;
             DoBPickerAdd.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
         }
-
         private void btnCompetitorSave_Click(object sender, EventArgs e)
         {
             txtCompetitorID.Text = "";
@@ -111,9 +122,16 @@ namespace ISCG6421Assignment1
                 }
                 newCompetitorRow["DateOfBirth"] = DoBPickerAdd.Value;
                 newCompetitorRow["EmailAddress"] = txtCompetitorEmailAdd.Text;
-                DM.dtCompetitor.Rows.Add(newCompetitorRow);
-                DM.UpdateCompetitor();
-                MessageBox.Show("Competitor Added Successfully", "Success");
+                try
+                {
+                    DM.dtCompetitor.Rows.Add(newCompetitorRow);
+                    DM.UpdateCompetitor();
+                    MessageBox.Show("Competitor Added Successfully", "Success");
+                }
+                catch (Exception ex)
+                {
+                    Utilities.DBExceptionError();
+                }
 
                 pnlAdd.Visible = false;
                 //enable butttons
@@ -128,7 +146,12 @@ namespace ISCG6421Assignment1
             //enable buttons
             Utilities.ButtonsMagic(controls, true);
         }
+        #endregion
 
+        /// <summary>
+        /// this region holds the code for updating a competitor
+        /// </summary>
+        #region UpdateCompetitors
         private void btnUpdateCancel_Click(object sender, EventArgs e)
         {
             //hide panel and enable controls
@@ -203,7 +226,12 @@ namespace ISCG6421Assignment1
                 Utilities.ButtonsMagic(controls, true);
             }
         }
+        #endregion 
 
+        /// <summary>
+        /// this region holds the code for deleting a competitor
+        /// </summary>
+        #region DeleteCompetitor
         private void btnDeleteCompetitor_Click(object sender, EventArgs e)
         {
             DataRow deleteCompetitorRow = DM.dtCompetitor.Rows[currencyManager.Position];
@@ -222,10 +250,6 @@ namespace ISCG6421Assignment1
                 }
             }
         }
-
-        private void CompetitorForm_Move(object sender, EventArgs e)
-        {
-            step = Utilities.Movement(step, sender, e);
-        }
+        #endregion
     }
 }

@@ -876,7 +876,6 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Competitor Maintenance";
-            this.Move += new System.EventHandler(this.CompetitorForm_Move);
             this.pnlAdd.ResumeLayout(false);
             this.pnlAdd.PerformLayout();
             this.pnlUpdate.ResumeLayout(false);
