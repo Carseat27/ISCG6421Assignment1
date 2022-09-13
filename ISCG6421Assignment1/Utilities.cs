@@ -34,7 +34,7 @@ namespace ISCG6421Assignment1
         /// this method checks the validity of an inputted email and returns true or false
         /// </summary>
         /// <param name="email"></param>
-        /// <returns></returns>
+        /// <returns>true/false</returns>
         public static bool EmailCheck(string email)
         {
             return email.Contains("@");
