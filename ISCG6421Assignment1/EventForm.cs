@@ -114,6 +114,7 @@ namespace ISCG6421Assignment1
                 newEventRow["Status"] = cmbEventStatusAdd.Text;
                 newEventRow["Capacity"] = numEventCapacityAdd.Value;
                 newEventRow["EventDate"] = DatePickerAdd.Value;
+                newEventRow["ArenaName"] = cmbArenaName.Text;
                 try
                 {
                     DM.dtEvent.Rows.Add(newEventRow);
@@ -205,6 +206,7 @@ namespace ISCG6421Assignment1
                 updateEventRow["Status"] = cmbEventStatusUpdate.Text;
                 updateEventRow["Capacity"] = numEventCapacityUpdate.Value;
                 updateEventRow["EventDate"] = DatePickerUpdate.Value;
+                updateEventRow["ArenaName"] = txtArenaNameUpdate.Text;
                 currencyManager.EndCurrentEdit();
                 try
                 {

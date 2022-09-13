@@ -115,6 +115,7 @@ namespace ISCG6421Assignment1
                 newChallengeRow["StartTime"] = timePicker.Text;
                 newChallengeRow["Status"] = cmbStatusAdd.Text;
                 newChallengeRow["Capacity"] = numCapacity.Value;
+                newChallengeRow["EventName"] = cmbEventName.Text;
                 try
                 {
                     DM.dtChallenge.Rows.Add(newChallengeRow);
@@ -176,6 +177,7 @@ namespace ISCG6421Assignment1
                 UpdateChallengeRow["StartTime"] = timePickerUpdate.Text;
                 UpdateChallengeRow["Capacity"] = numCapacityUpdate.Value;
                 UpdateChallengeRow["Status"] = cmbStatusUpdate.Text;
+                UpdateChallengeRow["EventName"] = txtEventNameUpdate.Text;
                 currencyManager.EndCurrentEdit();
                 try
                 {
