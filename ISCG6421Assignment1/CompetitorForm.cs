@@ -10,7 +10,6 @@ namespace ISCG6421Assignment1
         private MainForm frmMenu;
         private CurrencyManager currencyManager;
         private Button[] controls;
-        private int step;
         public CompetitorForm(DataModule dm, MainForm mnu)
         {
             InitializeComponent();

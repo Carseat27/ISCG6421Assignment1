@@ -15,7 +15,6 @@ namespace ISCG6421Assignment1
         private DataModule DM;
         private MainForm frmMenu;
         private CurrencyManager currencyManager;
-        private int step;
         private Button[] controls;
         public EventForm(DataModule dm, MainForm mnu)
         {
