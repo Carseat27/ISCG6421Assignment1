@@ -23,7 +23,6 @@ namespace ISCG6421Assignment1
             frmMenu = mnu;
             BindControls();
             controls = new Button[] { btnNext, btnPrevious, btnAddEvent, btnUpdateEvent, btnDeleteEvent, btnReturn };
-            step = 0;
         }
         /// <summary>
         /// this method binds the event maintenance controls

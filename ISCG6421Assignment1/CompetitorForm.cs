@@ -17,7 +17,6 @@ namespace ISCG6421Assignment1
             frmMenu = mnu;
             BindControls();
             controls = new Button[] { btnPrevious, btnNext, btnAddCompetitor, btnUpdateCompetitor, btnDeleteCompetitor, btnReturn };
-            step = 0;
         }
         /// <summary>
         /// this method binds the competitor maintenance controls
