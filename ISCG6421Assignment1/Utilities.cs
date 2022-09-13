@@ -19,14 +19,9 @@ namespace ISCG6421Assignment1
         /// <param name="enabled"></param>
         public static void ButtonsMagic(Button[] buttons, bool enabled)
         {
-            //foreach (Button button in buttons)
-            //{
-            //    button.Enabled = enabled;
-            //}
-            Console.WriteLine(buttons);
-            for (int i = 0; i < buttons.Length; i++)
+            foreach (Button button in buttons)
             {
-                buttons[i].Enabled = enabled;
+                button.Enabled = enabled;
             }
         }
 
