@@ -153,6 +153,7 @@ namespace ISCG6421Assignment1
             catch (Exception ex)
             {
                 MessageBox.Show("An unexpected error has been encountered.\n\nPlease select your database file", "Error");
+                Utilities.selectDBFile();
             }
         }
     }
