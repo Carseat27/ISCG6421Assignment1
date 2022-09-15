@@ -71,6 +71,7 @@ namespace ISCG6421Assignment1
                     catch (Exception)
                     {
                         MessageBox.Show("Unexpected error encountered.\n\nPlease try again", "Error");
+                        selectDBFile();
                     }
                 }
                 else
