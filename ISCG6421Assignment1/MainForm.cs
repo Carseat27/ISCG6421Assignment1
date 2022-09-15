@@ -19,7 +19,7 @@ namespace ISCG6421Assignment1
         private EventForm frmEvent;
         private ChallengeForm frmChallenge;
         private CompetitorForm frmCompetitor;
-        private CompetitorChallengeForm frmCompetitorChallenge;
+        private EntryForm frmEntry;
         private EventsReportForm frmEventsReport;
         private CompetitorReportForm frmCompetitorReport;
 
@@ -77,11 +77,11 @@ namespace ISCG6421Assignment1
 
         private void btnEnterCompetitorChallenge_Click(object sender, EventArgs e)
         {
-            if(frmCompetitorChallenge == null)
+            if(frmEntry == null)
             {
-                frmCompetitorChallenge = new CompetitorChallengeForm(DM, this);
+                frmEntry = new EntryForm(DM, this);
             }
-            frmCompetitorChallenge.ShowDialog();
+            frmEntry.ShowDialog();
         }
 
         private void btnEventsReport_Click(object sender, EventArgs e)

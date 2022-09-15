@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ISCG6421Assignment1
 {
-    public partial class CompetitorChallengeForm : Form
+    public partial class EntryForm : Form
     {
         private DataModule DM;
         private MainForm frmMenu;
@@ -20,7 +20,7 @@ namespace ISCG6421Assignment1
         private CurrencyManager cmCE;
         private DataTable dt = new DataTable();
         private CurrencyManager cmDt;
-        public CompetitorChallengeForm(DataModule dm, MainForm mnu)
+        public EntryForm(DataModule dm, MainForm mnu)
         {
             InitializeComponent();
             DM = dm;
@@ -50,6 +50,8 @@ namespace ISCG6421Assignment1
             dgvEntry.DataMember = "Challenge.Challenge_Entry";
 
             txtEventName.DataBindings.Add("Text", DM.dsNZESL, "Challenge.EventName");
+
+            cmbEntryStatus.DataBindings.Add("Text", DM.dsNZESL, "Entry.Status");
 
             //auto resize columns
             //noticed that it sometimes caused an error, hence the try-catch
@@ -126,6 +128,31 @@ namespace ISCG6421Assignment1
                     Utilities.DBExceptionError();
                 }
             }
+        }
+        #endregion
+
+        /// <summary>
+        /// this region holds the code for updating the status of an entry
+        /// </summary>
+        #region UpdateEntryStatus
+        private void cmbEntryStatus_SelectedValueChanged(object sender, EventArgs e) // <-- each time the combo box selection changes
+        {
+            DataRow UpdateEntryRow = DM.dtEntry.Rows[cmCE.Position];
+            UpdateEntryRow["Status"] = cmbEntryStatus.Text; // <-- update the status
+            cmCE.EndCurrentEdit();
+            try
+            {
+                DM.UpdateEntry();
+            }
+            catch (Exception)
+            {
+                Utilities.DBExceptionError();
+            }
+        }
+        //link the combo box value to the entry DGV
+        private void dgvEntry_SelectionChanged(object sender, EventArgs e)
+        {
+            cmbEntryStatus.Text = dgvEntry.Rows[cmCE.Position].Cells["Status"].Value.ToString(); // <-- change the EntryStatus combo box to match that selected.
         }
         #endregion
     }

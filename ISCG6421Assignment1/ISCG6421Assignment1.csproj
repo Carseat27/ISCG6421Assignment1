@@ -66,11 +66,11 @@
     <Compile Include="ChallengeForm.Designer.cs">
       <DependentUpon>ChallengeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="CompetitorChallengeForm.cs">
+    <Compile Include="EntryForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CompetitorChallengeForm.Designer.cs">
-      <DependentUpon>CompetitorChallengeForm.cs</DependentUpon>
+    <Compile Include="EntryForm.Designer.cs">
+      <DependentUpon>EntryForm.cs</DependentUpon>
     </Compile>
     <Compile Include="CompetitorForm.cs">
       <SubType>Form</SubType>
@@ -122,8 +122,8 @@
     <EmbeddedResource Include="ChallengeForm.resx">
       <DependentUpon>ChallengeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CompetitorChallengeForm.resx">
-      <DependentUpon>CompetitorChallengeForm.cs</DependentUpon>
+    <EmbeddedResource Include="EntryForm.resx">
+      <DependentUpon>EntryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CompetitorForm.resx">
       <DependentUpon>CompetitorForm.cs</DependentUpon>
