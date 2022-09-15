@@ -28,7 +28,51 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CompetitorReportForm));
+            this.btnReturn = new System.Windows.Forms.Button();
+            this.btnPrintReport = new System.Windows.Forms.Button();
+            this.printCompetitors = new System.Drawing.Printing.PrintDocument();
+            this.prvCompetitors = new System.Windows.Forms.PrintPreviewDialog();
             this.SuspendLayout();
+            // 
+            // btnReturn
+            // 
+            this.btnReturn.BackColor = System.Drawing.SystemColors.Control;
+            this.btnReturn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReturn.Location = new System.Drawing.Point(504, 197);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(146, 46);
+            this.btnReturn.TabIndex = 26;
+            this.btnReturn.Text = "Return";
+            this.btnReturn.UseVisualStyleBackColor = false;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
+            // 
+            // btnPrintReport
+            // 
+            this.btnPrintReport.BackColor = System.Drawing.SystemColors.Control;
+            this.btnPrintReport.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrintReport.Location = new System.Drawing.Point(206, 197);
+            this.btnPrintReport.Name = "btnPrintReport";
+            this.btnPrintReport.Size = new System.Drawing.Size(146, 46);
+            this.btnPrintReport.TabIndex = 27;
+            this.btnPrintReport.Text = "Print Competitor Report";
+            this.btnPrintReport.UseVisualStyleBackColor = false;
+            this.btnPrintReport.Click += new System.EventHandler(this.btnPrintReport_Click);
+            // 
+            // printCompetitors
+            // 
+            this.printCompetitors.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printCompetitors_PrintPage);
+            // 
+            // prvCompetitors
+            // 
+            this.prvCompetitors.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.prvCompetitors.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.prvCompetitors.ClientSize = new System.Drawing.Size(400, 300);
+            this.prvCompetitors.Document = this.printCompetitors;
+            this.prvCompetitors.Enabled = true;
+            this.prvCompetitors.Icon = ((System.Drawing.Icon)(resources.GetObject("prvCompetitors.Icon")));
+            this.prvCompetitors.Name = "prvCompetitors";
+            this.prvCompetitors.Visible = false;
             // 
             // CompetitorReportForm
             // 
@@ -36,6 +80,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(797, 442);
+            this.ControlBox = false;
+            this.Controls.Add(this.btnPrintReport);
+            this.Controls.Add(this.btnReturn);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximumSize = new System.Drawing.Size(813, 481);
             this.MinimumSize = new System.Drawing.Size(813, 481);
             this.Name = "CompetitorReportForm";
@@ -47,5 +95,10 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnReturn;
+        private System.Windows.Forms.Button btnPrintReport;
+        private System.Drawing.Printing.PrintDocument printCompetitors;
+        private System.Windows.Forms.PrintPreviewDialog prvCompetitors;
     }
 }

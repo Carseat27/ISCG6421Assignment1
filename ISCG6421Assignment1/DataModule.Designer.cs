@@ -55,8 +55,12 @@
             this.oleDbUpdateCommand5 = new System.Data.OleDb.OleDbCommand();
             this.oleDbDeleteCommand5 = new System.Data.OleDb.OleDbCommand();
             this.daEvent = new System.Data.OleDb.OleDbDataAdapter();
-            this.dsNZESL = new ISCG6421Assignment1.DSNZESL();
+            this.dsNZESL = new ISCG6421Assignment1.dsNZESL();
+            this.dsCompReport = new ISCG6421Assignment1.dsCompReport();
+            this.oleDbSelectCommand6 = new System.Data.OleDb.OleDbCommand();
+            this.daCompReport = new System.Data.OleDb.OleDbDataAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dsNZESL)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsCompReport)).BeginInit();
             this.SuspendLayout();
             // 
             // ctnNZESL
@@ -408,18 +412,45 @@
             // 
             // dsNZESL
             // 
-            this.dsNZESL.DataSetName = "DSNZESL";
+            this.dsNZESL.DataSetName = "dsNZESL";
             this.dsNZESL.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dsCompReport
+            // 
+            this.dsCompReport.DataSetName = "dsCompReport";
+            this.dsCompReport.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // oleDbSelectCommand6
+            // 
+            this.oleDbSelectCommand6.CommandText = resources.GetString("oleDbSelectCommand6.CommandText");
+            this.oleDbSelectCommand6.Connection = this.ctnNZESL;
+            // 
+            // daCompReport
+            // 
+            this.daCompReport.SelectCommand = this.oleDbSelectCommand6;
+            this.daCompReport.TableMappings.AddRange(new System.Data.Common.DataTableMapping[] {
+            new System.Data.Common.DataTableMapping("Table", "CHALLENGE", new System.Data.Common.DataColumnMapping[] {
+                        new System.Data.Common.DataColumnMapping("ChallengeID", "ChallengeID"),
+                        new System.Data.Common.DataColumnMapping("CompetitorID", "CompetitorID"),
+                        new System.Data.Common.DataColumnMapping("ChallengeName", "ChallengeName"),
+                        new System.Data.Common.DataColumnMapping("StartTime", "StartTime"),
+                        new System.Data.Common.DataColumnMapping("UserName", "UserName"),
+                        new System.Data.Common.DataColumnMapping("LastName", "LastName"),
+                        new System.Data.Common.DataColumnMapping("Gender", "Gender"),
+                        new System.Data.Common.DataColumnMapping("DateOfBirth", "DateOfBirth"),
+                        new System.Data.Common.DataColumnMapping("EmailAddress", "EmailAddress"),
+                        new System.Data.Common.DataColumnMapping("FirstName", "FirstName")})});
             // 
             // DataModule
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(261, 182);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ClientSize = new System.Drawing.Size(196, 148);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DataModule";
             this.Text = "DataModule";
             ((System.ComponentModel.ISupportInitialize)(this.dsNZESL)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsCompReport)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -450,7 +481,10 @@
         private System.Data.OleDb.OleDbCommand oleDbUpdateCommand5;
         private System.Data.OleDb.OleDbCommand oleDbDeleteCommand5;
         private System.Data.OleDb.OleDbDataAdapter daEvent;
-        public DSNZESL dsNZESL;
         public System.Data.OleDb.OleDbConnection ctnNZESL;
+        public dsNZESL dsNZESL;
+        public dsCompReport dsCompReport;
+        private System.Data.OleDb.OleDbCommand oleDbSelectCommand6;
+        private System.Data.OleDb.OleDbDataAdapter daCompReport;
     }
 }

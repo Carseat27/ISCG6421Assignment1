@@ -20,9 +20,9 @@ namespace ISCG6421Assignment1 {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("DSNZESL")]
+    [global::System.Xml.Serialization.XmlRootAttribute("dsNZESL")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class DSNZESL : global::System.Data.DataSet {
+    public partial class dsNZESL : global::System.Data.DataSet {
         
         private ARENADataTable tableARENA;
         
@@ -40,7 +40,7 @@ namespace ISCG6421Assignment1 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public DSNZESL() {
+        public dsNZESL() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -51,7 +51,7 @@ namespace ISCG6421Assignment1 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected DSNZESL(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected dsNZESL(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -189,7 +189,7 @@ namespace ISCG6421Assignment1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            DSNZESL cln = ((DSNZESL)(base.Clone()));
+            dsNZESL cln = ((dsNZESL)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -298,9 +298,9 @@ namespace ISCG6421Assignment1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "DSNZESL";
+            this.DataSetName = "dsNZESL";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/DSNZESL.xsd";
+            this.Namespace = "http://tempuri.org/dsNZESL.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableARENA = new ARENADataTable();
@@ -319,8 +319,8 @@ namespace ISCG6421Assignment1 {
                         this.tableENTRY.ChallengeIDColumn});
             this.tableENTRY.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
-            fkc.DeleteRule = global::System.Data.Rule.None;
-            fkc.UpdateRule = global::System.Data.Rule.None;
+            fkc.DeleteRule = global::System.Data.Rule.Cascade;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
             this.relationCHALLENGE_ENTRY = new global::System.Data.DataRelation("CHALLENGE_ENTRY", new global::System.Data.DataColumn[] {
                         this.tableCHALLENGE.ChallengeIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableENTRY.ChallengeIDColumn}, false);
@@ -368,7 +368,7 @@ namespace ISCG6421Assignment1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            DSNZESL ds = new DSNZESL();
+            dsNZESL ds = new dsNZESL();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -702,7 +702,7 @@ namespace ISCG6421Assignment1 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DSNZESL ds = new DSNZESL();
+                dsNZESL ds = new dsNZESL();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1040,7 +1040,7 @@ namespace ISCG6421Assignment1 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DSNZESL ds = new DSNZESL();
+                dsNZESL ds = new dsNZESL();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1388,7 +1388,7 @@ namespace ISCG6421Assignment1 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DSNZESL ds = new DSNZESL();
+                dsNZESL ds = new dsNZESL();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1680,7 +1680,7 @@ namespace ISCG6421Assignment1 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DSNZESL ds = new DSNZESL();
+                dsNZESL ds = new dsNZESL();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1757,6 +1757,8 @@ namespace ISCG6421Assignment1 {
             private global::System.Data.DataColumn columnCapacity;
             
             private global::System.Data.DataColumn columnEventDate;
+            
+            private global::System.Data.DataColumn columnArenaName;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -1841,6 +1843,14 @@ namespace ISCG6421Assignment1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ArenaNameColumn {
+                get {
+                    return this.columnArenaName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1876,7 +1886,7 @@ namespace ISCG6421Assignment1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public EVENTRow AddEVENTRow(string EventName, int ArenaID, string Status, int Capacity, System.DateTime EventDate) {
+            public EVENTRow AddEVENTRow(string EventName, int ArenaID, string Status, int Capacity, System.DateTime EventDate, string ArenaName) {
                 EVENTRow rowEVENTRow = ((EVENTRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1884,17 +1894,11 @@ namespace ISCG6421Assignment1 {
                         ArenaID,
                         Status,
                         Capacity,
-                        EventDate};
+                        EventDate,
+                        ArenaName};
                 rowEVENTRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowEVENTRow);
                 return rowEVENTRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public EVENTRow FindByEventID(int EventID) {
-                return ((EVENTRow)(this.Rows.Find(new object[] {
-                            EventID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1920,6 +1924,7 @@ namespace ISCG6421Assignment1 {
                 this.columnStatus = base.Columns["Status"];
                 this.columnCapacity = base.Columns["Capacity"];
                 this.columnEventDate = base.Columns["EventDate"];
+                this.columnArenaName = base.Columns["ArenaName"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1937,13 +1942,12 @@ namespace ISCG6421Assignment1 {
                 base.Columns.Add(this.columnCapacity);
                 this.columnEventDate = new global::System.Data.DataColumn("EventDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEventDate);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnEventID}, true));
+                this.columnArenaName = new global::System.Data.DataColumn("ArenaName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnArenaName);
                 this.columnEventID.AutoIncrement = true;
-                this.columnEventID.AllowDBNull = false;
-                this.columnEventID.Unique = true;
                 this.columnEventName.MaxLength = 40;
                 this.columnStatus.MaxLength = 11;
+                this.columnArenaName.MaxLength = 40;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2011,7 +2015,7 @@ namespace ISCG6421Assignment1 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DSNZESL ds = new DSNZESL();
+                dsNZESL ds = new dsNZESL();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2746,7 +2750,12 @@ namespace ISCG6421Assignment1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int EventID {
                 get {
-                    return ((int)(this[this.tableEVENT.EventIDColumn]));
+                    try {
+                        return ((int)(this[this.tableEVENT.EventIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'EventID\' in table \'EVENT\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableEVENT.EventIDColumn] = value;
@@ -2835,6 +2844,34 @@ namespace ISCG6421Assignment1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string ArenaName {
+                get {
+                    try {
+                        return ((string)(this[this.tableEVENT.ArenaNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ArenaName\' in table \'EVENT\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableEVENT.ArenaNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsEventIDNull() {
+                return this.IsNull(this.tableEVENT.EventIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetEventIDNull() {
+                this[this.tableEVENT.EventIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsEventNameNull() {
                 return this.IsNull(this.tableEVENT.EventNameColumn);
             }
@@ -2891,6 +2928,18 @@ namespace ISCG6421Assignment1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetEventDateNull() {
                 this[this.tableEVENT.EventDateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsArenaNameNull() {
+                return this.IsNull(this.tableEVENT.ArenaNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetArenaNameNull() {
+                this[this.tableEVENT.ArenaNameColumn] = global::System.Convert.DBNull;
             }
         }
         

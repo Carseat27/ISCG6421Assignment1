@@ -66,6 +66,16 @@
     <Compile Include="ChallengeForm.Designer.cs">
       <DependentUpon>ChallengeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="dsCompReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCompReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsNZESL.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsNZESL.xsd</DependentUpon>
+    </Compile>
     <Compile Include="EntryForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,11 +99,6 @@
     </Compile>
     <Compile Include="DataModule.Designer.cs">
       <DependentUpon>DataModule.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DSNZESL.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DSNZESL.xsd</DependentUpon>
     </Compile>
     <Compile Include="EventForm.cs">
       <SubType>Form</SubType>
@@ -152,16 +157,27 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="DSNZESL.xsc">
-      <DependentUpon>DSNZESL.xsd</DependentUpon>
+    <None Include="dsCompReport.xsc">
+      <DependentUpon>dsCompReport.xsd</DependentUpon>
     </None>
-    <None Include="DSNZESL.xsd">
+    <None Include="dsCompReport.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DSNZESL.Designer.cs</LastGenOutput>
+      <LastGenOutput>dsCompReport.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="DSNZESL.xss">
-      <DependentUpon>DSNZESL.xsd</DependentUpon>
+    <None Include="dsCompReport.xss">
+      <DependentUpon>dsCompReport.xsd</DependentUpon>
+    </None>
+    <None Include="dsNZESL.xsc">
+      <DependentUpon>dsNZESL.xsd</DependentUpon>
+    </None>
+    <None Include="dsNZESL.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsNZESL.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsNZESL.xss">
+      <DependentUpon>dsNZESL.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -152,7 +152,17 @@ namespace ISCG6421Assignment1
         //link the combo box value to the entry DGV
         private void dgvEntry_SelectionChanged(object sender, EventArgs e)
         {
-            cmbEntryStatus.Text = dgvEntry.Rows[cmCE.Position].Cells["Status"].Value.ToString(); // <-- change the EntryStatus combo box to match that selected.
+            //prevents the combo box being usable (and sets blank) when cmCE.Position is out of range
+            if(cmCE.Position == -1)
+            {
+                cmbEntryStatus.Enabled = false;
+                cmbEntryStatus.Text = "";
+            }
+            else
+            {
+                cmbEntryStatus.Enabled = true;
+                cmbEntryStatus.Text = dgvEntry.Rows[cmCE.Position].Cells["Status"].Value.ToString(); // <-- change the EntryStatus combo box to match that selected.
+            }
         }
         #endregion
     }
