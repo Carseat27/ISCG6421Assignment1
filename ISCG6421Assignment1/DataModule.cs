@@ -143,7 +143,7 @@ namespace ISCG6421Assignment1
             {
                 fileString = @"C:\Temp\NZESL.mdb"; // <-- set default if file not found
                 //Utilities.writeCtnString(fileString); // <-- create the file and write the default string
-                MessageBox.Show("Could not find the required file.\n\nThe default has been set to " + fileString);
+                MessageBox.Show("Could not find the required database file.\n\nThe default has been set to " + fileString);
             }
             //try set ctn string
             try
