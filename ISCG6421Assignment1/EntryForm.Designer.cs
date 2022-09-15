@@ -46,48 +46,44 @@
             // dgvCompetitor
             // 
             this.dgvCompetitor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCompetitor.Location = new System.Drawing.Point(61, 41);
-            this.dgvCompetitor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvCompetitor.Location = new System.Drawing.Point(46, 33);
             this.dgvCompetitor.MultiSelect = false;
             this.dgvCompetitor.Name = "dgvCompetitor";
             this.dgvCompetitor.ReadOnly = true;
             this.dgvCompetitor.RowHeadersWidth = 51;
-            this.dgvCompetitor.Size = new System.Drawing.Size(589, 185);
+            this.dgvCompetitor.Size = new System.Drawing.Size(442, 150);
             this.dgvCompetitor.TabIndex = 0;
             // 
             // dgvEntry
             // 
             this.dgvEntry.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEntry.Location = new System.Drawing.Point(681, 277);
-            this.dgvEntry.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvEntry.Location = new System.Drawing.Point(511, 225);
             this.dgvEntry.MultiSelect = false;
             this.dgvEntry.Name = "dgvEntry";
             this.dgvEntry.ReadOnly = true;
             this.dgvEntry.RowHeadersWidth = 51;
-            this.dgvEntry.Size = new System.Drawing.Size(320, 185);
+            this.dgvEntry.Size = new System.Drawing.Size(240, 150);
             this.dgvEntry.TabIndex = 1;
             this.dgvEntry.SelectionChanged += new System.EventHandler(this.dgvEntry_SelectionChanged);
             // 
             // dgvChallenge
             // 
             this.dgvChallenge.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvChallenge.Location = new System.Drawing.Point(61, 277);
-            this.dgvChallenge.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvChallenge.Location = new System.Drawing.Point(46, 225);
             this.dgvChallenge.MultiSelect = false;
             this.dgvChallenge.Name = "dgvChallenge";
             this.dgvChallenge.ReadOnly = true;
             this.dgvChallenge.RowHeadersWidth = 51;
-            this.dgvChallenge.Size = new System.Drawing.Size(589, 185);
+            this.dgvChallenge.Size = new System.Drawing.Size(442, 150);
             this.dgvChallenge.TabIndex = 2;
             // 
             // btnReturn
             // 
             this.btnReturn.BackColor = System.Drawing.SystemColors.Control;
             this.btnReturn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReturn.Location = new System.Drawing.Point(807, 482);
-            this.btnReturn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReturn.Location = new System.Drawing.Point(605, 392);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(195, 57);
+            this.btnReturn.Size = new System.Drawing.Size(146, 46);
             this.btnReturn.TabIndex = 25;
             this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = false;
@@ -97,10 +93,9 @@
             // 
             this.btnAddEntry.BackColor = System.Drawing.SystemColors.Control;
             this.btnAddEntry.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddEntry.Location = new System.Drawing.Point(61, 482);
-            this.btnAddEntry.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddEntry.Location = new System.Drawing.Point(46, 392);
             this.btnAddEntry.Name = "btnAddEntry";
-            this.btnAddEntry.Size = new System.Drawing.Size(185, 57);
+            this.btnAddEntry.Size = new System.Drawing.Size(139, 46);
             this.btnAddEntry.TabIndex = 33;
             this.btnAddEntry.Text = "Add Entry";
             this.btnAddEntry.UseVisualStyleBackColor = false;
@@ -110,10 +105,9 @@
             // 
             this.btnRemoveEntry.BackColor = System.Drawing.SystemColors.Control;
             this.btnRemoveEntry.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemoveEntry.Location = new System.Drawing.Point(465, 482);
-            this.btnRemoveEntry.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRemoveEntry.Location = new System.Drawing.Point(349, 392);
             this.btnRemoveEntry.Name = "btnRemoveEntry";
-            this.btnRemoveEntry.Size = new System.Drawing.Size(185, 57);
+            this.btnRemoveEntry.Size = new System.Drawing.Size(139, 46);
             this.btnRemoveEntry.TabIndex = 34;
             this.btnRemoveEntry.Text = "Remove Entry";
             this.btnRemoveEntry.UseVisualStyleBackColor = false;
@@ -124,10 +118,9 @@
             this.txtEventName.AcceptsTab = true;
             this.txtEventName.Enabled = false;
             this.txtEventName.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEventName.Location = new System.Drawing.Point(807, 69);
-            this.txtEventName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEventName.Location = new System.Drawing.Point(605, 56);
             this.txtEventName.Name = "txtEventName";
-            this.txtEventName.Size = new System.Drawing.Size(193, 27);
+            this.txtEventName.Size = new System.Drawing.Size(146, 23);
             this.txtEventName.TabIndex = 43;
             this.txtEventName.Text = "Name";
             // 
@@ -136,10 +129,9 @@
             this.lblEventName.AutoSize = true;
             this.lblEventName.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEventName.ForeColor = System.Drawing.Color.White;
-            this.lblEventName.Location = new System.Drawing.Point(676, 73);
-            this.lblEventName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEventName.Location = new System.Drawing.Point(507, 59);
             this.lblEventName.Name = "lblEventName";
-            this.lblEventName.Size = new System.Drawing.Size(119, 21);
+            this.lblEventName.Size = new System.Drawing.Size(92, 17);
             this.lblEventName.TabIndex = 44;
             this.lblEventName.Text = "Event Name:";
             this.lblEventName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -149,10 +141,9 @@
             this.lblEntryStatus.AutoSize = true;
             this.lblEntryStatus.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEntryStatus.ForeColor = System.Drawing.Color.White;
-            this.lblEntryStatus.Location = new System.Drawing.Point(685, 232);
-            this.lblEntryStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEntryStatus.Location = new System.Drawing.Point(514, 188);
             this.lblEntryStatus.Name = "lblEntryStatus";
-            this.lblEntryStatus.Size = new System.Drawing.Size(110, 21);
+            this.lblEntryStatus.Size = new System.Drawing.Size(84, 17);
             this.lblEntryStatus.TabIndex = 45;
             this.lblEntryStatus.Text = "Entry Status:";
             this.lblEntryStatus.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -164,18 +155,20 @@
             this.cmbEntryStatus.Items.AddRange(new object[] {
             "Confirmed",
             "Pending"});
-            this.cmbEntryStatus.Location = new System.Drawing.Point(807, 229);
+            this.cmbEntryStatus.Location = new System.Drawing.Point(605, 186);
+            this.cmbEntryStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbEntryStatus.Name = "cmbEntryStatus";
-            this.cmbEntryStatus.Size = new System.Drawing.Size(193, 29);
+            this.cmbEntryStatus.Size = new System.Drawing.Size(146, 27);
             this.cmbEntryStatus.TabIndex = 47;
             this.cmbEntryStatus.SelectedValueChanged += new System.EventHandler(this.cmbEntryStatus_SelectedValueChanged);
             // 
             // EntryForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(1060, 534);
+            this.ClientSize = new System.Drawing.Size(796, 440);
+            this.ControlBox = false;
             this.Controls.Add(this.cmbEntryStatus);
             this.Controls.Add(this.lblEntryStatus);
             this.Controls.Add(this.lblEventName);
@@ -186,9 +179,9 @@
             this.Controls.Add(this.dgvChallenge);
             this.Controls.Add(this.dgvEntry);
             this.Controls.Add(this.dgvCompetitor);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.MaximumSize = new System.Drawing.Size(1078, 581);
-            this.MinimumSize = new System.Drawing.Size(1078, 581);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximumSize = new System.Drawing.Size(812, 479);
+            this.MinimumSize = new System.Drawing.Size(812, 479);
             this.Name = "EntryForm";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
