@@ -56,9 +56,9 @@
             this.oleDbDeleteCommand5 = new System.Data.OleDb.OleDbCommand();
             this.daEvent = new System.Data.OleDb.OleDbDataAdapter();
             this.dsNZESL = new ISCG6421Assignment1.dsNZESL();
-            this.dsCompReport = new ISCG6421Assignment1.dsCompReport();
             this.oleDbSelectCommand6 = new System.Data.OleDb.OleDbCommand();
             this.daCompReport = new System.Data.OleDb.OleDbDataAdapter();
+            this.dsCompReport = new ISCG6421Assignment1.dsCompReport();
             ((System.ComponentModel.ISupportInitialize)(this.dsNZESL)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsCompReport)).BeginInit();
             this.SuspendLayout();
@@ -415,11 +415,6 @@
             this.dsNZESL.DataSetName = "dsNZESL";
             this.dsNZESL.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // dsCompReport
-            // 
-            this.dsCompReport.DataSetName = "dsCompReport";
-            this.dsCompReport.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // oleDbSelectCommand6
             // 
             this.oleDbSelectCommand6.CommandText = resources.GetString("oleDbSelectCommand6.CommandText");
@@ -440,6 +435,11 @@
                         new System.Data.Common.DataColumnMapping("DateOfBirth", "DateOfBirth"),
                         new System.Data.Common.DataColumnMapping("EmailAddress", "EmailAddress"),
                         new System.Data.Common.DataColumnMapping("FirstName", "FirstName")})});
+            // 
+            // dsCompReport
+            // 
+            this.dsCompReport.DataSetName = "dsCompReport";
+            this.dsCompReport.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // DataModule
             // 
@@ -483,8 +483,8 @@
         private System.Data.OleDb.OleDbDataAdapter daEvent;
         public System.Data.OleDb.OleDbConnection ctnNZESL;
         public dsNZESL dsNZESL;
-        public dsCompReport dsCompReport;
         private System.Data.OleDb.OleDbCommand oleDbSelectCommand6;
         private System.Data.OleDb.OleDbDataAdapter daCompReport;
+        public dsCompReport dsCompReport;
     }
 }

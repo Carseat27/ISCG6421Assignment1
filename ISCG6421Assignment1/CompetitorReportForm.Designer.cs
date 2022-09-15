@@ -61,6 +61,7 @@
             // 
             // printCompetitors
             // 
+            this.printCompetitors.DocumentName = "Competitor Report";
             this.printCompetitors.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printCompetitors_PrintPage);
             // 
             // prvCompetitors

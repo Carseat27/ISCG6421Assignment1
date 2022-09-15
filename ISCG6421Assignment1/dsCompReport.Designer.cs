@@ -299,6 +299,8 @@ namespace ISCG6421Assignment1 {
             
             private global::System.Data.DataColumn columnFirstName;
             
+            private global::System.Data.DataColumn columnStatus;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public CHALLENGEDataTable() {
@@ -414,6 +416,14 @@ namespace ISCG6421Assignment1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn StatusColumn {
+                get {
+                    return this.columnStatus;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -449,7 +459,7 @@ namespace ISCG6421Assignment1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public CHALLENGERow AddCHALLENGERow(int ChallengeID, int CompetitorID, string ChallengeName, System.DateTime StartTime, string UserName, string LastName, string Gender, System.DateTime DateOfBirth, string EmailAddress, string FirstName) {
+            public CHALLENGERow AddCHALLENGERow(int ChallengeID, int CompetitorID, string ChallengeName, System.DateTime StartTime, string UserName, string LastName, string Gender, System.DateTime DateOfBirth, string EmailAddress, string FirstName, string Status) {
                 CHALLENGERow rowCHALLENGERow = ((CHALLENGERow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ChallengeID,
@@ -461,7 +471,8 @@ namespace ISCG6421Assignment1 {
                         Gender,
                         DateOfBirth,
                         EmailAddress,
-                        FirstName};
+                        FirstName,
+                        Status};
                 rowCHALLENGERow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowCHALLENGERow);
                 return rowCHALLENGERow;
@@ -494,6 +505,7 @@ namespace ISCG6421Assignment1 {
                 this.columnDateOfBirth = base.Columns["DateOfBirth"];
                 this.columnEmailAddress = base.Columns["EmailAddress"];
                 this.columnFirstName = base.Columns["FirstName"];
+                this.columnStatus = base.Columns["Status"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -519,12 +531,15 @@ namespace ISCG6421Assignment1 {
                 base.Columns.Add(this.columnEmailAddress);
                 this.columnFirstName = new global::System.Data.DataColumn("FirstName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFirstName);
+                this.columnStatus = new global::System.Data.DataColumn("Status", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnStatus);
                 this.columnChallengeName.MaxLength = 40;
                 this.columnUserName.MaxLength = 30;
                 this.columnLastName.MaxLength = 255;
                 this.columnGender.MaxLength = 7;
                 this.columnEmailAddress.MaxLength = 536870910;
                 this.columnFirstName.MaxLength = 255;
+                this.columnStatus.MaxLength = 12;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -827,6 +842,22 @@ namespace ISCG6421Assignment1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Status {
+                get {
+                    try {
+                        return ((string)(this[this.tableCHALLENGE.StatusColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Status\' in table \'CHALLENGE\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCHALLENGE.StatusColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsChallengeIDNull() {
                 return this.IsNull(this.tableCHALLENGE.ChallengeIDColumn);
             }
@@ -943,6 +974,18 @@ namespace ISCG6421Assignment1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetFirstNameNull() {
                 this[this.tableCHALLENGE.FirstNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsStatusNull() {
+                return this.IsNull(this.tableCHALLENGE.StatusColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetStatusNull() {
+                this[this.tableCHALLENGE.StatusColumn] = global::System.Convert.DBNull;
             }
         }
         
