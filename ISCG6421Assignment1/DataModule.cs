@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using System.IO;
 
 namespace ISCG6421Assignment1
 {
@@ -26,18 +27,30 @@ namespace ISCG6421Assignment1
         public DataModule()
         {
             InitializeComponent();
-            dsNZESL.EnforceConstraints = false;
-            daArena.Fill(dsNZESL);
-            daChallenge.Fill(dsNZESL);
-            daCompetitor.Fill(dsNZESL);
-            daEntry.Fill(dsNZESL);
-            daEvent.Fill(dsNZESL);
-            dtArena = dsNZESL.Tables["Arena"];
-            dtChallenge = dsNZESL.Tables["Challenge"];
-            dtCompetitor = dsNZESL.Tables["Competitor"];
-            dtEntry = dsNZESL.Tables["Entry"];
-            dtEvent = dsNZESL.Tables["Event"];
-            dsNZESL.EnforceConstraints = true;
+            Utilities.DM = this;
+
+            readCtnString(); // <-- make ctn from file
+
+            try
+            {
+                dsNZESL.EnforceConstraints = false;
+                daArena.Fill(dsNZESL);
+                daChallenge.Fill(dsNZESL);
+                daCompetitor.Fill(dsNZESL);
+                daEntry.Fill(dsNZESL);
+                daEvent.Fill(dsNZESL);
+                dtArena = dsNZESL.Tables["Arena"];
+                dtChallenge = dsNZESL.Tables["Challenge"];
+                dtCompetitor = dsNZESL.Tables["Competitor"];
+                dtEntry = dsNZESL.Tables["Entry"];
+                dtEvent = dsNZESL.Tables["Event"];
+                dsNZESL.EnforceConstraints = true;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("There is no database file located in the saved directory.\n\nPlease select one now.");
+                Utilities.selectDBFile();
+            }
         }
         public void UpdateArena()
         {
@@ -103,6 +116,43 @@ namespace ISCG6421Assignment1
             {
                 newID = (int)idCMD.ExecuteScalar();
                 e.Row["EventID"] = newID;
+            }
+        }
+
+        /// <summary>
+        /// this method sets the connection string to the sed
+        /// </summary>
+        /// <param name="fileString"></param>
+        public void setDBFilePath(string fileString)
+        {
+            //set the connection string
+            this.ctnNZESL.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\"" + fileString + "\"";
+            //save the connection string to a file
+            Utilities.writeCtnString(fileString);
+
+        }
+        public void readCtnString()
+        {
+            //try reading file
+            string fileString;
+            try
+            {
+                fileString = File.ReadAllText("connection.txt"); // <-- read the fileString from txt file
+            }
+            catch (Exception)
+            {
+                fileString = @"C:\Temp\NZESL.mdb"; // <-- set default if file not found
+                //Utilities.writeCtnString(fileString); // <-- create the file and write the default string
+                MessageBox.Show("Could not find the required file.\n\nThe default has been set to " + fileString);
+            }
+            //try set ctn string
+            try
+            {
+                this.ctnNZESL.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\"" + fileString + "\"";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An unexpected error has been encountered.\n\nPlease select your database file", "Error");
             }
         }
     }

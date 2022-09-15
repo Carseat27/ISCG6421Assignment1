@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,7 +31,7 @@ namespace ISCG6421Assignment1
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            DM = new DataModule(); //create data module and load dataset
+            DM = new DataModule(); // <-- create data module and load dataset
         }
 
         private void btnArenaMaintenance_Click(object sender, EventArgs e)
@@ -103,19 +104,7 @@ namespace ISCG6421Assignment1
 
         private void btbDbConnect_Click(object sender, EventArgs e)
         {
-
-        }
-        
-        /// <summary>
-        /// this method causes the MainForm to move to the same location each time a child form is moved.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        public void On_Move(object sender, EventArgs e)
-        {
-            Point LocationCurrent = this.Location;
-            this.Location = new Point(((Form)sender).Location.X, ((Form)sender).Location.Y);
-            Console.WriteLine(sender);
+            Utilities.selectDBFile();
         }
     }
 }

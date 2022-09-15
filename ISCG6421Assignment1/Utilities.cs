@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,8 @@ namespace ISCG6421Assignment1
     {
 
         public static MainForm frmMenu;
+        public static DataModule DM;
+
         /// <summary>
         /// this method makes the buttons on each form enable or disable on request
         /// </summary>
@@ -42,6 +45,48 @@ namespace ISCG6421Assignment1
         public static void DBExceptionError()
         {
             MessageBox.Show("There has been an unexpected error.\n\nPlease check that you are using 'NZESL.mdb' as provided.", "Error");
+        }
+
+
+        /// <summary>
+        /// this method allows the user to select the NZESL.mdb file location and saves it for future reference
+        /// </summary>
+        public static void selectDBFile()
+        {
+            OpenFileDialog DBFile = new OpenFileDialog(); // <-- create file dialog
+            DBFile.Filter = "Access files (*.mdb)|*.mdb"; // <-- set file filter
+            DialogResult result = DBFile.ShowDialog();    // <-- user to choose file
+            if (result == DialogResult.OK)
+            {
+                if (DBFile.FileName.Contains("NZESL")) // <-- check that the file name is correct
+                {
+                    try
+                    {
+                        DM.setDBFilePath(DBFile.FileName); // <-- set the connection string in the DataModule
+
+                        //restart application
+                        MessageBox.Show("The application will now restart to apply changes.", "Warning");
+                        Application.Restart(); 
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Unexpected error encountered.\n\nPlease try again", "Error");
+                    }
+                }
+                else
+                {
+                    Utilities.DBExceptionError();
+                }
+            }
+        }
+
+        /// <summary>
+        /// this method writes the passed connection string 
+        /// </summary>
+        /// <param name="fileString"></param>
+        public static void writeCtnString(string fileString)
+        {
+            File.WriteAllText("connection.txt", fileString); // <-- write the fileString to txt file
         }
     }
 }
