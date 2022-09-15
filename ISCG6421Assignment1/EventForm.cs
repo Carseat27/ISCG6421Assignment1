@@ -101,9 +101,9 @@ namespace ISCG6421Assignment1
                 MessageBox.Show("You must fill out ALL fields!", "Error");
             }
             //check capacity
-            else if ( (numEventCapacityAdd.Value == 0) || (numEventCapacityAdd.Value == null) )
+            else if (numEventCapacityAdd.Value == 0)
             {
-                MessageBox.Show("Capacity cannot be 0 or null", "Error");
+                MessageBox.Show("Capacity cannot be 0", "Error");
             }
             else
             {
@@ -119,7 +119,7 @@ namespace ISCG6421Assignment1
                     DM.UpdateEvent();
                     MessageBox.Show("Event added successfully", "Success");
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     Utilities.DBExceptionError();
                 }
@@ -193,7 +193,7 @@ namespace ISCG6421Assignment1
                 MessageBox.Show("You must fill out ALL fields!", "Error");
             }
             //check capacity
-            else if ((numEventCapacityUpdate.Value == 0) || (numEventCapacityUpdate.Value == null))
+            else if (numEventCapacityUpdate.Value == 0)
             {
                 MessageBox.Show("Capacity cannot be 0 or null", "Error");
             }
@@ -211,7 +211,7 @@ namespace ISCG6421Assignment1
                     DM.UpdateEvent();
                     MessageBox.Show("Event Updated Successfully", "Success");
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     Utilities.DBExceptionError();
                 }
@@ -246,7 +246,7 @@ namespace ISCG6421Assignment1
                         DM.UpdateEvent();
                         MessageBox.Show("Event deleted successfully", "Success");
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
                         Utilities.DBExceptionError();
                     }

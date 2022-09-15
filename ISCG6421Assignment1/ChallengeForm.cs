@@ -122,7 +122,7 @@ namespace ISCG6421Assignment1
                     DM.UpdateChallenge();
                     MessageBox.Show("Challenge added successfully", "Success");
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     Utilities.DBExceptionError();
                 }
@@ -184,7 +184,7 @@ namespace ISCG6421Assignment1
                     DM.UpdateChallenge();
                     MessageBox.Show("Challenge updated successfully", "Success");
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     Utilities.DBExceptionError();
                 }
@@ -228,7 +228,7 @@ namespace ISCG6421Assignment1
                         DM.UpdateChallenge();
                         MessageBox.Show("Challenge deleted successfully", "Success");
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
                         Utilities.DBExceptionError();
                     }
@@ -254,7 +254,7 @@ namespace ISCG6421Assignment1
                     DM.UpdateChallenge();
                     MessageBox.Show("Challenge status set to 'Finished'", "Success");
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     Utilities.DBExceptionError();
                 }
@@ -278,7 +278,7 @@ namespace ISCG6421Assignment1
                     DM.UpdateChallenge();
                     MessageBox.Show("Challenge status set to 'Completed'", "Success");
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     Utilities.DBExceptionError();
                 }

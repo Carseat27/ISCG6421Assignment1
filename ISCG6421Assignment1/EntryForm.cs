@@ -61,7 +61,7 @@ namespace ISCG6421Assignment1
                 dgvChallenge.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dgvEntry.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Error loading the form. Please try again.");
             }
@@ -96,7 +96,7 @@ namespace ISCG6421Assignment1
                     DM.UpdateEntry();
                     MessageBox.Show("Entry added successfully", "Success");
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     Utilities.DBExceptionError();
                 }
@@ -123,7 +123,7 @@ namespace ISCG6421Assignment1
                     DM.UpdateEntry();
                     MessageBox.Show("Entry deleted successfully", "Success");
                 }
-                catch(Exception ex)
+                catch(Exception)
                 {
                     Utilities.DBExceptionError();
                 }

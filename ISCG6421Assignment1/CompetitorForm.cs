@@ -126,7 +126,7 @@ namespace ISCG6421Assignment1
                     DM.UpdateCompetitor();
                     MessageBox.Show("Competitor Added Successfully", "Success");
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     Utilities.DBExceptionError();
                 }

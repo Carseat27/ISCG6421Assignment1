@@ -150,7 +150,7 @@ namespace ISCG6421Assignment1
             {
                 this.ctnNZESL.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\"" + fileString + "\"";
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("An unexpected error has been encountered.\n\nPlease select your database file", "Error");
                 Utilities.selectDBFile();

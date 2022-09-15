@@ -124,7 +124,7 @@ namespace ISCG6421Assignment1
                     DM.UpdateArena();
                     MessageBox.Show("Arena added successfully", "Success");
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     Utilities.DBExceptionError();
                 }
@@ -176,7 +176,7 @@ namespace ISCG6421Assignment1
                     DM.UpdateArena();
                     MessageBox.Show("Arena updated successfully", "Success");
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     Utilities.DBExceptionError();
                 }
@@ -233,7 +233,7 @@ namespace ISCG6421Assignment1
                         DM.UpdateArena();
                         MessageBox.Show("Arena updated successfully", "Success");
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
                         Utilities.DBExceptionError();
                     }
