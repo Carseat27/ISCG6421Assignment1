@@ -58,7 +58,7 @@ namespace ISCG6421Assignment1
             DialogResult result = DBFile.ShowDialog();    // <-- user to choose file
             if (result == DialogResult.OK)
             {
-                if (DBFile.FileName.Contains("NZESL")) // <-- check that the file name is correct
+                if (DBFile.FileName.Equals("NZESL.mdb")) // <-- check that the file name is correct
                 {
                     try
                     {
