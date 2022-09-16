@@ -363,11 +363,12 @@ ORDER BY EVENT.EventID</value>
     <value>False</value>
   </metadata>
   <data name="oleDbSelectCommand6.CommandText" xml:space="preserve">
-    <value>SELECT        ENTRY.ChallengeID, ENTRY.CompetitorID, CHALLENGE.ChallengeName, CHALLENGE.StartTime, COMPETITOR.UserName, COMPETITOR.LastName, COMPETITOR.Gender, COMPETITOR.DateOfBirth, 
-                         COMPETITOR.EmailAddress, COMPETITOR.FirstName, ENTRY.Status
-FROM            ((ENTRY INNER JOIN
-                         COMPETITOR ON ENTRY.CompetitorID = COMPETITOR.CompetitorID) INNER JOIN
-                         CHALLENGE ON ENTRY.ChallengeID = CHALLENGE.ChallengeID)</value>
+    <value>SELECT ENTRY.CompetitorID, ENTRY.ChallengeID, CHALLENGE.ChallengeName, CHALLENGE.StartTime, COMPETITOR.UserName, COMPETITOR.LastName, COMPETITOR.Gender, COMPETITOR.DateOfBirth, COMPETITOR.EmailAddress, 
+                  COMPETITOR.FirstName, ENTRY.Status
+FROM     ((ENTRY INNER JOIN
+                  COMPETITOR ON ENTRY.CompetitorID = COMPETITOR.CompetitorID) INNER JOIN
+                  CHALLENGE ON ENTRY.ChallengeID = CHALLENGE.ChallengeID)
+ORDER BY ENTRY.CompetitorID, ENTRY.ChallengeID</value>
   </data>
   <metadata name="daCompReport.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>151, 56</value>
