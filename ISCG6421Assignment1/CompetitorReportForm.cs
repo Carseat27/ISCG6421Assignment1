@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -71,34 +72,75 @@ namespace ISCG6421Assignment1
             int topMarginDetails = topMargin + 70;
             int rightMargin = e.MarginBounds.Right;
 
-
             //heading
-            DataRow dr = DM.dtCompReport.Rows[cmEntry.Position];
-            Console.Write(dr["CompetitorID"]);
+            //DataRow dr = DM.dtCompReport.Rows[cmEntry.Position];
+            int CompID;
+            ArrayList IDRun = new ArrayList(); // <-- this holds the id of competitors that have already been run, so that they do not duplicate
+            //loop through all entries
+            foreach (DataRow dr in DM.dtCompReport.Rows)
+            {
+                CompID = (int)dr["CompetitorID"];
+                
+                if (!IDRun.Contains(CompID)) // <-- check if CompID has not been used yet
+                {
+                    IDRun.Add(CompID);
+                    g.DrawString("Competitor ID: ".PadRight(15) + CompID.ToString(),
+                        headingFont, brush, leftMargin + headingLeftMargin, topMargin + (linesSoFarHeading * textFont.Height));
+                    linesSoFarHeading += 2;
+                    g.DrawString("Username: ".PadRight(20) + dr["UserName"].ToString(),
+                        headingFont, brush, leftMargin + headingLeftMargin, topMargin + (linesSoFarHeading * textFont.Height));
+                    linesSoFarHeading++;
+                    g.DrawString("Name: ".PadRight(24) + dr["FirstName"].ToString() + " " + dr["LastName"].ToString(),
+                        headingFont, brush, leftMargin + headingLeftMargin, topMargin + (linesSoFarHeading * textFont.Height));
+                    linesSoFarHeading++;
+                    g.DrawString("Gender: ".PadRight(22) + dr["Gender"].ToString(),
+                        headingFont, brush, leftMargin + headingLeftMargin, topMargin + (linesSoFarHeading * textFont.Height));
+                    linesSoFarHeading++;
+                    g.DrawString("Date of Birth: ".PadRight(15) + dr["DateOfBirth"].ToString().Split(' ')[0].ToString(),
+                        headingFont, brush, leftMargin + headingLeftMargin, topMargin + (linesSoFarHeading * textFont.Height));
+                    linesSoFarHeading++;
+                    g.DrawString("Email: ".PadRight(23) + dr["EmailAddress"].ToString(),
+                        headingFont, brush, leftMargin + headingLeftMargin, topMargin + (linesSoFarHeading * textFont.Height));
+                    linesSoFarHeading += 2;
+                    g.DrawString("Entries: ",
+                        headingFont, brush, leftMargin + headingLeftMargin, topMargin + (linesSoFarHeading * textFont.Height));
+                    linesSoFarHeading += 2;
+                    g.DrawString("Challenge ID".PadRight(17) + "Challenge Name".PadRight(26) + "Start Time".PadRight(20),
+                        headingFont, brush, leftMargin + headingLeftMargin, topMargin + (linesSoFarHeading * textFont.Height));
+                    linesSoFarHeading += 2;
+                    foreach (DataRow checkRow in DM.dtCompReport.Rows)
+                    {
+                        if ((int)checkRow["CompetitorID"] == CompID) // <-- make sure all challenges have the same compID
+                        {
+                            if (checkRow["ChallengeID"].ToString().Length == 1)
+                            {
+                                g.DrawString(checkRow["ChallengeID"].ToString().PadRight(28) +
+                                    checkRow["ChallengeName"].ToString().PadRight(40),
+                                    headingFont, brush, leftMargin + headingLeftMargin, topMargin + (linesSoFarHeading * textFont.Height));
+                            }
+                            else if (checkRow["ChallengeID"].ToString().Length == 2)
+                            {
+                                g.DrawString(checkRow["ChallengeID"].ToString().PadRight(27) +
+                                    checkRow["ChallengeName"].ToString().PadRight(40),
+                                    headingFont, brush, leftMargin + headingLeftMargin, topMargin + (linesSoFarHeading * textFont.Height));
+                            }
+                            else
+                            {
+                                g.DrawString(checkRow["ChallengeID"].ToString().PadRight(26) +
+                                    checkRow["ChallengeName"].ToString().PadRight(40),
+                                    headingFont, brush, leftMargin + headingLeftMargin, topMargin + (linesSoFarHeading * textFont.Height));
+                            }
+                            linesSoFarHeading++;
+                        }
+                    }
+                    linesSoFarHeading += 3;
+                }
+                else { }
 
-            g.DrawString("Competitor ID: ".PadRight(15) + dr["CompetitorID"],
-                headingFont, brush, leftMargin + headingLeftMargin, topMargin + (linesSoFarHeading * textFont.Height));
-            linesSoFarHeading+=2;
-            g.DrawString("Username: ".PadRight(20) + dr["UserName"],
-                headingFont, brush, leftMargin + headingLeftMargin, topMargin + (linesSoFarHeading * textFont.Height));
-            linesSoFarHeading++;
-            g.DrawString("Name: ".PadRight(24) + dr["FirstName"] + " " + dr["LastName"],
-                headingFont, brush, leftMargin + headingLeftMargin, topMargin + (linesSoFarHeading * textFont.Height));
-            linesSoFarHeading++;
-            g.DrawString("Gender: ".PadRight(22) + dr["Gender"],
-                headingFont, brush, leftMargin + headingLeftMargin, topMargin + (linesSoFarHeading * textFont.Height));
-            linesSoFarHeading++;
-            g.DrawString("Date of Birth: ".PadRight(15) + dr["DateOfBirth"].ToString().Split(' ')[0],
-                headingFont, brush, leftMargin + headingLeftMargin, topMargin + (linesSoFarHeading * textFont.Height));
-            linesSoFarHeading++;
-            g.DrawString("Email: ".PadRight(23) + dr["EmailAddress"],
-                headingFont, brush, leftMargin + headingLeftMargin, topMargin + (linesSoFarHeading * textFont.Height));
-            linesSoFarHeading+=2;
-            g.DrawString("Entries: ",
-                headingFont, brush, leftMargin + headingLeftMargin, topMargin + (linesSoFarHeading * textFont.Height));
-            linesSoFarHeading+=2;
-            g.DrawString("Challenge ID".PadRight(17) + "Challenge Name".PadRight(16) + "Start Time".PadRight(20),
-                headingFont, brush, leftMargin + headingLeftMargin, topMargin + (linesSoFarHeading * textFont.Height));
+            }
+            
+
+            
             //g.DrawString("Challenge Name".PadRight(16),
             //    headingFont, brush, leftMargin + headingLeftMargin, topMargin + (linesSoFarHeading * textFont.Height));
             //g.DrawString("Start Time".PadRight(20),
@@ -106,6 +148,7 @@ namespace ISCG6421Assignment1
             linesSoFarHeading+=2;
 
             //g.DrawString();
+
         }
     }
 }
