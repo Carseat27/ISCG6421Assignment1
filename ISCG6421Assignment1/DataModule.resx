@@ -376,6 +376,25 @@ ORDER BY ENTRY.CompetitorID, ENTRY.ChallengeID</value>
   <metadata name="dsCompReport.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>19, 62</value>
   </metadata>
+  <metadata name="oleDbSelectCommand7.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="oleDbSelectCommand7.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="oleDbSelectCommand7.CommandText" xml:space="preserve">
+    <value>SELECT        EVENT.EventID, EVENT.EventName, EVENT.EventDate, ARENA.ArenaName, ARENA.StreetAddress, ARENA.Suburb, ARENA.City, CHALLENGE.ChallengeID, CHALLENGE.ChallengeName, CHALLENGE.StartTime
+FROM            ((EVENT INNER JOIN
+                         ARENA ON EVENT.ArenaID = ARENA.ArenaID) INNER JOIN
+                         CHALLENGE ON EVENT.EventID = CHALLENGE.EventID)
+ORDER BY EVENT.EventID, CHALLENGE.ChallengeID</value>
+  </data>
+  <metadata name="daEventReport.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>286, 56</value>
+  </metadata>
+  <metadata name="dsEventReport.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>418, 56</value>
+  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>132</value>
   </metadata>

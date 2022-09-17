@@ -20,12 +20,14 @@ namespace ISCG6421Assignment1
         public DataTable dtEntry;
         public DataTable dtEvent;
         public DataTable dtCompReport;
+        public DataTable dtEventReport;
         public DataView ArenaView;
         public DataView ChallengeView;
         public DataView CompetitorView;
         public DataView EntryView;
         public DataView EventView;
         public DataView CompReportView;
+        public DataView EventReportView;
         public DataModule()
         {
             InitializeComponent();
@@ -42,12 +44,14 @@ namespace ISCG6421Assignment1
                 daEntry.Fill(dsNZESL);
                 daEvent.Fill(dsNZESL);
                 daCompReport.Fill(dsCompReport);
+                daEventReport.Fill(dsEventReport);
                 dtArena = dsNZESL.Tables["Arena"];
                 dtChallenge = dsNZESL.Tables["Challenge"];
                 dtCompetitor = dsNZESL.Tables["Competitor"];
                 dtEntry = dsNZESL.Tables["Entry"];
                 dtEvent = dsNZESL.Tables["Event"];
                 dtCompReport = dsCompReport.Tables["Challenge"];
+                dtEventReport = dsEventReport.Tables["Arena"];
                 dsNZESL.EnforceConstraints = true;
             }
             catch (Exception)

@@ -59,8 +59,12 @@
             this.oleDbSelectCommand6 = new System.Data.OleDb.OleDbCommand();
             this.daCompReport = new System.Data.OleDb.OleDbDataAdapter();
             this.dsCompReport = new ISCG6421Assignment1.dsCompReport();
+            this.oleDbSelectCommand7 = new System.Data.OleDb.OleDbCommand();
+            this.daEventReport = new System.Data.OleDb.OleDbDataAdapter();
+            this.dsEventReport = new ISCG6421Assignment1.dsEventReport();
             ((System.ComponentModel.ISupportInitialize)(this.dsNZESL)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsCompReport)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsEventReport)).BeginInit();
             this.SuspendLayout();
             // 
             // ctnNZESL
@@ -442,16 +446,43 @@
             this.dsCompReport.DataSetName = "dsCompReport";
             this.dsCompReport.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // oleDbSelectCommand7
+            // 
+            this.oleDbSelectCommand7.CommandText = resources.GetString("oleDbSelectCommand7.CommandText");
+            this.oleDbSelectCommand7.Connection = this.ctnNZESL;
+            // 
+            // daEventReport
+            // 
+            this.daEventReport.SelectCommand = this.oleDbSelectCommand7;
+            this.daEventReport.TableMappings.AddRange(new System.Data.Common.DataTableMapping[] {
+            new System.Data.Common.DataTableMapping("Table", "ARENA", new System.Data.Common.DataColumnMapping[] {
+                        new System.Data.Common.DataColumnMapping("EventID", "EventID"),
+                        new System.Data.Common.DataColumnMapping("EventName", "EventName"),
+                        new System.Data.Common.DataColumnMapping("EventDate", "EventDate"),
+                        new System.Data.Common.DataColumnMapping("ArenaName", "ArenaName"),
+                        new System.Data.Common.DataColumnMapping("StreetAddress", "StreetAddress"),
+                        new System.Data.Common.DataColumnMapping("Suburb", "Suburb"),
+                        new System.Data.Common.DataColumnMapping("City", "City"),
+                        new System.Data.Common.DataColumnMapping("ChallengeID", "ChallengeID"),
+                        new System.Data.Common.DataColumnMapping("ChallengeName", "ChallengeName"),
+                        new System.Data.Common.DataColumnMapping("StartTime", "StartTime")})});
+            // 
+            // dsEventReport
+            // 
+            this.dsEventReport.DataSetName = "dsEventReport";
+            this.dsEventReport.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // DataModule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(196, 148);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DataModule";
             this.Text = "DataModule";
             ((System.ComponentModel.ISupportInitialize)(this.dsNZESL)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsCompReport)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsEventReport)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -487,5 +518,8 @@
         private System.Data.OleDb.OleDbCommand oleDbSelectCommand6;
         private System.Data.OleDb.OleDbDataAdapter daCompReport;
         public dsCompReport dsCompReport;
+        private System.Data.OleDb.OleDbCommand oleDbSelectCommand7;
+        private System.Data.OleDb.OleDbDataAdapter daEventReport;
+        public dsEventReport dsEventReport;
     }
 }

@@ -71,6 +71,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsCompReport.xsd</DependentUpon>
     </Compile>
+    <Compile Include="dsEventReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsEventReport.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dsNZESL.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -167,6 +172,17 @@
     </None>
     <None Include="dsCompReport.xss">
       <DependentUpon>dsCompReport.xsd</DependentUpon>
+    </None>
+    <None Include="dsEventReport.xsc">
+      <DependentUpon>dsEventReport.xsd</DependentUpon>
+    </None>
+    <None Include="dsEventReport.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsEventReport.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsEventReport.xss">
+      <DependentUpon>dsEventReport.xsd</DependentUpon>
     </None>
     <None Include="dsNZESL.xsc">
       <DependentUpon>dsNZESL.xsd</DependentUpon>
