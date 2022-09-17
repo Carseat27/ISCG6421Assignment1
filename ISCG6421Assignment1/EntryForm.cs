@@ -50,8 +50,7 @@ namespace ISCG6421Assignment1
             dgvEntry.DataMember = "Challenge.Challenge_Entry";
 
             txtEventName.DataBindings.Add("Text", DM.dsNZESL, "Challenge.EventName");
-
-            cmbEntryStatus.DataBindings.Add("Text", DM.dsNZESL, "Entry.Status");
+            txtEventStatus.DataBindings.Add("Text", DM.dsNZESL, "Challenge.EventStatus");
 
             //auto resize columns
             //noticed that it sometimes caused an error, hence the try-catch
@@ -89,10 +88,10 @@ namespace ISCG6421Assignment1
                 DataRow newEntryRow = DM.dtEntry.NewRow();
                 newEntryRow["ChallengeID"] = dgvChallenge["ChallengeID", cmChallenge.Position].Value;
                 newEntryRow["CompetitorID"] = dgvCompetitor["CompetitorID", cmCompetitor.Position].Value;
-                newEntryRow["Status"] = "Confirmed";
-                
+                newEntryRow["Status"] = "Pending";
                 try
                 {
+                    DM.dsNZESL.Tables["Entry"].Rows.Add(newEntryRow);
                     DM.UpdateEntry();
                     MessageBox.Show("Entry added successfully", "Success");
                 }
@@ -114,55 +113,30 @@ namespace ISCG6421Assignment1
         #region RemoveCompetitorFromChallenge
         private void btnRemoveEntry_Click(object sender, EventArgs e)
         {
-            DataRow deleteEntryRow = DM.dtEntry.Rows[cmCE.Position];
-            if (MessageBox.Show("Are you sure to delete the selected record?", "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
-            {
-                try
-                {
-                    deleteEntryRow.Delete();
-                    DM.UpdateEntry();
-                    MessageBox.Show("Entry deleted successfully", "Success");
-                }
-                catch(Exception)
-                {
-                    Utilities.DBExceptionError();
-                }
-            }
-        }
-        #endregion
-
-        /// <summary>
-        /// this region holds the code for updating the status of an entry
-        /// </summary>
-        #region UpdateEntryStatus
-        private void cmbEntryStatus_SelectedValueChanged(object sender, EventArgs e) // <-- each time the combo box selection changes
-        {
-            DataRow UpdateEntryRow = DM.dtEntry.Rows[cmCE.Position];
-            UpdateEntryRow["Status"] = cmbEntryStatus.Text; // <-- update the status
-            cmCE.EndCurrentEdit();
+            int competitorID = Convert.ToInt32(dgvEntry["CompetitorID", cmCE.Position].Value);
+            int challengeID = Convert.ToInt32(dgvEntry["ChallengeID", cmCE.Position].Value);
             try
             {
-                DM.UpdateEntry();
+                DataRow deleteEntryRow = DM.dtEntry.Select("CompetitorID = " + competitorID + " AND ChallengeID = " + challengeID)[0];
+                if (MessageBox.Show("Are you sure to delete the selected record?", "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                {
+                    try
+                    {
+                        deleteEntryRow.Delete();
+                        DM.UpdateEntry();
+                        MessageBox.Show("Entry deleted successfully", "Success");
+                    }
+                    catch (Exception)
+                    {
+                        Utilities.DBExceptionError();
+                    }
+                }
             }
             catch (Exception)
             {
-                Utilities.DBExceptionError();
+                MessageBox.Show("Unexpected Error\n\nTry Again", "Error");
             }
-        }
-        //link the combo box value to the entry DGV
-        private void dgvEntry_SelectionChanged(object sender, EventArgs e)
-        {
-            //prevents the combo box being usable (and sets blank) when cmCE.Position is out of range
-            if(cmCE.Position == -1)
-            {
-                cmbEntryStatus.Enabled = false;
-                cmbEntryStatus.Text = "";
-            }
-            else
-            {
-                cmbEntryStatus.Enabled = true;
-                cmbEntryStatus.Text = dgvEntry.Rows[cmCE.Position].Cells["Status"].Value.ToString(); // <-- change the EntryStatus combo box to match that selected.
-            }
+            
         }
         #endregion
     }

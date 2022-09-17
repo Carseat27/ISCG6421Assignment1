@@ -36,8 +36,8 @@
             this.btnRemoveEntry = new System.Windows.Forms.Button();
             this.txtEventName = new System.Windows.Forms.TextBox();
             this.lblEventName = new System.Windows.Forms.Label();
-            this.lblEntryStatus = new System.Windows.Forms.Label();
-            this.cmbEntryStatus = new System.Windows.Forms.ComboBox();
+            this.lblEventStatus = new System.Windows.Forms.Label();
+            this.txtEventStatus = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompetitor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEntry)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChallenge)).BeginInit();
@@ -64,7 +64,6 @@
             this.dgvEntry.RowHeadersWidth = 51;
             this.dgvEntry.Size = new System.Drawing.Size(240, 150);
             this.dgvEntry.TabIndex = 1;
-            this.dgvEntry.SelectionChanged += new System.EventHandler(this.dgvEntry_SelectionChanged);
             // 
             // dgvChallenge
             // 
@@ -136,31 +135,28 @@
             this.lblEventName.Text = "Event Name:";
             this.lblEventName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // lblEntryStatus
+            // lblEventStatus
             // 
-            this.lblEntryStatus.AutoSize = true;
-            this.lblEntryStatus.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEntryStatus.ForeColor = System.Drawing.Color.White;
-            this.lblEntryStatus.Location = new System.Drawing.Point(514, 188);
-            this.lblEntryStatus.Name = "lblEntryStatus";
-            this.lblEntryStatus.Size = new System.Drawing.Size(84, 17);
-            this.lblEntryStatus.TabIndex = 45;
-            this.lblEntryStatus.Text = "Entry Status:";
-            this.lblEntryStatus.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblEventStatus.AutoSize = true;
+            this.lblEventStatus.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEventStatus.ForeColor = System.Drawing.Color.White;
+            this.lblEventStatus.Location = new System.Drawing.Point(509, 106);
+            this.lblEventStatus.Name = "lblEventStatus";
+            this.lblEventStatus.Size = new System.Drawing.Size(90, 17);
+            this.lblEventStatus.TabIndex = 48;
+            this.lblEventStatus.Text = "Event Status:";
+            this.lblEventStatus.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // cmbEntryStatus
+            // txtEventStatus
             // 
-            this.cmbEntryStatus.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbEntryStatus.FormattingEnabled = true;
-            this.cmbEntryStatus.Items.AddRange(new object[] {
-            "Confirmed",
-            "Pending"});
-            this.cmbEntryStatus.Location = new System.Drawing.Point(605, 186);
-            this.cmbEntryStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.cmbEntryStatus.Name = "cmbEntryStatus";
-            this.cmbEntryStatus.Size = new System.Drawing.Size(146, 27);
-            this.cmbEntryStatus.TabIndex = 47;
-            this.cmbEntryStatus.SelectedValueChanged += new System.EventHandler(this.cmbEntryStatus_SelectedValueChanged);
+            this.txtEventStatus.AcceptsTab = true;
+            this.txtEventStatus.Enabled = false;
+            this.txtEventStatus.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEventStatus.Location = new System.Drawing.Point(605, 103);
+            this.txtEventStatus.Name = "txtEventStatus";
+            this.txtEventStatus.Size = new System.Drawing.Size(146, 23);
+            this.txtEventStatus.TabIndex = 49;
+            this.txtEventStatus.Text = "Status";
             // 
             // EntryForm
             // 
@@ -169,8 +165,8 @@
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(796, 440);
             this.ControlBox = false;
-            this.Controls.Add(this.cmbEntryStatus);
-            this.Controls.Add(this.lblEntryStatus);
+            this.Controls.Add(this.txtEventStatus);
+            this.Controls.Add(this.lblEventStatus);
             this.Controls.Add(this.lblEventName);
             this.Controls.Add(this.txtEventName);
             this.Controls.Add(this.btnRemoveEntry);
@@ -204,7 +200,7 @@
         private System.Windows.Forms.Button btnRemoveEntry;
         private System.Windows.Forms.TextBox txtEventName;
         private System.Windows.Forms.Label lblEventName;
-        private System.Windows.Forms.Label lblEntryStatus;
-        private System.Windows.Forms.ComboBox cmbEntryStatus;
+        private System.Windows.Forms.Label lblEventStatus;
+        private System.Windows.Forms.TextBox txtEventStatus;
     }
 }
