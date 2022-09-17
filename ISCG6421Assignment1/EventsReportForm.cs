@@ -55,7 +55,10 @@ namespace ISCG6421Assignment1
 
         private void printEvents_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            //define the used datarow
+            //printEvents.DefaultPageSettings.PaperSize = new PaperSize("210 x 297 mm", 800, 800); // <-- set page size to A4
+
+
+            //define the used datarow in the datarow list
             DataRow dr = (DataRow)this.eventInfo[eventInfoTracker];
 
             //set fonts
@@ -153,10 +156,11 @@ namespace ISCG6421Assignment1
 
                 if(eventInfoTracker < eventInfo.Count)
                 {
-                    eventInfoTracker++;
+                    eventInfoTracker++;     // <-- increase the used array list index
                     if (!(amountOfReportsPrinted >= pagesAmountExpected))
                     {
                         e.HasMorePages = true;
+                        return;
                     }
                     else
                     {

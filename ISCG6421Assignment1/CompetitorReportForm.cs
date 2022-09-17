@@ -20,8 +20,8 @@ namespace ISCG6421Assignment1
         private MainForm frmMenu;
         private int amountOfReportsPrinted, pagesAmountExpected;
         private DataRow[] reportsForPrint;
-        private int compInfoTracker;
-        private ArrayList compInfo = new ArrayList();
+        private int compDataRowTracker;
+        private ArrayList compDataRowList = new ArrayList();
         public CompetitorReportForm(DataModule dm, MainForm mnu)
         {
             InitializeComponent();
@@ -36,7 +36,7 @@ namespace ISCG6421Assignment1
 
         private void btnPrintReport_Click(object sender, EventArgs e)
         {
-            amountOfReportsPrinted = 0;
+            amountOfReportsPrinted = 0;                         // <-- set to zero
             string strFilter = "ChallengeID = ChallengeID";
             string strSort = "CompetitorID, ChallengeID";
             reportsForPrint = DM.dsCompReport.Tables["CHALLENGE"].Select(strFilter, strSort, DataViewRowState.CurrentRows);
@@ -48,12 +48,12 @@ namespace ISCG6421Assignment1
                 if (!uniqueCompIDs.Contains((int)r["CompetitorID"]))
                 {
                     uniqueCompIDs.Add((int)r["CompetitorID"]);  // <-- add unique compIDs to array to ensure no repeats
-                    compInfo.Add(r);                            // <-- add datarow to array if unique
+                    compDataRowList.Add(r);                            // <-- add datarow to array if unique
                 }
             }
             pagesAmountExpected = uniqueCompIDs.Count;
 
-            compInfoTracker = 0; // <-- this keeps track of the position in the compInfo array.
+            compDataRowTracker = 0; // <-- this keeps track of the position in the compDataRowList array.
 
             prvCompetitors.ShowDialog();
         }
@@ -61,9 +61,10 @@ namespace ISCG6421Assignment1
         private void printCompetitors_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             //prvCompetitors.Size = new System.Drawing.Size(420, 594);
-            //printCompetitors.DefaultPageSettings.PaperSize = new PaperSize("210 x 297 mm", 800, 800); // <-- set page size to A4
+            printCompetitors.DefaultPageSettings.PaperSize = new PaperSize("210 x 297 mm", 800, 800); // <-- set page size to A4
 
-            DataRow dr = (DataRow)this.compInfo[compInfoTracker];
+            //define the used datarow in the datarow list
+            DataRow dr = (DataRow)this.compDataRowList[compDataRowTracker];
 
             //set fonts
             Graphics g = e.Graphics;
@@ -175,9 +176,9 @@ namespace ISCG6421Assignment1
                 linesSoFarHeading++;
                 amountOfReportsPrinted++;
 
-                if (compInfoTracker < compInfo.Count)
+                if (compDataRowTracker < compDataRowList.Count)
                 {
-                    compInfoTracker++;
+                    compDataRowTracker++;       // <-- increase the used arraylist index
                     if (!(amountOfReportsPrinted >= pagesAmountExpected))
                     {
                         e.HasMorePages = true;
