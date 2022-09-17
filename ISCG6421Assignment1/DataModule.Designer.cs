@@ -337,6 +337,7 @@
                         new System.Data.Common.DataColumnMapping("CompetitorID", "CompetitorID"),
                         new System.Data.Common.DataColumnMapping("Status", "Status")})});
             this.daEntry.UpdateCommand = this.oleDbUpdateCommand4;
+            this.daEntry.RowUpdated += new System.Data.OleDb.OleDbRowUpdatedEventHandler(this.daEntry_RowUpdated);
             // 
             // oleDbSelectCommand5
             // 
@@ -443,10 +444,10 @@
             // 
             // DataModule
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(261, 182);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ClientSize = new System.Drawing.Size(196, 148);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "DataModule";
             this.Text = "DataModule";
             ((System.ComponentModel.ISupportInitialize)(this.dsNZESL)).EndInit();

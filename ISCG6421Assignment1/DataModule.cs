@@ -123,6 +123,11 @@ namespace ISCG6421Assignment1
             }
         }
 
+        private void daEntry_RowUpdated(object sender, OleDbRowUpdatedEventArgs e)
+        {
+
+        }
+
         /// <summary>
         /// this method sets the connection string to the sed
         /// </summary>

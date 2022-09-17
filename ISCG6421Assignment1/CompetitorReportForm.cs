@@ -35,7 +35,7 @@ namespace ISCG6421Assignment1
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
-            Close();
+            this.Close();
         }
 
 
@@ -56,7 +56,7 @@ namespace ISCG6421Assignment1
                 }
             }
             pagesAmountExpected = uniqueCompIDs.Count;
-            prvCompetitors.Show();
+            prvCompetitors.ShowDialog();
         }
 
         private void printCompetitors_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
@@ -106,6 +106,8 @@ namespace ISCG6421Assignment1
                     //draw competitor details heading
                     g.DrawString("Competitor ID: ",
                         headingFont, brush, leftMargin + headingLeftMargin, topMargin + (linesSoFarHeading * textFont.Height));
+                    g.DrawString("______________",
+                        headingFont, brush, leftMargin + headingLeftMargin, topMargin + (linesSoFarHeading * textFont.Height));
                     g.DrawString(CompID.ToString().PadLeft(HEADING_PAD_LEFT),
                         headingFont, brush, leftMargin + headingLeftMargin, topMargin + (linesSoFarHeading * textFont.Height));
                     linesSoFarHeading++;
@@ -143,6 +145,8 @@ namespace ISCG6421Assignment1
                     linesSoFarHeading++;
 
                     g.DrawString("Entries: ",
+                        headingFont, brush, leftMargin + headingLeftMargin, topMargin + (linesSoFarHeading * textFont.Height));
+                    g.DrawString("_______",
                         headingFont, brush, leftMargin + headingLeftMargin, topMargin + (linesSoFarHeading * textFont.Height));
                     linesSoFarHeading++;
                     linesSoFarHeading++;

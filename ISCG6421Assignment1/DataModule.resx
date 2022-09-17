@@ -175,9 +175,9 @@
     <value>False</value>
   </metadata>
   <data name="oleDbSelectCommand2.CommandText" xml:space="preserve">
-    <value>SELECT CHALLENGE.ChallengeID, CHALLENGE.ChallengeName, CHALLENGE.EventID, EVENT.EventName, CHALLENGE.StartTime, CHALLENGE.Status, CHALLENGE.Capacity
-FROM     (CHALLENGE INNER JOIN
-                  EVENT ON EVENT.EventID = CHALLENGE.EventID)</value>
+    <value>SELECT        CHALLENGE.ChallengeID, CHALLENGE.ChallengeName, CHALLENGE.EventID, EVENT.EventName, CHALLENGE.StartTime, CHALLENGE.Status, CHALLENGE.Capacity, EVENT.Status AS EventStatus
+FROM            (CHALLENGE INNER JOIN
+                         EVENT ON EVENT.EventID = CHALLENGE.EventID)</value>
   </data>
   <metadata name="oleDbInsertCommand2.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>

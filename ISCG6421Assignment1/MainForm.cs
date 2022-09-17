@@ -99,7 +99,7 @@ namespace ISCG6421Assignment1
             {
                 frmCompetitorReport = new CompetitorReportForm(DM, this);
             }
-            frmCompetitorReport.Show();
+            frmCompetitorReport.ShowDialog();
         }
 
         private void btbDbConnect_Click(object sender, EventArgs e)
