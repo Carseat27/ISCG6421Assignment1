@@ -14,7 +14,6 @@ namespace ISCG6421Assignment1
     {
         private DataModule DM;
         private MainForm frmMenu;
-        private CurrencyManager currencyManager;
         public EventsReportForm(DataModule dm, MainForm mnu)
         {
             InitializeComponent();
