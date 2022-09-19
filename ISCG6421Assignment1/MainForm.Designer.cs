@@ -177,7 +177,7 @@
             this.btnCompetitorReport.Size = new System.Drawing.Size(268, 39);
             this.btnCompetitorReport.TabIndex = 2;
             this.btnCompetitorReport.Text = "Competitor Report";
-            this.toolTipMenu.SetToolTip(this.btnCompetitorReport, "Click me tp produce a Competitors Report");
+            this.toolTipMenu.SetToolTip(this.btnCompetitorReport, "Click me to produce a Competitors Report");
             this.btnCompetitorReport.UseVisualStyleBackColor = false;
             this.btnCompetitorReport.Click += new System.EventHandler(this.btnCompetitorReport_Click);
             // 

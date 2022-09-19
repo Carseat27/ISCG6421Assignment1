@@ -103,7 +103,7 @@
             this.btnAddEntry.TabIndex = 33;
             this.btnAddEntry.Text = "Add Entry";
             this.toolTipEntry.SetToolTip(this.btnAddEntry, "Select the desired competitor from the top-left table\r\nand the challenge you wish" +
-        " to enter them into from the\r\nbottom-left table, then click this button.\r\n");
+        " to enter them into from the\r\nbottom-left table, then click me\r\n");
             this.btnAddEntry.UseVisualStyleBackColor = false;
             this.btnAddEntry.Click += new System.EventHandler(this.btnAddEntry_Click);
             // 
@@ -118,7 +118,7 @@
             this.btnRemoveEntry.Text = "Remove Entry";
             this.toolTipEntry.SetToolTip(this.btnRemoveEntry, "Select the challenge from which you want to remove \r\nan entry from the bottom-lef" +
         "t table and select\r\nthe entry you wish to remove from the bottom-right\r\ntable, t" +
-        "hen click this button.\r\n");
+        "hen click me");
             this.btnRemoveEntry.UseVisualStyleBackColor = false;
             this.btnRemoveEntry.Click += new System.EventHandler(this.btnRemoveEntry_Click);
             // 
