@@ -24,15 +24,16 @@ namespace ISCG6421Assignment1
         private ArrayList compDataRowList = new ArrayList();
         public CompetitorReportForm(DataModule dm, MainForm mnu)
         {
-            InitializeComponent();
             DM = dm;
-            frmMenu = mnu;
             DM.Refresh();   // <-- refreshing the datamodule so all info is up to date
+            frmMenu = mnu;
+            InitializeComponent();
+            Refresh();
         }
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void btnPrintReport_Click(object sender, EventArgs e)

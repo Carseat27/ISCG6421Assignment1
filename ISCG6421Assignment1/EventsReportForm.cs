@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,10 +22,11 @@ namespace ISCG6421Assignment1
         private ArrayList eventInfo = new ArrayList();
         public EventsReportForm(DataModule dm, MainForm mnu)
         {
-            InitializeComponent();
             DM = dm;
-            frmMenu = mnu;
             DM.Refresh();   // <-- refreshing the datamodule so all info is up to date
+            frmMenu = mnu;
+            InitializeComponent();
+            Refresh();
         }
  
         private void btnReturn_Click(object sender, EventArgs e)
@@ -56,7 +58,7 @@ namespace ISCG6421Assignment1
 
         private void printEvents_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            //printEvents.DefaultPageSettings.PaperSize = new PaperSize("210 x 297 mm", 800, 800); // <-- set page size to A4
+            printEvents.DefaultPageSettings.PaperSize = new PaperSize("210 x 297 mm", 800, 800); // <-- set page size to A4
 
 
             //define the used datarow in the datarow list
