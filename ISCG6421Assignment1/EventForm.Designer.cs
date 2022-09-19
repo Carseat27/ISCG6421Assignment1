@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnReturn = new System.Windows.Forms.Button();
             this.btnDeleteEvent = new System.Windows.Forms.Button();
             this.btnUpdateEvent = new System.Windows.Forms.Button();
@@ -82,6 +83,7 @@
             this.lblUpdateEvent = new System.Windows.Forms.Label();
             this.btnEventUpdate = new System.Windows.Forms.Button();
             this.btnUpdateCancel = new System.Windows.Forms.Button();
+            this.toolTipEvent = new System.Windows.Forms.ToolTip(this.components);
             this.pnlAdd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numEventCapacityAdd)).BeginInit();
             this.pnlUpdate.SuspendLayout();
@@ -98,6 +100,7 @@
             this.btnReturn.Size = new System.Drawing.Size(130, 23);
             this.btnReturn.TabIndex = 30;
             this.btnReturn.Text = "Return";
+            this.toolTipEvent.SetToolTip(this.btnReturn, "Return to the main menu");
             this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
@@ -111,6 +114,7 @@
             this.btnDeleteEvent.Size = new System.Drawing.Size(130, 23);
             this.btnDeleteEvent.TabIndex = 29;
             this.btnDeleteEvent.Text = "Delete Event";
+            this.toolTipEvent.SetToolTip(this.btnDeleteEvent, "Click me to delete the current Event");
             this.btnDeleteEvent.UseVisualStyleBackColor = false;
             this.btnDeleteEvent.Click += new System.EventHandler(this.btnDeleteEvent_Click);
             // 
@@ -124,6 +128,7 @@
             this.btnUpdateEvent.Size = new System.Drawing.Size(144, 23);
             this.btnUpdateEvent.TabIndex = 28;
             this.btnUpdateEvent.Text = "Update Event";
+            this.toolTipEvent.SetToolTip(this.btnUpdateEvent, "Click me to update the current Event");
             this.btnUpdateEvent.UseVisualStyleBackColor = false;
             this.btnUpdateEvent.Click += new System.EventHandler(this.btnUpdateEvent_Click);
             // 
@@ -137,6 +142,7 @@
             this.btnAddEvent.Size = new System.Drawing.Size(144, 23);
             this.btnAddEvent.TabIndex = 27;
             this.btnAddEvent.Text = "Add Event";
+            this.toolTipEvent.SetToolTip(this.btnAddEvent, "Click me to add an Event");
             this.btnAddEvent.UseVisualStyleBackColor = false;
             this.btnAddEvent.Click += new System.EventHandler(this.btnAddEvent_Click);
             // 
@@ -150,6 +156,7 @@
             this.btnNext.Size = new System.Drawing.Size(102, 23);
             this.btnNext.TabIndex = 26;
             this.btnNext.Text = ">>>";
+            this.toolTipEvent.SetToolTip(this.btnNext, "Next");
             this.btnNext.UseVisualStyleBackColor = false;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
@@ -163,6 +170,7 @@
             this.btnPrevious.Size = new System.Drawing.Size(102, 23);
             this.btnPrevious.TabIndex = 25;
             this.btnPrevious.Text = "<<<";
+            this.toolTipEvent.SetToolTip(this.btnPrevious, "Previous");
             this.btnPrevious.UseVisualStyleBackColor = false;
             this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
             // 
@@ -442,6 +450,7 @@
             this.btnEventSave.Size = new System.Drawing.Size(139, 56);
             this.btnEventSave.TabIndex = 32;
             this.btnEventSave.Text = "Save Event";
+            this.toolTipEvent.SetToolTip(this.btnEventSave, "Fill out the fields to my right, then click me to add an Event");
             this.btnEventSave.UseVisualStyleBackColor = false;
             this.btnEventSave.Click += new System.EventHandler(this.btnEventSave_Click);
             // 
@@ -454,6 +463,7 @@
             this.btnAddCancel.Size = new System.Drawing.Size(139, 56);
             this.btnAddCancel.TabIndex = 31;
             this.btnAddCancel.Text = "Cancel";
+            this.toolTipEvent.SetToolTip(this.btnAddCancel, "Click me to cancel adding an Event");
             this.btnAddCancel.UseVisualStyleBackColor = false;
             this.btnAddCancel.Click += new System.EventHandler(this.btnAddCancel_Click);
             // 
@@ -722,6 +732,7 @@
             this.btnEventUpdate.Size = new System.Drawing.Size(139, 56);
             this.btnEventUpdate.TabIndex = 32;
             this.btnEventUpdate.Text = "Save Changes";
+            this.toolTipEvent.SetToolTip(this.btnEventUpdate, "Change any details to my right, then click me to save the changes");
             this.btnEventUpdate.UseVisualStyleBackColor = false;
             this.btnEventUpdate.Click += new System.EventHandler(this.btnEventUpdate_Click);
             // 
@@ -734,6 +745,7 @@
             this.btnUpdateCancel.Size = new System.Drawing.Size(139, 56);
             this.btnUpdateCancel.TabIndex = 31;
             this.btnUpdateCancel.Text = "Cancel";
+            this.toolTipEvent.SetToolTip(this.btnUpdateCancel, "Click me to cancel updating the Event");
             this.btnUpdateCancel.UseVisualStyleBackColor = false;
             this.btnUpdateCancel.Click += new System.EventHandler(this.btnUpdateCancel_Click);
             // 
@@ -841,5 +853,6 @@
         private System.Windows.Forms.DateTimePicker DatePickerUpdate;
         private System.Windows.Forms.NumericUpDown numEventCapacityUpdate;
         private System.Windows.Forms.ComboBox cmbEventStatusUpdate;
+        private System.Windows.Forms.ToolTip toolTipEvent;
     }
 }

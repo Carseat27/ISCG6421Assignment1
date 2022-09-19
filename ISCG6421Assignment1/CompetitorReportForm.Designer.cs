@@ -28,23 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CompetitorReportForm));
             this.btnReturn = new System.Windows.Forms.Button();
             this.btnPrintReport = new System.Windows.Forms.Button();
             this.printCompetitors = new System.Drawing.Printing.PrintDocument();
             this.prvCompetitors = new System.Windows.Forms.PrintPreviewDialog();
+            this.toolTipCompReport = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // btnReturn
             // 
             this.btnReturn.BackColor = System.Drawing.SystemColors.Control;
             this.btnReturn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReturn.Location = new System.Drawing.Point(633, 228);
-            this.btnReturn.Margin = new System.Windows.Forms.Padding(4);
+            this.btnReturn.Location = new System.Drawing.Point(475, 185);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(195, 57);
+            this.btnReturn.Size = new System.Drawing.Size(146, 46);
             this.btnReturn.TabIndex = 26;
             this.btnReturn.Text = "Return";
+            this.toolTipCompReport.SetToolTip(this.btnReturn, "Return to the main menu");
             this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
@@ -52,12 +54,12 @@
             // 
             this.btnPrintReport.BackColor = System.Drawing.SystemColors.Control;
             this.btnPrintReport.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrintReport.Location = new System.Drawing.Point(236, 228);
-            this.btnPrintReport.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPrintReport.Location = new System.Drawing.Point(177, 185);
             this.btnPrintReport.Name = "btnPrintReport";
-            this.btnPrintReport.Size = new System.Drawing.Size(195, 57);
+            this.btnPrintReport.Size = new System.Drawing.Size(146, 46);
             this.btnPrintReport.TabIndex = 27;
             this.btnPrintReport.Text = "Print Competitor Report";
+            this.toolTipCompReport.SetToolTip(this.btnPrintReport, "Click me to generate the report to print");
             this.btnPrintReport.UseVisualStyleBackColor = false;
             this.btnPrintReport.Click += new System.EventHandler(this.btnPrintReport_Click);
             // 
@@ -79,17 +81,16 @@
             // 
             // CompetitorReportForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(1059, 532);
+            this.ClientSize = new System.Drawing.Size(796, 439);
             this.ControlBox = false;
             this.Controls.Add(this.btnPrintReport);
             this.Controls.Add(this.btnReturn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.MaximumSize = new System.Drawing.Size(1077, 579);
-            this.MinimumSize = new System.Drawing.Size(1077, 579);
+            this.MaximumSize = new System.Drawing.Size(812, 478);
+            this.MinimumSize = new System.Drawing.Size(812, 478);
             this.Name = "CompetitorReportForm";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -104,5 +105,6 @@
         private System.Windows.Forms.Button btnPrintReport;
         private System.Windows.Forms.PrintPreviewDialog prvCompetitors;
         private System.Drawing.Printing.PrintDocument printCompetitors;
+        private System.Windows.Forms.ToolTip toolTipCompReport;
     }
 }

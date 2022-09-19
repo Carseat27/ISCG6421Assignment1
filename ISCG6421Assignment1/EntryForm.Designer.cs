@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EntryForm));
             this.dgvCompetitor = new System.Windows.Forms.DataGridView();
             this.dgvEntry = new System.Windows.Forms.DataGridView();
             this.dgvChallenge = new System.Windows.Forms.DataGridView();
@@ -38,7 +40,8 @@
             this.lblEventName = new System.Windows.Forms.Label();
             this.lblEventStatus = new System.Windows.Forms.Label();
             this.txtEventStatus = new System.Windows.Forms.TextBox();
-            this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.toolTipEntry = new System.Windows.Forms.ToolTip(this.components);
+            this.lblHelp = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompetitor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEntry)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChallenge)).BeginInit();
@@ -86,6 +89,7 @@
             this.btnReturn.Size = new System.Drawing.Size(146, 46);
             this.btnReturn.TabIndex = 25;
             this.btnReturn.Text = "Return";
+            this.toolTipEntry.SetToolTip(this.btnReturn, "Return to the main menu");
             this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
@@ -98,6 +102,8 @@
             this.btnAddEntry.Size = new System.Drawing.Size(139, 46);
             this.btnAddEntry.TabIndex = 33;
             this.btnAddEntry.Text = "Add Entry";
+            this.toolTipEntry.SetToolTip(this.btnAddEntry, "Select the desired competitor from the top-left table\r\nand the challenge you wish" +
+        " to enter them into from the\r\nbottom-left table, then click this button.\r\n");
             this.btnAddEntry.UseVisualStyleBackColor = false;
             this.btnAddEntry.Click += new System.EventHandler(this.btnAddEntry_Click);
             // 
@@ -110,6 +116,9 @@
             this.btnRemoveEntry.Size = new System.Drawing.Size(139, 46);
             this.btnRemoveEntry.TabIndex = 34;
             this.btnRemoveEntry.Text = "Remove Entry";
+            this.toolTipEntry.SetToolTip(this.btnRemoveEntry, "Select the challenge from which you want to remove \r\nan entry from the bottom-lef" +
+        "t table and select\r\nthe entry you wish to remove from the bottom-right\r\ntable, t" +
+        "hen click this button.\r\n");
             this.btnRemoveEntry.UseVisualStyleBackColor = false;
             this.btnRemoveEntry.Click += new System.EventHandler(this.btnRemoveEntry_Click);
             // 
@@ -159,9 +168,18 @@
             this.txtEventStatus.TabIndex = 49;
             this.txtEventStatus.Text = "Status";
             // 
-            // printDialog1
+            // lblHelp
             // 
-            this.printDialog1.UseEXDialog = true;
+            this.lblHelp.AutoSize = true;
+            this.lblHelp.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHelp.ForeColor = System.Drawing.Color.White;
+            this.lblHelp.Location = new System.Drawing.Point(706, 166);
+            this.lblHelp.Name = "lblHelp";
+            this.lblHelp.Size = new System.Drawing.Size(45, 17);
+            this.lblHelp.TabIndex = 50;
+            this.lblHelp.Text = "Help?";
+            this.lblHelp.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.toolTipEntry.SetToolTip(this.lblHelp, resources.GetString("lblHelp.ToolTip"));
             // 
             // EntryForm
             // 
@@ -170,6 +188,7 @@
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(796, 440);
             this.ControlBox = false;
+            this.Controls.Add(this.lblHelp);
             this.Controls.Add(this.txtEventStatus);
             this.Controls.Add(this.lblEventStatus);
             this.Controls.Add(this.lblEventName);
@@ -207,6 +226,7 @@
         private System.Windows.Forms.Label lblEventName;
         private System.Windows.Forms.Label lblEventStatus;
         private System.Windows.Forms.TextBox txtEventStatus;
-        private System.Windows.Forms.PrintDialog printDialog1;
+        private System.Windows.Forms.ToolTip toolTipEntry;
+        private System.Windows.Forms.Label lblHelp;
     }
 }

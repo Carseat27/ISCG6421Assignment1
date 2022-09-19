@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EventsReportForm));
             this.btnPrintReport = new System.Windows.Forms.Button();
             this.btnReturn = new System.Windows.Forms.Button();
             this.printEvents = new System.Drawing.Printing.PrintDocument();
             this.prvEvents = new System.Windows.Forms.PrintPreviewDialog();
+            this.toolTipEventReport = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // btnPrintReport
@@ -44,6 +46,7 @@
             this.btnPrintReport.Size = new System.Drawing.Size(146, 46);
             this.btnPrintReport.TabIndex = 29;
             this.btnPrintReport.Text = "Print Event Report";
+            this.toolTipEventReport.SetToolTip(this.btnPrintReport, "Click me to generate the report to print");
             this.btnPrintReport.UseVisualStyleBackColor = false;
             this.btnPrintReport.Click += new System.EventHandler(this.btnPrintReport_Click);
             // 
@@ -56,6 +59,7 @@
             this.btnReturn.Size = new System.Drawing.Size(146, 46);
             this.btnReturn.TabIndex = 28;
             this.btnReturn.Text = "Return";
+            this.toolTipEventReport.SetToolTip(this.btnReturn, "Return to the main menu");
             this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
@@ -99,5 +103,6 @@
         private System.Windows.Forms.Button btnReturn;
         private System.Drawing.Printing.PrintDocument printEvents;
         private System.Windows.Forms.PrintPreviewDialog prvEvents;
+        private System.Windows.Forms.ToolTip toolTipEventReport;
     }
 }

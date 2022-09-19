@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.grpMaintenance = new System.Windows.Forms.GroupBox();
             this.btnEnterCompetitorChallenge = new System.Windows.Forms.Button();
             this.btnCompetitorMaintence = new System.Windows.Forms.Button();
@@ -39,6 +40,7 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnCompetitorReport = new System.Windows.Forms.Button();
             this.btnEventsReport = new System.Windows.Forms.Button();
+            this.toolTipMenu = new System.Windows.Forms.ToolTip(this.components);
             this.grpMaintenance.SuspendLayout();
             this.grpReporting.SuspendLayout();
             this.SuspendLayout();
@@ -69,6 +71,7 @@
             this.btnEnterCompetitorChallenge.Size = new System.Drawing.Size(268, 84);
             this.btnEnterCompetitorChallenge.TabIndex = 4;
             this.btnEnterCompetitorChallenge.Text = "Enter Competitor into Challenge";
+            this.toolTipMenu.SetToolTip(this.btnEnterCompetitorChallenge, "Click me add or remove Entries");
             this.btnEnterCompetitorChallenge.UseVisualStyleBackColor = false;
             this.btnEnterCompetitorChallenge.Click += new System.EventHandler(this.btnEnterCompetitorChallenge_Click);
             // 
@@ -81,6 +84,7 @@
             this.btnCompetitorMaintence.Size = new System.Drawing.Size(268, 39);
             this.btnCompetitorMaintence.TabIndex = 3;
             this.btnCompetitorMaintence.Text = "Competitor Maintenance";
+            this.toolTipMenu.SetToolTip(this.btnCompetitorMaintence, "Click to me add, update, or delete Competitors");
             this.btnCompetitorMaintence.UseVisualStyleBackColor = false;
             this.btnCompetitorMaintence.Click += new System.EventHandler(this.btnCompetitorMaintence_Click);
             // 
@@ -93,6 +97,7 @@
             this.btnChallengeMaintenance.Size = new System.Drawing.Size(268, 39);
             this.btnChallengeMaintenance.TabIndex = 2;
             this.btnChallengeMaintenance.Text = "Challenge Maintenance";
+            this.toolTipMenu.SetToolTip(this.btnChallengeMaintenance, "Click to me add, update, or delete Challenges");
             this.btnChallengeMaintenance.UseVisualStyleBackColor = false;
             this.btnChallengeMaintenance.Click += new System.EventHandler(this.btnChallengeMaintenance_Click);
             // 
@@ -105,6 +110,7 @@
             this.btnEventMaintenance.Size = new System.Drawing.Size(268, 39);
             this.btnEventMaintenance.TabIndex = 1;
             this.btnEventMaintenance.Text = "Event Maintenance";
+            this.toolTipMenu.SetToolTip(this.btnEventMaintenance, "Click to me add, update, or delete Events");
             this.btnEventMaintenance.UseVisualStyleBackColor = false;
             this.btnEventMaintenance.Click += new System.EventHandler(this.btnEventMaintenance_Click);
             // 
@@ -117,6 +123,7 @@
             this.btnArenaMaintenance.Size = new System.Drawing.Size(268, 39);
             this.btnArenaMaintenance.TabIndex = 0;
             this.btnArenaMaintenance.Text = "Arena Maintenance";
+            this.toolTipMenu.SetToolTip(this.btnArenaMaintenance, "Click to me add, update, or delete Arenas");
             this.btnArenaMaintenance.UseVisualStyleBackColor = false;
             this.btnArenaMaintenance.Click += new System.EventHandler(this.btnArenaMaintenance_Click);
             // 
@@ -144,6 +151,7 @@
             this.btbDbConnect.Size = new System.Drawing.Size(268, 39);
             this.btbDbConnect.TabIndex = 4;
             this.btbDbConnect.Text = "Connect to Database";
+            this.toolTipMenu.SetToolTip(this.btbDbConnect, "Click me to choose the location of your NZESL.mdb file");
             this.btbDbConnect.UseVisualStyleBackColor = false;
             this.btbDbConnect.Click += new System.EventHandler(this.btbDbConnect_Click);
             // 
@@ -156,6 +164,7 @@
             this.btnExit.Size = new System.Drawing.Size(268, 39);
             this.btnExit.TabIndex = 3;
             this.btnExit.Text = "Exit";
+            this.toolTipMenu.SetToolTip(this.btnExit, "Click me to exit the program");
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
@@ -168,6 +177,7 @@
             this.btnCompetitorReport.Size = new System.Drawing.Size(268, 39);
             this.btnCompetitorReport.TabIndex = 2;
             this.btnCompetitorReport.Text = "Competitor Report";
+            this.toolTipMenu.SetToolTip(this.btnCompetitorReport, "Click me tp produce a Competitors Report");
             this.btnCompetitorReport.UseVisualStyleBackColor = false;
             this.btnCompetitorReport.Click += new System.EventHandler(this.btnCompetitorReport_Click);
             // 
@@ -180,6 +190,7 @@
             this.btnEventsReport.Size = new System.Drawing.Size(268, 39);
             this.btnEventsReport.TabIndex = 1;
             this.btnEventsReport.Text = "Events Report";
+            this.toolTipMenu.SetToolTip(this.btnEventsReport, "Click me to produce an Events Report");
             this.btnEventsReport.UseVisualStyleBackColor = false;
             this.btnEventsReport.Click += new System.EventHandler(this.btnEventsReport_Click);
             // 
@@ -216,6 +227,7 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnCompetitorReport;
         private System.Windows.Forms.Button btbDbConnect;
+        private System.Windows.Forms.ToolTip toolTipMenu;
     }
 }
 

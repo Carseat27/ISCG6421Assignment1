@@ -31,6 +31,7 @@ namespace ISCG6421Assignment1
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnReturn = new System.Windows.Forms.Button();
             this.btnDeleteChallenge = new System.Windows.Forms.Button();
             this.btnUpdateChallenge = new System.Windows.Forms.Button();
@@ -83,6 +84,7 @@ namespace ISCG6421Assignment1
             this.lblChallengeUpdate = new System.Windows.Forms.Label();
             this.btnChallengeUpdate = new System.Windows.Forms.Button();
             this.btnUpdateCancel = new System.Windows.Forms.Button();
+            this.toolTipChallenge = new System.Windows.Forms.ToolTip(this.components);
             this.pnlAdd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numCapacity)).BeginInit();
             this.pnlUpdate.SuspendLayout();
@@ -98,6 +100,7 @@ namespace ISCG6421Assignment1
             this.btnReturn.Size = new System.Drawing.Size(130, 23);
             this.btnReturn.TabIndex = 24;
             this.btnReturn.Text = "Return";
+            this.toolTipChallenge.SetToolTip(this.btnReturn, "Return to the main menu");
             this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
@@ -110,6 +113,7 @@ namespace ISCG6421Assignment1
             this.btnDeleteChallenge.Size = new System.Drawing.Size(130, 23);
             this.btnDeleteChallenge.TabIndex = 23;
             this.btnDeleteChallenge.Text = "Delete Challenge";
+            this.toolTipChallenge.SetToolTip(this.btnDeleteChallenge, "Click me to delete the current challenge");
             this.btnDeleteChallenge.UseVisualStyleBackColor = false;
             this.btnDeleteChallenge.Click += new System.EventHandler(this.btnDeleteChallenge_Click);
             // 
@@ -122,6 +126,7 @@ namespace ISCG6421Assignment1
             this.btnUpdateChallenge.Size = new System.Drawing.Size(141, 23);
             this.btnUpdateChallenge.TabIndex = 22;
             this.btnUpdateChallenge.Text = "Update Challenge";
+            this.toolTipChallenge.SetToolTip(this.btnUpdateChallenge, "Click me to update the current Challenge");
             this.btnUpdateChallenge.UseVisualStyleBackColor = false;
             this.btnUpdateChallenge.Click += new System.EventHandler(this.btnUpdateChallenge_Click);
             // 
@@ -134,6 +139,7 @@ namespace ISCG6421Assignment1
             this.btnAddChallenge.Size = new System.Drawing.Size(141, 23);
             this.btnAddChallenge.TabIndex = 21;
             this.btnAddChallenge.Text = "Add Challenge";
+            this.toolTipChallenge.SetToolTip(this.btnAddChallenge, "Click me to add a Challenge");
             this.btnAddChallenge.UseVisualStyleBackColor = false;
             this.btnAddChallenge.Click += new System.EventHandler(this.btnAddChallenge_Click);
             // 
@@ -146,6 +152,7 @@ namespace ISCG6421Assignment1
             this.btnNext.Size = new System.Drawing.Size(102, 23);
             this.btnNext.TabIndex = 20;
             this.btnNext.Text = ">>>";
+            this.toolTipChallenge.SetToolTip(this.btnNext, "Next");
             this.btnNext.UseVisualStyleBackColor = false;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
@@ -158,6 +165,7 @@ namespace ISCG6421Assignment1
             this.btnPrevious.Size = new System.Drawing.Size(102, 23);
             this.btnPrevious.TabIndex = 19;
             this.btnPrevious.Text = "<<<";
+            this.toolTipChallenge.SetToolTip(this.btnPrevious, "Previous");
             this.btnPrevious.UseVisualStyleBackColor = false;
             this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
             // 
@@ -170,6 +178,7 @@ namespace ISCG6421Assignment1
             this.btnMarkFinished.Size = new System.Drawing.Size(230, 23);
             this.btnMarkFinished.TabIndex = 25;
             this.btnMarkFinished.Text = "Mark Challenge as Finished";
+            this.toolTipChallenge.SetToolTip(this.btnMarkFinished, "Click me to mark the current Challenge as Finished");
             this.btnMarkFinished.UseVisualStyleBackColor = false;
             this.btnMarkFinished.Click += new System.EventHandler(this.btnMarkFinished_Click);
             // 
@@ -182,6 +191,7 @@ namespace ISCG6421Assignment1
             this.btnMarkCompleted.Size = new System.Drawing.Size(288, 23);
             this.btnMarkCompleted.TabIndex = 26;
             this.btnMarkCompleted.Text = "Mark Challenge as Completed";
+            this.toolTipChallenge.SetToolTip(this.btnMarkCompleted, "Click me to mark the current Challenge as Completed");
             this.btnMarkCompleted.UseVisualStyleBackColor = false;
             this.btnMarkCompleted.Click += new System.EventHandler(this.btnMarkCompleted_Click);
             // 
@@ -469,6 +479,7 @@ namespace ISCG6421Assignment1
             this.btnChallengeSave.Size = new System.Drawing.Size(139, 56);
             this.btnChallengeSave.TabIndex = 32;
             this.btnChallengeSave.Text = "Save Challenge";
+            this.toolTipChallenge.SetToolTip(this.btnChallengeSave, "Fill out the fields to my right, then click me to add a Challenge\r\n");
             this.btnChallengeSave.UseVisualStyleBackColor = false;
             this.btnChallengeSave.Click += new System.EventHandler(this.btnChallengeSave_Click);
             // 
@@ -481,6 +492,7 @@ namespace ISCG6421Assignment1
             this.btnAddCancel.Size = new System.Drawing.Size(139, 56);
             this.btnAddCancel.TabIndex = 31;
             this.btnAddCancel.Text = "Cancel";
+            this.toolTipChallenge.SetToolTip(this.btnAddCancel, "Click me to cancel adding a Challenge");
             this.btnAddCancel.UseVisualStyleBackColor = false;
             this.btnAddCancel.Click += new System.EventHandler(this.btnAddCancel_Click);
             // 
@@ -705,6 +717,7 @@ namespace ISCG6421Assignment1
             this.btnChallengeUpdate.Size = new System.Drawing.Size(139, 56);
             this.btnChallengeUpdate.TabIndex = 32;
             this.btnChallengeUpdate.Text = "Save Changes";
+            this.toolTipChallenge.SetToolTip(this.btnChallengeUpdate, "Change any details to my right, then click me to save the changes");
             this.btnChallengeUpdate.UseVisualStyleBackColor = false;
             this.btnChallengeUpdate.Click += new System.EventHandler(this.btnChallengeUpdate_Click);
             // 
@@ -717,6 +730,7 @@ namespace ISCG6421Assignment1
             this.btnUpdateCancel.Size = new System.Drawing.Size(139, 56);
             this.btnUpdateCancel.TabIndex = 31;
             this.btnUpdateCancel.Text = "Cancel";
+            this.toolTipChallenge.SetToolTip(this.btnUpdateCancel, "Click me to cancel updating the Challenge");
             this.btnUpdateCancel.UseVisualStyleBackColor = false;
             this.btnUpdateCancel.Click += new System.EventHandler(this.btnUpdateCancel_Click);
             // 
@@ -824,5 +838,6 @@ namespace ISCG6421Assignment1
         private System.Windows.Forms.Label lblStatusUpdate;
         private Label label1;
         private ComboBox cmbStatusAdd;
+        private ToolTip toolTipChallenge;
     }
 }

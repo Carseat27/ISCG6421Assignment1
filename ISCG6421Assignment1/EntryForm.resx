@@ -117,7 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="printDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
+  <metadata name="toolTipEntry.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>13, 19</value>
   </metadata>
+  <data name="lblHelp.ToolTip" xml:space="preserve">
+    <value>Add Entry:
+Select the desired competitor from the top-left table
+and the challenge you wish to enter them into from the
+bottom-left table, then click "Add Entry".
+
+Remove Entry:
+Select the challenge from which you want to remove 
+an entry from the bottom-left table and select
+the entry you wish to remove from the bottom-right
+table, then click "Remove Entry"</value>
+  </data>
 </root>

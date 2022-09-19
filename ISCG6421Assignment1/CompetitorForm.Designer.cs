@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnReturn = new System.Windows.Forms.Button();
             this.btnDeleteCompetitor = new System.Windows.Forms.Button();
             this.btnUpdateCompetitor = new System.Windows.Forms.Button();
@@ -85,6 +86,7 @@
             this.lblCompetitorLNameUpdate = new System.Windows.Forms.Label();
             this.lblCompetitorFNameUpdate = new System.Windows.Forms.Label();
             this.lblCompetitorUsernameUpdate = new System.Windows.Forms.Label();
+            this.toolTipCompetitor = new System.Windows.Forms.ToolTip(this.components);
             this.pnlAdd.SuspendLayout();
             this.pnlUpdate.SuspendLayout();
             this.SuspendLayout();
@@ -99,6 +101,7 @@
             this.btnReturn.Size = new System.Drawing.Size(130, 23);
             this.btnReturn.TabIndex = 24;
             this.btnReturn.Text = "Return";
+            this.toolTipCompetitor.SetToolTip(this.btnReturn, "Return to the main menu");
             this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
@@ -112,6 +115,7 @@
             this.btnDeleteCompetitor.Size = new System.Drawing.Size(130, 23);
             this.btnDeleteCompetitor.TabIndex = 23;
             this.btnDeleteCompetitor.Text = "Delete Competitor";
+            this.toolTipCompetitor.SetToolTip(this.btnDeleteCompetitor, "Click me to delete the current Competitor");
             this.btnDeleteCompetitor.UseVisualStyleBackColor = false;
             this.btnDeleteCompetitor.Click += new System.EventHandler(this.btnDeleteCompetitor_Click);
             // 
@@ -125,6 +129,7 @@
             this.btnUpdateCompetitor.Size = new System.Drawing.Size(144, 23);
             this.btnUpdateCompetitor.TabIndex = 22;
             this.btnUpdateCompetitor.Text = "Update Competitor";
+            this.toolTipCompetitor.SetToolTip(this.btnUpdateCompetitor, "Click me to update the current Competitor");
             this.btnUpdateCompetitor.UseVisualStyleBackColor = false;
             this.btnUpdateCompetitor.Click += new System.EventHandler(this.btnUpdateCompetitor_Click);
             // 
@@ -138,6 +143,7 @@
             this.btnAddCompetitor.Size = new System.Drawing.Size(144, 23);
             this.btnAddCompetitor.TabIndex = 21;
             this.btnAddCompetitor.Text = "Add Competitor";
+            this.toolTipCompetitor.SetToolTip(this.btnAddCompetitor, "Click me to add a Competitor");
             this.btnAddCompetitor.UseVisualStyleBackColor = false;
             this.btnAddCompetitor.Click += new System.EventHandler(this.btnAddCompetitor_Click);
             // 
@@ -151,6 +157,7 @@
             this.btnNext.Size = new System.Drawing.Size(102, 23);
             this.btnNext.TabIndex = 20;
             this.btnNext.Text = ">>>";
+            this.toolTipCompetitor.SetToolTip(this.btnNext, "Next");
             this.btnNext.UseVisualStyleBackColor = false;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
@@ -164,6 +171,7 @@
             this.btnPrevious.Size = new System.Drawing.Size(102, 23);
             this.btnPrevious.TabIndex = 19;
             this.btnPrevious.Text = "<<<";
+            this.toolTipCompetitor.SetToolTip(this.btnPrevious, "Previous");
             this.btnPrevious.UseVisualStyleBackColor = false;
             this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
             // 
@@ -471,6 +479,7 @@
             this.btnCompetitorSave.Size = new System.Drawing.Size(139, 56);
             this.btnCompetitorSave.TabIndex = 32;
             this.btnCompetitorSave.Text = "Save Competitor";
+            this.toolTipCompetitor.SetToolTip(this.btnCompetitorSave, "Fill out the fields to my right, then click me to add a Competitor");
             this.btnCompetitorSave.UseVisualStyleBackColor = false;
             this.btnCompetitorSave.Click += new System.EventHandler(this.btnCompetitorSave_Click);
             // 
@@ -484,6 +493,7 @@
             this.btnAddCancel.Size = new System.Drawing.Size(139, 56);
             this.btnAddCancel.TabIndex = 31;
             this.btnAddCancel.Text = "Cancel";
+            this.toolTipCompetitor.SetToolTip(this.btnAddCancel, "Click me to cancel adding a Competitor");
             this.btnAddCancel.UseVisualStyleBackColor = false;
             this.btnAddCancel.Click += new System.EventHandler(this.btnAddCancel_Click);
             // 
@@ -714,6 +724,7 @@
             this.btnCompetitorUpdate.Size = new System.Drawing.Size(139, 56);
             this.btnCompetitorUpdate.TabIndex = 32;
             this.btnCompetitorUpdate.Text = "Save Changes";
+            this.toolTipCompetitor.SetToolTip(this.btnCompetitorUpdate, "Change any details to my right, then click me to save the changes");
             this.btnCompetitorUpdate.UseVisualStyleBackColor = false;
             this.btnCompetitorUpdate.Click += new System.EventHandler(this.btnCompetitorUpdate_Click);
             // 
@@ -727,6 +738,7 @@
             this.btnUpdateCancel.Size = new System.Drawing.Size(139, 56);
             this.btnUpdateCancel.TabIndex = 31;
             this.btnUpdateCancel.Text = "Cancel";
+            this.toolTipCompetitor.SetToolTip(this.btnUpdateCancel, "Click me to cancel updating the Competitor");
             this.btnUpdateCancel.UseVisualStyleBackColor = false;
             this.btnUpdateCancel.Click += new System.EventHandler(this.btnUpdateCancel_Click);
             // 
@@ -944,5 +956,6 @@
         private System.Windows.Forms.Label lblCompetitorLNameUpdate;
         private System.Windows.Forms.Label lblCompetitorFNameUpdate;
         private System.Windows.Forms.Label lblCompetitorUsernameUpdate;
+        private System.Windows.Forms.ToolTip toolTipCompetitor;
     }
 }
