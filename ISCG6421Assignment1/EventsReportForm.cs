@@ -24,6 +24,7 @@ namespace ISCG6421Assignment1
             InitializeComponent();
             DM = dm;
             frmMenu = mnu;
+            DM.Refresh();   // <-- refreshing the datamodule so all info is up to date
         }
  
         private void btnReturn_Click(object sender, EventArgs e)
@@ -134,10 +135,19 @@ namespace ISCG6421Assignment1
                 linesSoFarHeading++;
                 linesSoFarHeading++;
 
+                g.DrawString("Challenge ID",
+                    headingFont, brush, leftMargin + headingLeftMargin, topMargin + (linesSoFarHeading * textFont.Height));
+                g.DrawString("Challenge Name".PadLeft(50),
+                    headingFont, brush, leftMargin + headingLeftMargin, topMargin + (linesSoFarHeading * textFont.Height));
+                g.DrawString("Start Time".PadLeft(100),
+                    headingFont, brush, leftMargin + headingLeftMargin, topMargin + (linesSoFarHeading * textFont.Height));
+                linesSoFarHeading++;
+                linesSoFarHeading++;
+
                 //loop through all events again for challenges
                 foreach (DataRow dr2 in DM.dtEventReport.Rows)
                 {
-                    if ((int)dr2["EventID"] == EventID) // <-- make sure all challenges have the same compID
+                    if ((int)dr2["EventID"] == EventID) // <-- make sure all challenges have the same eventID
                     {
                         g.DrawString(dr2["ChallengeID"].ToString(),
                             headingFont, brush, leftMargin + headingLeftMargin, topMargin + (linesSoFarHeading * textFont.Height));

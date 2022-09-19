@@ -27,6 +27,7 @@ namespace ISCG6421Assignment1
             InitializeComponent();
             DM = dm;
             frmMenu = mnu;
+            DM.Refresh();   // <-- refreshing the datamodule so all info is up to date
         }
 
         private void btnReturn_Click(object sender, EventArgs e)
