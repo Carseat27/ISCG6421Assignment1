@@ -2,7 +2,12 @@
 using System.Data;
 using System.Data.OleDb;
 using System.Windows.Forms;
-
+/// <summary>
+/// this class runs the challenge maintenance form.
+/// From here, the user can view challenges, or choose to add, update, or delete them
+/// Author: Carson Loveday
+/// Date Finished: 22/09/2022
+/// </summary>
 namespace ISCG6421Assignment1
 {
     public partial class ChallengeForm : Form
@@ -42,6 +47,10 @@ namespace ISCG6421Assignment1
         /// this region holds the code for the basic controls
         /// </summary>
         #region basicPageControls
+
+        /// <summary>
+        /// move the cm position back one
+        /// </summary>
         private void btnPrevious_Click(object sender, EventArgs e)
         {
             if (currencyManager.Position > 0)
@@ -50,6 +59,9 @@ namespace ISCG6421Assignment1
             }
         }
 
+        /// <summary>
+        /// move the cm position forward one
+        /// </summary>
         private void btnNext_Click(object sender, EventArgs e)
         {
             if (currencyManager.Position < currencyManager.Count - 1)
@@ -58,6 +70,9 @@ namespace ISCG6421Assignment1
             }
         }
 
+        /// <summary>
+        /// close the form
+        /// </summary>
         private void btnReturn_Click(object sender, EventArgs e)
         {
             Close();
@@ -68,6 +83,10 @@ namespace ISCG6421Assignment1
         /// this region holds the code for adding a new challenge
         /// </summary>
         #region AddChallenges
+
+        /// <summary>
+        /// when user clicks add challenge button
+        /// </summary>
         private void btnAddChallenge_Click(object sender, EventArgs e)
         {
             //show panel
@@ -85,10 +104,12 @@ namespace ISCG6421Assignment1
             fillCmb();
         }
 
+        /// <summary>
+        /// this fills the event combo boxes on the add challenge screen and 
+        /// binds them to ensure that the values correlate
+        /// </summary>
         private void fillCmb()
         {
-            //this fills the event combo boxes on the add challenge screen and
-            //binds them to ensure that the values correlate
             cmbEventID.DataSource = DM.dsNZESL;
             cmbEventID.DisplayMember = "EVENT.EventID";
             cmbEventID.ValueMember = "EVENT.EventID";
@@ -98,6 +119,9 @@ namespace ISCG6421Assignment1
             cmbEventName.DisplayMember = "EVENT.EventName";
         }
 
+        /// <summary>
+        /// add a challenge
+        /// </summary>
         private void btnChallengeSave_Click(object sender, EventArgs e)
         {
             txtChallengeID.Text = "";   // <-- set challengeID to blank
@@ -135,6 +159,9 @@ namespace ISCG6421Assignment1
             }
         }
 
+        /// <summary>
+        /// user cancels add
+        /// </summary>
         private void btnAddCancel_Click(object sender, EventArgs e)
         {
             //hide panel
@@ -149,6 +176,10 @@ namespace ISCG6421Assignment1
         /// this region holds the cold for updating a challenge
         /// </summary>
         #region UpdateChallenge
+
+        /// <summary>
+        /// user clicks on update challenge
+        /// </summary>
         private void btnUpdateChallenge_Click(object sender, EventArgs e)
         {
             //show panel
@@ -166,6 +197,9 @@ namespace ISCG6421Assignment1
             cmbStatusUpdate.Text = txtStatus.Text;
         }
 
+        /// <summary>
+        /// update the selected challenge
+        /// </summary>
         private void btnChallengeUpdate_Click(object sender, EventArgs e)
         {
             DataRow UpdateChallengeRow = DM.dtChallenge.Rows[currencyManager.Position];
@@ -200,6 +234,9 @@ namespace ISCG6421Assignment1
             }
         }
 
+        /// <summary>
+        /// user cancels add
+        /// </summary>
         private void btnUpdateCancel_Click(object sender, EventArgs e)
         {
             //ensure extra panels are not visible
@@ -215,6 +252,10 @@ namespace ISCG6421Assignment1
         /// this region holds the code for deleting a challenge
         /// </summary>
         #region DeleteChallenge
+
+        /// <summary>
+        /// user clicks on delete challenge
+        /// </summary>
         private void btnDeleteChallenge_Click(object sender, EventArgs e)
         {
             DataRow deleteChallengeRow = DM.dtChallenge.Rows[currencyManager.Position];
@@ -249,6 +290,10 @@ namespace ISCG6421Assignment1
         /// this region holds the code for changing the status of a challenge
         /// </summary>
         #region changeStatus
+
+        /// <summary>
+        /// user clicks mark as finished
+        /// </summary>
         private void btnMarkFinished_Click(object sender, EventArgs e)
         {
             //sets the selected challenge to "Finished" provided that the condidtions are met
@@ -275,6 +320,9 @@ namespace ISCG6421Assignment1
             }
         }
 
+        /// <summary>
+        /// user clicks mark as completed
+        /// </summary>
         private void btnMarkCompleted_Click(object sender, EventArgs e)
         {
             //sets the selected challenge to "Completed" provided that the condidtions are met

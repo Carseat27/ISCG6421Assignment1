@@ -7,7 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+/// <summary>
+/// this class runs the add a competitor to a challenge form.
+/// From here, the user can make an entry by adding a competitor to a challenge,
+/// or they can remove an entry by removing a competitor from a challenge.
+/// Author: Carson Loveday
+/// Date Finished: 22/09/2022
+/// </summary>
 namespace ISCG6421Assignment1
 {
     public partial class EntryForm : Form
@@ -72,6 +78,9 @@ namespace ISCG6421Assignment1
         /// </summary>
         #region basicPageControls
 
+        /// <summary>
+        /// close the form
+        /// </summary>
         private void btnReturn_Click(object sender, EventArgs e)
         {
             Close();
@@ -82,16 +91,22 @@ namespace ISCG6421Assignment1
         /// this region holds the code for assigning a comeptitor to a challenge
         /// </summary>
         #region AssignCompetitorToChallenge
+        
+        /// <summary>
+        /// add an entry
+        /// </summary>
         private void btnAddEntry_Click(object sender, EventArgs e)
         {
             //check if challenge is scheduled
             if (DM.dtChallenge.Rows[cmChallenge.Position]["Status"].ToString() == "Scheduled")
             {
                 DataRow newEntryRow = DM.dtEntry.NewRow();
+
                 //assign values to add row
                 newEntryRow["ChallengeID"] = dgvChallenge["ChallengeID", cmChallenge.Position].Value;
                 newEntryRow["CompetitorID"] = dgvCompetitor["CompetitorID", cmCompetitor.Position].Value;
                 newEntryRow["Status"] = "Pending";
+
                 //add entry
                 try
                 {
@@ -115,6 +130,10 @@ namespace ISCG6421Assignment1
         /// this region holds the code for removing an entry
         /// </summary>
         #region RemoveCompetitorFromChallenge
+
+        /// <summary>
+        /// remove an entry
+        /// </summary>
         private void btnRemoveEntry_Click(object sender, EventArgs e)
         {
             int competitorID = Convert.ToInt32(dgvEntry["CompetitorID", cmCE.Position].Value);

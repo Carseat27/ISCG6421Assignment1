@@ -9,6 +9,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/// <summary>
+/// this class runs the main form.
+/// From here, the user can choose from many maintenance or report options
+/// Author: Carson Loveday
+/// Date Finished: 22/09/2022
+/// </summary>
 namespace ISCG6421Assignment1
 {
     public partial class MainForm : Form

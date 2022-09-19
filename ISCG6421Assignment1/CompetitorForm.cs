@@ -1,7 +1,12 @@
 ﻿using System;
 using System.Data;
 using System.Windows.Forms;
-
+/// <summary>
+/// this class runs the competitor maintenance form.
+/// From here, the user can view competitors, or choose to add, update, or delete them
+/// Author: Carson Loveday
+/// Date Finished: 22/09/2022
+/// </summary>
 namespace ISCG6421Assignment1
 {
     public partial class CompetitorForm : Form
@@ -40,11 +45,18 @@ namespace ISCG6421Assignment1
         /// this region holds the code for the basic controls
         /// </summary>
         #region basicPageControls
+        
+        /// <summary>
+        /// close the form
+        /// </summary>
         private void btnReturn_Click(object sender, EventArgs e)
         {
             Close();
         }
 
+        /// <summary>
+        /// move the cm position back one
+        /// </summary>
         private void btnPrevious_Click(object sender, EventArgs e)
         {
             if (currencyManager.Position > 0)
@@ -53,6 +65,9 @@ namespace ISCG6421Assignment1
             }
         }
 
+        /// <summary>
+        /// move the cm position forward one
+        /// </summary>
         private void btnNext_Click(object sender, EventArgs e)
         {
             if (currencyManager.Position < currencyManager.Count - 1)
@@ -66,6 +81,10 @@ namespace ISCG6421Assignment1
         /// this region holds the code for adding a new competitor
         /// </summary>
         #region AddCompetitor
+
+        /// <summary>
+        /// when user clicks add competitor button
+        /// </summary>
         private void btnAddCompetitor_Click(object sender, EventArgs e)
         {
             //show panel
@@ -84,6 +103,10 @@ namespace ISCG6421Assignment1
             DoBPickerAdd.MaxDate = DateTime.Now;
             DoBPickerAdd.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
         }
+
+        /// <summary>
+        /// add a competitor
+        /// </summary>
         private void btnCompetitorSave_Click(object sender, EventArgs e)
         {
             txtCompetitorID.Text = "";  // <-- set competitorID to blank
@@ -142,6 +165,9 @@ namespace ISCG6421Assignment1
             }
         }
 
+        /// <summary>
+        /// user cancels add
+        /// </summary>
         private void btnAddCancel_Click(object sender, EventArgs e)
         {
             //hide panel
@@ -155,6 +181,10 @@ namespace ISCG6421Assignment1
         /// this region holds the code for updating a competitor
         /// </summary>
         #region UpdateCompetitors
+
+        /// <summary>
+        /// when user clicks update arena button
+        /// </summary>
         private void btnUpdateCompetitor_Click(object sender, EventArgs e)
         {
             //show correct panel
@@ -177,6 +207,9 @@ namespace ISCG6421Assignment1
             DoBPickerAdd.MaxDate = DateTime.Now;
         }
 
+        /// <summary>
+        /// update competitor
+        /// </summary>
         private void btnCompetitorUpdate_Click(object sender, EventArgs e)
         {
             DataRow UpdateCompetitorRow = DM.dtCompetitor.Rows[currencyManager.Position];
@@ -234,6 +267,10 @@ namespace ISCG6421Assignment1
                 Utilities.ButtonsMagic(controls, true);
             }
         }
+
+        /// <summary>
+        /// user cancels update
+        /// </summary>
         private void btnUpdateCancel_Click(object sender, EventArgs e)
         {
             //hide panel 
@@ -248,6 +285,10 @@ namespace ISCG6421Assignment1
         /// this region holds the code for deleting a competitor
         /// </summary>
         #region DeleteCompetitor
+
+        /// <summary>
+        /// when user clicks delete challenge
+        /// </summary>
         private void btnDeleteCompetitor_Click(object sender, EventArgs e)
         {
             DataRow deleteCompetitorRow = DM.dtCompetitor.Rows[currencyManager.Position];

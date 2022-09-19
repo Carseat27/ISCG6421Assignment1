@@ -7,7 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+/// <summary>
+/// this class runs the event maintenance form.
+/// From here, the user can view events, or choose to add, update, or delete them
+/// Author: Carson Loveday
+/// Date Finished: 22/09/2022
+/// </summary>
 namespace ISCG6421Assignment1
 {
     public partial class EventForm : Form
@@ -46,11 +51,18 @@ namespace ISCG6421Assignment1
         /// this region holds the code for the basic controls
         /// </summary>
         #region basicPageControls
+
+        /// <summary>
+        /// close the form
+        /// </summary>
         private void btnReturn_Click(object sender, EventArgs e)
         {
             Close();
         }
 
+        /// <summary>
+        /// move the cm position back one
+        /// </summary>
         private void btnPrevious_Click(object sender, EventArgs e)
         {
             if (currencyManager.Position > 0)
@@ -59,6 +71,9 @@ namespace ISCG6421Assignment1
             }
         }
 
+        /// <summary>
+        /// move the cm position forward one
+        /// </summary>
         private void btnNext_Click(object sender, EventArgs e)
         {
             if (currencyManager.Position < currencyManager.Count - 1)
@@ -72,6 +87,10 @@ namespace ISCG6421Assignment1
         /// this region holds the code for adding a new event
         /// </summary>
         #region AddEvents
+
+        /// <summary>
+        /// user clicks on add event
+        /// </summary>
         private void btnAddEvent_Click(object sender, EventArgs e)
         {
             //show panel
@@ -94,6 +113,9 @@ namespace ISCG6421Assignment1
             DatePickerAdd.Value = DateTime.Now;
         }
 
+        /// <summary>
+        /// add an event
+        /// </summary>
         private void btnEventSave_Click(object sender, EventArgs e)
         {
             txtEventID.Text = "";   // <-- set eventID to blank
@@ -137,6 +159,9 @@ namespace ISCG6421Assignment1
 
         }
 
+        /// <summary>
+        /// user cancels the add
+        /// </summary>
         private void btnAddCancel_Click(object sender, EventArgs e)
         {
             //hide panel
@@ -145,8 +170,10 @@ namespace ISCG6421Assignment1
             Utilities.ButtonsMagic(controls, true);
         }
 
-        //this fills the arena combo boxes on the add challenge screen and
-        //ensures that they match.
+        /// <summary>
+        /// this fills the arena combo boxes on the add challenge screen and
+        /// ensures that they match.
+        /// </summary>
         private void fillArenaInfo()
         {
             cmbArenaID.DataSource = DM.dsNZESL;
@@ -163,6 +190,10 @@ namespace ISCG6421Assignment1
         /// this region holds the code for updating an event
         /// </summary>
         #region UpdateEvents
+
+        /// <summary>
+        /// user clicks on update event
+        /// </summary>
         private void btnUpdateEvent_Click(object sender, EventArgs e)
         {
             //show panel
@@ -185,14 +216,9 @@ namespace ISCG6421Assignment1
             DatePickerUpdate.Text = txtEventDate.Text;
         }
 
-        private void btnUpdateCancel_Click(object sender, EventArgs e)
-        {
-            //hide panel
-            pnlUpdate.Visible = false;
-            //enable buttons
-            Utilities.ButtonsMagic(controls, true);
-        }
-
+        /// <summary>
+        /// update the selected event
+        /// </summary>
         private void btnEventUpdate_Click(object sender, EventArgs e)
         {
             DataRow updateEventRow = DM.dtEvent.Rows[currencyManager.Position];
@@ -234,12 +260,27 @@ namespace ISCG6421Assignment1
             }
 
         }
+
+        /// <summary>
+        /// user cancels the update
+        /// </summary>
+        private void btnUpdateCancel_Click(object sender, EventArgs e)
+        {
+            //hide panel
+            pnlUpdate.Visible = false;
+            //enable buttons
+            Utilities.ButtonsMagic(controls, true);
+        }
         #endregion
 
         /// <summary>
         /// this region holds the code for deleting an event
         /// </summary>
         #region DeleteEvent
+
+        /// <summary>
+        /// user clicks on delete event
+        /// </summary>
         private void btnDeleteEvent_Click(object sender, EventArgs e)
         {
             DataRow deleteEventRow = DM.dtEvent.Rows[currencyManager.Position];

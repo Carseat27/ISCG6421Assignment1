@@ -8,7 +8,12 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+/// <summary>
+/// this class runs the arena maintenance form.
+/// From here, the user can view arenas, or choose to add, update, or delete them
+/// Author: Carson Loveday
+/// Date Finished: 22/09/2022
+/// </summary>
 namespace ISCG6421Assignment1
 {
     public partial class ArenaForm : Form
@@ -47,6 +52,10 @@ namespace ISCG6421Assignment1
         /// this region holds the code for the basic controls
         /// </summary>
         #region basicPageControls
+
+        /// <summary>
+        /// move the cm position back one
+        /// </summary>
         private void btnPrevious_Click(object sender, EventArgs e)
         {
             if(currencyManager.Position > 0)
@@ -55,6 +64,9 @@ namespace ISCG6421Assignment1
             }
         }
 
+        /// <summary>
+        /// move the cm position forward one
+        /// </summary>
         private void btnNext_Click(object sender, EventArgs e)
         {
             if(currencyManager.Position < currencyManager.Count - 1)
@@ -63,6 +75,9 @@ namespace ISCG6421Assignment1
             }
         }
 
+        /// <summary>
+        /// close the form
+        /// </summary>
         private void btnReturn_Click(object sender, EventArgs e)
         {
             Close();
@@ -73,6 +88,10 @@ namespace ISCG6421Assignment1
         /// this region holds the code for adding a new arena
         /// </summary>
         #region AddArena
+
+        /// <summary>
+        /// when user clicks add arena button
+        /// </summary>
         private void btnAddArena_Click(object sender, EventArgs e)
         {
             //show panel
@@ -89,7 +108,9 @@ namespace ISCG6421Assignment1
             txtArenaPhoneAdd.Text = "";
         }
 
-
+        /// <summary>
+        /// add an arena
+        /// </summary>
         private void btnArenaSave_Click(object sender, EventArgs e)
         {
             txtArenaID.Text = "";   // <-- set arenaID to blank
@@ -126,6 +147,9 @@ namespace ISCG6421Assignment1
             }
         }
 
+        /// <summary>
+        /// user cancels add
+        /// </summary>
         private void btnAddCancel_Click(object sender, EventArgs e)
         {
             //hide panel for adding arena
@@ -141,6 +165,10 @@ namespace ISCG6421Assignment1
         /// this region holds the code for updating an arena
         /// </summary>
         #region UpdateArena
+
+        /// <summary>
+        /// user clicks on update arena
+        /// </summary>
         private void btnUpdateArena_Click(object sender, EventArgs e)
         {
             //show panel
@@ -157,6 +185,9 @@ namespace ISCG6421Assignment1
             txtArenaPhone.Enabled = true;
         }
 
+        /// <summary>
+        /// update the selected arena
+        /// </summary>
         private void btnArenaUpdate_Click(object sender, EventArgs e)
         {
             DataRow updateArenaRow = DM.dtArena.Rows[currencyManager.Position];
@@ -199,6 +230,9 @@ namespace ISCG6421Assignment1
             }
         }
 
+        /// <summary>
+        /// user cancels the update
+        /// </summary>
         private void btnUpdateCancel_Click(object sender, EventArgs e)
         {
             //hide panel
@@ -220,6 +254,10 @@ namespace ISCG6421Assignment1
         /// this section defines the EventActions for deleting an arena
         /// </summary>
         #region DeleteArena
+
+        /// <summary>
+        /// user clicks on delete arena
+        /// </summary>
         private void btnDeleteArena_Click(object sender, EventArgs e)
         {
             DataRow deleteArenaRow = DM.dtArena.Rows[currencyManager.Position];

@@ -9,7 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 using System.IO;
-
+/// <summary>
+/// this class runs the data module.
+/// The user does not have direct access to it.
+/// It's job is to communicate with the database file (.mdb) to select, insert, update, or delete data.
+/// The user can change the connection string by clicking the 'Connect to Database' button on the main form.
+/// Author: Carson Loveday
+/// Date Finished: 22/09/2022
 namespace ISCG6421Assignment1
 {
     public partial class DataModule : Form
@@ -33,7 +39,7 @@ namespace ISCG6421Assignment1
             InitializeComponent();
             Utilities.DM = this;
 
-            readCtnString(); // <-- make ctn from file
+            readCtnString(); // <-- make ctn with string from file
 
             //attempt to fill dataAdapters and dataTables
             try
@@ -63,7 +69,8 @@ namespace ISCG6421Assignment1
         }
 
         /// <summary>
-        /// this region does the updates for each table
+        /// this region does the updates for each table.
+        /// The methods here are public and call other in-built methods
         /// </summary>
         #region updateMethods
         public void UpdateArena()
@@ -92,9 +99,15 @@ namespace ISCG6421Assignment1
 
         /// <summary>
         /// this region holds the code for setting the primary key upon the RowUpdated event
-        /// and ensures that the ID is set to the correct value
+        /// and ensures that the ID is set to the correct value.
+        /// Each method within the region contains the same code, 
+        /// with minor changes depending on the table affected.
         /// </summary>
         #region rowUpdatedMethods
+
+        /// <summary>
+        /// ensure id is set to correct value
+        /// </summary>
         private void daArena_RowUpdated(object sender, OleDbRowUpdatedEventArgs e)
         {
             int newID = 0;
@@ -107,6 +120,9 @@ namespace ISCG6421Assignment1
             }
         }
 
+        /// <summary>
+        /// ensure id is set to correct value
+        /// </summary>
         private void daChallenge_RowUpdated(object sender, OleDbRowUpdatedEventArgs e)
         {
             int newID = 0;
@@ -118,6 +134,9 @@ namespace ISCG6421Assignment1
             }
         }
 
+        /// <summary>
+        /// ensure id is set to correct value
+        /// </summary>
         private void daCompetitor_RowUpdated(object sender, OleDbRowUpdatedEventArgs e)
         {
             int newID = 0;
@@ -129,6 +148,9 @@ namespace ISCG6421Assignment1
             }
         }
 
+        /// <summary>
+        /// ensure id is set to correct value
+        /// </summary>
         private void daEvent_RowUpdated(object sender, OleDbRowUpdatedEventArgs e)
         {
             int newID = 0;
@@ -140,6 +162,9 @@ namespace ISCG6421Assignment1
             }
         }
 
+        /// <summary>
+        /// ensure id is set to correct value
+        /// </summary>
         private void daEntry_RowUpdated(object sender, OleDbRowUpdatedEventArgs e)
         {
             //no primary key ID is required for this table as it uses a

@@ -9,7 +9,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+/// <summary>
+/// this class runs the events report form.
+/// From here, the user can print out the events report to a printPreviewDialog,
+/// then choose to save or print it from there.
+/// Author: Carson Loveday
+/// Date Finished: 22/09/2022
+/// </summary>
 namespace ISCG6421Assignment1
 {
     public partial class EventsReportForm : Form
@@ -27,12 +33,18 @@ namespace ISCG6421Assignment1
             frmMenu = mnu;
             InitializeComponent();
         }
- 
+
+        /// <summary>
+        /// close the form
+        /// </summary>
         private void btnReturn_Click(object sender, EventArgs e)
         {
             Close();
         }
 
+        /// <summary>
+        /// user clicks on print report
+        /// </summary>
         private void btnPrintReport_Click(object sender, EventArgs e)
         {
             amountOfReportsPrinted = 0;                     // <-- set to zero
@@ -57,6 +69,9 @@ namespace ISCG6421Assignment1
             prvEvents.ShowDialog();
         }
 
+        /// <summary>
+        /// print the report
+        /// </summary>
         private void printEvents_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             printEvents.DefaultPageSettings.PaperSize = new PaperSize("210 x 297 mm", 800, 800); // <-- set page size to A4

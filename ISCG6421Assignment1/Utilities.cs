@@ -6,7 +6,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+/// <summary>
+/// this is the Utilities class.
+/// This holds methods that are commonly used between multiple classes.
+/// The purpose of this is to reduce redundancy by creating pieces of reusable code.
+/// For example, the method ButtonsMagic is referenced 24 times, with the class
+/// itself having 49 references.
+/// Author: Carson Loveday
+/// Date Finished: 22/09/2022
 namespace ISCG6421Assignment1
 {
     class Utilities
