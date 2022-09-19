@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.grpMaintenance = new System.Windows.Forms.GroupBox();
             this.btnEnterCompetitorChallenge = new System.Windows.Forms.Button();
             this.btnCompetitorMaintence = new System.Windows.Forms.Button();
@@ -203,6 +204,8 @@
             this.Controls.Add(this.grpMaintenance);
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(813, 481);
             this.MinimumSize = new System.Drawing.Size(813, 481);
             this.Name = "MainForm";
