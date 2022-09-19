@@ -34,6 +34,9 @@ namespace ISCG6421Assignment1
             DM = new DataModule(); // <-- create data module and load dataset
         }
 
+        /// <summary>
+        /// button to open arena maintenance form
+        /// </summary>
         private void btnArenaMaintenance_Click(object sender, EventArgs e)
         {
             if(frmArena == null)
@@ -43,11 +46,9 @@ namespace ISCG6421Assignment1
             frmArena.ShowDialog();
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
+        /// <summary>
+        /// button to open the event maintenance form
+        /// </summary>
         private void btnEventMaintenance_Click(object sender, EventArgs e)
         {
             if(frmEvent == null)
@@ -57,6 +58,9 @@ namespace ISCG6421Assignment1
             frmEvent.ShowDialog();
         }
 
+        /// <summary>
+        /// button to open the challenge maintenance form
+        /// </summary>
         private void btnChallengeMaintenance_Click(object sender, EventArgs e)
         {
             if(frmChallenge == null)
@@ -66,6 +70,9 @@ namespace ISCG6421Assignment1
             frmChallenge.ShowDialog();
         }
 
+        /// <summary>
+        /// button to open the competitor maintenance form
+        /// </summary>
         private void btnCompetitorMaintence_Click(object sender, EventArgs e)
         {
             if(frmCompetitor == null)
@@ -75,6 +82,9 @@ namespace ISCG6421Assignment1
             frmCompetitor.ShowDialog();
         }
 
+        /// <summary>
+        /// button to open the entry maintenance form
+        /// </summary>
         private void btnEnterCompetitorChallenge_Click(object sender, EventArgs e)
         {
             if(frmEntry == null)
@@ -84,6 +94,9 @@ namespace ISCG6421Assignment1
             frmEntry.ShowDialog();
         }
 
+        /// <summary>
+        /// button to open the events report form
+        /// </summary>
         private void btnEventsReport_Click(object sender, EventArgs e)
         {
             if(frmEventsReport == null)
@@ -94,6 +107,9 @@ namespace ISCG6421Assignment1
             frmEventsReport.ShowDialog();
         }
 
+        /// <summary>
+        /// button to open the competitor reports form
+        /// </summary>
         private void btnCompetitorReport_Click(object sender, EventArgs e)
         {
             if(frmCompetitorReport == null)
@@ -104,9 +120,20 @@ namespace ISCG6421Assignment1
             frmCompetitorReport.ShowDialog();
         }
 
+        /// <summary>
+        /// button to allow user to select location of database file
+        /// </summary>
         private void btbDbConnect_Click(object sender, EventArgs e)
         {
             Utilities.selectDBFile();
+        }
+
+        /// <summary>
+        /// button to exit the program
+        /// </summary>
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

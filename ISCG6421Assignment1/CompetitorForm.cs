@@ -16,7 +16,7 @@ namespace ISCG6421Assignment1
             DM = dm;
             frmMenu = mnu;
             BindControls();
-            controls = new Button[] { btnPrevious, btnNext, btnAddCompetitor, btnUpdateCompetitor, btnDeleteCompetitor, btnReturn };
+            controls = new Button[] { btnPrevious, btnNext, btnAddCompetitor, btnUpdateCompetitor, btnDeleteCompetitor, btnReturn };    // <-- add controls to button array for passing to Utilities.ButtonsMagic
         }
         /// <summary>
         /// this method binds the competitor maintenance controls
@@ -68,41 +68,45 @@ namespace ISCG6421Assignment1
         #region AddCompetitor
         private void btnAddCompetitor_Click(object sender, EventArgs e)
         {
-            //show correct panel
+            //show panel
             pnlAdd.Visible = true;
+
             //disable items not needed
             Utilities.ButtonsMagic(controls, false);
+
             //ensure boxes are emtpy
             txtCompetitorUsernameAdd.Text = "";
             txtCompetitorFNameAdd.Text = "";
             txtCompetitorLNameAdd.Text = "";
             txtCompetitorEmailAdd.Text = "";
+
             //configure datepicker
             DoBPickerAdd.MaxDate = DateTime.Now;
             DoBPickerAdd.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
         }
         private void btnCompetitorSave_Click(object sender, EventArgs e)
         {
-            txtCompetitorID.Text = "";
+            txtCompetitorID.Text = "";  // <-- set competitorID to blank
             DataRow newCompetitorRow = DM.dtCompetitor.NewRow();
 
-            //empty boxes validation
+            //check all fields are filled
             if ( (txtCompetitorUsernameAdd.Text == "") || (txtCompetitorFNameAdd.Text == "") || (txtCompetitorLNameAdd.Text == "") || (txtCompetitorEmailAdd.Text == ""))
             {
                 MessageBox.Show("You must fill out ALL fields!", "Error!");
             }
-            //gender validation
+            //check gender has been selected
             else if ( (radCompetitorFemaleAdd.Checked == false) && (radCompetitorMaleAdd.Checked == false) && (radCompetitorOtherAdd.Checked == false))
             {
                 MessageBox.Show("You must select a gender!", "Error!");
             }
-            //email validation
+            //check email is an email
             else if (!Utilities.EmailCheck(txtCompetitorEmailAdd.Text))
             {
                 MessageBox.Show("Invalid email address!", "Error!");
             }
             else
             {
+                //assign values to new datarow
                 newCompetitorRow["UserName"] = txtCompetitorUsernameAdd.Text;
                 newCompetitorRow["FirstName"] = txtCompetitorFNameAdd.Text;
                 newCompetitorRow["LastName"] = txtCompetitorLNameAdd.Text;
@@ -120,6 +124,7 @@ namespace ISCG6421Assignment1
                 }
                 newCompetitorRow["DateOfBirth"] = DoBPickerAdd.Value;
                 newCompetitorRow["EmailAddress"] = txtCompetitorEmailAdd.Text;
+                //add row
                 try
                 {
                     DM.dtCompetitor.Rows.Add(newCompetitorRow);
@@ -130,7 +135,7 @@ namespace ISCG6421Assignment1
                 {
                     Utilities.DBExceptionError();
                 }
-
+                //hide panel
                 pnlAdd.Visible = false;
                 //enable butttons
                 Utilities.ButtonsMagic(controls, true);
@@ -139,7 +144,7 @@ namespace ISCG6421Assignment1
 
         private void btnAddCancel_Click(object sender, EventArgs e)
         {
-            //hide panel and enable controls
+            //hide panel
             pnlAdd.Visible = false;
             //enable buttons
             Utilities.ButtonsMagic(controls, true);
@@ -150,29 +155,24 @@ namespace ISCG6421Assignment1
         /// this region holds the code for updating a competitor
         /// </summary>
         #region UpdateCompetitors
-        private void btnUpdateCancel_Click(object sender, EventArgs e)
-        {
-            //hide panel and enable controls
-            pnlUpdate.Visible = false;
-            //enable buttons
-            Utilities.ButtonsMagic(controls, true);
-        }
-
         private void btnUpdateCompetitor_Click(object sender, EventArgs e)
         {
             //show correct panel
             pnlUpdate.Visible = true;
+
             //disable buttons
             Utilities.ButtonsMagic(controls, false);
+
             //ensure fields are filled out correctly for selected competitor
             txtCompetitorUsernameUpdate.Text = txtCompetitorUsername.Text;
             txtCompetitorFNameUpdate.Text = txtCompetitorFName.Text;
             txtCompetitorLNameUpdate.Text = txtCompetitorLName.Text;
-            if(txtCompetitorGender.Text == "Female") { radCompetitorFemaleUpdate.Checked = true; }
+            if(txtCompetitorGender.Text == "Female"){ radCompetitorFemaleUpdate.Checked = true; }
             else if (txtCompetitorGender.Text == "Male") { radCompetitorMaleUpdate.Checked = true; }
             else if (txtCompetitorGender.Text == "Other") { radCompetitorOtherUpdate.Checked = true; }
             DoBPickerUpdate.Text = txtCompetitorDoB.Text;
             txtCompetitorEmailUpdate.Text = txtCompetitorEmail.Text;
+
             //configure datepicker
             DoBPickerAdd.MaxDate = DateTime.Now;
         }
@@ -181,23 +181,24 @@ namespace ISCG6421Assignment1
         {
             DataRow UpdateCompetitorRow = DM.dtCompetitor.Rows[currencyManager.Position];
 
-            //empty boxes validation
+            //check fields are filled
             if ((txtCompetitorUsernameUpdate.Text == "") || (txtCompetitorFNameUpdate.Text == "") || (txtCompetitorLNameUpdate.Text == "") || (txtCompetitorEmailUpdate.Text == ""))
             {
                 MessageBox.Show("You must fill out ALL fields!", "Error!");
             }
-            //gender validation
+            //check gender is selected
             else if ((radCompetitorFemaleUpdate.Checked == false) && (radCompetitorMaleUpdate.Checked == false) && (radCompetitorOtherUpdate.Checked == false))
             {
                 MessageBox.Show("You must select a gender!", "Error!");
             }
-            //email validation
+            //check email is email
             else if (!Utilities.EmailCheck(txtCompetitorEmailUpdate.Text))
             {
                 MessageBox.Show("Invalid email address!", "Error!");
             }
             else
             {
+                //assign values to update row
                 UpdateCompetitorRow["UserName"] = txtCompetitorUsernameUpdate.Text;
                 UpdateCompetitorRow["FirstName"] = txtCompetitorFNameUpdate.Text;
                 UpdateCompetitorRow["LastName"] = txtCompetitorLNameUpdate.Text;
@@ -216,14 +217,31 @@ namespace ISCG6421Assignment1
                 UpdateCompetitorRow["DateOfBirth"] = DoBPickerUpdate.Value;
                 UpdateCompetitorRow["EmailAddress"] = txtCompetitorEmailUpdate.Text;
                 currencyManager.EndCurrentEdit();
-                DM.UpdateCompetitor();
-                MessageBox.Show("Competitor Updated Successfully", "Success");
+                //update row
+                try
+                {
 
+                    DM.UpdateCompetitor();
+                    MessageBox.Show("Competitor Updated Successfully", "Success");
+                }
+                catch (Exception)
+                {
+                    Utilities.DBExceptionError();
+                }
+                //hide panel
                 pnlUpdate.Visible = false;
                 //enable buttons
                 Utilities.ButtonsMagic(controls, true);
             }
         }
+        private void btnUpdateCancel_Click(object sender, EventArgs e)
+        {
+            //hide panel 
+            pnlUpdate.Visible = false;
+            //enable buttons
+            Utilities.ButtonsMagic(controls, true);
+        }
+
         #endregion 
 
         /// <summary>
@@ -234,17 +252,27 @@ namespace ISCG6421Assignment1
         {
             DataRow deleteCompetitorRow = DM.dtCompetitor.Rows[currencyManager.Position];
             DataRow[] EntryRow = DM.dtEntry.Select("CompetitorID = " + txtCompetitorID.Text);
+            //ensure competitor has no entries
             if (EntryRow.Length != 0)
             {
                 MessageBox.Show("You may only delete competitors that have no entries", "Error");
             }
             else
             {
+                //check with user
                 if (MessageBox.Show("Are you sure you want to delete the selected record?\n\nIt is currently: " + txtCompetitorFName.Text + " " + txtCompetitorLName.Text, "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
-                    deleteCompetitorRow.Delete();
-                    DM.UpdateCompetitor();
-                    MessageBox.Show("Competitor deleted successfully", "Success");
+                    //delete row
+                    try
+                    {
+                        deleteCompetitorRow.Delete();
+                        DM.UpdateCompetitor();
+                        MessageBox.Show("Competitor deleted successfully", "Success");
+                    }
+                    catch (Exception)
+                    {
+                        Utilities.DBExceptionError();
+                    }
                 }
             }
         }

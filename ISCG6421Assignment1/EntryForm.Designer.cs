@@ -38,6 +38,7 @@
             this.lblEventName = new System.Windows.Forms.Label();
             this.lblEventStatus = new System.Windows.Forms.Label();
             this.txtEventStatus = new System.Windows.Forms.TextBox();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompetitor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEntry)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChallenge)).BeginInit();
@@ -158,6 +159,10 @@
             this.txtEventStatus.TabIndex = 49;
             this.txtEventStatus.Text = "Status";
             // 
+            // printDialog1
+            // 
+            this.printDialog1.UseEXDialog = true;
+            // 
             // EntryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -202,5 +207,6 @@
         private System.Windows.Forms.Label lblEventName;
         private System.Windows.Forms.Label lblEventStatus;
         private System.Windows.Forms.TextBox txtEventStatus;
+        private System.Windows.Forms.PrintDialog printDialog1;
     }
 }

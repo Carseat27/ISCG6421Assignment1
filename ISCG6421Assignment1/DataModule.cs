@@ -35,6 +35,7 @@ namespace ISCG6421Assignment1
 
             readCtnString(); // <-- make ctn from file
 
+            //attempt to fill dataAdapters and dataTables
             try
             {
                 dsNZESL.EnforceConstraints = false;
@@ -60,6 +61,11 @@ namespace ISCG6421Assignment1
                 Utilities.selectDBFile();
             }
         }
+
+        /// <summary>
+        /// this region does the updates for each table
+        /// </summary>
+        #region updateMethods
         public void UpdateArena()
         {
             daArena.Update(dtArena);
@@ -82,7 +88,13 @@ namespace ISCG6421Assignment1
             daCompReport.Update(dtCompReport);
             daEntry.Update(dtEntry);
         }
+        #endregion
 
+        /// <summary>
+        /// this region holds the code for setting the primary key upon the RowUpdated event
+        /// and ensures that the ID is set to the correct value
+        /// </summary>
+        #region rowUpdatedMethods
         private void daArena_RowUpdated(object sender, OleDbRowUpdatedEventArgs e)
         {
             int newID = 0;
@@ -130,8 +142,10 @@ namespace ISCG6421Assignment1
 
         private void daEntry_RowUpdated(object sender, OleDbRowUpdatedEventArgs e)
         {
-
+            //no primary key ID is required for this table as it uses a
+            //composite primary key of both the ChallengeID and the CompetitorID
         }
+        #endregion
 
         /// <summary>
         /// this method sets the connection string to the sed
@@ -143,8 +157,16 @@ namespace ISCG6421Assignment1
             this.ctnNZESL.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\"" + fileString + "\"";
             //save the connection string to a file
             Utilities.writeCtnString(fileString);
-
         }
+
+        /// <summary>
+        /// this method reads the connection string from 'connection.txt' and
+        /// attempts to set it.
+        /// 
+        /// It will force the default to be 'C:\Temp\NZESL.mdb' if 'connection.txt' is not found.
+        /// 
+        /// It will ask the user to select a file if 'NZESL.mdb' does not exist in the location given - default or otherwise.
+        /// </summary>
         public void readCtnString()
         {
             //try reading file
@@ -156,7 +178,6 @@ namespace ISCG6421Assignment1
             catch (Exception)
             {
                 fileString = @"C:\Temp\NZESL.mdb"; // <-- set default if file not found
-                //Utilities.writeCtnString(fileString); // <-- create the file and write the default string
                 MessageBox.Show("Could not find the required database file.\n\nThe default has been set to " + fileString);
             }
             //try set ctn string
@@ -166,7 +187,7 @@ namespace ISCG6421Assignment1
             }
             catch (Exception)
             {
-                MessageBox.Show("An unexpected error has been encountered.\n\nPlease select your database file", "Error");
+                MessageBox.Show("We could not find the file at the following location:\n\n" + fileString + "\n\nPlease select your database file", "Error");
                 Utilities.selectDBFile();
             }
         }

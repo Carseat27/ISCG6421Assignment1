@@ -142,6 +142,7 @@
                         new System.Data.Common.DataColumnMapping("City", "City"),
                         new System.Data.Common.DataColumnMapping("PhoneNumber", "PhoneNumber")})});
             this.daArena.UpdateCommand = this.oleDbUpdateCommand1;
+            this.daArena.RowUpdated += new System.Data.OleDb.OleDbRowUpdatedEventHandler(this.daArena_RowUpdated);
             // 
             // oleDbSelectCommand2
             // 
@@ -213,6 +214,7 @@
                         new System.Data.Common.DataColumnMapping("Status", "Status"),
                         new System.Data.Common.DataColumnMapping("Capacity", "Capacity")})});
             this.daChallenge.UpdateCommand = this.oleDbUpdateCommand2;
+            this.daChallenge.RowUpdated += new System.Data.OleDb.OleDbRowUpdatedEventHandler(this.daChallenge_RowUpdated);
             // 
             // oleDbSelectCommand3
             // 
@@ -474,10 +476,10 @@
             // 
             // DataModule
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(261, 182);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ClientSize = new System.Drawing.Size(196, 148);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "DataModule";
             this.Text = "DataModule";
             ((System.ComponentModel.ISupportInitialize)(this.dsNZESL)).EndInit();

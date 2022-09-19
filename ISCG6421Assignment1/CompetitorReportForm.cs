@@ -22,13 +22,12 @@ namespace ISCG6421Assignment1
         private DataRow[] reportsForPrint;
         private int compDataRowTracker;
         private ArrayList compDataRowList = new ArrayList();
+        private ArrayList IDRun = new ArrayList(); // <-- holds the id of competitors that have already been run, so that they do not duplicate
         public CompetitorReportForm(DataModule dm, MainForm mnu)
         {
             DM = dm;
-            DM.Refresh();   // <-- refreshing the datamodule so all info is up to date
             frmMenu = mnu;
             InitializeComponent();
-            Refresh();
         }
 
         private void btnReturn_Click(object sender, EventArgs e)
@@ -49,29 +48,22 @@ namespace ISCG6421Assignment1
             {
                 if (!uniqueCompIDs.Contains((int)r["CompetitorID"]))
                 {
-                    uniqueCompIDs.Add((int)r["CompetitorID"]);  // <-- add unique compIDs to array to ensure no repeats
-                    compDataRowList.Add(r);                            // <-- add datarow to array if unique
+                    uniqueCompIDs.Add((int)r["CompetitorID"]);      // <-- add unique compIDs to array to ensure no repeats
+                    compDataRowList.Add(r);                         // <-- add datarow to array if unique
                 }
             }
-            pagesAmountExpected = uniqueCompIDs.Count;
+            pagesAmountExpected = uniqueCompIDs.Count;              // <-- get count of unique competitors
 
-            compDataRowTracker = 0; // <-- this keeps track of the position in the compDataRowList array.
+            compDataRowTracker = 0;                                 // <-- this keeps track of the position in the compDataRowList array.
 
             prvCompetitors.ShowDialog();
         }
 
-        private void CompetitorReportForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            prvCompetitors = null;
-            printCompetitors = null;
-        }
-
         private void printCompetitors_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            //prvCompetitors.Size = new System.Drawing.Size(420, 594);
             printCompetitors.DefaultPageSettings.PaperSize = new PaperSize("210 x 297 mm", 800, 800); // <-- set page size to A4
 
-            //define the used datarow in the datarow list
+            //define the used datarow in the datarow list using the tracker
             DataRow dr = (DataRow)this.compDataRowList[compDataRowTracker];
 
             //set fonts
@@ -82,16 +74,13 @@ namespace ISCG6421Assignment1
             Font titleFont = new Font("Century Gothic", 20, FontStyle.Underline);
 
             Brush brush = new SolidBrush(Color.Black);
-            //margins
+
+            //set margins
             int leftMargin = e.MarginBounds.Left;
             int topMargin = e.MarginBounds.Top;
             int headingLeftMargin = 50;
-            //int topMarginDetails = topMargin + 70;
-            //int rightMargin = e.MarginBounds.Right;
-            //float pageHeight = e.PageSettings.PrintableArea.Height;
 
             int CompID;
-            ArrayList IDRun = new ArrayList(); // <-- holds the id of competitors that have already been run, so that they do not duplicate
 
             //make a title
             g.DrawString("Entry Report by Competitor",
@@ -100,8 +89,8 @@ namespace ISCG6421Assignment1
             linesSoFarHeading++;
             linesSoFarHeading++;
 
-            //print entry
-            int HEADING_PAD_LEFT = 50;
+            //print competitor with entries
+            int HEADING_PAD_LEFT = 50;                  // <-- define padding
             CompID = (int)dr["CompetitorID"];           // <-- store competitorID
 
             if (!IDRun.Contains(CompID))                // <-- check if CompID has not been used yet

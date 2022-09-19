@@ -94,7 +94,6 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Competitor Report";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CompetitorReportForm_FormClosing);
             this.ResumeLayout(false);
 
         }

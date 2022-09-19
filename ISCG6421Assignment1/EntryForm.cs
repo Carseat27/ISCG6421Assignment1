@@ -63,6 +63,7 @@ namespace ISCG6421Assignment1
             catch (Exception)
             {
                 MessageBox.Show("Error loading the form. Please try again.");
+                Close();
             }
         }
 
@@ -83,12 +84,15 @@ namespace ISCG6421Assignment1
         #region AssignCompetitorToChallenge
         private void btnAddEntry_Click(object sender, EventArgs e)
         {
+            //check if challenge is scheduled
             if (DM.dtChallenge.Rows[cmChallenge.Position]["Status"].ToString() == "Scheduled")
             {
                 DataRow newEntryRow = DM.dtEntry.NewRow();
+                //assign values to add row
                 newEntryRow["ChallengeID"] = dgvChallenge["ChallengeID", cmChallenge.Position].Value;
                 newEntryRow["CompetitorID"] = dgvCompetitor["CompetitorID", cmCompetitor.Position].Value;
                 newEntryRow["Status"] = "Pending";
+                //add entry
                 try
                 {
                     DM.dsNZESL.Tables["Entry"].Rows.Add(newEntryRow);
@@ -118,8 +122,10 @@ namespace ISCG6421Assignment1
             try
             {
                 DataRow deleteEntryRow = DM.dtEntry.Select("CompetitorID = " + competitorID + " AND ChallengeID = " + challengeID)[0];
+                //check with user
                 if (MessageBox.Show("Are you sure to delete the selected record?", "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
+                    //delete entry
                     try
                     {
                         deleteEntryRow.Delete();

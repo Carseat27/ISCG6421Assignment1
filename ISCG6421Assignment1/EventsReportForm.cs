@@ -20,13 +20,12 @@ namespace ISCG6421Assignment1
         private DataRow[] reportsForPrint;
         private int eventInfoTracker;
         private ArrayList eventInfo = new ArrayList();
+        private ArrayList IDRun = new ArrayList(); // <-- holds the id of competitors that have already been run, so that they do not duplicate
         public EventsReportForm(DataModule dm, MainForm mnu)
         {
             DM = dm;
-            DM.Refresh();   // <-- refreshing the datamodule so all info is up to date
             frmMenu = mnu;
             InitializeComponent();
-            Refresh();
         }
  
         private void btnReturn_Click(object sender, EventArgs e)
@@ -36,7 +35,7 @@ namespace ISCG6421Assignment1
 
         private void btnPrintReport_Click(object sender, EventArgs e)
         {
-            amountOfReportsPrinted = 0;
+            amountOfReportsPrinted = 0;                     // <-- set to zero
             string strFilter = "EventID = EventID";
             string strSort = "EventID, ChallengeID";
             reportsForPrint = DM.dsEventReport.Tables["ARENA"].Select(strFilter, strSort, DataViewRowState.CurrentRows);
@@ -48,18 +47,19 @@ namespace ISCG6421Assignment1
                 if (!uniqueEventIDs.Contains((int)r["EventID"]))
                 {
                     uniqueEventIDs.Add((int)r["EventID"]);      // <-- add unique compIDs to array to ensure no repeats
-                    eventInfo.Add(r);                            // <-- add datarow to array if unique
+                    eventInfo.Add(r);                           // <-- add datarow to array if unique
                 }
             }
-            pagesAmountExpected = uniqueEventIDs.Count;
-            eventInfoTracker = 0; // <-- this keeps track of the position in the compInfo array.
+            pagesAmountExpected = uniqueEventIDs.Count;         // <-- get count of uniques events
+
+            eventInfoTracker = 0;                               // <-- this keeps track of the position in the compInfo array.
+
             prvEvents.ShowDialog();
         }
 
         private void printEvents_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             printEvents.DefaultPageSettings.PaperSize = new PaperSize("210 x 297 mm", 800, 800); // <-- set page size to A4
-
 
             //define the used datarow in the datarow list
             DataRow dr = (DataRow)this.eventInfo[eventInfoTracker];
@@ -72,13 +72,13 @@ namespace ISCG6421Assignment1
             Font titleFont = new Font("Century Gothic", 20, FontStyle.Underline);
 
             Brush brush = new SolidBrush(Color.Black);
+
             //margins
             int leftMargin = e.MarginBounds.Left;
             int topMargin = e.MarginBounds.Top;
             int headingLeftMargin = 50;
 
             int EventID;
-            ArrayList IDRun = new ArrayList(); // <-- holds the id of competitors that have already been run, so that they do not duplicate
 
             //make a title
             g.DrawString("Event Report",
@@ -87,14 +87,14 @@ namespace ISCG6421Assignment1
             linesSoFarHeading++;
             linesSoFarHeading++;
 
-            //print entry
+            //print events with challenges
             EventID = (int)dr["EventID"];       // <-- store eventID
 
             if (!IDRun.Contains(EventID))       // <-- check if not run yet
             {
                 IDRun.Add(EventID);             // <-- add eventID to IDRun array
 
-                //heading
+                //draw event details heading
                 g.DrawString("Event ID:",
                     headingFont, brush, leftMargin + headingLeftMargin, topMargin + (linesSoFarHeading * textFont.Height));
                 g.DrawString("________",

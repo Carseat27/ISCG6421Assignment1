@@ -17,7 +17,7 @@ namespace ISCG6421Assignment1
             DM = dm;
             frmMenu = mnu;
             BindControls();
-            controls = new Button[] { btnPrevious, btnNext, btnMarkCompleted, btnMarkFinished, btnAddChallenge, btnUpdateChallenge, btnDeleteChallenge, btnReturn };
+            controls = new Button[] { btnPrevious, btnNext, btnMarkCompleted, btnMarkFinished, btnAddChallenge, btnUpdateChallenge, btnDeleteChallenge, btnReturn };    // <-- add controls to button array for passing to Utilities.ButtonsMagic
         }
         /// <summary>
         /// this method binds the challenge maintenance controls
@@ -100,22 +100,24 @@ namespace ISCG6421Assignment1
 
         private void btnChallengeSave_Click(object sender, EventArgs e)
         {
-            //ensures that no options are left blank and adds the challenge with a new id
-            txtChallengeID.Text = "";
+            txtChallengeID.Text = "";   // <-- set challengeID to blank
             DataRow newChallengeRow = DM.dtChallenge.NewRow();
 
+            //check that all fields are filled
             if ((txtChallengeNameAdd.Text == "") || (cmbEventID.Text == "select") || (timePicker.Text == "") || (numCapacity.Value == 0))
             {
                 MessageBox.Show("You must fill out ALL fields!", "Error!");
             }
             else
             {
+                //assign values to new datarow
                 newChallengeRow["ChallengeName"] = txtChallengeNameAdd.Text;
                 newChallengeRow["EventID"] = cmbEventID.Text;
                 newChallengeRow["StartTime"] = timePicker.Text;
                 newChallengeRow["Status"] = cmbStatusAdd.Text;
                 newChallengeRow["Capacity"] = numCapacity.Value;
                 newChallengeRow["EventName"] = cmbEventName.Text;
+                //add row
                 try
                 {
                     DM.dtChallenge.Rows.Add(newChallengeRow);
@@ -126,7 +128,9 @@ namespace ISCG6421Assignment1
                 {
                     Utilities.DBExceptionError();
                 }
+                //hide panel
                 pnlAdd.Visible = false;
+                //enable buttons
                 Utilities.ButtonsMagic(controls, true);
             }
         }
@@ -147,9 +151,8 @@ namespace ISCG6421Assignment1
         #region UpdateChallenge
         private void btnUpdateChallenge_Click(object sender, EventArgs e)
         {
-            //show correct panel
+            //show panel
             pnlUpdate.Visible = true;
-            pnlAdd.Visible = false;
 
             //disable not needed items
             Utilities.ButtonsMagic(controls, false);
@@ -165,20 +168,22 @@ namespace ISCG6421Assignment1
 
         private void btnChallengeUpdate_Click(object sender, EventArgs e)
         {
-            //ensures that no options are left blank and updates the relevant challenge
             DataRow UpdateChallengeRow = DM.dtChallenge.Rows[currencyManager.Position];
+            //check fields are filled
             if ((txtChallengeNameUpdate.Text == "") || (timePickerUpdate.Text == "") || (numCapacityUpdate.Value == 0))
             {
                 MessageBox.Show("You must fill out ALL fields!", "Error!");
             }
             else
             {
+                //assign values to update row
                 UpdateChallengeRow["ChallengeName"] = txtChallengeNameUpdate.Text;
                 UpdateChallengeRow["StartTime"] = timePickerUpdate.Text;
                 UpdateChallengeRow["Capacity"] = numCapacityUpdate.Value;
                 UpdateChallengeRow["Status"] = cmbStatusUpdate.Text;
                 UpdateChallengeRow["EventName"] = txtEventNameUpdate.Text;
                 currencyManager.EndCurrentEdit();
+                //update row
                 try
                 {
                     DM.UpdateChallenge();
@@ -214,14 +219,17 @@ namespace ISCG6421Assignment1
         {
             DataRow deleteChallengeRow = DM.dtChallenge.Rows[currencyManager.Position];
             DataRow[] entryRow = DM.dtEntry.Select("ChallengeID = " + txtChallengeID.Text);
+            //ensure that challenge has no entries
             if (entryRow.Length != 0)
             {
                 MessageBox.Show("You may only delete challenges that have no entries", "Error!");
             }
             else
             {
+                //check with user
                 if (MessageBox.Show("Are you sure to delete the selected record?\n\nIt is currently: " + txtChallengeName.Text, "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
+                    //delete row
                     try
                     {
                         deleteChallengeRow.Delete();
@@ -245,10 +253,12 @@ namespace ISCG6421Assignment1
         {
             //sets the selected challenge to "Finished" provided that the condidtions are met
             DataRow updateChallengeRow = DM.dtChallenge.Rows[currencyManager.Position];
+            //check current status
             if (txtStatus.Text == "Scheduled")
             {
                 updateChallengeRow["Status"] = "Finished";
                 currencyManager.EndCurrentEdit();
+                //update status
                 try
                 {
                     DM.UpdateChallenge();
@@ -269,10 +279,12 @@ namespace ISCG6421Assignment1
         {
             //sets the selected challenge to "Completed" provided that the condidtions are met
             DataRow updateChallengeRow = DM.dtChallenge.Rows[currencyManager.Position];
+            //check current status
             if (txtStatus.Text == "Finished")
             {
                 updateChallengeRow["Status"] = "Completed";
                 currencyManager.EndCurrentEdit();
+                //update status
                 try
                 {
                     DM.UpdateChallenge();

@@ -54,7 +54,7 @@ namespace ISCG6421Assignment1
         public static void selectDBFile()
         {
             OpenFileDialog DBFile = new OpenFileDialog(); // <-- create file dialog
-            DBFile.Filter = "Access files (*.mdb)|*.mdb"; // <-- set file filter
+            DBFile.Filter = "Access files (*.mdb)|*.mdb"; // <-- set file filter to '.mdb'
             DialogResult result = DBFile.ShowDialog();    // <-- user to choose file
             if (result == DialogResult.OK)
             {
@@ -87,7 +87,7 @@ namespace ISCG6421Assignment1
         /// <param name="fileString"></param>
         public static void writeCtnString(string fileString)
         {
-            File.WriteAllText("connection.txt", fileString); // <-- write the fileString to txt file
+            File.WriteAllText("connection.txt", fileString); // <-- write the fileString to 'connection.txt' file
         }
     }
 }

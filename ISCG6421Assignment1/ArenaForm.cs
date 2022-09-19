@@ -23,7 +23,7 @@ namespace ISCG6421Assignment1
             DM = dm;
             frmMenu = mnu;
             BindControls();
-            controls = new Button[] { btnNext, btnPrevious, btnAddArena, btnUpdateArena, btnDeleteArena, btnReturn };
+            controls = new Button[] { btnNext, btnPrevious, btnAddArena, btnUpdateArena, btnDeleteArena, btnReturn };   // <-- add controls to button array for passing to Utilities.ButtonsMagic
         }
 
         /// <summary>
@@ -73,21 +73,10 @@ namespace ISCG6421Assignment1
         /// this region holds the code for adding a new arena
         /// </summary>
         #region AddArena
-        private void btnAddCancel_Click(object sender, EventArgs e)
-        {
-            //hide panel for adding arena
-            pnlAdd.Visible = false;
-            pnlUpdate.Visible = false;
-
-            //enable needed items
-            Utilities.ButtonsMagic(controls, true);
-        }
-
         private void btnAddArena_Click(object sender, EventArgs e)
         {
-            //show panel for adding arena
+            //show panel
             pnlAdd.Visible = true;
-            pnlUpdate.Visible = false;
 
             //disable items not needed
             Utilities.ButtonsMagic(controls, false);
@@ -103,21 +92,23 @@ namespace ISCG6421Assignment1
 
         private void btnArenaSave_Click(object sender, EventArgs e)
         {
-            txtArenaID.Text = "";
+            txtArenaID.Text = "";   // <-- set arenaID to blank
             DataRow newArenaRow = DM.dtArena.NewRow();
 
+            //checking that all fields are filled
             if ((txtArenaNameAdd.Text == "") || (txtArenaAddressAdd.Text == "") || (txtArenaSuburbAdd.Text == "") || (txtArenaCityAdd.Text == "") || (txtArenaPhoneAdd.Text == ""))
             {
                 MessageBox.Show("You must fill out ALL fields!", "Error!");
             }
             else
             {
+                //assign values to new datarow
                 newArenaRow["ArenaName"] = txtArenaNameAdd.Text;
                 newArenaRow["StreetAddress"] = txtArenaAddressAdd.Text;
                 newArenaRow["Suburb"] = txtArenaSuburbAdd.Text;
                 newArenaRow["City"] = txtArenaCityAdd.Text;
                 newArenaRow["PhoneNumber"] = txtArenaPhoneAdd.Text;
-                MessageBox.Show("Arena added successfully", "Success");
+                //add row
                 try
                 {
                     DM.dtArena.Rows.Add(newArenaRow);
@@ -134,6 +125,16 @@ namespace ISCG6421Assignment1
                 Utilities.ButtonsMagic(controls, true);
             }
         }
+
+        private void btnAddCancel_Click(object sender, EventArgs e)
+        {
+            //hide panel for adding arena
+            pnlAdd.Visible = false;
+
+            //enable needed items
+            Utilities.ButtonsMagic(controls, true);
+        }
+
         #endregion
 
         /// <summary>
@@ -142,7 +143,7 @@ namespace ISCG6421Assignment1
         #region UpdateArena
         private void btnUpdateArena_Click(object sender, EventArgs e)
         {
-            pnlAdd.Visible = false;
+            //show panel
             pnlUpdate.Visible = true;
 
             //disable items not needed
@@ -159,18 +160,21 @@ namespace ISCG6421Assignment1
         private void btnArenaUpdate_Click(object sender, EventArgs e)
         {
             DataRow updateArenaRow = DM.dtArena.Rows[currencyManager.Position];
+            //check fields are filled out
             if ((txtArenaName.Text == "") || (txtArenaAddress.Text == "") || (txtArenaSuburb.Text == "") || (txtArenaCity.Text == "") || (txtArenaPhone.Text == ""))
             {
                 MessageBox.Show("You must fill out ALL fields!", "Error!");
             }
             else
             {
+                //assign values to update row
                 updateArenaRow["ArenaName"] = txtArenaName.Text;
                 updateArenaRow["StreetAddress"] = txtArenaAddress.Text;
                 updateArenaRow["Suburb"] = txtArenaSuburb.Text;
                 updateArenaRow["City"] = txtArenaCity.Text;
                 updateArenaRow["PhoneNumber"] = txtArenaPhone.Text;
                 currencyManager.EndCurrentEdit();
+                //update row
                 try
                 {
                     DM.UpdateArena();
@@ -197,6 +201,7 @@ namespace ISCG6421Assignment1
 
         private void btnUpdateCancel_Click(object sender, EventArgs e)
         {
+            //hide panel
             pnlUpdate.Visible = false;
 
             //enable needed items
@@ -219,14 +224,17 @@ namespace ISCG6421Assignment1
         {
             DataRow deleteArenaRow = DM.dtArena.Rows[currencyManager.Position];
             DataRow[] EventRow = DM.dtEvent.Select("ArenaID = " + txtArenaID.Text);
+            //ensure that arena has no events
             if (EventRow.Length != 0)
             {
                 MessageBox.Show("You may only delete arenas that are not assigned to Events", "Error");
             }
             else
             {
+                //check with user
                 if (MessageBox.Show("Are you sure you want to delete the selected record?\n\nIt is currently: " + txtArenaName.Text, "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
+                    //delete row
                     try
                     {
                         deleteArenaRow.Delete();
