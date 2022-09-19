@@ -79,6 +79,7 @@ namespace ISCG6421Assignment1
         }
         public void UpdateEntry()
         {
+            daCompReport.Update(dtCompReport);
             daEntry.Update(dtEntry);
         }
 
@@ -168,6 +169,26 @@ namespace ISCG6421Assignment1
                 MessageBox.Show("An unexpected error has been encountered.\n\nPlease select your database file", "Error");
                 Utilities.selectDBFile();
             }
+        }
+
+        /// <summary>
+        /// this method clears the competitor report dataset and then refills it from the data adapter
+        /// to ensure report is always up to date with changes made during runtime
+        /// </summary>
+        public void refreshCompReportDS()
+        {
+            dsCompReport.Clear();
+            daCompReport.Fill(dsCompReport);
+        }
+
+        /// <summary>
+        /// this method clears the event report dataset and then refills it from the data adapter
+        /// to ensure report is always up to date with changes made during runtime
+        /// </summary>
+        public void refreshEventReportDS()
+        {
+            dsEventReport.Clear();
+            daEventReport.Fill(dsEventReport);
         }
     }
 }

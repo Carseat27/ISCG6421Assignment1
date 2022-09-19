@@ -60,6 +60,12 @@ namespace ISCG6421Assignment1
             prvCompetitors.ShowDialog();
         }
 
+        private void CompetitorReportForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            prvCompetitors = null;
+            printCompetitors = null;
+        }
+
         private void printCompetitors_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             //prvCompetitors.Size = new System.Drawing.Size(420, 594);

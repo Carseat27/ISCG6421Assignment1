@@ -90,6 +90,7 @@ namespace ISCG6421Assignment1
             {
                 frmEventsReport = new EventsReportForm(DM, this);
             }
+            DM.refreshEventReportDS();  // <-- refresh dataset for report
             frmEventsReport.ShowDialog();
         }
 
@@ -99,6 +100,7 @@ namespace ISCG6421Assignment1
             {
                 frmCompetitorReport = new CompetitorReportForm(DM, this);
             }
+            DM.refreshCompReportDS();   // <-- refresh dataset for report
             frmCompetitorReport.ShowDialog();
         }
 
