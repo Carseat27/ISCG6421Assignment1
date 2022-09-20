@@ -277,7 +277,7 @@ namespace ISCG6421Assignment1
                     {
                         deleteArenaRow.Delete();
                         DM.UpdateArena();
-                        MessageBox.Show("Arena updated successfully", "Success");
+                        MessageBox.Show("Arena deleted successfully", "Success");
                     }
                     catch (Exception)
                     {

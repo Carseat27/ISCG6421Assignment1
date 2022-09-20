@@ -169,7 +169,7 @@ namespace ISCG6421Assignment1
                 {
                     if ((int)dr2["EventID"] == EventID) // <-- make sure all challenges have the same eventID
                     {
-                        if (dr2["ChallengeID"].ToString() != "")    // <-- check that the challengeID is not empty in the dataset so that 
+                        if (dr2["ChallengeID"] != DBNull.Value)    // <-- check that the challengeID is not empty in the dataset so that 
                         {
                             g.DrawString(dr2["ChallengeID"].ToString(),
                             headingFont, brush, leftMargin + headingLeftMargin, topMargin + (linesSoFarHeading * textFont.Height));
