@@ -169,13 +169,22 @@ namespace ISCG6421Assignment1
                 {
                     if ((int)dr2["EventID"] == EventID) // <-- make sure all challenges have the same eventID
                     {
-                        g.DrawString(dr2["ChallengeID"].ToString(),
+                        if (dr2["ChallengeID"].ToString() != "")    // <-- check that the challengeID is not empty in the dataset so that 
+                        {
+                            g.DrawString(dr2["ChallengeID"].ToString(),
                             headingFont, brush, leftMargin + headingLeftMargin, topMargin + (linesSoFarHeading * textFont.Height));
-                        g.DrawString(dr2["ChallengeName"].ToString().PadLeft(50),
-                            headingFont, brush, leftMargin + headingLeftMargin, topMargin + (linesSoFarHeading * textFont.Height));
-                        g.DrawString((dr2["StartTime"].ToString().Split(' ')[1] + " " + dr2["StartTime"].ToString().Split(' ')[2]).PadLeft(100),
-                            headingFont, brush, leftMargin + headingLeftMargin, topMargin + (linesSoFarHeading * textFont.Height));
-                        linesSoFarHeading++;
+                            g.DrawString(dr2["ChallengeName"].ToString().PadLeft(50),
+                                headingFont, brush, leftMargin + headingLeftMargin, topMargin + (linesSoFarHeading * textFont.Height));
+                            Console.WriteLine(dr2["StartTime"].ToString());
+                            g.DrawString((dr2["StartTime"].ToString().Split(' ')[1] + " " + dr2["StartTime"].ToString().Split(' ')[2]).PadLeft(100),
+                                headingFont, brush, leftMargin + headingLeftMargin, topMargin + (linesSoFarHeading * textFont.Height));
+                            linesSoFarHeading++;
+                        }
+                        else
+                        {
+                            g.DrawString("This event has no challenges scheduled.",
+                                headingFont, brush, leftMargin + headingLeftMargin, topMargin + (linesSoFarHeading * textFont.Height));
+                        }
                     }
                 }
 

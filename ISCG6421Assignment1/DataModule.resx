@@ -388,7 +388,7 @@ ORDER BY ENTRY.CompetitorID, ENTRY.ChallengeID</value>
   <data name="oleDbSelectCommand7.CommandText" xml:space="preserve">
     <value>SELECT        EVENT.EventID, EVENT.EventName, EVENT.EventDate, ARENA.ArenaName, ARENA.StreetAddress, ARENA.Suburb, ARENA.City, CHALLENGE.ChallengeID, CHALLENGE.ChallengeName, CHALLENGE.StartTime
 FROM            ((EVENT INNER JOIN
-                         ARENA ON EVENT.ArenaID = ARENA.ArenaID) INNER JOIN
+                         ARENA ON EVENT.ArenaID = ARENA.ArenaID) LEFT OUTER JOIN
                          CHALLENGE ON EVENT.EventID = CHALLENGE.EventID)
 ORDER BY EVENT.EventID, CHALLENGE.ChallengeID</value>
   </data>
