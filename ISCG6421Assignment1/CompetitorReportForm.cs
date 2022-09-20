@@ -26,8 +26,8 @@ namespace ISCG6421Assignment1
         private int amountOfReportsPrinted, pagesAmountExpected;
         private DataRow[] reportsForPrint;
         private int compDataRowTracker;
-        private ArrayList compDataRowList = new ArrayList();
-        private ArrayList IDRun = new ArrayList(); // <-- holds the id of competitors that have already been run, so that they do not duplicate
+        private ArrayList compDataRowList;
+        private ArrayList IDRun; // <-- holds the id of competitors that have already been run, so that they do not duplicate
         public CompetitorReportForm(DataModule dm, MainForm mnu)
         {
             DM = dm;
@@ -48,6 +48,9 @@ namespace ISCG6421Assignment1
         /// </summary>
         private void btnPrintReport_Click(object sender, EventArgs e)
         {
+            compDataRowList = new ArrayList();
+            IDRun = new ArrayList();
+
             amountOfReportsPrinted = 0;                         // <-- set to zero
             string strFilter = "ChallengeID = ChallengeID";
             string strSort = "CompetitorID, ChallengeID";
@@ -78,7 +81,7 @@ namespace ISCG6421Assignment1
             printCompetitors.DefaultPageSettings.PaperSize = new PaperSize("210 x 297 mm", 800, 800); // <-- set page size to A4
 
             //define the used datarow in the datarow list using the tracker
-            DataRow dr = (DataRow)this.compDataRowList[compDataRowTracker];
+            DataRow dr = (DataRow)compDataRowList[compDataRowTracker];
 
             //set fonts
             Graphics g = e.Graphics;

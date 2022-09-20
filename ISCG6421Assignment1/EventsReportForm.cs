@@ -25,8 +25,8 @@ namespace ISCG6421Assignment1
         private int amountOfReportsPrinted, pagesAmountExpected;
         private DataRow[] reportsForPrint;
         private int eventInfoTracker;
-        private ArrayList eventInfo = new ArrayList();
-        private ArrayList IDRun = new ArrayList(); // <-- holds the id of competitors that have already been run, so that they do not duplicate
+        private ArrayList eventInfo;
+        private ArrayList IDRun; // <-- holds the id of competitors that have already been run, so that they do not duplicate
         public EventsReportForm(DataModule dm, MainForm mnu)
         {
             DM = dm;
@@ -47,6 +47,9 @@ namespace ISCG6421Assignment1
         /// </summary>
         private void btnPrintReport_Click(object sender, EventArgs e)
         {
+            eventInfo = new ArrayList();
+            IDRun = new ArrayList();
+
             amountOfReportsPrinted = 0;                     // <-- set to zero
             string strFilter = "EventID = EventID";
             string strSort = "EventID, ChallengeID";
