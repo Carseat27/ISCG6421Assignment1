@@ -87,6 +87,8 @@
             this.lblCompetitorFNameUpdate = new System.Windows.Forms.Label();
             this.lblCompetitorUsernameUpdate = new System.Windows.Forms.Label();
             this.toolTipCompetitor = new System.Windows.Forms.ToolTip(this.components);
+            this.lblEmailRequired = new System.Windows.Forms.Label();
+            this.lblEmailRequired2 = new System.Windows.Forms.Label();
             this.pnlAdd.SuspendLayout();
             this.pnlUpdate.SuspendLayout();
             this.SuspendLayout();
@@ -345,7 +347,7 @@
             this.txtCompetitorDoB.Location = new System.Drawing.Point(448, 244);
             this.txtCompetitorDoB.Margin = new System.Windows.Forms.Padding(4);
             this.txtCompetitorDoB.Name = "txtCompetitorDoB";
-            this.txtCompetitorDoB.Size = new System.Drawing.Size(96, 23);
+            this.txtCompetitorDoB.Size = new System.Drawing.Size(73, 23);
             this.txtCompetitorDoB.TabIndex = 41;
             this.txtCompetitorDoB.Text = "DoB";
             // 
@@ -363,6 +365,7 @@
             // 
             // pnlAdd
             // 
+            this.pnlAdd.Controls.Add(this.lblEmailRequired);
             this.pnlAdd.Controls.Add(this.radCompetitorOtherAdd);
             this.pnlAdd.Controls.Add(this.radCompetitorMaleAdd);
             this.pnlAdd.Controls.Add(this.radCompetitorFemaleAdd);
@@ -380,7 +383,7 @@
             this.pnlAdd.Controls.Add(this.lblCompetitorLNameAdd);
             this.pnlAdd.Controls.Add(this.lblCompetitorFNameAdd);
             this.pnlAdd.Controls.Add(this.lblCompetitorUserNameAdd);
-            this.pnlAdd.Location = new System.Drawing.Point(60, 25);
+            this.pnlAdd.Location = new System.Drawing.Point(60, 27);
             this.pnlAdd.Margin = new System.Windows.Forms.Padding(4);
             this.pnlAdd.Name = "pnlAdd";
             this.pnlAdd.Size = new System.Drawing.Size(684, 341);
@@ -448,7 +451,7 @@
             this.lblCompetitorEmailAdd.AutoSize = true;
             this.lblCompetitorEmailAdd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCompetitorEmailAdd.ForeColor = System.Drawing.Color.White;
-            this.lblCompetitorEmailAdd.Location = new System.Drawing.Point(289, 257);
+            this.lblCompetitorEmailAdd.Location = new System.Drawing.Point(275, 257);
             this.lblCompetitorEmailAdd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompetitorEmailAdd.Name = "lblCompetitorEmailAdd";
             this.lblCompetitorEmailAdd.Size = new System.Drawing.Size(47, 17);
@@ -546,7 +549,7 @@
             this.lblCompetitorDoBAdd.AutoSize = true;
             this.lblCompetitorDoBAdd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCompetitorDoBAdd.ForeColor = System.Drawing.Color.White;
-            this.lblCompetitorDoBAdd.Location = new System.Drawing.Point(227, 219);
+            this.lblCompetitorDoBAdd.Location = new System.Drawing.Point(231, 219);
             this.lblCompetitorDoBAdd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompetitorDoBAdd.Name = "lblCompetitorDoBAdd";
             this.lblCompetitorDoBAdd.Size = new System.Drawing.Size(92, 17);
@@ -608,6 +611,7 @@
             // 
             // pnlUpdate
             // 
+            this.pnlUpdate.Controls.Add(this.lblEmailRequired2);
             this.pnlUpdate.Controls.Add(this.radCompetitorOtherUpdate);
             this.pnlUpdate.Controls.Add(this.radCompetitorMaleUpdate);
             this.pnlUpdate.Controls.Add(this.radCompetitorFemaleUpdate);
@@ -851,6 +855,32 @@
             this.lblCompetitorUsernameUpdate.Text = "Username:";
             this.lblCompetitorUsernameUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // lblEmailRequired
+            // 
+            this.lblEmailRequired.AutoSize = true;
+            this.lblEmailRequired.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmailRequired.ForeColor = System.Drawing.Color.White;
+            this.lblEmailRequired.Location = new System.Drawing.Point(351, 279);
+            this.lblEmailRequired.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEmailRequired.Name = "lblEmailRequired";
+            this.lblEmailRequired.Size = new System.Drawing.Size(229, 16);
+            this.lblEmailRequired.TabIndex = 39;
+            this.lblEmailRequired.Text = "*email is not required, but recommended";
+            this.lblEmailRequired.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblEmailRequired2
+            // 
+            this.lblEmailRequired2.AutoSize = true;
+            this.lblEmailRequired2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmailRequired2.ForeColor = System.Drawing.Color.White;
+            this.lblEmailRequired2.Location = new System.Drawing.Point(370, 267);
+            this.lblEmailRequired2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEmailRequired2.Name = "lblEmailRequired2";
+            this.lblEmailRequired2.Size = new System.Drawing.Size(229, 16);
+            this.lblEmailRequired2.TabIndex = 40;
+            this.lblEmailRequired2.Text = "*email is not required, but recommended";
+            this.lblEmailRequired2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // CompetitorForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -957,5 +987,7 @@
         private System.Windows.Forms.Label lblCompetitorFNameUpdate;
         private System.Windows.Forms.Label lblCompetitorUsernameUpdate;
         private System.Windows.Forms.ToolTip toolTipCompetitor;
+        private System.Windows.Forms.Label lblEmailRequired;
+        private System.Windows.Forms.Label lblEmailRequired2;
     }
 }

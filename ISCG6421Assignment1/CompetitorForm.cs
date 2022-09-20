@@ -113,7 +113,7 @@ namespace ISCG6421Assignment1
             DataRow newCompetitorRow = DM.dtCompetitor.NewRow();
 
             //check all fields are filled
-            if ( (txtCompetitorUsernameAdd.Text == "") || (txtCompetitorFNameAdd.Text == "") || (txtCompetitorLNameAdd.Text == "") || (txtCompetitorEmailAdd.Text == ""))
+            if ( (txtCompetitorUsernameAdd.Text == "") || (txtCompetitorFNameAdd.Text == "") || (txtCompetitorLNameAdd.Text == ""))
             {
                 MessageBox.Show("You must fill out ALL fields!", "Error!");
             }
@@ -123,9 +123,12 @@ namespace ISCG6421Assignment1
                 MessageBox.Show("You must select a gender!", "Error!");
             }
             //check email is an email
-            else if (!Utilities.EmailCheck(txtCompetitorEmailAdd.Text))
+            else if (txtCompetitorEmailAdd.Text != null)
             {
-                MessageBox.Show("Invalid email address!", "Error!");
+                if (!Utilities.EmailCheck(txtCompetitorEmailAdd.Text))
+                {
+                    MessageBox.Show("Invalid email address!", "Error!");
+                }
             }
             else
             {
@@ -215,7 +218,7 @@ namespace ISCG6421Assignment1
             DataRow UpdateCompetitorRow = DM.dtCompetitor.Rows[currencyManager.Position];
 
             //check fields are filled
-            if ((txtCompetitorUsernameUpdate.Text == "") || (txtCompetitorFNameUpdate.Text == "") || (txtCompetitorLNameUpdate.Text == "") || (txtCompetitorEmailUpdate.Text == ""))
+            if ((txtCompetitorUsernameUpdate.Text == "") || (txtCompetitorFNameUpdate.Text == "") || (txtCompetitorLNameUpdate.Text == ""))
             {
                 MessageBox.Show("You must fill out ALL fields!", "Error!");
             }
@@ -225,9 +228,12 @@ namespace ISCG6421Assignment1
                 MessageBox.Show("You must select a gender!", "Error!");
             }
             //check email is email
-            else if (!Utilities.EmailCheck(txtCompetitorEmailUpdate.Text))
+            else if (txtCompetitorEmailUpdate.Text != null)
             {
-                MessageBox.Show("Invalid email address!", "Error!");
+                if (!Utilities.EmailCheck(txtCompetitorEmailUpdate.Text))
+                {
+                    MessageBox.Show("Invalid email address!", "Error!");
+                }
             }
             else
             {

@@ -417,6 +417,11 @@ namespace ISCG6421Assignment1
             // 
             this.numCapacity.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numCapacity.Location = new System.Drawing.Point(364, 221);
+            this.numCapacity.Maximum = new decimal(new int[] {
+            39,
+            0,
+            0,
+            0});
             this.numCapacity.Name = "numCapacity";
             this.numCapacity.Size = new System.Drawing.Size(120, 23);
             this.numCapacity.TabIndex = 37;
@@ -616,6 +621,11 @@ namespace ISCG6421Assignment1
             // 
             this.numCapacityUpdate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numCapacityUpdate.Location = new System.Drawing.Point(338, 225);
+            this.numCapacityUpdate.Maximum = new decimal(new int[] {
+            39,
+            0,
+            0,
+            0});
             this.numCapacityUpdate.Name = "numCapacityUpdate";
             this.numCapacityUpdate.Size = new System.Drawing.Size(120, 23);
             this.numCapacityUpdate.TabIndex = 44;

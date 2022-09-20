@@ -138,29 +138,39 @@ namespace ISCG6421Assignment1
         {
             int competitorID = Convert.ToInt32(dgvEntry["CompetitorID", cmCE.Position].Value);
             int challengeID = Convert.ToInt32(dgvEntry["ChallengeID", cmCE.Position].Value);
-            try
+
+            //check if challenge is scheduled, not completed or finished
+            if (DM.dtChallenge.Rows[cmChallenge.Position]["Status"].ToString() == "Scheduled")
             {
-                DataRow deleteEntryRow = DM.dtEntry.Select("CompetitorID = " + competitorID + " AND ChallengeID = " + challengeID)[0];
-                //check with user
-                if (MessageBox.Show("Are you sure to delete the selected record?", "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                try
                 {
-                    //delete entry
-                    try
+                    DataRow deleteEntryRow = DM.dtEntry.Select("CompetitorID = " + competitorID + " AND ChallengeID = " + challengeID)[0];
+                    //check with user
+                    if (MessageBox.Show("Are you sure to delete the selected record?", "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
                     {
-                        deleteEntryRow.Delete();
-                        DM.UpdateEntry();
-                        MessageBox.Show("Entry deleted successfully", "Success");
-                    }
-                    catch (Exception)
-                    {
-                        Utilities.DBExceptionError();
+                        //delete entry
+                        try
+                        {
+                            deleteEntryRow.Delete();
+                            DM.UpdateEntry();
+                            MessageBox.Show("Entry deleted successfully", "Success");
+                        }
+                        catch (Exception)
+                        {
+                            Utilities.DBExceptionError();
+                        }
                     }
                 }
+                catch (Exception)
+                {
+                    MessageBox.Show("Unexpected Error\n\nTry Again", "Error");
+                }
             }
-            catch (Exception)
+            else
             {
-                MessageBox.Show("Unexpected Error\n\nTry Again", "Error");
+                MessageBox.Show("Competitors can only be removed from scheduled challenges", "Error");
             }
+            
             
         }
         #endregion
