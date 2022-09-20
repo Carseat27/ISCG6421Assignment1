@@ -81,11 +81,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsNZESL.xsd</DependentUpon>
     </Compile>
-    <Compile Include="EntryForm.cs">
+    <Compile Include="CompetitiorChallengeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EntryForm.Designer.cs">
-      <DependentUpon>EntryForm.cs</DependentUpon>
+    <Compile Include="CompetitiorChallengeForm.Designer.cs">
+      <DependentUpon>CompetitiorChallengeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="CompetitorForm.cs">
       <SubType>Form</SubType>
@@ -132,8 +132,8 @@
     <EmbeddedResource Include="ChallengeForm.resx">
       <DependentUpon>ChallengeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EntryForm.resx">
-      <DependentUpon>EntryForm.cs</DependentUpon>
+    <EmbeddedResource Include="CompetitiorChallengeForm.resx">
+      <DependentUpon>CompetitiorChallengeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CompetitorForm.resx">
       <DependentUpon>CompetitorForm.cs</DependentUpon>

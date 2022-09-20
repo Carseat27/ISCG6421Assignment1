@@ -16,7 +16,7 @@ using System.Windows.Forms;
 /// </summary>
 namespace ISCG6421Assignment1
 {
-    public partial class EntryForm : Form
+    public partial class CompetitiorChallengeForm : Form
     {
         private DataModule DM;
         private MainForm frmMenu;
@@ -26,7 +26,7 @@ namespace ISCG6421Assignment1
         private CurrencyManager cmCE;
         private DataTable dt = new DataTable();
         private CurrencyManager cmDt;
-        public EntryForm(DataModule dm, MainForm mnu)
+        public CompetitiorChallengeForm(DataModule dm, MainForm mnu)
         {
             InitializeComponent();
             DM = dm;

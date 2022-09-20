@@ -124,7 +124,9 @@
     <value>Add Entry:
 Select the desired competitor from the top-left table
 and the challenge you wish to enter them into from the
-bottom-left table, then click "Add Entry".
+bottom-left table, then click "Add Entry". Entries will set as
+'Scheduled', and need to be confirmed or disqualified in the
+entry maintenance form
 
 Remove Entry:
 Select the challenge from which you want to remove 
