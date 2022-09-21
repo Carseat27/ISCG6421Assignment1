@@ -175,7 +175,6 @@ namespace ISCG6421Assignment1
                             headingFont, brush, leftMargin + headingLeftMargin, topMargin + (linesSoFarHeading * textFont.Height));
                             g.DrawString(dr2["ChallengeName"].ToString().PadLeft(50),
                                 headingFont, brush, leftMargin + headingLeftMargin, topMargin + (linesSoFarHeading * textFont.Height));
-                            Console.WriteLine(dr2["StartTime"].ToString());
                             g.DrawString((dr2["StartTime"].ToString().Split(' ')[1] + " " + dr2["StartTime"].ToString().Split(' ')[2]).PadLeft(100),
                                 headingFont, brush, leftMargin + headingLeftMargin, topMargin + (linesSoFarHeading * textFont.Height));
                             linesSoFarHeading++;

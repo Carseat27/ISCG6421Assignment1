@@ -157,8 +157,6 @@ namespace ISCG6421Assignment1
 
                 g.DrawString("Entries: ",
                     headingFont, brush, leftMargin + headingLeftMargin, topMargin + (linesSoFarHeading * textFont.Height));
-                g.DrawString("_______",
-                    headingFont, brush, leftMargin + headingLeftMargin, topMargin + (linesSoFarHeading * textFont.Height));
                 linesSoFarHeading++;
                 linesSoFarHeading++;
 
