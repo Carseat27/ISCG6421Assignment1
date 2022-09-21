@@ -8,6 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/// <summary>
+/// this class runs the entry maintenance form.
+/// From here, the user can filter the entrys by challenges, and change the status of an entry
+/// Author: Carson Loveday
+/// Date Finished: 22/09/2022
+/// 
 namespace ISCG6421Assignment1
 {
     public partial class EntryForm : Form
@@ -25,6 +31,9 @@ namespace ISCG6421Assignment1
             BindControls();
         }
 
+        /// <summary>
+        /// this method binds the entry maintenance controls
+        /// </summary>
         private void BindControls()
         {
             lstChallenges.DataSource = DM.dsNZESL;
@@ -46,12 +55,22 @@ namespace ISCG6421Assignment1
             cmEntry = (CurrencyManager)this.BindingContext[DM.dsNZESL, "Entry"];
         }
 
+        /// <summary>
+        /// this region holds the code for the basic controls
+        /// </summary>
         #region basicPageControls
+
+        /// <summary>
+        /// close the form
+        /// </summary>
         private void btnReturn_Click(object sender, EventArgs e)
         {
             Close();
         }
 
+        /// <summary>
+        /// move the cm position back one
+        /// </summary>
         private void btnPreviousChallenge_Click(object sender, EventArgs e)
         {
             if (cmChallenge.Position > 0)
@@ -60,6 +79,9 @@ namespace ISCG6421Assignment1
             }
         }
 
+        /// <summary>
+        /// move the cm position forward one
+        /// </summary>
         private void btnNextChallenge_Click(object sender, EventArgs e)
         {
             if (cmChallenge.Position < cmChallenge.Count - 1)
@@ -68,6 +90,9 @@ namespace ISCG6421Assignment1
             }
         }
 
+        /// <summary>
+        /// move the cm position back one
+        /// </summary>
         private void btnPreviousCompetitor_Click(object sender, EventArgs e)
         {
             if (cmCompetitor.Position > 0)
@@ -76,6 +101,9 @@ namespace ISCG6421Assignment1
             }
         }
 
+        /// <summary>
+        /// move the cm position forward one
+        /// </summary>
         private void btnNextCompetitor_Click(object sender, EventArgs e)
         {
             if (cmCompetitor.Position < cmCompetitor.Count - 1)
@@ -85,6 +113,9 @@ namespace ISCG6421Assignment1
         }
         #endregion
 
+        /// <summary>
+        /// mark an entry as confirmed
+        /// </summary>
         private void btnEntryConfirm_Click(object sender, EventArgs e)
         {
             //get the correct row for the selection
@@ -114,6 +145,9 @@ namespace ISCG6421Assignment1
             }
         }
 
+        /// <summary>
+        /// mark an entry as disqualified
+        /// </summary>
         private void btnMarkDSQ_Click(object sender, EventArgs e)
         {
             //get the correct row for the selection
