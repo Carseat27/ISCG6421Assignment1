@@ -77,6 +77,7 @@
             this.prvCompetitors.Enabled = true;
             this.prvCompetitors.Icon = ((System.Drawing.Icon)(resources.GetObject("prvCompetitors.Icon")));
             this.prvCompetitors.Name = "prvCompetitors";
+            this.prvCompetitors.ShowIcon = false;
             this.prvCompetitors.Visible = false;
             // 
             // CompetitorReportForm

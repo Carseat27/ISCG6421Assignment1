@@ -76,6 +76,7 @@
             this.prvEvents.Enabled = true;
             this.prvEvents.Icon = ((System.Drawing.Icon)(resources.GetObject("prvEvents.Icon")));
             this.prvEvents.Name = "prvEvents";
+            this.prvEvents.ShowIcon = false;
             this.prvEvents.Visible = false;
             // 
             // EventsReportForm
