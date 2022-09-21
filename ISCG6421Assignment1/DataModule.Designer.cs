@@ -294,7 +294,7 @@
             // 
             // oleDbSelectCommand4
             // 
-            this.oleDbSelectCommand4.CommandText = "SELECT ENTRY.*\r\nFROM     ENTRY";
+            this.oleDbSelectCommand4.CommandText = resources.GetString("oleDbSelectCommand4.CommandText");
             this.oleDbSelectCommand4.Connection = this.ctnNZESL;
             // 
             // oleDbInsertCommand4

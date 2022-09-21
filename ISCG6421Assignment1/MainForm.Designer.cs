@@ -42,6 +42,7 @@
             this.btnCompetitorReport = new System.Windows.Forms.Button();
             this.btnEventsReport = new System.Windows.Forms.Button();
             this.toolTipMenu = new System.Windows.Forms.ToolTip(this.components);
+            this.btnEntryMaintenance = new System.Windows.Forms.Button();
             this.grpMaintenance.SuspendLayout();
             this.grpReporting.SuspendLayout();
             this.SuspendLayout();
@@ -50,6 +51,7 @@
             // 
             this.grpMaintenance.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.grpMaintenance.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.grpMaintenance.Controls.Add(this.btnEntryMaintenance);
             this.grpMaintenance.Controls.Add(this.btnEnterCompetitorChallenge);
             this.grpMaintenance.Controls.Add(this.btnCompetitorMaintence);
             this.grpMaintenance.Controls.Add(this.btnChallengeMaintenance);
@@ -195,6 +197,19 @@
             this.btnEventsReport.UseVisualStyleBackColor = false;
             this.btnEventsReport.Click += new System.EventHandler(this.btnEventsReport_Click);
             // 
+            // btnEntryMaintenance
+            // 
+            this.btnEntryMaintenance.BackColor = System.Drawing.SystemColors.Control;
+            this.btnEntryMaintenance.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEntryMaintenance.Location = new System.Drawing.Point(30, 213);
+            this.btnEntryMaintenance.Name = "btnEntryMaintenance";
+            this.btnEntryMaintenance.Size = new System.Drawing.Size(268, 39);
+            this.btnEntryMaintenance.TabIndex = 5;
+            this.btnEntryMaintenance.Text = "Entry Maintenance";
+            this.toolTipMenu.SetToolTip(this.btnEntryMaintenance, "Click to me add, update, or delete Competitors");
+            this.btnEntryMaintenance.UseVisualStyleBackColor = false;
+            this.btnEntryMaintenance.Click += new System.EventHandler(this.btnEntryMaintenance_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -231,6 +246,7 @@
         private System.Windows.Forms.Button btnCompetitorReport;
         private System.Windows.Forms.Button btbDbConnect;
         private System.Windows.Forms.ToolTip toolTipMenu;
+        private System.Windows.Forms.Button btnEntryMaintenance;
     }
 }
 

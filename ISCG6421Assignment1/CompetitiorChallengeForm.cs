@@ -54,6 +54,12 @@ namespace ISCG6421Assignment1
 
             dgvEntry.DataSource = DM.dsNZESL;
             dgvEntry.DataMember = "Challenge.Challenge_Entry";
+            dgvEntry.AutoGenerateColumns = false;
+
+            //remove not-needed columns
+            dgvEntry.Columns.Remove("FirstName");
+            dgvEntry.Columns.Remove("LastName");
+            dgvEntry.Columns.Remove("UserName");
 
             txtEventName.DataBindings.Add("Text", DM.dsNZESL, "Challenge.EventName");
             txtEventStatus.DataBindings.Add("Text", DM.dsNZESL, "Challenge.EventStatus");
@@ -62,6 +68,7 @@ namespace ISCG6421Assignment1
             //noticed that it sometimes caused an error, hence the try-catch
             try
             {
+                //resize collumns
                 dgvCompetitor.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dgvChallenge.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dgvEntry.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;

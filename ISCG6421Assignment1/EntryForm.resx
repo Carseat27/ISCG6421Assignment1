@@ -117,10 +117,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="toolTipChallenge.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="toolTipEntry.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="toolTipChallenge.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
+  <data name="lblHelp.ToolTip" xml:space="preserve">
+    <value>First, select a challenge from the left box. The
+entries for that challenge will be displayed.
+
+Next, select a competitor from the right box.
+The entry's username, first name, last name,
+and status will be displayed.
+
+Finally, click either "Confirm" or "Disqualify"
+to confirm or disqualify the entry.</value>
+  </data>
 </root>

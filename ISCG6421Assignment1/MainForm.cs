@@ -25,7 +25,8 @@ namespace ISCG6421Assignment1
         private EventForm frmEvent;
         private ChallengeForm frmChallenge;
         private CompetitorForm frmCompetitor;
-        private CompetitiorChallengeForm frmEntry;
+        private EntryForm frmEntry;
+        private CompetitiorChallengeForm frmCompetitorChallenge;
         private EventsReportForm frmEventsReport;
         private CompetitorReportForm frmCompetitorReport;
 
@@ -49,6 +50,7 @@ namespace ISCG6421Assignment1
             {
                 frmArena = new ArenaForm(DM, this);
             }
+            DM.refeshMainDS();          // <-- refresh main dataset
             frmArena.ShowDialog();
         }
 
@@ -61,6 +63,7 @@ namespace ISCG6421Assignment1
             {
                 frmEvent = new EventForm(DM, this);
             }
+            DM.refeshMainDS();          // <-- refresh main dataset;
             frmEvent.ShowDialog();
         }
 
@@ -73,6 +76,7 @@ namespace ISCG6421Assignment1
             {
                 frmChallenge = new ChallengeForm(DM, this);
             }
+            DM.refeshMainDS();          // <-- refresh main dataset
             frmChallenge.ShowDialog();
         }
 
@@ -85,7 +89,22 @@ namespace ISCG6421Assignment1
             {
                 frmCompetitor = new CompetitorForm(DM, this);
             }
+            DM.refeshMainDS();          // <-- refresh main dataset
             frmCompetitor.ShowDialog();
+        }
+        /// <summary>
+        /// button to open the entry maintenance form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnEntryMaintenance_Click(object sender, EventArgs e)
+        {
+            if(frmEntry == null)
+            {
+                frmEntry = new EntryForm(DM, this);
+            }
+            DM.refeshMainDS();          // <-- refresh main dataset
+            frmEntry.ShowDialog();
         }
 
         /// <summary>
@@ -93,11 +112,12 @@ namespace ISCG6421Assignment1
         /// </summary>
         private void btnEnterCompetitorChallenge_Click(object sender, EventArgs e)
         {
-            if(frmEntry == null)
+            if(frmCompetitorChallenge == null)
             {
-                frmEntry = new CompetitiorChallengeForm(DM, this);
+                frmCompetitorChallenge = new CompetitiorChallengeForm(DM, this);
             }
-            frmEntry.ShowDialog();
+            DM.refeshMainDS();          // <-- refresh main dataset
+            frmCompetitorChallenge.ShowDialog();
         }
 
         /// <summary>
@@ -109,6 +129,7 @@ namespace ISCG6421Assignment1
             {
                 frmEventsReport = new EventsReportForm(DM, this);
             }
+            DM.refeshMainDS();          // <-- refresh main dataset
             DM.refreshEventReportDS();  // <-- refresh dataset for report
             frmEventsReport.ShowDialog();
         }
@@ -122,6 +143,7 @@ namespace ISCG6421Assignment1
             {
                 frmCompetitorReport = new CompetitorReportForm(DM, this);
             }
+            DM.refeshMainDS();          // <-- refresh main dataset
             DM.refreshCompReportDS();   // <-- refresh dataset for report
             frmCompetitorReport.ShowDialog();
         }

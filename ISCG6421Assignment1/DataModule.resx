@@ -269,6 +269,12 @@ FROM            (CHALLENGE INNER JOIN
   <metadata name="oleDbSelectCommand4.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
+  <data name="oleDbSelectCommand4.CommandText" xml:space="preserve">
+    <value>SELECT        ENTRY.ChallengeID, ENTRY.CompetitorID, ENTRY.Status, COMPETITOR.UserName, COMPETITOR.FirstName, COMPETITOR.LastName
+FROM            (ENTRY INNER JOIN
+                         COMPETITOR ON ENTRY.CompetitorID = COMPETITOR.CompetitorID)
+ORDER BY ENTRY.ChallengeID, ENTRY.CompetitorID</value>
+  </data>
   <metadata name="oleDbInsertCommand4.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>

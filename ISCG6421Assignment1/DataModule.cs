@@ -236,5 +236,15 @@ namespace ISCG6421Assignment1
             dsEventReport.Clear();
             daEventReport.Fill(dsEventReport);
         }
+
+        public void refeshMainDS()
+        {
+            dsNZESL.Clear();
+            daArena.Fill(dsNZESL);
+            daChallenge.Fill(dsNZESL);
+            daCompetitor.Fill(dsNZESL);
+            daEntry.Fill(dsNZESL);
+            daEvent.Fill(dsNZESL);
+        }
     }
 }
