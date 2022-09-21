@@ -51,6 +51,8 @@
             this.txtCompetitorDoB = new System.Windows.Forms.TextBox();
             this.txtCompetitorEmail = new System.Windows.Forms.TextBox();
             this.pnlAdd = new System.Windows.Forms.Panel();
+            this.lblEmailInvalidAdd = new System.Windows.Forms.Label();
+            this.lblEmailRequired = new System.Windows.Forms.Label();
             this.radCompetitorOtherAdd = new System.Windows.Forms.RadioButton();
             this.radCompetitorMaleAdd = new System.Windows.Forms.RadioButton();
             this.radCompetitorFemaleAdd = new System.Windows.Forms.RadioButton();
@@ -69,6 +71,8 @@
             this.lblCompetitorFNameAdd = new System.Windows.Forms.Label();
             this.lblCompetitorUserNameAdd = new System.Windows.Forms.Label();
             this.pnlUpdate = new System.Windows.Forms.Panel();
+            this.lblEmailInvalidUpdate = new System.Windows.Forms.Label();
+            this.lblEmailRequired2 = new System.Windows.Forms.Label();
             this.radCompetitorOtherUpdate = new System.Windows.Forms.RadioButton();
             this.radCompetitorMaleUpdate = new System.Windows.Forms.RadioButton();
             this.radCompetitorFemaleUpdate = new System.Windows.Forms.RadioButton();
@@ -87,8 +91,6 @@
             this.lblCompetitorFNameUpdate = new System.Windows.Forms.Label();
             this.lblCompetitorUsernameUpdate = new System.Windows.Forms.Label();
             this.toolTipCompetitor = new System.Windows.Forms.ToolTip(this.components);
-            this.lblEmailRequired = new System.Windows.Forms.Label();
-            this.lblEmailRequired2 = new System.Windows.Forms.Label();
             this.pnlAdd.SuspendLayout();
             this.pnlUpdate.SuspendLayout();
             this.SuspendLayout();
@@ -365,6 +367,7 @@
             // 
             // pnlAdd
             // 
+            this.pnlAdd.Controls.Add(this.lblEmailInvalidAdd);
             this.pnlAdd.Controls.Add(this.lblEmailRequired);
             this.pnlAdd.Controls.Add(this.radCompetitorOtherAdd);
             this.pnlAdd.Controls.Add(this.radCompetitorMaleAdd);
@@ -389,6 +392,34 @@
             this.pnlAdd.Size = new System.Drawing.Size(684, 341);
             this.pnlAdd.TabIndex = 43;
             this.pnlAdd.Visible = false;
+            // 
+            // lblEmailInvalidAdd
+            // 
+            this.lblEmailInvalidAdd.AutoSize = true;
+            this.lblEmailInvalidAdd.BackColor = System.Drawing.Color.SteelBlue;
+            this.lblEmailInvalidAdd.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmailInvalidAdd.ForeColor = System.Drawing.Color.Snow;
+            this.lblEmailInvalidAdd.Location = new System.Drawing.Point(64, 164);
+            this.lblEmailInvalidAdd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEmailInvalidAdd.Name = "lblEmailInvalidAdd";
+            this.lblEmailInvalidAdd.Size = new System.Drawing.Size(107, 17);
+            this.lblEmailInvalidAdd.TabIndex = 40;
+            this.lblEmailInvalidAdd.Text = "*email is invalid*";
+            this.lblEmailInvalidAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblEmailInvalidAdd.Visible = false;
+            // 
+            // lblEmailRequired
+            // 
+            this.lblEmailRequired.AutoSize = true;
+            this.lblEmailRequired.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmailRequired.ForeColor = System.Drawing.Color.White;
+            this.lblEmailRequired.Location = new System.Drawing.Point(351, 279);
+            this.lblEmailRequired.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEmailRequired.Name = "lblEmailRequired";
+            this.lblEmailRequired.Size = new System.Drawing.Size(229, 16);
+            this.lblEmailRequired.TabIndex = 39;
+            this.lblEmailRequired.Text = "*email is not required, but recommended";
+            this.lblEmailRequired.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // radCompetitorOtherAdd
             // 
@@ -503,6 +534,7 @@
             // txtCompetitorEmailAdd
             // 
             this.txtCompetitorEmailAdd.AcceptsTab = true;
+            this.txtCompetitorEmailAdd.BackColor = System.Drawing.SystemColors.Window;
             this.txtCompetitorEmailAdd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCompetitorEmailAdd.Location = new System.Drawing.Point(354, 254);
             this.txtCompetitorEmailAdd.Margin = new System.Windows.Forms.Padding(4);
@@ -510,6 +542,7 @@
             this.txtCompetitorEmailAdd.Size = new System.Drawing.Size(253, 23);
             this.txtCompetitorEmailAdd.TabIndex = 30;
             this.txtCompetitorEmailAdd.Text = "Email:";
+            this.txtCompetitorEmailAdd.TextChanged += new System.EventHandler(this.txtCompetitorEmailAdd_TextChanged);
             // 
             // txtCompetitorLNameAdd
             // 
@@ -611,6 +644,7 @@
             // 
             // pnlUpdate
             // 
+            this.pnlUpdate.Controls.Add(this.lblEmailInvalidUpdate);
             this.pnlUpdate.Controls.Add(this.lblEmailRequired2);
             this.pnlUpdate.Controls.Add(this.radCompetitorOtherUpdate);
             this.pnlUpdate.Controls.Add(this.radCompetitorMaleUpdate);
@@ -635,6 +669,34 @@
             this.pnlUpdate.Size = new System.Drawing.Size(684, 341);
             this.pnlUpdate.TabIndex = 45;
             this.pnlUpdate.Visible = false;
+            // 
+            // lblEmailInvalidUpdate
+            // 
+            this.lblEmailInvalidUpdate.AutoSize = true;
+            this.lblEmailInvalidUpdate.BackColor = System.Drawing.Color.SteelBlue;
+            this.lblEmailInvalidUpdate.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmailInvalidUpdate.ForeColor = System.Drawing.Color.Snow;
+            this.lblEmailInvalidUpdate.Location = new System.Drawing.Point(64, 164);
+            this.lblEmailInvalidUpdate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEmailInvalidUpdate.Name = "lblEmailInvalidUpdate";
+            this.lblEmailInvalidUpdate.Size = new System.Drawing.Size(107, 17);
+            this.lblEmailInvalidUpdate.TabIndex = 41;
+            this.lblEmailInvalidUpdate.Text = "*email is invalid*";
+            this.lblEmailInvalidUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblEmailInvalidUpdate.Visible = false;
+            // 
+            // lblEmailRequired2
+            // 
+            this.lblEmailRequired2.AutoSize = true;
+            this.lblEmailRequired2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmailRequired2.ForeColor = System.Drawing.Color.White;
+            this.lblEmailRequired2.Location = new System.Drawing.Point(370, 267);
+            this.lblEmailRequired2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEmailRequired2.Name = "lblEmailRequired2";
+            this.lblEmailRequired2.Size = new System.Drawing.Size(229, 16);
+            this.lblEmailRequired2.TabIndex = 40;
+            this.lblEmailRequired2.Text = "*email is not required, but recommended";
+            this.lblEmailRequired2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // radCompetitorOtherUpdate
             // 
@@ -697,7 +759,7 @@
             this.lblCompetitorEmailUpdate.AutoSize = true;
             this.lblCompetitorEmailUpdate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCompetitorEmailUpdate.ForeColor = System.Drawing.Color.White;
-            this.lblCompetitorEmailUpdate.Location = new System.Drawing.Point(303, 242);
+            this.lblCompetitorEmailUpdate.Location = new System.Drawing.Point(293, 245);
             this.lblCompetitorEmailUpdate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompetitorEmailUpdate.Name = "lblCompetitorEmailUpdate";
             this.lblCompetitorEmailUpdate.Size = new System.Drawing.Size(47, 17);
@@ -756,6 +818,7 @@
             this.txtCompetitorEmailUpdate.Size = new System.Drawing.Size(252, 23);
             this.txtCompetitorEmailUpdate.TabIndex = 30;
             this.txtCompetitorEmailUpdate.Text = "Email:";
+            this.txtCompetitorEmailUpdate.TextChanged += new System.EventHandler(this.txtCompetitorEmailUpdate_TextChanged);
             // 
             // txtCompetitorLNameUpdate
             // 
@@ -795,7 +858,7 @@
             this.lblCompetitorDoBUpdate.AutoSize = true;
             this.lblCompetitorDoBUpdate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCompetitorDoBUpdate.ForeColor = System.Drawing.Color.White;
-            this.lblCompetitorDoBUpdate.Location = new System.Drawing.Point(245, 209);
+            this.lblCompetitorDoBUpdate.Location = new System.Drawing.Point(248, 209);
             this.lblCompetitorDoBUpdate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompetitorDoBUpdate.Name = "lblCompetitorDoBUpdate";
             this.lblCompetitorDoBUpdate.Size = new System.Drawing.Size(92, 17);
@@ -808,7 +871,7 @@
             this.lblCompetitorGenderUpdate.AutoSize = true;
             this.lblCompetitorGenderUpdate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCompetitorGenderUpdate.ForeColor = System.Drawing.Color.White;
-            this.lblCompetitorGenderUpdate.Location = new System.Drawing.Point(285, 174);
+            this.lblCompetitorGenderUpdate.Location = new System.Drawing.Point(280, 174);
             this.lblCompetitorGenderUpdate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompetitorGenderUpdate.Name = "lblCompetitorGenderUpdate";
             this.lblCompetitorGenderUpdate.Size = new System.Drawing.Size(60, 17);
@@ -854,32 +917,6 @@
             this.lblCompetitorUsernameUpdate.TabIndex = 21;
             this.lblCompetitorUsernameUpdate.Text = "Username:";
             this.lblCompetitorUsernameUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lblEmailRequired
-            // 
-            this.lblEmailRequired.AutoSize = true;
-            this.lblEmailRequired.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmailRequired.ForeColor = System.Drawing.Color.White;
-            this.lblEmailRequired.Location = new System.Drawing.Point(351, 279);
-            this.lblEmailRequired.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblEmailRequired.Name = "lblEmailRequired";
-            this.lblEmailRequired.Size = new System.Drawing.Size(229, 16);
-            this.lblEmailRequired.TabIndex = 39;
-            this.lblEmailRequired.Text = "*email is not required, but recommended";
-            this.lblEmailRequired.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lblEmailRequired2
-            // 
-            this.lblEmailRequired2.AutoSize = true;
-            this.lblEmailRequired2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmailRequired2.ForeColor = System.Drawing.Color.White;
-            this.lblEmailRequired2.Location = new System.Drawing.Point(370, 267);
-            this.lblEmailRequired2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblEmailRequired2.Name = "lblEmailRequired2";
-            this.lblEmailRequired2.Size = new System.Drawing.Size(229, 16);
-            this.lblEmailRequired2.TabIndex = 40;
-            this.lblEmailRequired2.Text = "*email is not required, but recommended";
-            this.lblEmailRequired2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // CompetitorForm
             // 
@@ -989,5 +1026,7 @@
         private System.Windows.Forms.ToolTip toolTipCompetitor;
         private System.Windows.Forms.Label lblEmailRequired;
         private System.Windows.Forms.Label lblEmailRequired2;
+        private System.Windows.Forms.Label lblEmailInvalidAdd;
+        private System.Windows.Forms.Label lblEmailInvalidUpdate;
     }
 }

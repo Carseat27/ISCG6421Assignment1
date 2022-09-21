@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Net.Mail;
 using System.Windows.Forms;
 /// <summary>
 /// this class runs the competitor maintenance form.
@@ -109,6 +110,8 @@ namespace ISCG6421Assignment1
         /// </summary>
         private void btnCompetitorSave_Click(object sender, EventArgs e)
         {
+            string Gender = "";
+
             txtCompetitorID.Text = "";  // <-- set competitorID to blank
             DataRow newCompetitorRow = DM.dtCompetitor.NewRow();
 
@@ -122,14 +125,6 @@ namespace ISCG6421Assignment1
             {
                 MessageBox.Show("You must select a gender!", "Error!");
             }
-            //check email is an email
-            else if (txtCompetitorEmailAdd.Text != null)
-            {
-                if (!Utilities.EmailCheck(txtCompetitorEmailAdd.Text))
-                {
-                    MessageBox.Show("Invalid email address!", "Error!");
-                }
-            }
             else
             {
                 //assign values to new datarow
@@ -139,14 +134,17 @@ namespace ISCG6421Assignment1
                 if (radCompetitorFemaleAdd.Checked == true)
                 {
                     newCompetitorRow["Gender"] = "Female";
+                    Gender = "Female";
                 }
                 else if (radCompetitorMaleAdd.Checked == true)
                 {
                     newCompetitorRow["Gender"] = "Male";
+                    Gender = "Male";
                 }
                 else if (radCompetitorOtherAdd.Checked == true)
                 {
                     newCompetitorRow["Gender"] = "Other";
+                    Gender = "Other";
                 }
                 newCompetitorRow["DateOfBirth"] = DoBPickerAdd.Value;
                 newCompetitorRow["EmailAddress"] = txtCompetitorEmailAdd.Text;
@@ -155,6 +153,57 @@ namespace ISCG6421Assignment1
                 {
                     DM.dtCompetitor.Rows.Add(newCompetitorRow);
                     DM.UpdateCompetitor();
+
+                    //send email confirmation of new competitor
+                    if (txtCompetitorEmailAdd.Text != "")
+                    {
+                        try
+                        {
+                            System.Net.ServicePointManager.SecurityProtocol |= System.Net.SecurityProtocolType.Tls12;       // <-- enable TSL1.2
+
+                            MailAddress from = new MailAddress("noreply-nzesportsleague@gmail.com", "NZESports League");            // <-- sending from
+                            MailAddress to = new MailAddress(txtCompetitorEmailAdd.Text, txtCompetitorFNameAdd.Text + " " + txtCompetitorLNameAdd.Text);    // <-- sending to
+
+                            //make message
+                            MailMessage message = new MailMessage(from, to);
+                            message.Subject = "New Registration for NZESL";     // <-- email subject
+
+                            message.Body = "Hello " + txtCompetitorFNameAdd.Text + " " + txtCompetitorLNameAdd.Text +
+                                "\n\nThis is an automated email from an application designed for a University Assignment. Please do not be alarmed if you receive it. " +
+                                "\nIf the recipient has any questions, please contact carsonloveday@gmail.com. Thank you." +
+                                "\n\nThank you for you registration with the New Zealand E-Sports League!" +
+                                "\n\nHere is a summary of the details you entered with us:" +
+                                "\nUsername: " + txtCompetitorUsernameAdd.Text +
+                                "\nFirst Name: " + txtCompetitorFNameAdd.Text +
+                                "\nLast Name: " + txtCompetitorLNameAdd.Text +
+                                "\nGender: " + Gender +
+                                "\nDate of Birth: " + DoBPickerAdd.Value.ToString().Split(' ')[0] +
+                                "\nEmail: " + txtCompetitorEmailAdd.Text +
+                                "\n\n\nWe wish you the best of luck at future events!";     // <--email body
+
+                            message.Priority = MailPriority.Normal;     // <-- email priority
+                            message.IsBodyHtml = false;     // <-- not html body
+
+                            SmtpClient MailClient = new SmtpClient("smtp.gmail.com");   // <-- google smtp
+
+                            MailClient.Credentials = new System.Net.NetworkCredential   // <-- login credentials
+                            {
+                                UserName = "nzesportsleague@gmail.com",
+                                Password = "rllrbpidzsygzmvz"       // <-- app only password lol
+                            };
+
+                            MailClient.EnableSsl = true;            // <-- SSL for security
+                            MailClient.Port = 587;                  // <-- mail port
+
+                            MailClient.DeliveryMethod = SmtpDeliveryMethod.Network;
+
+                            MailClient.Send(message);   // <-- send
+                        }
+                        catch (Exception)
+                        {
+                        }
+                    }
+
                     MessageBox.Show("Competitor Added Successfully", "Success");
                 }
                 catch (Exception)
@@ -215,6 +264,7 @@ namespace ISCG6421Assignment1
         /// </summary>
         private void btnCompetitorUpdate_Click(object sender, EventArgs e)
         {
+            string Gender = "";
             DataRow UpdateCompetitorRow = DM.dtCompetitor.Rows[currencyManager.Position];
 
             //check fields are filled
@@ -227,14 +277,6 @@ namespace ISCG6421Assignment1
             {
                 MessageBox.Show("You must select a gender!", "Error!");
             }
-            //check email is email
-            else if (txtCompetitorEmailUpdate.Text != null)
-            {
-                if (!Utilities.EmailCheck(txtCompetitorEmailUpdate.Text))
-                {
-                    MessageBox.Show("Invalid email address!", "Error!");
-                }
-            }
             else
             {
                 //assign values to update row
@@ -244,14 +286,17 @@ namespace ISCG6421Assignment1
                 if (radCompetitorFemaleUpdate.Checked == true)
                 {
                     UpdateCompetitorRow["Gender"] = "Female";
+                    Gender = "Female";
                 }
                 else if (radCompetitorMaleUpdate.Checked == true)
                 {
                     UpdateCompetitorRow["Gender"] = "Male";
+                    Gender = "Male";
                 }
                 else if (radCompetitorOtherUpdate.Checked == true)
                 {
                     UpdateCompetitorRow["Gender"] = "Other";
+                    Gender = "Other";
                 }
                 UpdateCompetitorRow["DateOfBirth"] = DoBPickerUpdate.Value;
                 UpdateCompetitorRow["EmailAddress"] = txtCompetitorEmailUpdate.Text;
@@ -261,6 +306,57 @@ namespace ISCG6421Assignment1
                 {
 
                     DM.UpdateCompetitor();
+
+                    //send email confirmation of new competitor
+                    if (txtCompetitorEmailAdd.Text != "")
+                    {
+                        try
+                        {
+                            System.Net.ServicePointManager.SecurityProtocol |= System.Net.SecurityProtocolType.Tls12;       // <-- enable TSL1.2
+
+                            MailAddress from = new MailAddress("noreply-nzesportsleague@gmail.com", "NZESports League");            // <-- sending from
+                            MailAddress to = new MailAddress(txtCompetitorEmailUpdate.Text, txtCompetitorFNameUpdate.Text + " " + txtCompetitorLNameUpdate.Text);    // <-- sending to
+
+                            //make message
+                            MailMessage message = new MailMessage(from, to);
+                            message.Subject = "New Registration for NZESL";     // <-- email subject
+
+                            message.Body = "Hello " + txtCompetitorFNameUpdate.Text + " " + txtCompetitorLNameUpdate.Text +
+                                "\n\nThis is an automated email from an application designed for a University Assignment. Please do not be alarmed if you receive it. " +
+                                "\nIf the recipient has any questions, please contact carsonloveday@gmail.com. Thank you." +
+                                "\n\nThank you for your updating your details with the New Zealand E-Sports League!" +
+                                "\n\nHere is a summary of the details you have updated with us:" +
+                                "\nUsername: " + txtCompetitorUsernameUpdate.Text +
+                                "\nFirst Name: " + txtCompetitorFNameUpdate.Text +
+                                "\nLast Name: " + txtCompetitorLNameUpdate.Text +
+                                "\nGender: " + Gender +
+                                "\nDate of Birth: " + DoBPickerUpdate.Value.ToString().Split(' ')[0] +
+                                "\nEmail: " + txtCompetitorEmailUpdate.Text +
+                                "\n\n\nWe wish you the best of luck at future events!";     // <--email body
+
+                            message.Priority = MailPriority.Normal;     // <-- email priority
+                            message.IsBodyHtml = false;     // <-- not html body
+
+                            SmtpClient MailClient = new SmtpClient("smtp.gmail.com");   // <-- google smtp
+
+                            MailClient.Credentials = new System.Net.NetworkCredential   // <-- login credentials
+                            {
+                                UserName = "nzesportsleague@gmail.com",
+                                Password = "rllrbpidzsygzmvz"       // <-- app only password lol
+                            };
+
+                            MailClient.EnableSsl = true;            // <-- SSL for security
+                            MailClient.Port = 587;                  // <-- mail port
+
+                            MailClient.DeliveryMethod = SmtpDeliveryMethod.Network;
+
+                            MailClient.Send(message);   // <-- send
+                        }
+                        catch (Exception)
+                        {
+                        }
+                    }
+
                     MessageBox.Show("Competitor Updated Successfully", "Success");
                 }
                 catch (Exception)
@@ -321,6 +417,78 @@ namespace ISCG6421Assignment1
                         Utilities.DBExceptionError();
                     }
                 }
+            }
+        }
+        #endregion
+
+        /// <summary>
+        /// this region holds the code for determining if an email is valid
+        /// </summary>
+        #region emailStuff
+
+        /// <summary>
+        /// this method makes the save competitor button not work
+        /// if the email is invalid during input
+        /// </summary>
+        private void txtCompetitorEmailAdd_TextChanged(object sender, EventArgs e)
+        {
+            Button[] btn = new Button[] { btnCompetitorSave };
+
+            //check not empty
+            if(txtCompetitorEmailAdd.Text != "")
+            {
+                //email not valid
+                if (!Utilities.EmailCheck(txtCompetitorEmailAdd.Text))
+                {
+                    //button disabled
+                    Utilities.ButtonsMagic(btn, false);
+                    //error text
+                    lblEmailInvalidAdd.Visible = true;
+                }
+                else
+                {
+                    Utilities.ButtonsMagic(btn, true);
+                    lblEmailInvalidAdd.Visible = false;
+                }
+            }
+            //because email is not required, allow adding without one
+            else
+            {
+                Utilities.ButtonsMagic(btn, true);
+                lblEmailInvalidAdd.Visible = false;
+            }
+        }
+
+        /// <summary>
+        /// this method makes the update competitor button not work
+        /// if the email is invalid during input
+        /// </summary>
+        private void txtCompetitorEmailUpdate_TextChanged(object sender, EventArgs e)
+        {
+            Button[] btn = new Button[] { btnCompetitorUpdate };
+
+            //check not empty
+            if (txtCompetitorEmailUpdate.Text != "")
+            {
+                //email not valid
+                if (!Utilities.EmailCheck(txtCompetitorEmailUpdate.Text))
+                {
+                    //button disabled
+                    Utilities.ButtonsMagic(btn, false);
+                    //error text
+                    lblEmailInvalidUpdate.Visible = true;
+                }
+                else
+                {
+                    Utilities.ButtonsMagic(btn, true);
+                    lblEmailInvalidUpdate.Visible = false;
+                }
+            }
+            //because email is not required, allow updating without one
+            else
+            {
+                Utilities.ButtonsMagic(btn, true);
+                lblEmailInvalidUpdate.Visible = false;
             }
         }
         #endregion

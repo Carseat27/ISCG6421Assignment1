@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -42,7 +43,17 @@ namespace ISCG6421Assignment1
         /// <returns>true/false</returns>
         public static bool EmailCheck(string email)
         {
-            return email.Contains("@");
+            bool valid = true;
+            //attempt to parse the email string to a MailAddress and catch error if it fails
+            try
+            {
+                MailAddress emailTest = new MailAddress(email);
+            }
+            catch (Exception)
+            {
+                valid = false;
+            }
+            return valid;
         }
 
         /// <summary>
