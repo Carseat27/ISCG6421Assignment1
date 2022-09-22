@@ -168,7 +168,7 @@ namespace ISCG6421Assignment1
                 try
                 {
                     DM.UpdateEntry();
-                    MessageBox.Show("Entry successfully set to 'Confirmed'", "Success");
+                    MessageBox.Show("Entry successfully set to 'Disqualified'", "Success");
                 }
                 catch (Exception)
                 {

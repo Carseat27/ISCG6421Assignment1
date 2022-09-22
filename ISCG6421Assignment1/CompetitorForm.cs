@@ -319,7 +319,7 @@ namespace ISCG6421Assignment1
 
                             //make message
                             MailMessage message = new MailMessage(from, to);
-                            message.Subject = "New Registration for NZESL";     // <-- email subject
+                            message.Subject = "Updated Registration for NZESL";     // <-- email subject
 
                             message.Body = "Hello " + txtCompetitorFNameUpdate.Text + " " + txtCompetitorLNameUpdate.Text +
                                 "\n\nThis is an automated email from an application designed for a University Assignment. Please do not be alarmed if you receive it. " +
